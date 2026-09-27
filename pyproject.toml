@@ -1,0 +1,5 @@
+[project]
+name = "deepswe-audit-runner"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = ["datacurve-pier==0.3.1"]

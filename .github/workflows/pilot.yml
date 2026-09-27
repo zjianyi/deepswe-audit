@@ -1,0 +1,55 @@
+name: DeepSWE native pilot
+on:
+  workflow_dispatch:
+    inputs:
+      cohort:
+        description: Smoke first; remaining only after smoke evidence validates
+        type: choice
+        options: [smoke, remaining]
+        default: smoke
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: deepswe-native-pilot
+  cancel-in-progress: false
+jobs:
+  native:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        task: ${{ fromJSON(inputs.cohort == 'smoke' && '["goreleaser-retry-publish-auditing"]' || '["helm-array-merge-strategies","testem-bail-on-test-failure","katex-multicolumn-array-spans","bandit-structured-nosec-directives","dateutil-rfc5545-timezone-interop","fd-deterministic-multi-key-sorting","wasmi-trap-coredumps","awilix-async-container-initialization","happy-dom-abort-pending-body-reads"]') }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.12.12'
+      - name: Install locked public runtime
+        run: |
+          python -m pip install --disable-pip-version-check uv==0.10.9
+          uv sync --locked
+      - name: Validate runner fixtures
+        run: python -m unittest discover -s tests -v
+      - name: Materialize pinned public corpus
+        run: |
+          git clone --quiet https://github.com/datacurve-ai/deep-swe "${RUNNER_TEMP}/deepswe"
+          git -C "${RUNNER_TEMP}/deepswe" checkout --quiet 0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea
+          python scripts/inventory.py --source "${RUNNER_TEMP}/deepswe"
+      - name: Run frozen task and retain explicit blockers
+        env:
+          TASK_ID: ${{ matrix.task }}
+        run: |
+          uv run python scripts/native_runner.py --task "${TASK_ID}" --source "${RUNNER_TEMP}/deepswe" --output "${RUNNER_TEMP}/native-evidence"
+      - name: Upload evidence even on task failure
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: deepswe-${{ matrix.task }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/native-evidence
+          if-no-files-found: error
+          retention-days: 30

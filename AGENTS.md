@@ -1,0 +1,1 @@
+Read docs/STATE.md, docs/NEXT.md, and docs/DECISIONS.md first. Work on the single NEXT objective. Preserve frozen source and evidence. Record adjacent work in BACKLOG. Update state, decisions, session log and exactly one NEXT objective at session end. Never relabel missing or failed evidence as passing.

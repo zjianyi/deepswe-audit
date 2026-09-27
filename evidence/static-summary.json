@@ -1,0 +1,4295 @@
+{
+  "counts": {
+    "FAIL": 16,
+    "PASS": 97
+  },
+  "task_count": 113,
+  "tasks": [
+    {
+      "envelope_hash": "22f0136db7b746565a32f4b3a9c6f28f05d6a8b0af4300e00e2bf0e5bbe95e03",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75679ajj3b8dtd7se3h7z0a1833y6r-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/abs-lang/abs",
+      "status": "PASS",
+      "task_hash": "7a750a69cc5dcf3544ba14e31a3513e6b913d8b820029510ea342200133bcefa",
+      "task_id": "abs-module-cache-flags"
+    },
+    {
+      "envelope_hash": "855e47477eea731c3748fc2a64dc480ea1d07430d5c77b0d92e7e68005b932bd",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7d5m4ed35zfp7gyhx7wdahed82yw72-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/abs-lang/abs",
+      "status": "PASS",
+      "task_hash": "3ef77039f16f355850fa84cc6a3b62787447fcacb05077772ae3a1081a4cd18a",
+      "task_id": "abs-stepped-slices"
+    },
+    {
+      "envelope_hash": "d8ad37de6a6a763d385ae4de82368e7cd29a782d53279f5082f12a8439198885",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79dnvkvq8j9bs22ededmsc79823akj-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/rhysd/actionlint",
+      "status": "PASS",
+      "task_hash": "1211e65fd3e47e5dbcb392dd17ca6bcea36031c22900afdcf6f48bddc4ad00e1",
+      "task_id": "actionlint-action-pinning-lint"
+    },
+    {
+      "envelope_hash": "be1ad7d43297dcac48c991ecf8d56668dce7949e8df296f5ad1819ce9afc7871",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73dq4n55jdxasppe6jjmth4183d47n-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/reagento/adaptix",
+      "status": "PASS",
+      "task_hash": "770a263960d92bd13d7fe1542f1bfd2a78ab842fd7e1bf83e84c4d6bf99c9f0d",
+      "task_id": "adaptix-name-mapping-aliases"
+    },
+    {
+      "envelope_hash": "1aa71dd5bd41904c360133cdd57e0fabe7c0d261a492d2ce8078ada4af0e7b76",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75rc2q0zhmsqwk7wewfwwtrx830v2n-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/aio-libs/aiomonitor",
+      "status": "PASS",
+      "task_hash": "962424b64be20cecb1488a0a14ea4bab0835bd0fcf93410f0647e3448ac3f520",
+      "task_id": "aiomonitor-task-snapshots-diff"
+    },
+    {
+      "envelope_hash": "8e914132b8932fd1bdc04b5c6d139670df64c0b116d5165df3f3468adfbca864",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fj3hc92zehtc8azrm32xzb182w9dr-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/mattn/anko",
+      "status": "PASS",
+      "task_hash": "76a967bbefdfb8a1e65736fb0d3bf3176a701d686b74a964ad4c7f9cdd484f01",
+      "task_id": "anko-default-function-arguments"
+    },
+    {
+      "envelope_hash": "d8b644792b39297d7f7a9d0df965908e4cb3f78024c22249a93a2ef112d16445",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79betfed7ets4an20cr4j57182y9wt-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/mattn/anko",
+      "status": "PASS",
+      "task_hash": "a5c2957bd13934b1c5dfcf14a26d15db28884d85de23ce704ccfac78353ec045",
+      "task_id": "anko-typed-variable-bindings"
+    },
+    {
+      "envelope_hash": "bac543540bc403f77f2b1a6a48c868398577aabe84212bfe1a5567970881b0e8",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70nj38qyatmsmj1d5zh57j25820vrx-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/getarcaneapp/arcane.git",
+      "status": "PASS",
+      "task_hash": "1d8f5326a5fa2a0b037ed4658d3bf30f8d72f2f878847e916960a7faf6c6cf8b",
+      "task_id": "arcane-drift-detection-baselines"
+    },
+    {
+      "envelope_hash": "9a07c7236352d932433600ac496e9c1457298bb9bbd3368b7e4015d9d5a30e2f",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh771gpr8crkjsnt9pj81bafgs8229em-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/arktypeio/arktype",
+      "status": "PASS",
+      "task_hash": "692138d287b3eb467bf08042746183c628c6349aba9be98d8bcf8f5249f6a46a",
+      "task_id": "arktype-json-schema-refs-dependencies"
+    },
+    {
+      "envelope_hash": "585efd28cc8e608a0093bb6361af60f83b402340b764f776c16f5c85751a8f49",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70bg8gy4xks4eyh1s71ecmk9822p9c-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/jeffijoe/awilix",
+      "status": "PASS",
+      "task_hash": "01634cc297897a4415f45263168ca0a20b65e8234cebec2fc7a5ca5049fb8957",
+      "task_id": "awilix-async-container-initialization"
+    },
+    {
+      "envelope_hash": "562046ac04ecd72f859c43f5d137b034c58d1a5cc750a55dce7c41fa044b2215",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "pytest"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "testtools"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "stestr"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "GitPython"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "beautifulsoup4"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "sarif-om>=1.0.4"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "jschema-to-python>=1.2.3"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "PyYAML"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "tomli"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "lxml"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "fixtures"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7drfg2vkvdvfh9xx0nfd5pz9821xr7-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/PyCQA/bandit.git",
+      "status": "FAIL",
+      "task_hash": "6772fe69e4e5fd0b2b2364c1861db96d8ac2b1b91a6b72c280160ed5bd63a8d7",
+      "task_id": "bandit-incremental-cache-control"
+    },
+    {
+      "envelope_hash": "8171c47809cab8f5b61e57384b4ec6fcd3802affd0b9f0929cb8412bb20c97ec",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77yap0nc4zwm5bysc954xbr182tptg-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/PyCQA/bandit.git",
+      "status": "PASS",
+      "task_hash": "50cf365d47b8b9cc313b7a87f9c2d933743d7065b1b3b59d42c0d2b7e568abd8",
+      "task_id": "bandit-interprocedural-taint-checks"
+    },
+    {
+      "envelope_hash": "dab548bba21edbacf77d44464f5441393d06c9cce028adca4692ca2934b87e54",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh757d8ggvnfaszv8zcav3msy982ma7f-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/PyCQA/bandit.git",
+      "status": "PASS",
+      "task_hash": "0139a3d28e20b976f3a6992f1dca654aa77c37b2e82b417b327b2f1ddac25776",
+      "task_id": "bandit-structured-nosec-directives"
+    },
+    {
+      "envelope_hash": "a88e1d12efc14e5dbd52860607979ae3e141f218fe5eab2520cbfd4bf05600c4",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71kat2v58yys3pnyybkgycax832vj2-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "rust",
+      "repository": "https://github.com/boa-dev/boa",
+      "status": "PASS",
+      "task_hash": "54d163978f8f2be20a45f283a1c6934e903a39fa79a72d608ac3c412a0f7529e",
+      "task_id": "boa-hierarchical-evaluation-cancellation"
+    },
+    {
+      "envelope_hash": "1b7028ffee583130860bc3d99d92185634cec5d68b90c7d114dd8c62a6058f1d",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-timeout"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-benchmark"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "hypothesis"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "attrs"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7f7cahc5ddm1qzpxz13kpmrh8235pc-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/python-attrs/cattrs",
+      "status": "FAIL",
+      "task_hash": "3f9b07cde7147b2591a35db19aea301b9b224aaa3af940e7397252fe0e90bda2",
+      "task_id": "cattrs-partial-structuring-recovery"
+    },
+    {
+      "envelope_hash": "d947e3c1ac12f9fbbd667147350c5a5f81a95fa948c612726f1fb37852ee7a50",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh78c5dwwna57y757p2y5ktw79836dnv-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/bombshell-dev/clack",
+      "status": "PASS",
+      "task_hash": "4281b7ed57f0df8906983aeed120ae70eab8da1f8ca4b9538f9fefa5fb7698eb",
+      "task_id": "clack-async-autocomplete-options"
+    },
+    {
+      "envelope_hash": "839abdcd19e1cbad06277f48b80a15e8c2ebebf51fb01ce15d4e54d12145f65c",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh734ehfw2s3bztf7pzc9xf3x18212bs-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/baryhuang/claude-code-by-agents",
+      "status": "PASS",
+      "task_hash": "3a2e1bc23c432983c1d01844b39e36f881cb8b65682e0448f591ba26fac92996",
+      "task_id": "claude-code-by-agents-recursive-delegation"
+    },
+    {
+      "envelope_hash": "fe65ccef28482574f0be2e979a5940c4dbe37304693102611e1e4a370a438a5d",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72088pg9vkc6peacnkc35yy9832jff-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/c4spar/cliffy",
+      "status": "PASS",
+      "task_hash": "90494608072b443fbb7a08faa6c74ed12f244faec9a088bd383abe497bfe8f87",
+      "task_id": "cliffy-config-file-parsing"
+    },
+    {
+      "envelope_hash": "4dd605eeaac342b44b4f86fb68a6659e67801fd1bbf0d9c55cf2e29f7ed5398b",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72qraccnjwdet6ynagsccr4x82y65c-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "javascript",
+      "repository": "https://github.com/csstree/csstree",
+      "status": "PASS",
+      "task_hash": "864ae87ca91200ea1466ed0698e90708c9e4f9c0b08863fb31b69647f6a87a08",
+      "task_id": "csstree-shorthand-expansion-compression"
+    },
+    {
+      "envelope_hash": "aa98e9766851c58976ec0e3848aa64dfd1787181bf522f1f5c119d71116a3110",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7c7rrg3zke74w7068nawak9x82t6am-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/TomWright/dasel",
+      "status": "PASS",
+      "task_hash": "242be0f1ae7bcac5963382351453eb051da795607ee2348b95dfae399a2b4595",
+      "task_id": "dasel-html-document-format"
+    },
+    {
+      "envelope_hash": "ff3b8a82f55067d0337ee749bdd66ae360ee3fbf83f79c2a3b8563882c236cd5",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7czqrrmrm1vnwfx1nhtjh9as833esn-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/dateutil/dateutil",
+      "status": "PASS",
+      "task_hash": "ea83f227aeeb4e9957045e688e3f9c6ae6eaf7c34445882ab70769896d6d15fc",
+      "task_id": "dateutil-rfc5545-timezone-interop"
+    },
+    {
+      "envelope_hash": "a0ecc946920f07b575a408c727462d1a5fc0e1d90dd03838ce8ead3c252a1c9c",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70cshdjenz3z5gq2wrqzhjmn82xbb0-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/drizzle-team/drizzle-orm",
+      "status": "PASS",
+      "task_hash": "83605310d264fd0e00faaacbea51f220f54e3660fe63b724112e667d4950341f",
+      "task_id": "drizzle-orm-window-function-builders"
+    },
+    {
+      "envelope_hash": "71a45f442cc1bb6128352b702396a7a642e6e8f3250c0c5f9c0aea3bb6f5286d",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79xyw12drtaz3reht4enc2hs83ef6v-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/dynamodb-toolbox/dynamodb-toolbox",
+      "status": "PASS",
+      "task_hash": "2224fdf922de2f43624f6fcdf408fe5153e7698d37836b118cc0798b39bf387e",
+      "task_id": "dynamodb-toolbox-conditional-attribute-requirements"
+    },
+    {
+      "envelope_hash": "d3b73b39b6fa15b82b93baa95a3e26c92d89ea704dc0a48b43c7b342c390bf41",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72mtcjbhgxmwq036jccx77dh83dj5n-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/dynamodb-toolbox/dynamodb-toolbox",
+      "status": "PASS",
+      "task_hash": "c18915b36deb5466c3c59fdd1c56548a20400f603d36fd207c53785d60d6c491",
+      "task_id": "dynamodb-toolbox-lazy-recursive-schemas"
+    },
+    {
+      "envelope_hash": "8fe5c94d9efc54f42532b7f3bbb328a11bbcb44487a1cebcd723b6a0e7ce8de9",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ajcjberhnnhk914qezwwt0x830v6v-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/Effect-TS/effect",
+      "status": "PASS",
+      "task_hash": "8ada818b7cf937a8fd65a3a8207ae31c8801d9307a865f21ae03667ee781f020",
+      "task_id": "effect-sse-httpapi-streaming"
+    },
+    {
+      "envelope_hash": "9113f9032c62b642089b3949029ca6e111f6a65aae5d36b3c4ebd35ba6bacc82",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "task.toml",
+                "issue": "abbreviated base commit requires unique upstream resolution; declarations agree",
+                "line": 1
+              },
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79vgnwnp3wfz0b63ft8zbs81822re8-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/eicrud/eicrud",
+      "status": "PASS",
+      "task_hash": "26146d73cc8bbb6aebf2bf6767acb1e656c582087fa8ff769d077a6b15242253",
+      "task_id": "eicrud-keyset-pagination-cursor"
+    },
+    {
+      "envelope_hash": "5ccca5bc8f6cdb8b6e3618c4488598db07dac27b141fd537cb71c5a7a89687f9",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7e0e2z02keqh6j7db6bcg1c9822140-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/beevik/etree",
+      "status": "PASS",
+      "task_hash": "98abce25f0b98f835092a57717c2fa2a88381999ac3338972da84ff0a0ac4cdb",
+      "task_id": "etree-xml-diff-patch"
+    },
+    {
+      "envelope_hash": "7dfdaf7ad85a74ee7767d303504ee637e7ebe936a68cebd84bbcfa8741a0efee",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71gkadwafw4ry4r6g37era0182qpms-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/expr-lang/expr",
+      "status": "PASS",
+      "task_hash": "b0044b3b94a3e71d4dd3f0fe851aacd9cfc9e9526895d1fcdcb32477fe9ed16d",
+      "task_id": "expr-try-catch-errors"
+    },
+    {
+      "envelope_hash": "71a886b4af13aa97ccf465dc33fc051def7847e00ceef18df115b27aed7c94cb",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75azsnb5eqs3mf4xm0zkzha582rvcd-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/fastapi/fastapi",
+      "status": "PASS",
+      "task_hash": "60b5e4a4e111d944a0ba8ca30f13485e5e9c762620bb9bc71c37d3ece1a0a1ff",
+      "task_id": "fastapi-deprecation-response-headers"
+    },
+    {
+      "envelope_hash": "ada9e39498336f2fb45387ad741e49297e39effd87d8196fea5ffc16063c520d",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7191qb52n5pfwh0a4yhahmt18343sn-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/fastapi/fastapi",
+      "status": "PASS",
+      "task_hash": "57d8997c9f207aa89380aaddbcef07913b92302a9c7dbb5a01c5811e7826e8e6",
+      "task_id": "fastapi-implicit-head-options"
+    },
+    {
+      "envelope_hash": "8d14830cdb4eadc42c4380d74a97890ce00f1309cf6a4f179c7d95ea57e5d259",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79s1ny2ab454f8caet44rv5n82za06-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "rust",
+      "repository": "https://github.com/sharkdp/fd",
+      "status": "PASS",
+      "task_hash": "b5b38dc39eb8aca59ba3265b922795b08171be7e7edaf2cd721c39303fefcc02",
+      "task_id": "fd-deterministic-multi-key-sorting"
+    },
+    {
+      "envelope_hash": "377c91ca2ea8daae94a488a59c13e42b0505a996aa998ba797223e77290dd09b",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74gd4v9cty7573mr6k7va39183ngrq-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/golang/geo",
+      "status": "PASS",
+      "task_hash": "6c74432f576c35799d74f2b7de2a76245e5dcb0e22d043e4ce7a31b0e245329b",
+      "task_id": "geo-shapeindex-serialization"
+    },
+    {
+      "envelope_hash": "88000b41da7c9f632bbb9220a2f91cbb13488c7a3969df44ee170d09414c256e",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh727w7pxd9cv476t3cxptxcg182e1e5-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/go-critic/go-critic",
+      "status": "PASS",
+      "task_hash": "680c97c872fb072f5531140325fb913094e6d25dced5e078e78b3e24ccd2314e",
+      "task_id": "go-critic-doc-link-checker"
+    },
+    {
+      "envelope_hash": "7e759e3d43172deb8f45beca7870f5148502bc265b906c2005984986e207afea",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ahy57bb3jmdjzmbvq257swh8353nm-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/googleapis/go-genai.git",
+      "status": "PASS",
+      "task_hash": "ea7bc0824bebb1898e932e051028b09372a5e8a523d59593c74358856369594b",
+      "task_id": "go-genai-streamed-function-args"
+    },
+    {
+      "envelope_hash": "336f9c0fcddd7f2597ea9a449bea8eb4037c8abed36b3b0f79e8253b808cd7f1",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7bnb92eb32zvxx50fzjnshes822db0-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/go-git/go-git",
+      "status": "PASS",
+      "task_hash": "10df641d150f17b1222e144297033c76764a4eb3755b17595471d86df9780511",
+      "task_id": "go-git-worktree-merge-conflicts"
+    },
+    {
+      "envelope_hash": "1c54c5d9014c34c4f763691844b35a8fc63f4fd51fbc6c414a2774f78bbac6eb",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7cc4hqw7wb87h3kwwnkq0pv1830gjz-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/goreleaser/goreleaser",
+      "status": "PASS",
+      "task_hash": "822d8d7197acb974409f87100bf7f0ffb96326e79c8e5f7be58d62d951b5eb26",
+      "task_id": "goreleaser-retry-publish-auditing"
+    },
+    {
+      "envelope_hash": "3c74bd6eb4997d58f7ca2f7bb7a3412f47f4aa22effc538d0f2aab3b86bbfbcf",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "aiohttp<3.14"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79vjbp8dv1pyk7t09zdb9xx9821628-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/graphql-python/gql",
+      "status": "FAIL",
+      "task_hash": "769aeaf3afd7bd03143d0513aa0123c9262d1bfe3c8089589ea47048e9032664",
+      "task_id": "gql-incremental-graphql-delivery"
+    },
+    {
+      "envelope_hash": "7a16e9258a0091264e92f9869229d5c44266473b12296cd972855d43c5ae4298",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7c2re7cvbseq7xz6samd1xr182y1dc-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/capricorn86/happy-dom",
+      "status": "PASS",
+      "task_hash": "d36294605d9a8463347c73a3809397c99fd5cc201dcbadf918bc9045582ff923",
+      "task_id": "happy-dom-abort-pending-body-reads"
+    },
+    {
+      "envelope_hash": "40277a25b97e11e0e3a8d808197b8a25f0d3b71d8c17b1cdf623073139509718",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75ggdejhnymjbhkbtkxvhz758352br-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/capricorn86/happy-dom",
+      "status": "PASS",
+      "task_hash": "99ae7c9ea47424d105a39f0f0a8c7ec8f5ea17019640b35efd32df7f31912918",
+      "task_id": "happy-dom-deterministic-intersectionobserver"
+    },
+    {
+      "envelope_hash": "08432fc6be648b829d1b914396579ec98d4edaf483b5a5e6ec64b7651214d48a",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72a3qcr0kjpdr153havavn8s83bx8t-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/helm/helm",
+      "status": "PASS",
+      "task_hash": "a9986f28e87f89c3ca14dfc063abbb187633fb71b92d355e31ada600b2646d0e",
+      "task_id": "helm-array-merge-strategies"
+    },
+    {
+      "envelope_hash": "52816e2d29ec1800e54f88bb3c7f1ee604a03b7f4117dda1d78faa7a0cf18ab4",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7dvkse99x41x83c5z6f2eq7n82w8fm-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/helm/helm",
+      "status": "PASS",
+      "task_hash": "398783cc3c24099c0cba75f2e5b918c3aa63c29688a3fd7f456258396d6df98f",
+      "task_id": "helm-unified-manifest-stream"
+    },
+    {
+      "envelope_hash": "019940bd58d44339f0dc25cf88bbbd5435d86b413e381a24110322802867e543",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ccr1w93zymhy42k5hs2m9w1831xpx-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/encode/httpx",
+      "status": "PASS",
+      "task_hash": "f88bfd3d1db587a17e06462d1ae3ebc777accb2a5c4d74dfeb421eeb56111337",
+      "task_id": "httpx-deterministic-cookie-store"
+    },
+    {
+      "envelope_hash": "e2b139e12ac65b100b688b901f5a781e3087e1b3665493452fa89b58aec5121e",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fr6f1yw1289ye5ttsfvaqen8319dq-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/encode/httpx",
+      "status": "PASS",
+      "task_hash": "77297cd55c4c60a8b03b899846e1e5bc5f196bb12c5d5ab932a6237717a0c0a1",
+      "task_id": "httpx-multipart-response-parsing"
+    },
+    {
+      "envelope_hash": "77e70f31a860f7d84f08d739734a2cc461215e21775abf74f646f4859044cbb5",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73snc7v9x3psk69rg4eqvjgs836v5a-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/encode/httpx",
+      "status": "PASS",
+      "task_hash": "c90bb5fe708012be7bdc4028b8057e523a9febbaf3e0da545f30053123ab0fca",
+      "task_id": "httpx-streaming-json-iteration"
+    },
+    {
+      "envelope_hash": "0362f7f2c916f1b3f0c5d3f31657e960ba301a281358e719d4b0cce3e7fc1a24",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7brwh7cv23ggeshkz85ac5fx831x5k-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/nidhaloff/igel",
+      "status": "PASS",
+      "task_hash": "1e0e44117a4541878545826774cf9fa38d9f02286d1b5e0d6066e8f0868b3f7b",
+      "task_id": "igel-persist-feature-schema"
+    },
+    {
+      "envelope_hash": "c6dd3d96e929d38fb69b56d7bfa978bf4ffc97750ae995996269c4126e3aa693",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75wxkjyha9441e7m9tpetb2582mn63-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/vadimdemedes/ink",
+      "status": "PASS",
+      "task_hash": "5a0f86c708e8d3b6badbfa859c7ef8c36a364e49e7a7d975155d825878f139dd",
+      "task_id": "ink-grid-box-layout"
+    },
+    {
+      "envelope_hash": "76cab4b682c215928064a2f31bd2346d89005ea0782f927a87bb095080df71c1",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75kn07w0t92m4xxd3dy0cgp982jz6m-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/ipython/ipython",
+      "status": "PASS",
+      "task_hash": "229a36cbcccafc3e3bd3de8d466bb7b17e1e3f9b9b8cc3fa2370be3fdfd71da4",
+      "task_id": "ipython-session-bundle-replay"
+    },
+    {
+      "envelope_hash": "c602bdb14bc0da9f71967a5e4e61b8f8fd5c5acaa47daf0ac01e9719189016a1",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fkjmy67qny9z98mt6bj52m182ygdy-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "javascript",
+      "repository": "https://github.com/KaTeX/KaTeX",
+      "status": "PASS",
+      "task_hash": "3a01fbc084aee71b6556cd0f8654d071b16b62358a5a34ddda8cd380351d12c1",
+      "task_id": "katex-multicolumn-array-spans"
+    },
+    {
+      "envelope_hash": "45e08fe4c9373801f22a7cd62c58efb9a99bd89f6c91504529d5174d3cf516cd",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72w47mwm321wh9xj47vskc8d822e9t-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/xtaci/kcp-go",
+      "status": "PASS",
+      "task_hash": "056013e72a795bdb00a766daf044b6389a36ee2f56ea23dc5cc363aadebf658f",
+      "task_id": "kcp-go-multiplexed-kcp-streams"
+    },
+    {
+      "envelope_hash": "ffc92ec6f0c278d64ce178e5a4bf9c3a241e8743a29e5f064827fa2566cee464",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7anwezzyc0zgk160c9peh13n82r12z-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/keajs/kea.git",
+      "status": "PASS",
+      "task_hash": "7af20998df087c14e6e2d481db68b73051bbf00991823385601af1aa7ccc8f65",
+      "task_id": "kea-atomic-signal-selectors"
+    },
+    {
+      "envelope_hash": "bc39b88c6a0040c181ad6cef3aec2c66db64e449e95dadab5053a1e91cec05e5",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74gnp94dw8fx3h047h4m4ht9830bat-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/kgateway-dev/kgateway",
+      "status": "PASS",
+      "task_hash": "ea2b9e334b565887339cecd304257d083a44375b7e97f221b26eb2797deabe13",
+      "task_id": "kgateway-consistent-hash-policy"
+    },
+    {
+      "envelope_hash": "c8fb3935a9e6a2137d6c9e563cd28a8ee7bdf565b440952934375a1bbf0904f1",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71vrtr4b1jj5vavv6aybnvjd83pcar-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/celery/kombu",
+      "status": "PASS",
+      "task_hash": "cdc915cbabc775b51ef6afe61a13c55fd8495958b8728b33bca333df04aea1bd",
+      "task_id": "kombu-single-active-consumer-priority"
+    },
+    {
+      "envelope_hash": "b82fdea2b9cdfc510b16bb9858db270f4f8dfd6910d4b2909facd012fb3add01",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72pgvncj82fnbfq2bvmy1qs183jdc5-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/celery/kombu",
+      "status": "PASS",
+      "task_hash": "1a6be1543239f2c4887f20fb99535abe4186360a32061e976032c5734664f002",
+      "task_id": "kombu-virtual-queue-dead-lettering"
+    },
+    {
+      "envelope_hash": "63022708c0ed722027ec6a208d8dfdece82f5a17ac6ed1ab864d9de58315dece",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh705e1hgmtj22pyetcmqa8ygs83bh33-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/pmndrs/koota",
+      "status": "PASS",
+      "task_hash": "3847d2703315ba71edd0fb047d7e721ef8c45ae38260a15a292571a406379038",
+      "task_id": "koota-composite-trait-aspects"
+    },
+    {
+      "envelope_hash": "cfd2245fc2b9634a35189d77104c6cff6b55e88254b9675a01e4ad6c1dae16a9",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7evrvtwkk64hraqvefgx9ndd821j43-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/pmndrs/koota",
+      "status": "PASS",
+      "task_hash": "340d6db5c5dda2933cda4effa30aeae04039d205eb2ed34f307c19ccac137b13",
+      "task_id": "koota-deferred-mutation-buffer"
+    },
+    {
+      "envelope_hash": "8640c1f3e05e4f1001f1dd922c7cb45f7cff06189edbedb85741e13c5a565eed",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "task.toml",
+                "issue": "abbreviated base commit requires unique upstream resolution; declarations agree",
+                "line": 1
+              },
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71b98xenay7p45357036xq5x82tcdf-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/pmndrs/koota",
+      "status": "PASS",
+      "task_hash": "0f839f233c25df0c83bdd35e76af07ed5cd40d4c7aecad9653432f02433f69e6",
+      "task_id": "koota-entity-snapshot-rollback"
+    },
+    {
+      "envelope_hash": "e9f6e569990a575f51c070cf3f95989292463dc1ff49d294d934adaa386813fb",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7cshjqfe84fmtb2ye37nrd6h82dds6-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/pmndrs/koota",
+      "status": "PASS",
+      "task_hash": "9c3afd71a1cb7828ad0259f2cdc75eb642fe3dbfff91d05dceff2e360baf0056",
+      "task_id": "koota-pair-relation-tracking"
+    },
+    {
+      "envelope_hash": "180a54764e545cdc9532be4a579fa3e89a62ca1b041edcccd982787055eba0b6",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7dkes3xb054yt1fd3g6nym5s83bz2h-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/pmndrs/koota",
+      "status": "PASS",
+      "task_hash": "89b6861663fa437bf6e9ef955d63d702c138d911eb7bb436ad84cbf358626116",
+      "task_id": "koota-query-predicates"
+    },
+    {
+      "envelope_hash": "396039d12a9b875b554a2254c1de4bd732359ccf334434eaabf2b1ca8e8ee798",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh799f394epg9pb2j9fhzky98183e8ec-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/kysely-org/kysely",
+      "status": "PASS",
+      "task_hash": "a6edc2e7cfbb71cc86942aa8145670fe6f0eafcdb46e0c9ebd14d599f32d0ef4",
+      "task_id": "kysely-window-grouping-helpers"
+    },
+    {
+      "envelope_hash": "0e2d3d1cc47bf0b8f74fe75fa61c060a5da0a5b89a50ba41702af496621cd25b",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 42,
+                "package": "pydantic<2.13"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "task.toml",
+                "issue": "abbreviated base commit requires unique upstream resolution; declarations agree",
+                "line": 1
+              },
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71y4gxtry9p0m42wvg4th515831mwz-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/langchain-ai/langchain",
+      "status": "FAIL",
+      "task_hash": "c8cd7fa848c5073824ea2706da9cebe501151d31bb2207b202a53903c54660a2",
+      "task_id": "langchain-request-coalescing"
+    },
+    {
+      "envelope_hash": "3bd1256ddabc7e620e9dcbc41b560bdcbb893b0a494af09162f8a0993506a8f2",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 20,
+                "package": "pytest"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70k6aj3y457hgtraar0rmgdn822qx8-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/Fatal1ty/mashumaro",
+      "status": "FAIL",
+      "task_hash": "bb6f2e4c11312e1beaac6add586d1547c655a60e5b68e647cf52e5d23df01790",
+      "task_id": "mashumaro-flattened-dataclass-fields"
+    },
+    {
+      "envelope_hash": "dbbcbb36c55619dd706a62dc83c5ea9f47bd5a72ee439e7a81dc89c10ab8c274",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7398skqnxqwg9hbmdj7ncmk1822aa0-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/meriyah/meriyah",
+      "status": "PASS",
+      "task_hash": "01859be9f190a137a3b98dbce37721281821046aec0314fac0fed7a92fd37c91",
+      "task_id": "meriyah-explicit-resource-declarations"
+    },
+    {
+      "envelope_hash": "70792274b2ab8300df8c67c052c55db2bbafd35927b536a86d16ae4f925b2107",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71jf6d7mtqaw5z1h69krrarx820dys-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/jkwill87/mnamer",
+      "status": "PASS",
+      "task_hash": "cc075cf8a42b607900882c79254bebbdda3631088a711261644221d61d230877",
+      "task_id": "mnamer-daemon-watch-lifecycle"
+    },
+    {
+      "envelope_hash": "0c0d1fd3c20a4f6f13f67d1803ba0ce97b93bc6813e0016c127152ac5ec1536e",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 20,
+                "package": "portpicker"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 20,
+                "package": "pyyaml"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 20,
+                "package": "mock"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 20,
+                "package": "pytest"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 20,
+                "package": "pytz"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74b2m0tjfn59vq8btqrj774s821570-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/google/mobly",
+      "status": "FAIL",
+      "task_hash": "2cf19c53bfd6c6f8b8e10bedd39ab63928a745f01b667e781f39c41b417a14aa",
+      "task_id": "mobly-grouped-test-barriers"
+    },
+    {
+      "envelope_hash": "3a2cea12b2a98603f109727238cef5d11b2f0423fcbd0b205d0b2f6349906380",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 44,
+                "package": "polars<1.40"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7987m8hz4g19ngkk2zfe3v4n82y0e2-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/narwhals-dev/narwhals",
+      "status": "FAIL",
+      "task_hash": "396f4173faec0c7bf4771a7f3b614b7b463d86029e89bc54f2262fb2b3ac8d1b",
+      "task_id": "narwhals-rolling-window-suite"
+    },
+    {
+      "envelope_hash": "2c026028a564eeabe480f88456a2a032175462fb493d3f18d855d766dacbb4dc",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "numpy<2.0"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "scipy"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "llvmlite"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ag6w2nh5a47ta6bg7hj2mk1823qwj-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/numba/numba",
+      "status": "FAIL",
+      "task_hash": "41ad34eb176c260b094300966e2e66e55fc844a036b4b967f51f2c0255108ea9",
+      "task_id": "numba-stencil-boundary-modes"
+    },
+    {
+      "envelope_hash": "b5d7d73c9419405371ac788c685d0a511e669c81c8842fea3037e0cbcb1fd937",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74j15mp1vrxx737y8b47tc8h832a37-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/platers/obsidian-linter",
+      "status": "PASS",
+      "task_hash": "87e5f76ce81275f72f8c46bce44cd940023670573b07bd791363a6991e260002",
+      "task_id": "obsidian-linter-auto-table-of-contents"
+    },
+    {
+      "envelope_hash": "197b2b7512803ab5a405c0b0b095e0130d535a7e371fd7998a592453fe47b5db",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7anfdjd1c4e5ejxncny0j1ed82xjm4-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/platers/obsidian-linter",
+      "status": "PASS",
+      "task_hash": "e283b69c9c2f7e7659ca3cdd526f82b9a2d70acdbca86c6bff54b912f9d11a6d",
+      "task_id": "obsidian-linter-link-format-conversion"
+    },
+    {
+      "envelope_hash": "d06415c526bc9b76c1759e4d7cb7b4629575adfaaf57971abfabd86b4aa21077",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fmf1y6r9ajpg3htmaj237h182vztd-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/platers/obsidian-linter",
+      "status": "PASS",
+      "task_hash": "1cc29f4c398fd66c0dca9718e2df1a5eda6fa2e11addbe52d4938ac6bf437616",
+      "task_id": "obsidian-linter-scoped-ignore-markers"
+    },
+    {
+      "envelope_hash": "6ab9896f33393142e1a750c7334dab3a38cfc564feb123f0c4f47013b293f1a9",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7aq6h38q4e91mragyvr8cd3n82xxxr-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/unjs/ofetch",
+      "status": "PASS",
+      "task_hash": "b8046a9ad27c9d140f6dc50e6b671ccdf2a23869fa29ee5a137d1d1c9c792eff",
+      "task_id": "ofetch-per-origin-circuit-breaker"
+    },
+    {
+      "envelope_hash": "d0f2f61c3e66ddccdcca5987636d5a61bed4a8d7ee09aede1ae829ca827f5540",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73t6ych6s1a4vtkbgr61ecr1823tt2-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/liweiyi88/onedump",
+      "status": "PASS",
+      "task_hash": "b0bc788c91bcdf3c5b63f854410bf3b8a5e25daa6df1f30315ff2e0fbb5a03df",
+      "task_id": "onedump-dump-encryption-pipeline"
+    },
+    {
+      "envelope_hash": "268bc5ea92d6659d90f23000583f72fa7d17e515b67ba783c7e1a9b403a6a001",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh78zjag0xnxppgym5v4sshav982y8s4-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/open-policy-agent/opa",
+      "status": "PASS",
+      "task_hash": "33857a9a1e9ef8e9f14f77eb4246327e9ea455cbb7451d963627006a0a242430",
+      "task_id": "opa-rego-rule-profiling"
+    },
+    {
+      "envelope_hash": "ac5e2df3ec49acecc4c551e23a748d2d68d802287283d1b61df87a8c778d2e9c",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7eq7eek21pjhv1zx8c2cmmed82yd7v-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/open-policy-agent/opa",
+      "status": "PASS",
+      "task_hash": "c80bcd26dc23c2dc8fb2f49af14d35f80a89276a0f3056fe84c1ac11009ca975",
+      "task_id": "opa-template-string-reconstruction"
+    },
+    {
+      "envelope_hash": "798c76bafafe162e1f803e50b73806e7af98740ed4cef9dae2c08b6b30d82533",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79vadftp8bjw2qzqjw8a0b9s82ytpj-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/dahlia/optique",
+      "status": "PASS",
+      "task_hash": "d4eeab0824386459ea9901c0cddb4d1e04cad1dccbe52187bd51c996f1055339",
+      "task_id": "optique-conditional-option-dependencies"
+    },
+    {
+      "envelope_hash": "4784c4de7068edb41cbbd1066f8b968f16a6029dfe1e899160777ec0a36b3f7b",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh749pxv8w35vksyfhe7p8tg8x82p0vg-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "rust",
+      "repository": "https://github.com/noahbald/oxvg",
+      "status": "PASS",
+      "task_hash": "33efc705732767eee7562bcf0bc9272c712aba63bbb08c2db7d39889a4d0f44e",
+      "task_id": "oxvg-structural-selector-preservation"
+    },
+    {
+      "envelope_hash": "4ada0faa5ce20a4c9a70251cf7d1520aa9a503fe624d580c74b57d62ba2568bd",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74m2j63pskf6htk1sxxevvv1823hvd-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/alecthomas/participle.git",
+      "status": "PASS",
+      "task_hash": "5a9f68f42abe531e5c86993339aeb4088ae27405bb0b0733332a47e4f59bb116",
+      "task_id": "participle-grammar-conflict-analysis"
+    },
+    {
+      "envelope_hash": "f82e294e6bcf1cc641d04f885a1dd00ae6f3af0e5838b131391e9088e87c39d1",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh786tyr77qk4ycrz24nm2kynh82zaam-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/cockroachdb/pebble",
+      "status": "PASS",
+      "task_hash": "d4a71f12af7bdc75ae2e302c6c48ff582151bbaa1d66007886b68dc05a9fce80",
+      "task_id": "pebble-durability-wait-apis"
+    },
+    {
+      "envelope_hash": "ff78ffc3ceb7a485fcf65a3be1a7d6ca89ee212f021e84e6c9d3cdd7cdf64413",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7bmp04pqht2pcvp8qce1afm582ph2j-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "rust",
+      "repository": "https://github.com/pest-parser/pest",
+      "status": "PASS",
+      "task_hash": "64e4ad608e90cdb893b0706d1962bda386857a69ca17017a8ea95deadabf3beb",
+      "task_id": "pest-character-class-coalescing"
+    },
+    {
+      "envelope_hash": "2d71bd1690bf05f18f416a16746a12bfe51279da704299f02269ab3bb8e0f464",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7faaexjnnv9h4vt84e0r1v4d82qtv7-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/prometheus/prometheus.git",
+      "status": "PASS",
+      "task_hash": "d95531f599e364654fc10b72c37140bfee3e05ddbbf39f2c4509cc2a544f26c5",
+      "task_id": "prometheus-transactional-reload-status"
+    },
+    {
+      "envelope_hash": "25dd9c4c418201c3c6586bc7117345b3c5731c52bb411ec104177c568ba7bdab",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh76dadw64v8013j689380xsg182yhfc-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/prometheus/prometheus",
+      "status": "PASS",
+      "task_hash": "f2e5c02cbd08c58cad0b626e24fafee68341d10d8e9580e4dd19982391e5b391",
+      "task_id": "prometheus-typed-label-sorting"
+    },
+    {
+      "envelope_hash": "e691716b1d4088214348a6058873f0f4eb53b90bd51252e7d9c22525b7afa6d0",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "attrs"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "Pillow>=10.3.0"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "numpy"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-cov"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "scipy"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "scikit-image"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72dq33t9djm894gqagmgpkhd82yvjv-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/psd-tools/psd-tools",
+      "status": "FAIL",
+      "task_hash": "ae1952f1fdbc2e7cf5f722fe2e2a5afcb8af859907917e99953c73b0c68e484e",
+      "task_id": "psd-tools-blend-range-api"
+    },
+    {
+      "envelope_hash": "f029d022e8d7704fdb4fc4ba62ac75be39d7a0d15b807023571aea1c206335d6",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 20,
+                "package": "pytest"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74mb9dzz76a6zgdqmmf5mvk1833cnk-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/Gallopsled/pwntools",
+      "status": "FAIL",
+      "task_hash": "610186b1736a345f2b85b8e64cfc893257786a26dd024dde83b0c35f39d0e6cb",
+      "task_id": "pwntools-tube-multiplexing"
+    },
+    {
+      "envelope_hash": "100a4c57472864e85a661872ab9bea587e3f4ab89b4af8af90412fe545fe6c16",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-cov"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-asyncio"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-mock"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-sugar"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-benchmark"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-xdist"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-timeout"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "django"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "docutils"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "Sphinx"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-django"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh719np6e210pf8skawv132rw183pfyy-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/fgmacedo/python-statemachine",
+      "status": "FAIL",
+      "task_hash": "08aa7143368057e509220d6e66de38eb8b25320673038e97c8ac6b8a88abb272",
+      "task_id": "python-statemachine-state-data-scoping"
+    },
+    {
+      "envelope_hash": "b3ffe46ae063e6628f751f4cfd16be704d4e3282ee352440efe0f290c0be56b8",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh76g3pdaddrcg12k7jse0xrzn83a5fd-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/TanStack/query",
+      "status": "PASS",
+      "task_hash": "452501029f50eebb6140ee470f431f93ced602a62c650aff2a1a5ddd405fa45f",
+      "task_id": "query-persist-restored-query-state"
+    },
+    {
+      "envelope_hash": "d81394c88f9235e38d8f6b8c36776c89b7ebb3524a4d4c7c3adbbc992476ec6c",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73sgee6751fmh72hwwctyscx832frj-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/slab/quill",
+      "status": "PASS",
+      "task_hash": "ccda404d02e16f461a520e25de74cf239d80cbd9ade8ff5758eae8586b3e83b5",
+      "task_id": "quill-shared-toolbar-focus"
+    },
+    {
+      "envelope_hash": "9c36d8dea85a26f4814a3d18cf46037a46a4e4835eb4b1b40ef820f70c333e7d",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 20,
+                "package": "pytest-subtests"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 20,
+                "package": "anyio"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh754n098chwgtm24jakheqsw5833ec6-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/dry-python/returns",
+      "status": "FAIL",
+      "task_hash": "231252debd07979b39b92f0646a73646db677b4ab3136e1565ebd0deeb086796",
+      "task_id": "returns-validated-error-accumulation"
+    },
+    {
+      "envelope_hash": "f2fac49407efac1f2c508982127fe631a9cb1a2ea4d05ac00f551506c32c300c",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71j0gr2axgn6v1f92cam6s6x82rkv6-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/boyter/scc.git",
+      "status": "PASS",
+      "task_hash": "c7a85f4c4b734113466da5a5fd2305f19421e823acae3e9b0c4e674497eb1014",
+      "task_id": "scc-bounded-memory-spilling"
+    },
+    {
+      "envelope_hash": "f95368bdb0db8a66ba3fe70122f6b6bd3f9a72c839e94fa094bca59f9448e910",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7adk413brr6nnvzntz1qvb51833me1-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/open2b/scriggo",
+      "status": "PASS",
+      "task_hash": "4cc91a7bc9693011a5cfdf1310272f67ce17d804d12e6a360cf87af1c993c346",
+      "task_id": "scriggo-method-declarations"
+    },
+    {
+      "envelope_hash": "efa18ba5e450d65061439eaef9dd593304cb3a6bd7f8b491199b649f761599f6",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-cov"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-xdist"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pyarrow"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "polars<1.40"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "plotly"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "optuna"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "numpydoc"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77y2107s6xkqyf61mj1dsm0983kmp1-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/skrub-data/skrub",
+      "status": "FAIL",
+      "task_hash": "0dd4ae690dad0ea6bc88b2c6b46a14f2b903d9c696661a628af5548993b908e8",
+      "task_id": "skrub-duration-encoding"
+    },
+    {
+      "envelope_hash": "6771d552bec992c6405f268fdf38d2f4575414692a6ba8ddce6c858393cca029",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh712k0bfwxew9fvg12k70g59n83pw33-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/sql-formatter-org/sql-formatter",
+      "status": "PASS",
+      "task_hash": "94e79dfdfd13362f9a9901307ffa3c023ec679636906124995840262eff7e965",
+      "task_id": "sql-formatter-bigquery-pipe-formatting"
+    },
+    {
+      "envelope_hash": "822cbd359280078ba8150dfd08db533986b3c5fe7d629c58b8a470cd91a8708d",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "pytest"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 23,
+                "package": "pytest-timeout"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71t2fb7qvx4y0svvv77e5p3182hnvq-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/tconbeer/sqlfmt",
+      "status": "FAIL",
+      "task_hash": "1c46210f1319c35b4b3aa97ee4f9a6360e919f7d10d81d43264fadb9c151e441",
+      "task_id": "sqlfmt-create-table-ddl-formatting"
+    },
+    {
+      "envelope_hash": "72daf8a3caf6cdd0c8d1195378fb6ab690cc8e1e2dca742309d2b7f920aa3c52",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "click"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "click-default-group"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pluggy"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "python-dateutil"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "sqlite-fts4"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "tabulate"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-cov"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-xdist"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "hypothesis"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73xpqyc0vqx9prf3m106nqe5821dcb-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/simonw/sqlite-utils",
+      "status": "FAIL",
+      "task_hash": "e27ce6ce711870b5753fd0cd789387aee4bb17b7b50351e11a5b175b569ff7f7",
+      "task_id": "sqlite-utils-safe-import-checkpoints"
+    },
+    {
+      "envelope_hash": "b5d958b791fcd6a9a44df2103a28b9e42bd6d75bbfeb59439b70f8a27833d754",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh701jywhzgddknqwzsq6npjv98226tq-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/flightcontrolhq/superjson.git",
+      "status": "PASS",
+      "task_hash": "843a84dad09e06d9af41650eae40c730c27bc15aa33f2870d0e09abfe8f214d2",
+      "task_id": "superjson-error-stack-serialization"
+    },
+    {
+      "envelope_hash": "7128032533c27236fc44c72dab346acb2e95d671c86d042a5921326de0fbf958",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ejvdhks3x059j6jwfncaj4982yxrv-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/go-task/task",
+      "status": "PASS",
+      "task_hash": "7de0b5a164e5b2d5b4931e1b73da470b672d32258099762e36e4d71196e27000",
+      "task_id": "task-task-graph-export"
+    },
+    {
+      "envelope_hash": "fd3343abd140ba8e3493ed8f77d95010320f678f7ce3606a564fe1d70c62c306",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77n9t7ybdq9387d08jzdp1y183ffe6-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/d5/tengo",
+      "status": "PASS",
+      "task_hash": "b409a10ce1c80ebe8098518bc62f127c9a1a707601ae137cc592aa0f8a4da3d4",
+      "task_id": "tengo-callable-instance-isolation"
+    },
+    {
+      "envelope_hash": "4ba20c5b2f0ef933b843f0651b9a48ca7f4793b2be13670da0fa91398c380828",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ajwvesks1d5kkpeqx7y79sd8238zn-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/d5/tengo",
+      "status": "PASS",
+      "task_hash": "f618cf576731ac6adea3941061248fc4b8335c8e159c496c2fd9a6e9458f299e",
+      "task_id": "tengo-destructuring-bindings"
+    },
+    {
+      "envelope_hash": "6e310d97e0776b901fb11e82899976eed59b86a9167005e2d3491a8115944945",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh731cskx45z0t0961464d9ezx8220nt-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/muesli/termenv",
+      "status": "PASS",
+      "task_hash": "77b00fe690da2b4f990687ecc31643cc5bf2ec34fd2e81812ecf32c20fa2c238",
+      "task_id": "termenv-preserve-ansi-resets"
+    },
+    {
+      "envelope_hash": "e743eeeef6b80f209f3ad43c1308d38c3b52f9a0f9199d8450c8c25a2dbfa009",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77k18d31qx7jj0c7nyv0xd8s82cznp-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "javascript",
+      "repository": "https://github.com/testem/testem",
+      "status": "PASS",
+      "task_hash": "9bdb41369862916f13e3307547ec2e4e5bd7a66d4eef8801eca7576181ebc1ce",
+      "task_id": "testem-bail-on-test-failure"
+    },
+    {
+      "envelope_hash": "affcb91ddc437fe7de629277d9110155a3ddab7a7b67e3548320391749d7f22b",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7322qjz1xfjspavxy0kamf9h83277p-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "javascript",
+      "repository": "https://github.com/testem/testem",
+      "status": "PASS",
+      "task_hash": "e557b34fec8ecb2103cfab5cb066f741a4e690247f05681743dcea1c49ae2440",
+      "task_id": "testem-per-launcher-reports"
+    },
+    {
+      "envelope_hash": "4a3cee30bd915195fa166407d4bc6e0d5c9395a1d984210311acb0fd9a9fe100",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7b36e22me6fzbav0na7kt14h82wk1m-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/Textualize/textual",
+      "status": "PASS",
+      "task_hash": "674a84e4e8baedb872e3a200e5c560c5ac49f0df344ef649ed69d02d40995ece",
+      "task_id": "textual-kitty-key-phases"
+    },
+    {
+      "envelope_hash": "6e4b60948a3566332ce901c149e94b56c07d603dbd71130153c0ff3af2594926",
+      "findings": [
+        {
+          "check_id": "GEN-006",
+          "code": "DEPENDENCY_UNPINNED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest"
+              },
+              {
+                "file": "environment/Dockerfile",
+                "line": 19,
+                "package": "pytest-asyncio"
+              }
+            ]
+          },
+          "message": "unpinned runtime Python package install found",
+          "outcome": "TASK_FAILURE",
+          "source": "generic"
+        },
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70247kxfz01g03p1dpz9fqv183g47e-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/Textualize/textual",
+      "status": "FAIL",
+      "task_hash": "8afe720e19daac0c8c6c54019412d8e238e802a6ba3b8d9144c449976b6c4d8b",
+      "task_id": "textual-richlog-follow-state"
+    },
+    {
+      "envelope_hash": "94285ceedc3da44bdca4130579c2399bfebf363f5883d17d8c47c78fb21b03c3",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ezsk4ze1jyjta967ypwnxhh83etpm-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/python-poetry/tomlkit",
+      "status": "PASS",
+      "task_hash": "59840567a8555e7613e17321440a996723f9b40aa8b09a82a968afaae84be075",
+      "task_id": "tomlkit-toml-table-converters"
+    },
+    {
+      "envelope_hash": "0413e8c8456d26421057c3d1f9a01a55c9f8bd709fe156415646239054e649a8",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74r2t7kdnt7h2efdk0hf5asx82zr0s-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/true-myth/true-myth",
+      "status": "PASS",
+      "task_hash": "8d355ae35839d3e82f2a23690f5848f5c19480d7b09dc9d21943f71f72f90398",
+      "task_id": "true-myth-iterable-collection-combinators"
+    },
+    {
+      "envelope_hash": "425a228ff7054e804ed13c9697123a354274c4dab9863e6554ac19f227dffa17",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh724kgmvy32trvakc1q6a6sa583fdx7-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/gvergnaud/ts-pattern",
+      "status": "PASS",
+      "task_hash": "d5e2fe139d78ad675cf3c62b68c7116d1adfcf0ae9153047b9d3e389e5bb9354",
+      "task_id": "ts-pattern-match-each"
+    },
+    {
+      "envelope_hash": "d4f6c0cbd3a876fbfff7e581d142c33b137c723b519d867d34e1c82f0ac1c735",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7dk7mmh6ewnyc9h46wyag19d831gmy-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/Owloops/updo",
+      "status": "PASS",
+      "task_hash": "74db320528957eed207f18acb8a23dcfc1efad35ec4dbed4ce2b2a809f123af0",
+      "task_id": "updo-policy-alerting"
+    },
+    {
+      "envelope_hash": "b1fea1fb2d5db85b6fab60ea4ca449f015aee9f272307219cc5ea2db7f08f1a5",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77krxpg096a66tm8s8ztcarn82zzyv-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/open-circle/valibot",
+      "status": "PASS",
+      "task_hash": "86778732f2f7293b25f9f3369d6e8d33fbe0432e24e7ae3bbe020a9ea6588136",
+      "task_id": "valibot-recursive-schema-composition"
+    },
+    {
+      "envelope_hash": "709a6bb8b05bcf475f8a2928b1bf88668f6293033da3859e6e50865ea9ff62f3",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh788hvxvxaz825205djm3ctth822xms-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "typescript",
+      "repository": "https://github.com/vitest-dev/vitest.git",
+      "status": "PASS",
+      "task_hash": "4a1b544f41b5805fb0713efdc27904f821d88d15427f401eeda8fe9a15dc7e5a",
+      "task_id": "vitest-duration-sharding"
+    },
+    {
+      "envelope_hash": "141f4bed811845483c78f91be0ac25bc124fcce1c8e7e68ae619a43f34728a0b",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7992s6336c7yhv34x198jqy182zpmt-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "python",
+      "repository": "https://github.com/jendrikseipp/vulture",
+      "status": "PASS",
+      "task_hash": "ee5cd60c7cd6d4192ec517bd99ab0062354d0b1043d918ba2862ac3f025892f0",
+      "task_id": "vulture-persistent-analysis-cache"
+    },
+    {
+      "envelope_hash": "c02bfa6f9675d0e0c65ed3c0aed42c0a48a0720eef6a254626399b6f9774ea1e",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70h37djmvc9ac48jeh25gwz582xgqv-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "rust",
+      "repository": "https://github.com/wasmi-labs/wasmi",
+      "status": "PASS",
+      "task_hash": "9bbfe3f54d775d2a20f4b8cb308cdbab2158fd12e583228d53d2a9d58c7314c2",
+      "task_id": "wasmi-trap-coredumps"
+    },
+    {
+      "envelope_hash": "755e1732e2828df24d8d599f8dd5d5f8742b371a855a992cfbc7ae850e80b053",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77sbk25h3f5383rz7xqx98th822fd4-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/wazero/wazero.git",
+      "status": "PASS",
+      "task_hash": "fdb1574a9f8aed9d4ff76d5220416121ab4c8662804998988c0f2d612312353e",
+      "task_id": "wazero-multi-module-snapshots"
+    },
+    {
+      "envelope_hash": "e7ade6ee34e8874206bc6ecf373e09bfc0bf261b36440753884ec74d427ecdbf",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73faxghpn90rtyxsrjmpjpsx83f4ws-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/traefik/yaegi",
+      "status": "PASS",
+      "task_hash": "b750d47fd8984e0fc0da6a4fd44465443e370c048f42be58f63266059a9ac47c",
+      "task_id": "yaegi-go-embed-directives"
+    },
+    {
+      "envelope_hash": "a31fd28f3d29e15d6bc163b0fb88bca1c9a8a5a309db8b9e51d9f5fc9a2788ba",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fwz4nedevfex8ssk2p8xbt9836scp-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "javascript",
+      "repository": "https://github.com/yjs/yjs",
+      "status": "PASS",
+      "task_hash": "e573d21a555ddf2ca9c97b77289a6a2a4925a14f0249e9480bd385c0bfa0eef9",
+      "task_id": "yjs-map-conflict-detection"
+    },
+    {
+      "envelope_hash": "f09136886ab20c8f2b0a16e49cde0218f94ca754df682be49b2085455a75ea37",
+      "findings": [
+        {
+          "check_id": "DS-002",
+          "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+          "evidence": {
+            "locations": [
+              {
+                "file": "environment/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 1,
+                "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+              },
+              {
+                "file": "tests/Dockerfile",
+                "issue": "mutable image reference; runtime digest required",
+                "line": 3,
+                "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77w0w2z8qs6m904k2hs9eg058325j8-v1.1"
+              }
+            ]
+          },
+          "message": "Image identity and Git visibility require runtime corroboration",
+          "outcome": "WARNING",
+          "source": "deepswe"
+        }
+      ],
+      "language": "go",
+      "repository": "https://github.com/carvel-dev/ytt",
+      "status": "PASS",
+      "task_hash": "a97b25b0313fe016b36b641d31a8ad0d370615b422fc1f8a4c5747a0afda35f5",
+      "task_id": "ytt-jsonpath-query-api"
+    }
+  ],
+  "upstream_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea"
+}
