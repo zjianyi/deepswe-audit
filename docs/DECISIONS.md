@@ -11,3 +11,4 @@
 - Static scoring validation is AST-only. All 113 released grader files share SHA-256 47cc9eaadf21e636323c360ec4fa786f0733ec9fd1d21ea5a5717ff9f8c4077c. No native task passability or resistance claim follows from this common source identity.
 
 - Preserve the first S0 exactly even when its interpretation conflicts with raw execution evidence. Record discrepancies in a separate audit annotation; do not rerun S0 or expand into its requested 8–12-mutant campaign. Protected writes remain a concrete execution failure.
+- KaTeX IMAGE_UNAVAILABLE is caused by registry rate limiting in image-pull.log, not a confirmed absent image. Retain the attempt; any single infrastructure retry requires a documented correction and must preserve one native task at a time.

