@@ -25,7 +25,7 @@
     "src/btqc/checks/__init__.py": "057785487104417821c3e8a4b7f5665f46938a52fd0f626e6acf6234cb135ad6",
     "src/btqc/checks/banana.py": "fdb823c7112f8659434b8ac3e9ea4803222210d29d322b4ae68849ae46b37825",
     "src/btqc/checks/core.py": "580407f611eaa75a7e7ffd91d013eb75f46fa1f7252d8ce0f7c8ffe04969cc47",
-    "src/btqc/checks/deepswe.py": "41154efab1273f413788df7d69176c9e10033d394ca1d1594f27e3b22a5f656a",
+    "src/btqc/checks/deepswe.py": "e8a07c79516e9e0927a92e25ab259f72a5390775e4406e0567ba7c0c3ac2d689",
     "src/btqc/checks/hyper_tau.py": "9f0d27e3e2adc35634b4244fdcf51f505c4419262abc32e9c6ecc8b1f947ac09",
     "src/btqc/checks/runner.py": "7d5e17575220ad4756f9395f325501500d1836c755facf69a4d45bbc73405eb7",
     "src/btqc/checks/senior_swe.py": "feed73b35d6204b723c1a92c7e7e6391e9144c00c73295ab24415ab3897d4950",
@@ -52,9 +52,8 @@
     "src/btqc/semantic/validation.py": "a281d6558efb06b1b565c3f4bce98eed1bd54dbbad83c9eac6d2c715022e0e32"
   },
   "validation": {
-    "adapter_additional_cases": 2,
     "audit_unit_cases": 16,
-    "btqc_full_suite": 110,
+    "btqc_full_suite": 112,
     "workflow_actionlint": "v1.7.7 PASS"
   },
   "working_tree_dirty": true

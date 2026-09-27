@@ -82,6 +82,15 @@ def validate_binding(bundle, frozen, artifacts_root):
             raise ValueError(f'artifact missing/stale/unsafe: {name}')
     if bundle.get('status') != 'INFRASTRUCTURE_FAILURE' and not bundle.get('image_digest'):
         raise ValueError('executed bundle lacks image identity')
+    for name, case in bundle.get('cases', {}).items():
+        if 'effective_task_hash' in case:
+            relative = name + '/case-manifest.json'
+            if relative not in bundle.get('artifact_hashes', {}):
+                raise ValueError('executed case lacks hashed manifest')
+            if json.loads((root/relative).read_text()) != case:
+                raise ValueError('native summary differs from durable case manifest')
+            if case.get('image_digest') != bundle.get('image_digest'):
+                raise ValueError('case image binding mismatch')
 
 
 def classify(reward, ctrf, config, case, exception=None):
@@ -89,6 +98,8 @@ def classify(reward, ctrf, config, case, exception=None):
         return {'status': 'INFRASTRUCTURE_FAILURE', 'code': 'PIER_EXCEPTION', 'details': exception}
     if not isinstance(reward, dict) or not isinstance(ctrf, dict):
         return {'status': 'INFRASTRUCTURE_FAILURE', 'code': 'VERIFIER_OUTPUT_MISSING_OR_MALFORMED'}
+    if reward.get('apply_failed') and reward.get('reward') != 0:
+        return {'status': 'FAIL', 'code': 'INVALID_PATCH_REWARDED'}
     if reward.get('apply_failed'):
         return {'status': 'FAIL' if case == 'oracle' else 'PASS', 'code': 'PATCH_REJECTED', 'reward': reward.get('reward'), 'test_execution': False}
     tests = ctrf.get('results', {}).get('tests')

@@ -19,6 +19,8 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(classify(self.reward,self.ctrf,self.cfg,'nop')['status'],'PASS')
     def test_forged_credit_is_failure(self):self.assertEqual(classify(self.reward,self.ctrf,self.cfg,'forge-reports')['status'],'FAIL')
     def test_oracle_failure(self):self.assertEqual(classify({'apply_failed':1,'reward':0},{},self.cfg,'oracle')['status'],'FAIL')
+    def test_rewarded_invalid_patch(self):
+        self.assertEqual(classify({'apply_failed':1,'reward':1},{},self.cfg,'nop')['status'],'FAIL')
     def test_invalid_candidate_patch(self):self.assertEqual(classify({'apply_failed':1,'reward':0},{},self.cfg,'nop')['code'],'PATCH_REJECTED')
     def test_missing_malformed_reports(self):
         for c in [None,{}, {'results':{'tests':[]}}, {'results':{'tests':'fake'}}]:
