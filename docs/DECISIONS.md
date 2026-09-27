@@ -9,3 +9,5 @@
 - DeepSWE test assertions and oracle implementations live in patch files. The semantic bundle now includes `.patch` and `.diff` as inert text, with regression coverage.
 - Native evidence is imported only after artifact hashes, case-manifest equality, image identity and exact permitted derivative-task bytes validate. The effective derivative changes only image resolution for endpoints; probes additionally replace the solver script with a separately hashed candidate-only hook.
 - Static scoring validation is AST-only. All 113 released grader files share SHA-256 47cc9eaadf21e636323c360ec4fa786f0733ec9fd1d21ea5a5717ff9f8c4077c. No native task passability or resistance claim follows from this common source identity.
+
+- Preserve the first S0 exactly even when its interpretation conflicts with raw execution evidence. Record discrepancies in a separate audit annotation; do not rerun S0 or expand into its requested 8–12-mutant campaign. Protected writes remain a concrete execution failure.

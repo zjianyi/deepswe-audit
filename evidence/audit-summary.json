@@ -2,8 +2,8 @@
   "claim": "Balanced ten-task pilot; not a corpus prevalence estimate or release approval.",
   "clean_count": 0,
   "completed_phase_counts": {
-    "execution": 0,
-    "semantic": 0,
+    "execution": 1,
+    "semantic": 1,
     "static": 10
   },
   "corpus_static_counts": {
@@ -13,18 +13,18 @@
   "frozen_manifest_hash": "462e98aa04ef805ea8c09f1ec0252433e1dd689086fd649d5fe84e68604ff285",
   "pilot": [
     {
-      "all_phases_evaluated": false,
+      "all_phases_evaluated": true,
       "clean_three_phase_result": false,
       "has_infrastructure_blocker": false,
-      "has_task_defect": false,
+      "has_task_defect": true,
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/goreleaser/goreleaser",
-      "semantic_finding_count": 0,
+      "semantic_finding_count": 2,
       "task_id": "goreleaser-retry-publish-auditing"
     },
     {
