@@ -8,9 +8,9 @@ Static outcomes: `{'FAIL': 16, 'PASS': 97}`.
 |---|---|---|---|---|
 | goreleaser-retry-publish-auditing | PASS | FAIL | DEFERRED_EVIDENCE_REQUIRED | False |
 | helm-array-merge-strategies | PASS | FAIL | FAIL | False |
-| testem-bail-on-test-failure | PASS | DEFERRED_EVIDENCE_REQUIRED | NOT_RUN | False |
+| testem-bail-on-test-failure | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED | False |
 | katex-multicolumn-array-spans | PASS | INFRASTRUCTURE_FAILURE | NOT_RUN | False |
-| bandit-structured-nosec-directives | PASS | NOT_RUN | NOT_RUN | False |
+| bandit-structured-nosec-directives | PASS | DEFERRED_EVIDENCE_REQUIRED | NOT_RUN | False |
 | dateutil-rfc5545-timezone-interop | PASS | NOT_RUN | NOT_RUN | False |
 | fd-deterministic-multi-key-sorting | PASS | NOT_RUN | NOT_RUN | False |
 | wasmi-trap-coredumps | PASS | NOT_RUN | NOT_RUN | False |

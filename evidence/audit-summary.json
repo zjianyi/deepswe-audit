@@ -2,8 +2,8 @@
   "claim": "Balanced ten-task pilot; not a corpus prevalence estimate or release approval.",
   "clean_count": 0,
   "completed_phase_counts": {
-    "execution": 4,
-    "semantic": 2,
+    "execution": 5,
+    "semantic": 3,
     "static": 10
   },
   "corpus_static_counts": {
@@ -43,18 +43,18 @@
       "task_id": "helm-array-merge-strategies"
     },
     {
-      "all_phases_evaluated": false,
+      "all_phases_evaluated": true,
       "clean_three_phase_result": false,
       "has_infrastructure_blocker": false,
       "has_task_defect": false,
       "language": "javascript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/testem/testem",
-      "semantic_finding_count": 0,
+      "semantic_finding_count": 5,
       "task_id": "testem-bail-on-test-failure"
     },
     {
@@ -79,7 +79,7 @@
       "has_task_defect": false,
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },
