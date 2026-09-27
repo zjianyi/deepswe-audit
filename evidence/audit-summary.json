@@ -1,0 +1,167 @@
+{
+  "claim": "Balanced ten-task pilot; not a corpus prevalence estimate or release approval.",
+  "clean_count": 0,
+  "completed_phase_counts": {
+    "execution": 0,
+    "semantic": 0,
+    "static": 10
+  },
+  "corpus_static_counts": {
+    "FAIL": 16,
+    "PASS": 97
+  },
+  "frozen_manifest_hash": "462e98aa04ef805ea8c09f1ec0252433e1dd689086fd649d5fe84e68604ff285",
+  "pilot": [
+    {
+      "all_phases_evaluated": false,
+      "clean_three_phase_result": false,
+      "has_infrastructure_blocker": false,
+      "has_task_defect": false,
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/goreleaser/goreleaser",
+      "semantic_finding_count": 0,
+      "task_id": "goreleaser-retry-publish-auditing"
+    },
+    {
+      "all_phases_evaluated": false,
+      "clean_three_phase_result": false,
+      "has_infrastructure_blocker": false,
+      "has_task_defect": false,
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/helm/helm",
+      "semantic_finding_count": 0,
+      "task_id": "helm-array-merge-strategies"
+    },
+    {
+      "all_phases_evaluated": false,
+      "clean_three_phase_result": false,
+      "has_infrastructure_blocker": false,
+      "has_task_defect": false,
+      "language": "javascript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/testem/testem",
+      "semantic_finding_count": 0,
+      "task_id": "testem-bail-on-test-failure"
+    },
+    {
+      "all_phases_evaluated": false,
+      "clean_three_phase_result": false,
+      "has_infrastructure_blocker": false,
+      "has_task_defect": false,
+      "language": "javascript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/KaTeX/KaTeX",
+      "semantic_finding_count": 0,
+      "task_id": "katex-multicolumn-array-spans"
+    },
+    {
+      "all_phases_evaluated": false,
+      "clean_three_phase_result": false,
+      "has_infrastructure_blocker": false,
+      "has_task_defect": false,
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/PyCQA/bandit.git",
+      "semantic_finding_count": 0,
+      "task_id": "bandit-structured-nosec-directives"
+    },
+    {
+      "all_phases_evaluated": false,
+      "clean_three_phase_result": false,
+      "has_infrastructure_blocker": false,
+      "has_task_defect": false,
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/dateutil/dateutil",
+      "semantic_finding_count": 0,
+      "task_id": "dateutil-rfc5545-timezone-interop"
+    },
+    {
+      "all_phases_evaluated": false,
+      "clean_three_phase_result": false,
+      "has_infrastructure_blocker": false,
+      "has_task_defect": false,
+      "language": "rust",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/sharkdp/fd",
+      "semantic_finding_count": 0,
+      "task_id": "fd-deterministic-multi-key-sorting"
+    },
+    {
+      "all_phases_evaluated": false,
+      "clean_three_phase_result": false,
+      "has_infrastructure_blocker": false,
+      "has_task_defect": false,
+      "language": "rust",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/wasmi-labs/wasmi",
+      "semantic_finding_count": 0,
+      "task_id": "wasmi-trap-coredumps"
+    },
+    {
+      "all_phases_evaluated": false,
+      "clean_three_phase_result": false,
+      "has_infrastructure_blocker": false,
+      "has_task_defect": false,
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/jeffijoe/awilix",
+      "semantic_finding_count": 0,
+      "task_id": "awilix-async-container-initialization"
+    },
+    {
+      "all_phases_evaluated": false,
+      "clean_three_phase_result": false,
+      "has_infrastructure_blocker": false,
+      "has_task_defect": false,
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/capricorn86/happy-dom",
+      "semantic_finding_count": 0,
+      "task_id": "happy-dom-abort-pending-body-reads"
+    }
+  ],
+  "upstream_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea"
+}

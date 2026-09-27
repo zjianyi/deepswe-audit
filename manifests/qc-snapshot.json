@@ -1,6 +1,18 @@
 {
   "framework_version": "0.2.0",
   "git_head": "8bfff33e52c46e88ddba0b8d4bbecfc7785f4462",
+  "pinned_source_context": {
+    "awilix-async-container-initialization": "f0300b4c5710a030cfd036dd0f2903c0a469e25e83395e035c874e1121577b8e",
+    "bandit-structured-nosec-directives": "e0d1b294a6d1cce9ae075c3c6b6fffd61855772fb2c3653aae30ff391e768692",
+    "dateutil-rfc5545-timezone-interop": "d26e92fd5ecb7c604cff36663762de84ec0839adf5d4276672908294bb12d2f7",
+    "fd-deterministic-multi-key-sorting": "5a75fe4e6c10b634eaa9095a94f583b8ec71583770c85eef12c80b5bed3165b1",
+    "goreleaser-retry-publish-auditing": "7d0da5072ceee2569603df54981458e84048d4c86e65e776109ffb5d86fca588",
+    "happy-dom-abort-pending-body-reads": "3bd601a43828e8684286bf0a7e7fbb694af4e50753bb72aeed6401146793d01c",
+    "helm-array-merge-strategies": "e7e179f473318df3a47e41c8245319003b4315956ae1c58653a21270a60c2c97",
+    "katex-multicolumn-array-spans": "f65c7ead13af8d149e2adcf99d24284013842cac9d032f8ee2d247f40c362dee",
+    "testem-bail-on-test-failure": "9bdedc57048c282da06b1862094b9cb6b26c507a8bfe9adc70d56e2c65006aab",
+    "wasmi-trap-coredumps": "70b9eb6a9f593687fcb018f2040d113485d535c89606781bac424252edc6dea5"
+  },
   "source_hashes": {
     "rubrics/task-quality-reviewer.md": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
     "rubrics/task-quality.toml": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
@@ -52,7 +64,7 @@
     "src/btqc/semantic/validation.py": "a281d6558efb06b1b565c3f4bce98eed1bd54dbbad83c9eac6d2c715022e0e32"
   },
   "validation": {
-    "audit_unit_cases": 16,
+    "audit_unit_cases": 17,
     "btqc_full_suite": 112,
     "workflow_actionlint": "v1.7.7 PASS"
   },

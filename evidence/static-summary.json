@@ -6,7 +6,7 @@
   "task_count": 113,
   "tasks": [
     {
-      "envelope_hash": "46b6e22ec1e305ed9a8c1405b67891266f04786d74218467954b3c90d239c05d",
+      "envelope_hash": "8043292ae22e618325d34ec00d3d4496b0ab3537b13e3f5ae07efa44c07b7cc9",
       "findings": [
         {
           "check_id": "DS-002",
@@ -39,7 +39,7 @@
       "task_id": "abs-module-cache-flags"
     },
     {
-      "envelope_hash": "aa34b0367c14df56e1b63c5569d169cdb0612ef83914ed55b735517d0c994c5d",
+      "envelope_hash": "35bfcbc589ab4063a6235371ec151fe4479574c0a261cce1df32ba3fe484d16e",
       "findings": [
         {
           "check_id": "DS-002",
@@ -72,7 +72,7 @@
       "task_id": "abs-stepped-slices"
     },
     {
-      "envelope_hash": "b9ca4a4a3f65375e73a7bb34e2e44ea81aab52e945defc437fecc7fdadc7dc87",
+      "envelope_hash": "4ff60216f8593e1ebe75b5e814803085b8ff1022355cc6280a0348b8512b2264",
       "findings": [
         {
           "check_id": "DS-002",
@@ -105,7 +105,7 @@
       "task_id": "actionlint-action-pinning-lint"
     },
     {
-      "envelope_hash": "c407e16a80c9b1912a53f225094e9b3bfb905cd0eb5c0f5e07998052466c30e5",
+      "envelope_hash": "ed84f72217f43620f5373946bcddb9994208082764235cb77fe7e79549fc5699",
       "findings": [
         {
           "check_id": "DS-002",
@@ -138,7 +138,7 @@
       "task_id": "adaptix-name-mapping-aliases"
     },
     {
-      "envelope_hash": "f149d22bb69e3231af19cabd2b1f78e7014145be56b88121565e27197f823832",
+      "envelope_hash": "cc8b97ac09c910d14f280253b82e159cdc1396fb8a1e69bd7e902510622ca974",
       "findings": [
         {
           "check_id": "DS-002",
@@ -171,7 +171,7 @@
       "task_id": "aiomonitor-task-snapshots-diff"
     },
     {
-      "envelope_hash": "f4626939f19a64e1b15a47989d324c9b7bf3c3cad93df06a083cde8154f3633d",
+      "envelope_hash": "5796937b7ffdddb01d75cb879dd7ddc604e8bb68cb4182f601cdc3499bf499a9",
       "findings": [
         {
           "check_id": "DS-002",
@@ -204,7 +204,7 @@
       "task_id": "anko-default-function-arguments"
     },
     {
-      "envelope_hash": "8b92318079818ce2cb35f8568c68ae35588d84b6936da06da78b5f5f1e0c9b04",
+      "envelope_hash": "2f77a8a14b1e5b894b977df7e18d88400eb9b965a27fb282613154164acb20cb",
       "findings": [
         {
           "check_id": "DS-002",
@@ -237,7 +237,7 @@
       "task_id": "anko-typed-variable-bindings"
     },
     {
-      "envelope_hash": "ef0da230bff338ffc5abd5face7c5353e6099e47a6a2858b30cd3465b410e417",
+      "envelope_hash": "9c6e1bd0e6a4f68f49d1c9ba315976f27ee528a5af62f62dda09cbe61258f555",
       "findings": [
         {
           "check_id": "DS-002",
@@ -270,7 +270,7 @@
       "task_id": "arcane-drift-detection-baselines"
     },
     {
-      "envelope_hash": "fecd71f9ed91cfde8447921d03e55626c247dc7378ca0c2668b3e4d5ea176c05",
+      "envelope_hash": "5bdd9b77ce80f1a5cf17265011efb943103e803c3da69f70a5a5781cce76fb49",
       "findings": [
         {
           "check_id": "DS-002",
@@ -303,7 +303,7 @@
       "task_id": "arktype-json-schema-refs-dependencies"
     },
     {
-      "envelope_hash": "7d98f85a823e4908ec358bfcd6efbcf25e7735fd39a93f6ec6322b59ba0ad520",
+      "envelope_hash": "f0597c4215248c7a49927d5a45777e89703ca1a49e0e48daa390e124b82fc17a",
       "findings": [
         {
           "check_id": "DS-002",
@@ -336,7 +336,7 @@
       "task_id": "awilix-async-container-initialization"
     },
     {
-      "envelope_hash": "11d231f13bc2ecbe46b477db29f4f5a6deac659e2327d06930539819e7658e75",
+      "envelope_hash": "9ce8e365d911e1f974eb951c907d32dac582ee4a46940c75f477d546830cda29",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -435,7 +435,7 @@
       "task_id": "bandit-incremental-cache-control"
     },
     {
-      "envelope_hash": "afc26a45f7d8ad085b93d7cdc8543ed58b95cea5f28bae2d66c88d9f5b28ee4f",
+      "envelope_hash": "4e62b3d7aead324ba408cc2d184b01bbbec0287125864f56c3193640357f47bd",
       "findings": [
         {
           "check_id": "DS-002",
@@ -468,7 +468,7 @@
       "task_id": "bandit-interprocedural-taint-checks"
     },
     {
-      "envelope_hash": "2ea54d812976e6c732cef2ec54492df438ca48687e8f5f311451c17c4f866974",
+      "envelope_hash": "cd10d872d248fbdf9504a3f3ee17245731ed5b7d691ad350152a8e9c3bba2dfa",
       "findings": [
         {
           "check_id": "DS-002",
@@ -501,7 +501,7 @@
       "task_id": "bandit-structured-nosec-directives"
     },
     {
-      "envelope_hash": "b3ca70e3f05e57014b77764b19f1418ef38e1ae40d9317e7c50e50eb64cec4e8",
+      "envelope_hash": "fda2e6568ae01d6a0b8e90bf4b79c3b6aeee88233c49f50b07b9e78bab4c078f",
       "findings": [
         {
           "check_id": "DS-002",
@@ -534,7 +534,7 @@
       "task_id": "boa-hierarchical-evaluation-cancellation"
     },
     {
-      "envelope_hash": "424c5807a7f143dbeef86cf38cac3badc74bb168fa6dac343b5cc58728e0465c",
+      "envelope_hash": "c9c1903401cbfadc723c114ceeb9f8c9d24d1a1d60e6bd4de2f9865e4b87b797",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -603,7 +603,7 @@
       "task_id": "cattrs-partial-structuring-recovery"
     },
     {
-      "envelope_hash": "9b09517fc996396364212a15d062383d211daf298ab56f0a5cc5628519bb5a62",
+      "envelope_hash": "233e6295019b10524d163247785a775c2400a91061af3074af628e742d3db42f",
       "findings": [
         {
           "check_id": "DS-002",
@@ -636,7 +636,7 @@
       "task_id": "clack-async-autocomplete-options"
     },
     {
-      "envelope_hash": "eadf9e50df535527866ad17e6c84f4e64832fe589ccfa525495ff13df6ccbe0b",
+      "envelope_hash": "4a0e9a475d603d7021c5715521d29cb06348199bad2e4481d52ff9f1eddcf7e6",
       "findings": [
         {
           "check_id": "DS-002",
@@ -669,7 +669,7 @@
       "task_id": "claude-code-by-agents-recursive-delegation"
     },
     {
-      "envelope_hash": "a6ef374b3c44c6c4fba48338b49d87080ee58ca1bf51dcbece67b538d99ca580",
+      "envelope_hash": "f6f6b8eb97eac94111d023f4b2171c18718fdda4c13387222caa3959bc010ad6",
       "findings": [
         {
           "check_id": "DS-002",
@@ -702,7 +702,7 @@
       "task_id": "cliffy-config-file-parsing"
     },
     {
-      "envelope_hash": "11bcb69d79fc4d97e7e94e76ed564dfebaae86dbf3ff1e7f3526aceb5ed6a617",
+      "envelope_hash": "528c14a3c4f6828692cf67b99ed4985960a8372a0faeb56dbfb83b295c099475",
       "findings": [
         {
           "check_id": "DS-002",
@@ -735,7 +735,7 @@
       "task_id": "csstree-shorthand-expansion-compression"
     },
     {
-      "envelope_hash": "a34bfe9b2f90efbf928f83574830116517ca611ad584f7536ff697ee9033f702",
+      "envelope_hash": "9eed4c4f9c12be61f663209e6a9b64e45b3857c27b810be4a32fb47aa2f60a76",
       "findings": [
         {
           "check_id": "DS-002",
@@ -768,7 +768,7 @@
       "task_id": "dasel-html-document-format"
     },
     {
-      "envelope_hash": "4fe915b19f0880d91ae82ea0fb10476a6815b85bbf1bb4bc95bc429a028c773e",
+      "envelope_hash": "4c6778403c07a4925a7caea876248ae57fb156a3e04971fdf5737a3b90c7aed5",
       "findings": [
         {
           "check_id": "DS-002",
@@ -801,7 +801,7 @@
       "task_id": "dateutil-rfc5545-timezone-interop"
     },
     {
-      "envelope_hash": "120e1984569dd0a0afc866f9d4bea084a21a58fa3d40a37b54e71d28221686d6",
+      "envelope_hash": "db75c69845258f9ba3887fb94b81d798aa1b7ea5941527eb83a08c9974f68953",
       "findings": [
         {
           "check_id": "DS-002",
@@ -834,7 +834,7 @@
       "task_id": "drizzle-orm-window-function-builders"
     },
     {
-      "envelope_hash": "3346c8abd5e1fccd4eff2ed30d2d1cbc105373b775d2c4d360aa7c5dac609b50",
+      "envelope_hash": "6af952ed5afe632f845f348103e540787c0373527981918d3b6c10fc1641d0b6",
       "findings": [
         {
           "check_id": "DS-002",
@@ -867,7 +867,7 @@
       "task_id": "dynamodb-toolbox-conditional-attribute-requirements"
     },
     {
-      "envelope_hash": "513cdba765ca3f56ce0de76ffa295baef1f42332b2c889d8a251b49f0a249692",
+      "envelope_hash": "094fe56b396f09ed8d92c74dfa7a1f57c7bd2de1a3edf3730dc0240330bf17b0",
       "findings": [
         {
           "check_id": "DS-002",
@@ -900,7 +900,7 @@
       "task_id": "dynamodb-toolbox-lazy-recursive-schemas"
     },
     {
-      "envelope_hash": "ebb4c5dd7ee41f32421659a689edf90a268715733b181f707f85bb6d8158fd21",
+      "envelope_hash": "c704c62d383e8fa287a7ee09d1717eeaf4d259a9ee7f0c85840a14c6799df69c",
       "findings": [
         {
           "check_id": "DS-002",
@@ -933,7 +933,7 @@
       "task_id": "effect-sse-httpapi-streaming"
     },
     {
-      "envelope_hash": "0d8c7131372edbc2fea72976cc8d25a231d661c43fb555186767fbbd1b77f315",
+      "envelope_hash": "c244ce0773b374f896341d293267dcc61b4970c12a294a78bf99142bc392efcd",
       "findings": [
         {
           "check_id": "DS-002",
@@ -971,7 +971,7 @@
       "task_id": "eicrud-keyset-pagination-cursor"
     },
     {
-      "envelope_hash": "ab9db674d2516e91f9de9936d68abd9a76238b79c1712d67672aaef2a630045c",
+      "envelope_hash": "9ed7631cda9698590938676024f325eaeb9e474a4b54e92b2b98f0961c081f6c",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1004,7 +1004,7 @@
       "task_id": "etree-xml-diff-patch"
     },
     {
-      "envelope_hash": "caa165bc2d15b454424e8d45f31baad5ee4b7e37391996fe2608588b3fc95e9b",
+      "envelope_hash": "bd9f388a2dc2a22f3dedf203a5ebf8628d1b0fedb5c6fdb976e20a17a1e97d2e",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1037,7 +1037,7 @@
       "task_id": "expr-try-catch-errors"
     },
     {
-      "envelope_hash": "acd762bf4d26842d7c7af370c75ff7b4724fbd3cbdf6bea1c9b08d9dd5205157",
+      "envelope_hash": "e2731d38a2c082db3e5795eb78da50aa54a534a34894fe85c595d949c42e4145",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1070,7 +1070,7 @@
       "task_id": "fastapi-deprecation-response-headers"
     },
     {
-      "envelope_hash": "94b83deac1f1d7f520a723e8a69bdcb3fc77efed14f7c570177c1506a29afc00",
+      "envelope_hash": "600f8247a192eeae14856b291d9d02c3d8278841c5e0c0e404190344095e2e7c",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1103,7 +1103,7 @@
       "task_id": "fastapi-implicit-head-options"
     },
     {
-      "envelope_hash": "2cf1e7b693c778ea060cb42c9f725a149e6635718d985729048a09dc8bb7acfa",
+      "envelope_hash": "617aedc7aee2f532346ff972f2084143557910275b268810d393a36b40431d36",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1136,7 +1136,7 @@
       "task_id": "fd-deterministic-multi-key-sorting"
     },
     {
-      "envelope_hash": "ffafcbe5944cf8064c791aa0eec1ffe2bd084308f13b8722630117e0437b2107",
+      "envelope_hash": "543e0a0d580843bfe65edf418cdacfd59d0cd741fa9eedd6dce82373b8bca577",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1169,7 +1169,7 @@
       "task_id": "geo-shapeindex-serialization"
     },
     {
-      "envelope_hash": "0d2087960e3c7fc316e6a6fb71eaedb6c65cd20ae189f54d4d2a4823f701495c",
+      "envelope_hash": "b71c493f0151f02bb67660734829d4a7fab316fa97fb7998287ecf0dd16e3fb7",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1202,7 +1202,7 @@
       "task_id": "go-critic-doc-link-checker"
     },
     {
-      "envelope_hash": "2d720e58424fd887a1421b5ce87a1fa51a3f7deabd66bdced53414441fe75e6b",
+      "envelope_hash": "826992950775b04e38efc56cd74665cb3833d80373f17584066e787871ed55e7",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1235,7 +1235,7 @@
       "task_id": "go-genai-streamed-function-args"
     },
     {
-      "envelope_hash": "8d543d99f7d89f2408a3c303a8d49fc0bfd141dad0effc86f53537676c27429b",
+      "envelope_hash": "7c526eb7bf9003e627d0e3a717a50a93bd34843f9c7f49dc4a11214c67cef823",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1268,7 +1268,7 @@
       "task_id": "go-git-worktree-merge-conflicts"
     },
     {
-      "envelope_hash": "0b3307cd30b57225deb919f1510939f8b4d6a3c1fa4e90ffa1b64bb7fdb3453a",
+      "envelope_hash": "1d2bc67855dc1d7c52b2689c8b54b094b561164780f6149c94c5b0ae77c21c81",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1301,7 +1301,7 @@
       "task_id": "goreleaser-retry-publish-auditing"
     },
     {
-      "envelope_hash": "ee63c2268f1c7577a682fbce3df2af8d6a536b7399e5119339ec632692cd804e",
+      "envelope_hash": "c58e34e2ff52eede20a1be9ea4b362e2853a399ae196d1e142a91a7ce9ff8de2",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -1350,7 +1350,7 @@
       "task_id": "gql-incremental-graphql-delivery"
     },
     {
-      "envelope_hash": "3132a8033d3164c8a8a1df53b0065ebbbeed129f73f5ecfaef3595693ba7b1bf",
+      "envelope_hash": "a8d8e0705ae79b0d24afb020e5eb7a82498bb3a8cedc18df7f58fcacfbbcc92c",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1383,7 +1383,7 @@
       "task_id": "happy-dom-abort-pending-body-reads"
     },
     {
-      "envelope_hash": "18c630bb361a964f0cc1c9ee49d125310b6c55344c407ca2b5fa4a490d015022",
+      "envelope_hash": "376abefaf308aa8694dae5fea3eb0478e3b5d34f12c4ed1b821a9d82ec096fe3",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1416,7 +1416,7 @@
       "task_id": "happy-dom-deterministic-intersectionobserver"
     },
     {
-      "envelope_hash": "90ea35a8eebe2d0ecf1c6bcfc1df95af96017cc05d9e16606f97e7ff4efe81d4",
+      "envelope_hash": "f62003df456bc661fd971e7d738a7952cd42356f7b798c2fe2a71054942e27b8",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1449,7 +1449,7 @@
       "task_id": "helm-array-merge-strategies"
     },
     {
-      "envelope_hash": "a22dfb6d9d289d51c3ffeb63edde0897f18e512847eceedd68f370bbd854c33d",
+      "envelope_hash": "2a13ddd5e5fb26e9e0f38db56d5a4a119f7177e411fc73cae913e91144a3698b",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1482,7 +1482,7 @@
       "task_id": "helm-unified-manifest-stream"
     },
     {
-      "envelope_hash": "51256bebfe1f79dc4a9feebe447c593afa5dc96b6f3c7e6ac404d1e322e94bb9",
+      "envelope_hash": "cd4cf33017a61ebf0488489f5ab21c537e77808c8c4b8e831f0674955afe6777",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1515,7 +1515,7 @@
       "task_id": "httpx-deterministic-cookie-store"
     },
     {
-      "envelope_hash": "bb7a8fcf8ee88a99a9121b8eae61098b75812e2fdce739983f6137757e15e219",
+      "envelope_hash": "21d3d02fe8dbde43c203ba4340464e6d8b9b963c79160726efbd41a648934a5a",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1548,7 +1548,7 @@
       "task_id": "httpx-multipart-response-parsing"
     },
     {
-      "envelope_hash": "66db4f67fcf51825c56a3b5c9be607d16d28d930db9ab99fa32a24de306d1708",
+      "envelope_hash": "5554637497a1bbe68c86f12adeeb056e0a6faa54ab040e35db4e7327bcecec97",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1581,7 +1581,7 @@
       "task_id": "httpx-streaming-json-iteration"
     },
     {
-      "envelope_hash": "55c4d37fe45cb77209934c16f5f1e3ecfd6ac5a690e02daef6141c8686041ad0",
+      "envelope_hash": "9861e6d2524586583e43608439fe63bc3684e17ad80a3b4ab7532a55d9e48b75",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1614,7 +1614,7 @@
       "task_id": "igel-persist-feature-schema"
     },
     {
-      "envelope_hash": "e5d34da137f0e6a75e5c0d671ca2ad4a806629c0a6dd1c9dd0a3500facefddc1",
+      "envelope_hash": "049de5a50975c404b06dc1828934606f80998d0eff5f1c83e20e6932325016e5",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1647,7 +1647,7 @@
       "task_id": "ink-grid-box-layout"
     },
     {
-      "envelope_hash": "a947140206ae45a62e66809747a55196de64c051bcaf0f1acc254333bd289c9e",
+      "envelope_hash": "19401a648f4a3f15bf467532ead410cd46e2aecfb5e49bf26ef9b46900ed4103",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1680,7 +1680,7 @@
       "task_id": "ipython-session-bundle-replay"
     },
     {
-      "envelope_hash": "6438fb4f812613d163706056bd0d6a032903b4a930ffd0c35220e02675ce64a6",
+      "envelope_hash": "1e1baaa870b2f3f529fcbe0f9c0c7c4256b28ed4f6743f05e64a5f36fb791d0c",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1713,7 +1713,7 @@
       "task_id": "katex-multicolumn-array-spans"
     },
     {
-      "envelope_hash": "6f9b4153582621ccb1d26f7e790c35a331ba20f3e1406f51c4d50bdfd7850139",
+      "envelope_hash": "00a41c4d717f2fbf5020d8f44e37b8e7114514c4ccb952a455e1d1e16e0721d6",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1746,7 +1746,7 @@
       "task_id": "kcp-go-multiplexed-kcp-streams"
     },
     {
-      "envelope_hash": "225429116092f1e8143c1ace8fa5dbf7a85e6e842867284b4c28c23f26a6c0f3",
+      "envelope_hash": "08e6fdeb29242e1205a739d8b28aa21a1f990d45513607a1716de314b82ae6e7",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1779,7 +1779,7 @@
       "task_id": "kea-atomic-signal-selectors"
     },
     {
-      "envelope_hash": "580024a4378d4e5b5d9f7e5e044e5060ed88a8cdb37b531ef57bd15cedb3be71",
+      "envelope_hash": "3a3c1681a1c2377565dcfabaa2f6963501ff2eaf72141931f8703d5f37fab87a",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1812,7 +1812,7 @@
       "task_id": "kgateway-consistent-hash-policy"
     },
     {
-      "envelope_hash": "872c7ebc33949145ed43eab8ff3e8367ec758ddc61f0657d924aa36f818f3ef7",
+      "envelope_hash": "2ee1d8097d8f0c5b8d25092a3e28caa7736ff259440ca0c77d474f87e4c7fc82",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1845,7 +1845,7 @@
       "task_id": "kombu-single-active-consumer-priority"
     },
     {
-      "envelope_hash": "d1fc55166614f28ef9847a8446c74cc27b0df997aec6687d84908e9f36974159",
+      "envelope_hash": "e244257ebe4377d0e994e9e21bb878b66fa46016443887c7a4191ee3bb4ff936",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1878,7 +1878,7 @@
       "task_id": "kombu-virtual-queue-dead-lettering"
     },
     {
-      "envelope_hash": "8fdba4647a87065a2fd55d1c1282e6ed4e3fa1e18333cd45a7e631182eacb230",
+      "envelope_hash": "f14d0730ac05c4765b59b1dec9d3ed7dee4019e6f32a4dc5809241c4bf937be5",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1911,7 +1911,7 @@
       "task_id": "koota-composite-trait-aspects"
     },
     {
-      "envelope_hash": "507c532ae1850741a29eb67242ad217feb08dcd6dbbeb2b5331397e44ee73d1e",
+      "envelope_hash": "1919c9e118e63cd068e6d189f6afa6718db022df96ec6d968e252a2d4407b160",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1944,7 +1944,7 @@
       "task_id": "koota-deferred-mutation-buffer"
     },
     {
-      "envelope_hash": "640c7a73acb6f457548bb9c4a01aa26f63d0e6464ef193aec3002c04ea56d46c",
+      "envelope_hash": "1da3cd7765c4e05ca946f12071b76e827380da8186bfdf4bbf4ffca70eb3fe77",
       "findings": [
         {
           "check_id": "DS-002",
@@ -1982,7 +1982,7 @@
       "task_id": "koota-entity-snapshot-rollback"
     },
     {
-      "envelope_hash": "d6c7b6324a99e8a7f112fd6bce5b4bb975c6906726e6a83fc09688ed0a55e219",
+      "envelope_hash": "a77b07ed0f3c434e12fc870982ac1bef09269098e33adb3ec0ab2810b2875375",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2015,7 +2015,7 @@
       "task_id": "koota-pair-relation-tracking"
     },
     {
-      "envelope_hash": "2238fb2850a7708756aca1b90e4b570236f67e01831bc56a0b42869705a200ea",
+      "envelope_hash": "1a2ec182181c1a8574023af0a1d761fb2af1747a5c9594cb811d32823d97aebd",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2048,7 +2048,7 @@
       "task_id": "koota-query-predicates"
     },
     {
-      "envelope_hash": "2387fa64480caebea42f9c115850b249c5279ef4d15c2a390da90d53b31a5039",
+      "envelope_hash": "ce911cf21fabc00c1a4f03ea648dced7c6710c10a2e3b30794de191a6adcf94f",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2081,7 +2081,7 @@
       "task_id": "kysely-window-grouping-helpers"
     },
     {
-      "envelope_hash": "7b6b1ed8a68bb2ed2b4a9287c1ac5ec81bf7b5215b9c81c7e9d25dfa54e1a677",
+      "envelope_hash": "06a65f359e44603b75fa14b362792e3c49e414c06a84f2f5dcce2e651f518232",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -2135,7 +2135,7 @@
       "task_id": "langchain-request-coalescing"
     },
     {
-      "envelope_hash": "a7f15e613d89c3920377f1080d1860d2ef12e6469c0593ce364ac75af5977ebd",
+      "envelope_hash": "7a7f57842f347b58c3e268351a88c8e08801f0aa9b77feb08979661526a70f7b",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -2184,7 +2184,7 @@
       "task_id": "mashumaro-flattened-dataclass-fields"
     },
     {
-      "envelope_hash": "d7db2b03fffd8b5823eab353f66069ccb175ed866c0551afaef3dc987f2e98a0",
+      "envelope_hash": "c6920b1c0409b03963f785e2861e93051a3e676c04d6b7b1d64cdbf5a0a6e3cf",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2217,7 +2217,7 @@
       "task_id": "meriyah-explicit-resource-declarations"
     },
     {
-      "envelope_hash": "cae224c6866e38818c087b8e4e659e2323405a5efc44cbc69acd79a6e9b83e44",
+      "envelope_hash": "328afc0f1402af268d99ae0c022acf722505cf1d238a441f029f63729d59699c",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2250,7 +2250,7 @@
       "task_id": "mnamer-daemon-watch-lifecycle"
     },
     {
-      "envelope_hash": "d3a9f1fe8229b50e6cafab3a84f765709e1e89691141fbb0efda61bb2c501581",
+      "envelope_hash": "703511421de5e9deeadbd01303db1b24fd9088edff8872ecd162d6b30baf796f",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -2319,7 +2319,7 @@
       "task_id": "mobly-grouped-test-barriers"
     },
     {
-      "envelope_hash": "b732592f0092ccd64ea54170e75e879775dd034c7c995af0fbefcfffe6f8a346",
+      "envelope_hash": "bf244a2972d553c1d76a5071030a8e7209cc75bc408b4a93a24fafbe9804fb7d",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -2368,7 +2368,7 @@
       "task_id": "narwhals-rolling-window-suite"
     },
     {
-      "envelope_hash": "614d6bc92605df57c0bce288b0c283d906b0194b8b6f5ac0d7c3e67a899dd57c",
+      "envelope_hash": "4cd08cd693e1a110b30e45b659477a3e35956850fa8796d040d124a4bc0cb306",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -2432,7 +2432,7 @@
       "task_id": "numba-stencil-boundary-modes"
     },
     {
-      "envelope_hash": "c235e37496007e8af0d5126a0cd5982ca69da7b3b2a3c2f92a505ac4a58abf33",
+      "envelope_hash": "4956a7b19d82e3dd7018f4efb5426b2bacba0d05ed04a96188bd56b1312f8d38",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2465,7 +2465,7 @@
       "task_id": "obsidian-linter-auto-table-of-contents"
     },
     {
-      "envelope_hash": "35b8b93ec091bbd2c75c4249ec66a181f1c37e42f5e861d153321f17343ca23f",
+      "envelope_hash": "373c79b2b090158e1014e07616d07237481b528980a0ebe5f48000274385aa13",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2498,7 +2498,7 @@
       "task_id": "obsidian-linter-link-format-conversion"
     },
     {
-      "envelope_hash": "7916cce801bb6cfd6003aa6b2888cc8e2494dd2e4e134c65815584dcc3f834ab",
+      "envelope_hash": "dd661f0feeb658a500442ac89c26ad9b77a34d0de6bd87af8314c65e8468123d",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2531,7 +2531,7 @@
       "task_id": "obsidian-linter-scoped-ignore-markers"
     },
     {
-      "envelope_hash": "d089678b426e195eb8d1dae239afa5e9ee0f459333ebe8e798b891f9475ee140",
+      "envelope_hash": "5a53bebeb76758abf2f5973c23bec9c9120addd5c9c47dad2b84ed2e8d60c457",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2564,7 +2564,7 @@
       "task_id": "ofetch-per-origin-circuit-breaker"
     },
     {
-      "envelope_hash": "b38ec18f9d6f077d645f49b3d40634c989eb6d17e720fc9dac88f95c8d8597e4",
+      "envelope_hash": "3e677880e53fa35e59706c057a90d1084bdd7ac0157f8c5761ba4bfc4286dd0b",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2597,7 +2597,7 @@
       "task_id": "onedump-dump-encryption-pipeline"
     },
     {
-      "envelope_hash": "6c5a7fdef71a0ff803c08c7cc9b72e5a02fce3502a46fec29481779afaaf9584",
+      "envelope_hash": "ae699800c96490383d535faed0afc147dd72dd1ffc30a07040d6af9f41147482",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2630,7 +2630,7 @@
       "task_id": "opa-rego-rule-profiling"
     },
     {
-      "envelope_hash": "6018696a66bf9d70727664685059f4d5005566ce9c4eb10f08fba87218fc48a8",
+      "envelope_hash": "e06608b92e2b8ca9c698e9073069ec7338605c5f73554219d210de5ab95f7b48",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2663,7 +2663,7 @@
       "task_id": "opa-template-string-reconstruction"
     },
     {
-      "envelope_hash": "86c963a90abb0d4eebc344b1d372ba89a248109e7c3b3b82a14f5acb0361f094",
+      "envelope_hash": "c5fe0fca1989dbc25f17b93f0f136a607c1322c23d82507c79f71cc337a8dc29",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2696,7 +2696,7 @@
       "task_id": "optique-conditional-option-dependencies"
     },
     {
-      "envelope_hash": "884e269b1b8b4d6e5a774b823bcc82481cef65e273aedfce0b2fb4cc4f29aef9",
+      "envelope_hash": "03c5e17fd31503d8f66491fc5a5db0496639766e871b2ba7208099e2cccae5c9",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2729,7 +2729,7 @@
       "task_id": "oxvg-structural-selector-preservation"
     },
     {
-      "envelope_hash": "44c9eff19cb8cc2ba1972ebc9cdd42d2a468c2290e2c77e870d29051dac750ab",
+      "envelope_hash": "0cab05796611933de4f33336c113a6504c21884351f456b688e9f35e03e80ffc",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2762,7 +2762,7 @@
       "task_id": "participle-grammar-conflict-analysis"
     },
     {
-      "envelope_hash": "99c3b0d40e58650917a45f9913813c4cf39ed2ffb25c77c152d6429b637e2dcb",
+      "envelope_hash": "54971ae8bb12c383e0bc6cca33d9c507f57f4013298c76351ef6860c7bbbe1f4",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2795,7 +2795,7 @@
       "task_id": "pebble-durability-wait-apis"
     },
     {
-      "envelope_hash": "a07717c39200ff8653150f9c03dd3d0d7d627d38a7b8689ee07f086017a9e0e5",
+      "envelope_hash": "eade5c82aef2a6abae4051c2625406b10925e6a1bd1f3db1ca933f3beb6b1f29",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2828,7 +2828,7 @@
       "task_id": "pest-character-class-coalescing"
     },
     {
-      "envelope_hash": "9200ff7cbe99d272a2d88fab647a09ec8642a10eb40ebc78bfb847491e40b725",
+      "envelope_hash": "ab82a74d1ba2203c52d1a88436d52a0dda494b4112dc8a1cbe579ef22e884650",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2861,7 +2861,7 @@
       "task_id": "prometheus-transactional-reload-status"
     },
     {
-      "envelope_hash": "8f253d205594f8ee6f1a1d3c8ff4fb20fbed6afa151b3a79bce359eed33d082c",
+      "envelope_hash": "0073bae69f2ec6d12e89968a0d1a89fbc85eed82ad329940a1c11f36212a6b08",
       "findings": [
         {
           "check_id": "DS-002",
@@ -2894,7 +2894,7 @@
       "task_id": "prometheus-typed-label-sorting"
     },
     {
-      "envelope_hash": "5a24fd9cb37f32b7765eed7aee2b4349ea065c56634915ee981562e1f0c915fd",
+      "envelope_hash": "d3abecd4bd7441410e17b2e6f8fe5f0af3c282aac20b87b1d175e45045a33137",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -2973,7 +2973,7 @@
       "task_id": "psd-tools-blend-range-api"
     },
     {
-      "envelope_hash": "bb9fdf1d0648541c68cf4caf63121fa123402530d38d027e14097ec44a3c962d",
+      "envelope_hash": "d372a83fbd1097b9813d124e86bf8330ee74f202af732f46f24b911d58927db2",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -3022,7 +3022,7 @@
       "task_id": "pwntools-tube-multiplexing"
     },
     {
-      "envelope_hash": "3948b4f988a3a1847cb84eb14fb5757acfd60554786e1a9608c9059d11ddd875",
+      "envelope_hash": "b82962581f1a890cd76221641cc645171930b5d569a43f16d7b3dbd72c424036",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -3126,7 +3126,7 @@
       "task_id": "python-statemachine-state-data-scoping"
     },
     {
-      "envelope_hash": "afecf10e62bcb53f6d02fdca3fa1858223c516721bf64f6291eebc80fcffe8f9",
+      "envelope_hash": "f16a772a3526394df9ed52527f01a01d4d08665bc507dea646dd57fe7a515319",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3159,7 +3159,7 @@
       "task_id": "query-persist-restored-query-state"
     },
     {
-      "envelope_hash": "e58a463e3b83ed7737102cc51378e6afb8b84257d0a77f7178f85a99871cfd39",
+      "envelope_hash": "ad84a29fab1cc78ff777c0be15ff284a5971141fc4a6451ba73e465b5fb5f326",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3192,7 +3192,7 @@
       "task_id": "quill-shared-toolbar-focus"
     },
     {
-      "envelope_hash": "32df1d12dd2d9213945b5c97e73bb64fecb0ea7084c1e7c39d2d124ca6453715",
+      "envelope_hash": "76b84d1445b80b03b2cbf99d0cedffdae9e29f509edce1dd83306085df95054b",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -3246,7 +3246,7 @@
       "task_id": "returns-validated-error-accumulation"
     },
     {
-      "envelope_hash": "f71d33ae409d7b15ddafeb9454b44e1d5a048539d05df9cec8de349e634d9b81",
+      "envelope_hash": "2cf198d997539bfbcc3f84fd51ec5545ae1bc90003cfb3393cfdcc64b3491852",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3279,7 +3279,7 @@
       "task_id": "scc-bounded-memory-spilling"
     },
     {
-      "envelope_hash": "3def9078038a6ee6a1747d1e333ad9354c939176db901805b3182219779e5330",
+      "envelope_hash": "522eddc23dd42b073448dd0d27781e0fcf95daafed5f769817e394a923c84187",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3312,7 +3312,7 @@
       "task_id": "scriggo-method-declarations"
     },
     {
-      "envelope_hash": "e9b7162e7d4308eec9d284f3c166cfea3ae14b661bf8c81e4530da1a391da9c9",
+      "envelope_hash": "b5351746d77abe15d4b53cf7789c66210af05a628e14cb606c188d69fa8c4b0a",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -3396,7 +3396,7 @@
       "task_id": "skrub-duration-encoding"
     },
     {
-      "envelope_hash": "8c4afd1eabded138d36057e1e0a27988394e6bffaa0ff43f1c2b549d633ef6b0",
+      "envelope_hash": "096cec939ebf15cc8dbd35cacc6bf4cbf3a193941fe9d9df6132abc6e3d8475d",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3429,7 +3429,7 @@
       "task_id": "sql-formatter-bigquery-pipe-formatting"
     },
     {
-      "envelope_hash": "65664a5a86caee4b67606980268e128aa992fa9d12023388588ceddc7f2946b1",
+      "envelope_hash": "fd63d664fd7aad4a6d693ebb5dbb84af8f84ed9df03084c1a42e8195dc7b6759",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -3483,7 +3483,7 @@
       "task_id": "sqlfmt-create-table-ddl-formatting"
     },
     {
-      "envelope_hash": "8f7bc86b41abd7f1b6ee0ca76cb540ffe43a5f3cec2edf3186a0cdf4e009f816",
+      "envelope_hash": "3ad0cd6715dfe2f01bcf2e9f2d4467f60b0e9be0cc7a08b2db3e331f07fbc4f9",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -3577,7 +3577,7 @@
       "task_id": "sqlite-utils-safe-import-checkpoints"
     },
     {
-      "envelope_hash": "e339b66478018983f4ddab64938b840411e3e619add9e39615ac52eeae2d8362",
+      "envelope_hash": "b18efc5b789806559da8f9adf51c2784796798a91ceeff4c8c7226a69d1a9c93",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3610,7 +3610,7 @@
       "task_id": "superjson-error-stack-serialization"
     },
     {
-      "envelope_hash": "0c8900678d86851f3a61173a73139fd6f9a55d9b1656471889c008d3a62b7ac0",
+      "envelope_hash": "f38c1ca814192df1b852cea03ebbdedb0e1aacad4c6a31917e2e5186d6430d51",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3643,7 +3643,7 @@
       "task_id": "task-task-graph-export"
     },
     {
-      "envelope_hash": "d4841ff75ffaa98c3329b2bad03a18df158f1a75a76a97014971d71ee73e02ee",
+      "envelope_hash": "3894b88ab1f724d184e9c21afaecb214656ada4f9511f2f1b33e8334590bd007",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3676,7 +3676,7 @@
       "task_id": "tengo-callable-instance-isolation"
     },
     {
-      "envelope_hash": "ccd5e0df088e2791da4a69d18be2d6f051b773d39d610b17e417865af510c091",
+      "envelope_hash": "ca46466ee26444e8e439eb972ca10ea2962891a337edf11bfc19020fb1f5f3b7",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3709,7 +3709,7 @@
       "task_id": "tengo-destructuring-bindings"
     },
     {
-      "envelope_hash": "359479cfaf119491ff824b652fc677af45251da68be95ccbc640cda71b0a38e1",
+      "envelope_hash": "ace8c528efb63d6b44444b3cac4b2bc0db0232b364a937e2d64e694b7719070c",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3742,7 +3742,7 @@
       "task_id": "termenv-preserve-ansi-resets"
     },
     {
-      "envelope_hash": "b24a0f5226c136bec2b24f0ecb8b34148677aea2ff3137095894d7c377c2f383",
+      "envelope_hash": "3bb42944d3e365f0370f026b3e4b55980797a4ed6eea4fa31460cd87e610bea6",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3775,7 +3775,7 @@
       "task_id": "testem-bail-on-test-failure"
     },
     {
-      "envelope_hash": "553a192d073be1d3352359574c5bf2dfac1a510794f5c1c7f719862919292934",
+      "envelope_hash": "dd2fbcb7d7ebb4625adeaf4eac17550d16e058dab7e6b89fb84482b537ca0133",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3808,7 +3808,7 @@
       "task_id": "testem-per-launcher-reports"
     },
     {
-      "envelope_hash": "bbfedd1a42dc2078e4652bf29975b50dec9f4d1fcc76afaa5b075fc49905f6b3",
+      "envelope_hash": "33aa2a051f0ed40690f0525188f34198cc2939b8f6b3044d890d635f049a9c25",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3841,7 +3841,7 @@
       "task_id": "textual-kitty-key-phases"
     },
     {
-      "envelope_hash": "8ba45c9e7f13e1f260d4b3527007907f8ba22a6a81bdf2a6801b40bcaaf66b93",
+      "envelope_hash": "d5dc07fa9a1fd889097806bf926d0f2ca814b45bc4c047503d3669f89236e36c",
       "findings": [
         {
           "check_id": "GEN-006",
@@ -3895,7 +3895,7 @@
       "task_id": "textual-richlog-follow-state"
     },
     {
-      "envelope_hash": "229bfd1c0f3011f4d40849e3c9e592ab4e454961432fe34574e711434a35e493",
+      "envelope_hash": "8d63ebdf59131eb298c7d3fb94c4a92a9269cc3dcf1d0e14f40e0c893a3925a3",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3928,7 +3928,7 @@
       "task_id": "tomlkit-toml-table-converters"
     },
     {
-      "envelope_hash": "070331ed066575c70d3c804636574c8b3a680c8e76e98590377e29c52862893c",
+      "envelope_hash": "dd3947907bfd6e9e8c8c0cdf99553b1f58f355bce944cd7c8bba8faed8d59863",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3961,7 +3961,7 @@
       "task_id": "true-myth-iterable-collection-combinators"
     },
     {
-      "envelope_hash": "ad2f68912cc6d580ad416bde3dff149946755367b7acddfeb5394205b4a1d08c",
+      "envelope_hash": "889b19f70da5e86e6e10997c632ab90a23dd8dde05aeba2d6ef1e15fd202ac90",
       "findings": [
         {
           "check_id": "DS-002",
@@ -3994,7 +3994,7 @@
       "task_id": "ts-pattern-match-each"
     },
     {
-      "envelope_hash": "7e8c27367d40a461e95c9fc9d3ba05e52d87ccab3005abdee1cb12a8c2069678",
+      "envelope_hash": "c69c2b07e0b7a627699b5d17527bf0a1d33581ec22cea97d6945b0c4243571b7",
       "findings": [
         {
           "check_id": "DS-002",
@@ -4027,7 +4027,7 @@
       "task_id": "updo-policy-alerting"
     },
     {
-      "envelope_hash": "50320203297c5756eabe6c8c9dfb2a71d80143318906a94e4404e1b36c80b16d",
+      "envelope_hash": "b0da40ca98b1691f2f86def6f20be3cce99543be531dcc1e43c91a1a3b3def0c",
       "findings": [
         {
           "check_id": "DS-002",
@@ -4060,7 +4060,7 @@
       "task_id": "valibot-recursive-schema-composition"
     },
     {
-      "envelope_hash": "6893abcc3a37471f53b7e8aa6e5ecacc88e1a5a0bd875a8ace62549736e42353",
+      "envelope_hash": "a6b47be21d6fea698786841ff53470f3b805f3b0967db92706cdabdd99c3c5f0",
       "findings": [
         {
           "check_id": "DS-002",
@@ -4093,7 +4093,7 @@
       "task_id": "vitest-duration-sharding"
     },
     {
-      "envelope_hash": "6410294e162e8b445fbb4cf8c4e20c7e18d91e172b6d6c0997a9fa529ba6b43f",
+      "envelope_hash": "55d06ad0102bc3b14b6a3c76746a3828ae3fe46bdbe98436c6b41f1a7c2a96f2",
       "findings": [
         {
           "check_id": "DS-002",
@@ -4126,7 +4126,7 @@
       "task_id": "vulture-persistent-analysis-cache"
     },
     {
-      "envelope_hash": "55928134114fbe6e8ca8af7c1c4bfcd6d59e7d88fffbd62f0e5c126f48922f3c",
+      "envelope_hash": "c5281f2c79ccd1f5c4da8d2c7ebb113525118f559d93c7ee730e3163fc47338e",
       "findings": [
         {
           "check_id": "DS-002",
@@ -4159,7 +4159,7 @@
       "task_id": "wasmi-trap-coredumps"
     },
     {
-      "envelope_hash": "d5ef000e6a95cf95c84dcd5b5bd42a080b87ae4cb5741f5065ae8852cfedbe20",
+      "envelope_hash": "f8e6f58582fe6dcaad51df328adc4e719138f3812c6a8415a3b0eb80fdb75160",
       "findings": [
         {
           "check_id": "DS-002",
@@ -4192,7 +4192,7 @@
       "task_id": "wazero-multi-module-snapshots"
     },
     {
-      "envelope_hash": "6542074f0726c68d74482d29967337f37721593b2835ad5b2b54aa038f8ad8fe",
+      "envelope_hash": "6ea2d1cf1830a1f0e5de829a90b61168bbae547e6217c7d2d1a95b2b37da79c0",
       "findings": [
         {
           "check_id": "DS-002",
@@ -4225,7 +4225,7 @@
       "task_id": "yaegi-go-embed-directives"
     },
     {
-      "envelope_hash": "918ba7f70b225c61aa6d0e719627ed0a9045d1801eb421719e1ffe47432cb844",
+      "envelope_hash": "a17bf1fc5f146d101587779220715ae14327a37fe1acb3b6e31fce05c7ef947a",
       "findings": [
         {
           "check_id": "DS-002",
@@ -4258,7 +4258,7 @@
       "task_id": "yjs-map-conflict-detection"
     },
     {
-      "envelope_hash": "2bfdffcd38969b5f4afa16f356a903b1d2b4e3db7b2cf0807a3d04b3ad934795",
+      "envelope_hash": "ca4cce5462b0416c7ab264b53a0e68735e20db9bf535d2c8dcf1ac0758eeb714",
       "findings": [
         {
           "check_id": "DS-002",

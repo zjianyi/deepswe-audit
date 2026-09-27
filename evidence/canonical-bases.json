@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-09-27T22:03:33.789342+00:00",
+  "results": [
+    {
+      "task_id": "eicrud-keyset-pagination-cursor",
+      "declared_base": "68dafce",
+      "canonical_commit": "68dafce500a85227b996d8fcab466d7a0c88809e",
+      "url": "https://api.github.com/repos/eicrud/eicrud/commits/68dafce",
+      "status": "RESOLVED"
+    },
+    {
+      "task_id": "koota-entity-snapshot-rollback",
+      "declared_base": "72ebef44b8e024d877250f055eea60cdfaa4506",
+      "canonical_commit": "72ebef44b8e024d877250f055eea60cdfaa45069",
+      "url": "https://api.github.com/repos/pmndrs/koota/commits/72ebef44b8e024d877250f055eea60cdfaa4506",
+      "status": "RESOLVED"
+    },
+    {
+      "task_id": "langchain-request-coalescing",
+      "declared_base": "7cef35b",
+      "canonical_commit": "7cef35bfdebd22148a4c62a10bf01f1fde36e722",
+      "url": "https://api.github.com/repos/langchain-ai/langchain/commits/7cef35b",
+      "status": "RESOLVED"
+    }
+  ]
+}
