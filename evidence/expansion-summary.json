@@ -11,9 +11,9 @@
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 16,
-      "FAIL": 28,
+      "FAIL": 29,
       "INFRASTRUCTURE_FAILURE": 12,
-      "NOT_RUN": 47
+      "NOT_RUN": 46
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 57,
-    "semantic": 56,
+    "semantic": 57,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1058,17 +1058,19 @@
       "task_id": "mobly-grouped-test-barriers"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "b0403e8f6b0bb57b9266aafe921a21a6151fcc8ae741ca4b139b0a86dd91e3dd",
         "execution.json": "6077381f3f578b4ca651bbf44f9df3406661ebf8c73801ed184640cc6fc7fdb2",
+        "semantic.json": "9c2d7cb229225f00373b649a877f4e8260b4fb63147e437d66781769c639d329",
         "static.json": "9e8daf9e5a2d6a6af6c7e66076ac1c8988a86aa7ee2b2303058b3e3d0c1a3831"
       },
       "language": "python",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "FAIL"
       },
       "repository": "https://github.com/narwhals-dev/narwhals",
