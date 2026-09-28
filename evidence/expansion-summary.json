@@ -10,10 +10,10 @@
       "NOT_RUN": 33
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 19,
+      "DEFERRED_EVIDENCE_REQUIRED": 20,
       "FAIL": 34,
       "INFRASTRUCTURE_FAILURE": 16,
-      "NOT_RUN": 34
+      "NOT_RUN": 33
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 70,
-    "semantic": 69,
+    "semantic": 70,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1296,17 +1296,18 @@
       "task_id": "pebble-durability-wait-apis"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "08d86f2d7fb5b4f56ad5764d904a4a74a7234a5a6392db58114c296fdfbb2304",
+        "semantic.json": "0dccffb6955daa502e1a4d3f8185bc2ee1e087a27629d8d8be8cd4e7e6d776cd",
         "static.json": "3a213624226661cc88b7e83cebc7679f24266905dce14a550381d9806fddea99"
       },
       "language": "rust",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/pest-parser/pest",

