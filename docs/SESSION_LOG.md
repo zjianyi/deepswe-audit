@@ -309,3 +309,11 @@ Native completion advanced to 78/103; SCC bounded-memory spilling active, 24 que
 ### 2026-09-28 08:36 UTC — Returns S0 integrity finding
 
 Returns S0 validated as FAIL, corroborating the native protected-path reward bypass under SEM-008 and SEM-020; reproducibility remains deferred. Archived raw review parsed (8962 bytes). Accounting now 78 native and 78 S0 outcomes, zero clean results. SCC native active with 24 queued; original worker waiting without active S0 or errors. Verified 259 public evidence hashes; published semantic result, summary and EXPANSION.md. No new attempts or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:38 UTC — expansion heartbeat
+
+Fresh GitHub status: 79 native task jobs completed, Scriggo method declarations active, 23 queued. SCC completed after the latest worker poll and awaits import. Local accounting remains 78 native and 78 S0 outcomes. Original worker PID 99581 waiting without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:40 UTC — SCC native integrity failure
+
+Native completion advanced to 79/103; Scriggo method declarations active, 23 queued. SCC protected-path reward 1 accepted by Pier without exception despite failing feature tests. Explicit reach/write markers verified; oracle/no-op rewards 1/0 (31 F2P, 286 P2P). Both other attacks rejected with reach. Sole original worker and SCC S0 active without errors. Refreshed EXPANSION.md and summary; verified 261 public evidence hashes. Existing reconciliation agent assigned read-only tasks 75–79 hash/case verification. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

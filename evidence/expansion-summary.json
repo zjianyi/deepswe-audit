@@ -5,9 +5,9 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 20,
-      "FAIL": 44,
+      "FAIL": 45,
       "INFRASTRUCTURE_FAILURE": 14,
-      "NOT_RUN": 25
+      "NOT_RUN": 24
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 23,
@@ -21,7 +21,7 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 78,
+    "execution": 79,
     "semantic": 78,
     "static": 103
   },
@@ -1461,10 +1461,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "6e159fbe3cd0a84b5d6d17c6b86c1fdeafbee66c12a12b8e11c40485730f17f6",
+        "static.json": "1a9ce4d4c034ad1ba287fbba1154fa7851c54c208fdfcda6a58379380fbddd69"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

