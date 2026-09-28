@@ -12,8 +12,8 @@
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 19,
       "FAIL": 33,
-      "INFRASTRUCTURE_FAILURE": 15,
-      "NOT_RUN": 36
+      "INFRASTRUCTURE_FAILURE": 16,
+      "NOT_RUN": 35
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 68,
-    "semantic": 67,
+    "semantic": 68,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1260,17 +1260,18 @@
       "task_id": "oxvg-structural-selector-preservation"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "a42189faae3c8991a68652f0073db528a581f5fa37b9a0eb4857dce9cabb6835",
+        "semantic.json": "a265212b6ceedae3cd7eba960baf6718c00240ca3dabc1432128d3fadc950657",
         "static.json": "cbbff496d5e3e65cfd23d578213533b0e29d0d67423a512b325efcf2c2c72844"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/alecthomas/participle.git",
