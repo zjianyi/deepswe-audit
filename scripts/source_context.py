@@ -54,5 +54,12 @@ def one(row):
     write(out,{'context_version':2,'repository':row['repository'],'base_commit':row['base_commit'],'selection':'README/manifests plus first 20 preimage paths from official oracle; excerpt limits explicit','files':files,'complete_codebase':False})
     return row['id']+' fetched'
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
-    for result in pool.map(one,[r for r in frozen['tasks'] if r['id'] in frozen['pilot']]):print(result,flush=True)
+def main():
+    import argparse
+    ap=argparse.ArgumentParser();ap.add_argument('--task');ap.add_argument('--expansion',action='store_true');args=ap.parse_args()
+    selected=[args.task] if args.task else ([r['id'] for r in frozen['tasks'] if r['id'] not in frozen['pilot']] if args.expansion else frozen['pilot'])
+    if not set(selected).issubset({r['id'] for r in frozen['tasks']}):raise ValueError('unknown task')
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+        for result in pool.map(one,[r for r in frozen['tasks'] if r['id'] in selected]):print(result,flush=True)
+
+if __name__=='__main__':main()

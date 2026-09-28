@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from audit_core import UPSTREAM, PIER, CASES, sha, snapshot, hash_json, write, preflight, classify
 from probes import solve_script
+from cohort import validate_expansion, accepted_attack_reward
 
 
 def now(): return datetime.now(timezone.utc).isoformat()
@@ -32,13 +33,17 @@ def load(path):
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--task',required=True);ap.add_argument('--source',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--manifest',type=Path,default=Path('manifests/frozen.json'));args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--task',required=True);ap.add_argument('--source',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--manifest',type=Path,default=Path('manifests/frozen.json'));ap.add_argument('--cohort-manifest',type=Path);args=ap.parse_args()
     out=args.output.resolve();out.mkdir(parents=True,exist_ok=False)
     frozen=load(args.manifest); original=args.source.resolve()/'tasks'/args.task
     row=next(r for r in frozen['tasks'] if r['id']==args.task)
     doc={'schema_version':'deepswe.native-run/1','task_id':args.task,'task_hash':row['task_hash'],'upstream_commit':UPSTREAM,'pier_version':PIER,'frozen_manifest_hash':frozen['manifest_hash'],'image_digest':None,'started_at':now(),'cases':{},'status':'INFRASTRUCTURE_FAILURE','github_run_id':os.getenv('GITHUB_RUN_ID'),'github_run_attempt':os.getenv('GITHUB_RUN_ATTEMPT'),'driver_commit':os.getenv('GITHUB_SHA')}
     try:
-        if args.task not in frozen['pilot'] or snapshot(original)['sha256'] != row['task_hash']: raise RuntimeError('TASK_BINDING_MISMATCH')
+        allowed=frozen['pilot']
+        if args.cohort_manifest:
+            cohort=load(args.cohort_manifest);allowed=validate_expansion(cohort,frozen)
+            doc['expansion_manifest_hash']=cohort['manifest_hash']
+        if args.task not in allowed or snapshot(original)['sha256'] != row['task_hash']: raise RuntimeError('TASK_BINDING_MISMATCH')
         if hash_json({k:v for k,v in frozen.items() if k!='manifest_hash'}) != frozen['manifest_hash']: raise RuntimeError('MANIFEST_HASH_MISMATCH')
         if importlib.metadata.version('datacurve-pier') != PIER: raise RuntimeError('PIER_VERSION_MISMATCH')
         mem={x.split(':')[0]:int(x.split()[1])*1024 for x in Path('/proc/meminfo').read_text().splitlines() if ':' in x}
@@ -69,6 +74,7 @@ def main():
             case_doc={'case':case,'started_at':now(),'effective_task_hash':effective['sha256'],'effective_file_hashes':effective['files'],'image_digest':digest,'expected_reward':1 if case=='oracle' else 0,'probe_scope':'candidate committed repository only' if case not in ('oracle','nop') else 'released endpoint'}
             cmd=['pier','run','-p',str(task),'--agent','nop' if case=='nop' else 'oracle','--env','docker','--no-force-build','--n-concurrent','1','--max-retries','0','--job-name',case,'--jobs-dir',str(case_out/'jobs')]
             case_doc['command']=cmd;write(case_out/'case-manifest.json',case_doc)
+            trial=None;reward=None;ctrf=None
             try:
                 case_doc['exit_code']=run(cmd,case_out/'pier.log',15600)
                 result_files=list((case_out/'jobs').glob('*/*/result.json'))
@@ -85,6 +91,11 @@ def main():
                     case_doc['outcome']={'status':'FAIL','code':'CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE','native_outcome':case_doc['outcome']}
             except Exception as exc:
                 case_doc['outcome']={'status':'INFRASTRUCTURE_FAILURE','code':type(exc).__name__,'details':str(exc)}
+            if args.cohort_manifest and 'trial' in locals():
+                case_doc['native_reward']=reward
+                case_doc['native_verifier_result']=(trial or {}).get('verifier_result')
+                if accepted_attack_reward(case,reward,case_doc['native_verifier_result'],(trial or {}).get('exception_info')):
+                    case_doc['outcome']={'status':'FAIL','code':'CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER','native_outcome':case_doc['outcome']}
             case_doc['finished_at']=now();write(case_out/'case-manifest.json',case_doc);doc['cases'][case]=case_doc
             # No source, submission patch, or oracle content in public artifacts.
             for p in (case_out/'jobs').rglob('*'):

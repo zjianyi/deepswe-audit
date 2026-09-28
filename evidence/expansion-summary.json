@@ -1,0 +1,1468 @@
+{
+  "all_scheduled_accounted": false,
+  "clean_count": 0,
+  "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
+  "phase_status_counts": {
+    "execution": {
+      "NOT_RUN": 103
+    },
+    "semantic": {
+      "NOT_RUN": 103
+    },
+    "static": {
+      "FAIL": 16,
+      "PASS": 87
+    }
+  },
+  "recorded_outcome_counts": {
+    "execution": 0,
+    "semantic": 0,
+    "static": 103
+  },
+  "schema_version": "deepswe.expansion-progress/1",
+  "task_count": 103,
+  "tasks": [
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/abs-lang/abs",
+      "task_id": "abs-module-cache-flags"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/abs-lang/abs",
+      "task_id": "abs-stepped-slices"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/rhysd/actionlint",
+      "task_id": "actionlint-action-pinning-lint"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/reagento/adaptix",
+      "task_id": "adaptix-name-mapping-aliases"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/aio-libs/aiomonitor",
+      "task_id": "aiomonitor-task-snapshots-diff"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/mattn/anko",
+      "task_id": "anko-default-function-arguments"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/mattn/anko",
+      "task_id": "anko-typed-variable-bindings"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/getarcaneapp/arcane.git",
+      "task_id": "arcane-drift-detection-baselines"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/arktypeio/arktype",
+      "task_id": "arktype-json-schema-refs-dependencies"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/PyCQA/bandit.git",
+      "task_id": "bandit-incremental-cache-control"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/PyCQA/bandit.git",
+      "task_id": "bandit-interprocedural-taint-checks"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "rust",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/boa-dev/boa",
+      "task_id": "boa-hierarchical-evaluation-cancellation"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/python-attrs/cattrs",
+      "task_id": "cattrs-partial-structuring-recovery"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/bombshell-dev/clack",
+      "task_id": "clack-async-autocomplete-options"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/baryhuang/claude-code-by-agents",
+      "task_id": "claude-code-by-agents-recursive-delegation"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/c4spar/cliffy",
+      "task_id": "cliffy-config-file-parsing"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "javascript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/csstree/csstree",
+      "task_id": "csstree-shorthand-expansion-compression"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/TomWright/dasel",
+      "task_id": "dasel-html-document-format"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/drizzle-team/drizzle-orm",
+      "task_id": "drizzle-orm-window-function-builders"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/dynamodb-toolbox/dynamodb-toolbox",
+      "task_id": "dynamodb-toolbox-conditional-attribute-requirements"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/dynamodb-toolbox/dynamodb-toolbox",
+      "task_id": "dynamodb-toolbox-lazy-recursive-schemas"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/Effect-TS/effect",
+      "task_id": "effect-sse-httpapi-streaming"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/eicrud/eicrud",
+      "task_id": "eicrud-keyset-pagination-cursor"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/beevik/etree",
+      "task_id": "etree-xml-diff-patch"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/expr-lang/expr",
+      "task_id": "expr-try-catch-errors"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/fastapi/fastapi",
+      "task_id": "fastapi-deprecation-response-headers"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/fastapi/fastapi",
+      "task_id": "fastapi-implicit-head-options"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/golang/geo",
+      "task_id": "geo-shapeindex-serialization"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/go-critic/go-critic",
+      "task_id": "go-critic-doc-link-checker"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/googleapis/go-genai.git",
+      "task_id": "go-genai-streamed-function-args"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/go-git/go-git",
+      "task_id": "go-git-worktree-merge-conflicts"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/graphql-python/gql",
+      "task_id": "gql-incremental-graphql-delivery"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/capricorn86/happy-dom",
+      "task_id": "happy-dom-deterministic-intersectionobserver"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/helm/helm",
+      "task_id": "helm-unified-manifest-stream"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/encode/httpx",
+      "task_id": "httpx-deterministic-cookie-store"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/encode/httpx",
+      "task_id": "httpx-multipart-response-parsing"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/encode/httpx",
+      "task_id": "httpx-streaming-json-iteration"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/nidhaloff/igel",
+      "task_id": "igel-persist-feature-schema"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/vadimdemedes/ink",
+      "task_id": "ink-grid-box-layout"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/ipython/ipython",
+      "task_id": "ipython-session-bundle-replay"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/xtaci/kcp-go",
+      "task_id": "kcp-go-multiplexed-kcp-streams"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/keajs/kea.git",
+      "task_id": "kea-atomic-signal-selectors"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/kgateway-dev/kgateway",
+      "task_id": "kgateway-consistent-hash-policy"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/celery/kombu",
+      "task_id": "kombu-single-active-consumer-priority"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/celery/kombu",
+      "task_id": "kombu-virtual-queue-dead-lettering"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/pmndrs/koota",
+      "task_id": "koota-composite-trait-aspects"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/pmndrs/koota",
+      "task_id": "koota-deferred-mutation-buffer"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/pmndrs/koota",
+      "task_id": "koota-entity-snapshot-rollback"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/pmndrs/koota",
+      "task_id": "koota-pair-relation-tracking"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/pmndrs/koota",
+      "task_id": "koota-query-predicates"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/kysely-org/kysely",
+      "task_id": "kysely-window-grouping-helpers"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/langchain-ai/langchain",
+      "task_id": "langchain-request-coalescing"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/Fatal1ty/mashumaro",
+      "task_id": "mashumaro-flattened-dataclass-fields"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/meriyah/meriyah",
+      "task_id": "meriyah-explicit-resource-declarations"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/jkwill87/mnamer",
+      "task_id": "mnamer-daemon-watch-lifecycle"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/google/mobly",
+      "task_id": "mobly-grouped-test-barriers"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/narwhals-dev/narwhals",
+      "task_id": "narwhals-rolling-window-suite"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/numba/numba",
+      "task_id": "numba-stencil-boundary-modes"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/platers/obsidian-linter",
+      "task_id": "obsidian-linter-auto-table-of-contents"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/platers/obsidian-linter",
+      "task_id": "obsidian-linter-link-format-conversion"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/platers/obsidian-linter",
+      "task_id": "obsidian-linter-scoped-ignore-markers"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/unjs/ofetch",
+      "task_id": "ofetch-per-origin-circuit-breaker"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/liweiyi88/onedump",
+      "task_id": "onedump-dump-encryption-pipeline"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/open-policy-agent/opa",
+      "task_id": "opa-rego-rule-profiling"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/open-policy-agent/opa",
+      "task_id": "opa-template-string-reconstruction"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/dahlia/optique",
+      "task_id": "optique-conditional-option-dependencies"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "rust",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/noahbald/oxvg",
+      "task_id": "oxvg-structural-selector-preservation"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/alecthomas/participle.git",
+      "task_id": "participle-grammar-conflict-analysis"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/cockroachdb/pebble",
+      "task_id": "pebble-durability-wait-apis"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "rust",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/pest-parser/pest",
+      "task_id": "pest-character-class-coalescing"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/prometheus/prometheus.git",
+      "task_id": "prometheus-transactional-reload-status"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/prometheus/prometheus",
+      "task_id": "prometheus-typed-label-sorting"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/psd-tools/psd-tools",
+      "task_id": "psd-tools-blend-range-api"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/Gallopsled/pwntools",
+      "task_id": "pwntools-tube-multiplexing"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/fgmacedo/python-statemachine",
+      "task_id": "python-statemachine-state-data-scoping"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/TanStack/query",
+      "task_id": "query-persist-restored-query-state"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/slab/quill",
+      "task_id": "quill-shared-toolbar-focus"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/dry-python/returns",
+      "task_id": "returns-validated-error-accumulation"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/boyter/scc.git",
+      "task_id": "scc-bounded-memory-spilling"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/open2b/scriggo",
+      "task_id": "scriggo-method-declarations"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/skrub-data/skrub",
+      "task_id": "skrub-duration-encoding"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/sql-formatter-org/sql-formatter",
+      "task_id": "sql-formatter-bigquery-pipe-formatting"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/tconbeer/sqlfmt",
+      "task_id": "sqlfmt-create-table-ddl-formatting"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/simonw/sqlite-utils",
+      "task_id": "sqlite-utils-safe-import-checkpoints"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/flightcontrolhq/superjson.git",
+      "task_id": "superjson-error-stack-serialization"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/go-task/task",
+      "task_id": "task-task-graph-export"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/d5/tengo",
+      "task_id": "tengo-callable-instance-isolation"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/d5/tengo",
+      "task_id": "tengo-destructuring-bindings"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/muesli/termenv",
+      "task_id": "termenv-preserve-ansi-resets"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "javascript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/testem/testem",
+      "task_id": "testem-per-launcher-reports"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/Textualize/textual",
+      "task_id": "textual-kitty-key-phases"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "FAIL"
+      },
+      "repository": "https://github.com/Textualize/textual",
+      "task_id": "textual-richlog-follow-state"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/python-poetry/tomlkit",
+      "task_id": "tomlkit-toml-table-converters"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/true-myth/true-myth",
+      "task_id": "true-myth-iterable-collection-combinators"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/gvergnaud/ts-pattern",
+      "task_id": "ts-pattern-match-each"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/Owloops/updo",
+      "task_id": "updo-policy-alerting"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/open-circle/valibot",
+      "task_id": "valibot-recursive-schema-composition"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "typescript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/vitest-dev/vitest.git",
+      "task_id": "vitest-duration-sharding"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "python",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/jendrikseipp/vulture",
+      "task_id": "vulture-persistent-analysis-cache"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/wazero/wazero.git",
+      "task_id": "wazero-multi-module-snapshots"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/traefik/yaegi",
+      "task_id": "yaegi-go-embed-directives"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "javascript",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/yjs/yjs",
+      "task_id": "yjs-map-conflict-detection"
+    },
+    {
+      "all_outcomes_recorded": false,
+      "all_phases_resolved": false,
+      "clean_three_phase_result": false,
+      "evidence_hashes": {},
+      "language": "go",
+      "phases": {
+        "execution": "NOT_RUN",
+        "semantic": "NOT_RUN",
+        "static": "PASS"
+      },
+      "repository": "https://github.com/carvel-dev/ytt",
+      "task_id": "ytt-jsonpath-query-api"
+    }
+  ]
+}

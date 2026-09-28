@@ -14,3 +14,5 @@ uv run python scripts/native_runner.py --task goreleaser-retry-publish-auditing 
 GitHub workflow `pilot.yml` has `smoke` and `remaining` cohorts. Run and validate smoke evidence before the remaining cohort. Each task runs sequentially through oracle, nop, and three candidate-only probes in fresh containers. An unreached probe is deferred, never evidence of resistance. Missing or invalid infrastructure is not a model failure.
 
 See `manifests/frozen.json` for the complete deterministic selection and task hashes, `docs/DECISIONS.md` for policy, and `docs/STATE.md` for current progress. The [final report](REPORT.md) distinguishes task defects, unresolved evidence, and infrastructure blockers. All scheduled outcomes are recorded; zero tasks have a clean three-phase result. See [the run manifest](manifests/run.json) for hashes and [public completion accounting](evidence/audit-summary.json) for phase status. This balanced pilot is not an unbiased estimate of corpus-wide defect prevalence.
+
+The user-authorized [103-task expansion](EXPANSION.md) runs separately using `expansion.yml` and `manifests/expansion.json`. The original pilot results remain frozen.

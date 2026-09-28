@@ -19,6 +19,7 @@ os.environ['BTQC_DEEPSWE_CONTEXT_DIR']=str(ROOT/'.local/context')
 
 def frozen():return json.loads((ROOT/'manifests/frozen.json').read_text())
 def read(p):return json.loads(Path(p).read_text())
+def public_dir(task_id):return ROOT/'evidence'/('pilot' if task_id in frozen()['pilot'] else 'expansion')/task_id
 
 
 def static_all():
@@ -39,6 +40,10 @@ def import_native(native_path):
     from probes import solve_script
     doc=read(native_path);task_id=doc['task_id'];f=frozen();row=next(r for r in f['tasks'] if r['id']==task_id)
     validate_binding(doc,{**row,'frozen_manifest_hash':f['manifest_hash']},native_path.parent)
+    if task_id not in f['pilot']:
+        from cohort import validate_expansion
+        cohort=read(ROOT/'manifests/expansion.json');validate_expansion(cohort,f)
+        if doc.get('expansion_manifest_hash')!=cohort['manifest_hash']:raise ValueError('expansion binding mismatch')
     if set(doc['cases'])!=set(CASES):raise ValueError('scheduled case set mismatch')
     static=read(ROOT/'.local/phase1'/task_id/'static.json');packet=static['audit_packet'];task=SOURCE/task_id
     if static['task_hash']!=row['task_hash'] or snapshot(task)['sha256']!=row['task_hash']:raise ValueError('local task drift')
@@ -65,7 +70,12 @@ def import_native(native_path):
                     try:return read(path)
                     except (OSError,ValueError):return None
                 parsed=classify(maybe(ver/'reward.json'),maybe(ver/'ctrf.json'),read(task/'tests/config.json'),name,trial.get('exception_info'))
+                if 'native_reward' in case and (case['native_reward']!=maybe(ver/'reward.json') or case['native_verifier_result']!=trial.get('verifier_result')):raise ValueError('native reward observation mismatch')
+                if outcome.get('code')=='CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER':
+                    from cohort import accepted_attack_reward
+                    if not accepted_attack_reward(name,maybe(ver/'reward.json'),trial.get('verifier_result'),trial.get('exception_info')):raise ValueError('unsubstantiated native reward bypass')
                 reported=outcome.get('native_outcome',outcome)
+                if reported.get('code')=='CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE':reported=reported['native_outcome']
                 if reported.get('code')=='PROBE_NOT_OBSERVED_REACHING_VERIFIER':
                     if parsed['status']!='PASS':raise ValueError('deferred probe hides a native failure')
                 elif parsed!=reported:
@@ -76,7 +86,7 @@ def import_native(native_path):
     envelope=make_envelope(phase='execution',task_path=task,adapter='deepswe',task_hash=row['task_hash'],audit_packet=packet,results=checks,status=PhaseStatus(doc['status']),extra={'static_envelope_hash':static['envelope_hash'],'native_evidence_sha256':sha(native_path),'github_run_id':doc.get('github_run_id'),'driver_commit':doc.get('driver_commit'),'image_digest':doc.get('image_digest'),'execution_scope':'official Pier committed-patch endpoints plus candidate-only probes','native_bundle':str(native_path.relative_to(ROOT))})
     write(ROOT/'.local/phase2'/task_id/'execution.json',envelope)
     # Public summary avoids duplicating full configs and raw code.
-    write(ROOT/'evidence/pilot'/task_id/'execution.json',{'task_id':task_id,'status':doc['status'],'task_hash':row['task_hash'],'native_evidence_sha256':sha(native_path),'github_run_id':doc.get('github_run_id'),'driver_commit':doc.get('driver_commit'),'preflight':doc.get('preflight'),'blocker':doc.get('blocker'),'image_digest':doc.get('image_digest'),'cases':{k:{'outcome':v['outcome'],'probe_reached':v.get('probe_reached'),'protected_write_observed':v.get('protected_write_observed')} for k,v in doc['cases'].items()}})
+    write(public_dir(task_id)/'execution.json',{'task_id':task_id,'status':doc['status'],'task_hash':row['task_hash'],'native_evidence_sha256':sha(native_path),'github_run_id':doc.get('github_run_id'),'driver_commit':doc.get('driver_commit'),'preflight':doc.get('preflight'),'blocker':doc.get('blocker'),'image_digest':doc.get('image_digest'),'cases':{k:{'outcome':v['outcome'],'probe_reached':v.get('probe_reached'),'protected_write_observed':v.get('protected_write_observed'),'native_reward':v.get('native_reward'),'native_verifier_result':v.get('native_verifier_result')} for k,v in doc['cases'].items()}})
     print(task_id,doc['status'])
 
 
@@ -87,9 +97,13 @@ def semantic(task_id):
     phase1=ROOT/'.local/phase1'/task_id/'static.json';phase2=ROOT/'.local/phase2'/task_id/'execution.json'
     prepare_semantic_input(SOURCE/task_id,adapter_name='deepswe',static_evidence_path=phase1,execution_evidence_path=phase2,output_path=out/'input.json')
     os.environ.setdefault('CODEX_HOME',str(Path.home()/'.codex'))
-    result=review_semantic_input(out/'input.json',ledger_path=out/'ledger.json')
+    if task_id in frozen()['pilot']:
+        result=review_semantic_input(out/'input.json',ledger_path=out/'ledger.json')
+    else:
+        from semantic_capture import run_once
+        result=run_once(out,review_semantic_input)
     write(out/'semantic.json',result)
-    write(ROOT/'evidence/pilot'/task_id/'semantic.json',result)
+    write(public_dir(task_id)/'semantic.json',result)
     print(task_id,result.get('overall_status',result.get('status')),flush=True)
 
 
