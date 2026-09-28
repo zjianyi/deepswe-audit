@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 6, 'semantic': 5}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 6, 'semantic': 6}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -15,7 +15,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | go | actionlint-action-pinning-lint | PASS | FAIL | FAIL |
 | python | adaptix-name-mapping-aliases | PASS | FAIL | DEFERRED_EVIDENCE_REQUIRED |
 | python | aiomonitor-task-snapshots-diff | PASS | FAIL | INFRASTRUCTURE_FAILURE |
-| go | anko-default-function-arguments | PASS | FAIL | NOT_RUN |
+| go | anko-default-function-arguments | PASS | FAIL | FAIL |
 | go | anko-typed-variable-bindings | PASS | NOT_RUN | NOT_RUN |
 | go | arcane-drift-detection-baselines | PASS | NOT_RUN | NOT_RUN |
 | typescript | arktype-json-schema-refs-dependencies | PASS | NOT_RUN | NOT_RUN |

