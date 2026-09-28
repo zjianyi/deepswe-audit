@@ -170,3 +170,5 @@
 - 2026-09-28 07:04 UTC: Unchanged 63 native/63 semantic outcomes. OPA native running, 39 queued; original worker polling normally without worker/poll errors or active S0. No retries or duplicate attempts; diff check passed. NEXT objective unchanged.
 
 - 2026-09-28 07:06 UTC: OPA native FAIL: protected-path reward 1 accepted by Pier, explicit raw protected-write markers and no exception. Endpoints 1/0; other attacks 0 with reach markers. {'static': 103, 'execution': 64, 'semantic': 63}, zero clean; sole OPA S0 active, Optique conditional native running, one completed native awaits import. 214 public hashes verified; tasks 60–64 read-only reconciliation delegated. No errors/retries. NEXT unchanged.
+
+- 2026-09-28 07:09 UTC: OPA profiling S0 strict-validation blocker preserved with raw archive. Template reconstruction native blocked by registry Data limit exceeded; sole S0 active. {'static': 103, 'execution': 65, 'semantic': 64}, zero clean. Tasks 60–64 reconciliation verified 376 hashes, cumulative 4,783, no discrepancies. 217 public evidence bindings verified; no retries or worker errors. NEXT unchanged.

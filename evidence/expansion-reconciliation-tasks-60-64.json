@@ -1,0 +1,39 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 376,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "obsidian-linter-link-format-conversion",
+      "artifact_count": 87,
+      "native_evidence_sha256": "05f75034833c3f2f5bf18bb9a79037b689e89a0f77e374baa2b5a86b1746dd57"
+    },
+    {
+      "task_id": "obsidian-linter-scoped-ignore-markers",
+      "artifact_count": 1,
+      "native_evidence_sha256": "950e61fc7a96b7536137774aa238a37fbcff86073396dce7b3d68aef2577008b"
+    },
+    {
+      "task_id": "ofetch-per-origin-circuit-breaker",
+      "artifact_count": 116,
+      "native_evidence_sha256": "35b69b53853a1c7d1b28d9616dc0b0a27abf50bc6780ac14dec365977cef2f0b"
+    },
+    {
+      "task_id": "onedump-dump-encryption-pipeline",
+      "artifact_count": 86,
+      "native_evidence_sha256": "02836c473f52421ba6904e3e08bc8f84fe479328511fbf4d7e2fbb7de030ad80"
+    },
+    {
+      "task_id": "opa-rego-rule-profiling",
+      "artifact_count": 86,
+      "native_evidence_sha256": "8a6854491f00d091833e2aec3f7a19e3ade7bc26a2e87ad31dd69b375c063764"
+    }
+  ],
+  "observations": [
+    "Independent read-only reconciliation verified 376/376 artifact hashes and all five public/native bindings and available case fields. Four executable oracle/no-op pairs are 1/0.",
+    "Ofetch, Onedump and OPA profiling protected-path reward 1 accepted by Pier with explicit reach/write markers, no exception and absent final CTRF.",
+    "Obsidian link conversion attack rewards 0 without reach markers; deferral preserved.",
+    "Obsidian scoped ignore registry toomanyrequests: Rate exceeded confirmed before execution."
+  ]
+}

