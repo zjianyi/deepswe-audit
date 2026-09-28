@@ -411,3 +411,7 @@ SQLite-utils S0 validated as FAIL and corroborates native reward bypass under SE
 ### 2026-09-28 09:33 UTC — SuperJSON native outcome
 
 GitHub reports 90 completed native jobs, active ['native (textual-kitty-key-phases)'], 12 queued. Local accounting {'static': 103, 'execution': 85, 'semantic': 84}, zero clean. SuperJSON oracle/no-op rewards 1/0 (80 F2P, 116 P2P); all attacks reward 0 with no observed reach, preserving deferral. Raw rewards and exceptions match public evidence. Original sequential worker stage semantic without errors. Additional GitHub completions await worker import/validation; workflow success alone is not a passing audit outcome. Refreshed report/summary and verified 280 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:35 UTC — SuperJSON S0 and Task graph registry blocker
+
+SuperJSON S0 validated as DEFERRED_EVIDENCE_REQUIRED for attack reach, independent alternative evidence and mutable build provenance; raw JSON parsed (9895 bytes). Task graph export native blocked before cases: image-pull.log confirms registry Data limit exceeded, not a proven absent image. Preserved first attempt and active S0; no infrastructure retry without corrected cause. Local accounting {'static': 103, 'execution': 86, 'semantic': 85}, zero clean. GitHub 90 native complete, Textual Kitty active, 12 queued. Original worker and one S0 active without errors. Refreshed report/summary, verified 283 public evidence hashes. No policy changes; NEXT unchanged. Validation: git diff --check.

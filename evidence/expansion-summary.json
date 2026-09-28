@@ -6,14 +6,14 @@
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 22,
       "FAIL": 49,
-      "INFRASTRUCTURE_FAILURE": 14,
-      "NOT_RUN": 18
+      "INFRASTRUCTURE_FAILURE": 15,
+      "NOT_RUN": 17
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 23,
+      "DEFERRED_EVIDENCE_REQUIRED": 24,
       "FAIL": 39,
       "INFRASTRUCTURE_FAILURE": 22,
-      "NOT_RUN": 19
+      "NOT_RUN": 18
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 85,
-    "semantic": 84,
+    "execution": 86,
+    "semantic": 85,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1567,17 +1567,18 @@
       "task_id": "sqlite-utils-safe-import-checkpoints"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "3c1a2352113d9465004b3e71f7a46bc41a5a012aa793375120deaad7114628cf",
+        "semantic.json": "a1f77f8a0f718d7d3d6071bc8c0025fc1ecd2b0674ef82b5de77d6dca83ae3a9",
         "static.json": "12533fce3aeef87c3c9b0a28fb8273d307ff07cde8af62171d04c357e18483ef"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/flightcontrolhq/superjson.git",
@@ -1587,10 +1588,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "048f7ab2f410d028184656f060a660af7204e55e82a70ccc631371e1b1051bb4",
+        "static.json": "4b7d58ab810f499a8ee6bf36aa14ff4cca3462ee3165f33b442d120131e80b5d"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },
