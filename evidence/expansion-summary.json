@@ -12,8 +12,8 @@
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 12,
       "FAIL": 23,
-      "INFRASTRUCTURE_FAILURE": 7,
-      "NOT_RUN": 61
+      "INFRASTRUCTURE_FAILURE": 8,
+      "NOT_RUN": 60
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 43,
-    "semantic": 42,
+    "semantic": 43,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -803,17 +803,18 @@
       "task_id": "kea-atomic-signal-selectors"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "18f2206b39fb878bf033dbaae66b3e27fb242b78164d4987bb7b03fd0b6076d7",
+        "semantic.json": "655937feb34d2e645448cb86666d3cc6746f925eefad9683cf91f4cec08efffe",
         "static.json": "19142843aec653352dd3375fe28eab8b0da5249bd582e5f8b28fc4efb9f5e78b"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/kgateway-dev/kgateway",
