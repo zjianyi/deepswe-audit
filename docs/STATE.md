@@ -36,3 +36,5 @@
 - Fifth independent reconciliation batch verified 200/200 artifacts for tasks 20–24; total 1,590 across twenty-four tasks, no discrepancies.
 
 - Sixth independent reconciliation batch verified 268/268 artifacts for tasks 25–29; total 1,858 across twenty-nine tasks. Raw report-forgery false positives confirmed for Geo and Go-critic, no discrepancies.
+
+- Seventh independent reconciliation verified 454/454 artifacts for tasks 30–34; total 2,312 across thirty-four tasks, no discrepancies. GQL raw failing-test log corroborates reward bypass despite missing attribution markers.

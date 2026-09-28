@@ -1,0 +1,47 @@
+{
+  "schema_version": "deepswe.evidence-reconciliation/1",
+  "method": "Independent read-only subagent reconciliation; no task execution or additional S0.",
+  "artifact_hashes_verified": 454,
+  "tasks": [
+    {
+      "task_id": "go-genai-streamed-function-args",
+      "artifact_hashes_verified": 86,
+      "native_run_sha256": "9873366dc3dced14ccfd9ee64a94c4cbe1e4557c86b5d8ccab958abce96937ed",
+      "public_execution_sha256": "0c5087d64f8df07957279798ea72d596c3cb83bd412cc135d7e7e195abcdc3d6",
+      "result": "Public/native bindings and all case fields match raw evidence."
+    },
+    {
+      "task_id": "go-git-worktree-merge-conflicts",
+      "artifact_hashes_verified": 86,
+      "native_run_sha256": "2cba55c276a6b62cf27905f9fca56abeff40e0e0a7f807530a13048132b230a5",
+      "public_execution_sha256": "6ffc94f457685972a953fd121a0a44fc462c30db4157cf8a16ca6add0b13464b",
+      "result": "Public/native bindings and all case fields match raw evidence."
+    },
+    {
+      "task_id": "gql-incremental-graphql-delivery",
+      "artifact_hashes_verified": 84,
+      "native_run_sha256": "314aa327fbe4bbeddaa3d020f4f632ea3a29bb7cb58421159956756ec409f903",
+      "public_execution_sha256": "aecb5f18549b015feb8134e11ab533744ef471f0510749841b51f950ded539aa",
+      "result": "Public/native bindings and all case fields match raw evidence."
+    },
+    {
+      "task_id": "happy-dom-deterministic-intersectionobserver",
+      "artifact_hashes_verified": 112,
+      "native_run_sha256": "52f094b4452c406216ec9d98f46837f56b03683986ea2046eb68f2d728bb0159",
+      "public_execution_sha256": "3d0bcfc49d8c0df838c799e18fa9ad911f709a37e607171f882baede12de0b3d",
+      "result": "Public/native bindings and all case fields match raw evidence."
+    },
+    {
+      "task_id": "helm-unified-manifest-stream",
+      "artifact_hashes_verified": 86,
+      "native_run_sha256": "1019448a8f9a47bcaf298039cd2e474d4a4dca2ed2c321c786b882910cb70707",
+      "public_execution_sha256": "fb6a69709a841363eca1de8496863f0b54c5ff013f8fae360f0f50dc6fb824c7",
+      "result": "Public/native bindings and all case fields match raw evidence."
+    }
+  ],
+  "observations": [
+    "Go-genai, Go-git and Helm protected-path reward 1 accepted by Pier without exception, explicit reach/write markers, absent final CTRF.",
+    "GQL protected-path reward 1 accepted with absent CTRF/markers. Raw stdout records applied candidate patch, 17 failed/1 passed at line 706, reward 1 at line 708. Exact write-path attribution unresolved. Log SHA-256 6d31f7c74b3b86340c88392d929689eb6d1fe6768ecfa396bb605e2a29ca05fd.",
+    "Happy DOM attacks reward 0 without reach markers; deferral preserved. All five oracle/no-op pairs 1/0."
+  ]
+}
