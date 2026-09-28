@@ -181,3 +181,17 @@
 - 2026-09-28 07:18 UTC: Oxvg S0 FAIL archived; static contract/assertion reconciliation recorded separately, no demonstrated false negative. Participle native FAIL from accepted report-forgery/protected-path reward 1; raw gate/build failures contradict forged all-pass reports, protected writes explicit. {'static': 103, 'execution': 68, 'semantic': 67}, zero clean; sole Participle S0 active, Pebble native running. 228 public bindings verified; no errors/retries. NEXT unchanged.
 
 - 2026-09-28 07:20 UTC: Participle S0 strict-validation infrastructure blocker recorded; raw JSON archive verified, no rereview. 68 native/68 semantic outcomes, zero clean; both native reward bypasses remain supported. Pebble running, worker polling without errors. All 229 public evidence hashes and diff check passed. NEXT unchanged.
+
+- 2026-09-28 07:22 UTC: Unchanged 68 native/68 semantic outcomes. Pebble native running, 34 queued; original worker polling normally without worker/poll errors or active S0. No retries or duplicate attempts; diff check passed. NEXT objective unchanged.
+
+- 2026-09-28 07:24 UTC: Unchanged 68 native/68 semantic outcomes. Pebble native running, 34 queued; original worker polling normally without worker/poll errors or active S0. No retries or duplicate attempts; diff check passed. NEXT objective unchanged.
+
+### 2026-09-28 07:29 UTC — expansion heartbeat
+
+Fresh GitHub status remains 68 native jobs completed, one active (pebble-durability-wait-apis), and 34 queued; setup is also complete. Local accounting remains 68 native and 68 S0 outcomes. The sole worker (PID 99581) is healthy and waiting, with no active S0, worker errors, or poll error. No attempts were started or repeated. The next objective remains unchanged. Validation: git diff --check.
+
+### 2026-09-28 07:31 UTC — Pebble native outcome
+
+Native completion advanced to 69/103; Pest active and 33 queued. Pebble protected-path reward 1, explicit protected writes and probe reach, and no Pier exception verified against raw result and test log; final CTRF absent. Oracle/no-op 1/0; other attacks 0 with reach. S0 remains active under the sole existing worker; no errors or retries. Refreshed EXPANSION.md and evidence/expansion-summary.json, verified 231 public evidence hashes. NEXT unchanged. Validation: git diff --check.
+
+Independent read-only reconciliation of tasks 65–69 verified 289 artifact hashes and all native/public bindings, with no discrepancies; cumulative 5,072 across 69 tasks. Published concise reconciliation manifest; raw bundles remain local.
