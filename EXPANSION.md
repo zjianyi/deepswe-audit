@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 44, 'semantic': 44}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 45, 'semantic': 44}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -54,7 +54,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | typescript | kea-atomic-signal-selectors | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
 | go | kgateway-consistent-hash-policy | PASS | FAIL | INFRASTRUCTURE_FAILURE |
 | python | kombu-single-active-consumer-priority | PASS | FAIL | FAIL |
-| python | kombu-virtual-queue-dead-lettering | PASS | NOT_RUN | NOT_RUN |
+| python | kombu-virtual-queue-dead-lettering | PASS | FAIL | NOT_RUN |
 | typescript | koota-composite-trait-aspects | PASS | NOT_RUN | NOT_RUN |
 | typescript | koota-deferred-mutation-buffer | PASS | NOT_RUN | NOT_RUN |
 | python | koota-entity-snapshot-rollback | PASS | NOT_RUN | NOT_RUN |
