@@ -507,3 +507,11 @@ Wazero S0 failed strict validation because a finding prefix differs from its cri
 ### 2026-09-28 10:32 UTC — Yaegi S0 corroboration
 
 Yaegi S0 validated FAIL corroborating protected-path reward bypass under SEM-008; raw JSON parsed (6841 bytes). Published review and refreshed report: 101 native/101 S0, zero clean. Verified 333 public evidence hashes. GitHub Yjs active, one queued; original worker waiting without errors. After inspecting existing agents, assigned the idle accounting agent a strictly read-only check of the first 101 S0 attempt/raw/public archives and bindings, excluding final two ongoing tasks; no new reviews. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:33 UTC — Final native job active
+
+Fresh GitHub: 102 native tasks complete, final Ytt JSONPath job active, none queued. Local summary remains 101 native/101 S0 while original worker PID 99581 waits for polling/import; no worker/poll errors. Accounting agent continues read-only first-101 archive verification; corrected final-task name to Ytt in its assignment. No intervention, retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:36 UTC — Native workflow complete; Yjs blocker and accounting
+
+All 103 native jobs plus setup completed; GitHub workflow success does not imply QC pass. Yjs oracle/no-op 1/0 (9 F2P, 231 P2P), attacks reward 0 without reach, native deferred. Its S0 failed strict SEM-007/020 mismatched/duplicate references; raw parsed (15045 bytes), no rereview. Published 102 native/102 S0 outcomes, zero clean; verified 336 public evidence hashes. Published independent first-101 accounting: 2195 checks, 74 validated reviews and 27 reproduced validation blockers, no discrepancies; binds all 101 public S0 hashes. Original worker healthy, final Ytt import/review pending. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

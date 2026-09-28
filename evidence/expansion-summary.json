@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 25,
+      "DEFERRED_EVIDENCE_REQUIRED": 26,
       "FAIL": 56,
       "INFRASTRUCTURE_FAILURE": 20,
-      "NOT_RUN": 2
+      "NOT_RUN": 1
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 28,
       "FAIL": 46,
-      "INFRASTRUCTURE_FAILURE": 27,
-      "NOT_RUN": 2
+      "INFRASTRUCTURE_FAILURE": 28,
+      "NOT_RUN": 1
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 101,
-    "semantic": 101,
+    "execution": 102,
+    "semantic": 102,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1877,14 +1877,18 @@
       "task_id": "yaegi-go-embed-directives"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "c766b7d3f1f722bb185ec3e024e1fa862d405919437485541d4505462073a026",
+        "semantic.json": "f191c97f7d0e04b1738bc466174752b25974e74eb099e106cde8a2bbd0e3768d",
+        "static.json": "e98c00c9a9d65ae6acafead4e2ba4819bd3026aa78cba43020caff500f1de989"
+      },
       "language": "javascript",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/yjs/yjs",
