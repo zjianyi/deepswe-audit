@@ -259,3 +259,7 @@ Native completion advanced to 72/103; PSD tools blend-range API active, 30 queue
 ### 2026-09-28 08:05 UTC — Prometheus typed-label sorting S0 blocker
 
 S0 rejected by strict SEM-020 validation: actionable verdict requires a finding. Parsed archived raw review (7157 bytes); preserved first infrastructure-failure outcome without repair or rereview. Native protected-path reward bypass remains independently supported. Accounting now 72 native and 72 S0 outcomes, zero clean results. PSD blend-range API native active with 30 queued; sole worker waiting without errors. Verified 241 public evidence hashes. Published refreshed EXPANSION.md, summary and semantic result. NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:09 UTC — PSD blend-range native outcome
+
+Native completion advanced to 73/103; Pwntools tube multiplexing active, 29 queued. PSD blend-range protected-path reward 1 accepted without Pier exception despite missing blend_range module during new-test collection; explicit reach and writes to grader/config/reward verified from raw log. Oracle/no-op 1/0; forge-reports 0 with reach, suppression 0 without reach. Sole S0 active under original worker without errors. Refreshed EXPANSION.md and summary; 244 public evidence hashes verified. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

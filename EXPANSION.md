@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 72, 'semantic': 72}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 73, 'semantic': 73}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -82,7 +82,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | rust | pest-character-class-coalescing | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
 | typescript | prometheus-transactional-reload-status | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
 | go | prometheus-typed-label-sorting | PASS | FAIL | INFRASTRUCTURE_FAILURE |
-| python | psd-tools-blend-range-api | FAIL | NOT_RUN | NOT_RUN |
+| python | psd-tools-blend-range-api | FAIL | FAIL | INFRASTRUCTURE_FAILURE |
 | python | pwntools-tube-multiplexing | FAIL | NOT_RUN | NOT_RUN |
 | python | python-statemachine-state-data-scoping | FAIL | NOT_RUN | NOT_RUN |
 | typescript | query-persist-restored-query-state | PASS | NOT_RUN | NOT_RUN |

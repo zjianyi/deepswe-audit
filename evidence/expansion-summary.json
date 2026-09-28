@@ -5,15 +5,15 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 18,
-      "FAIL": 40,
+      "FAIL": 41,
       "INFRASTRUCTURE_FAILURE": 14,
-      "NOT_RUN": 31
+      "NOT_RUN": 30
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 21,
       "FAIL": 34,
-      "INFRASTRUCTURE_FAILURE": 17,
-      "NOT_RUN": 31
+      "INFRASTRUCTURE_FAILURE": 18,
+      "NOT_RUN": 30
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 72,
-    "semantic": 72,
+    "execution": 73,
+    "semantic": 73,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1350,14 +1350,18 @@
       "task_id": "prometheus-typed-label-sorting"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "e598fac8958ff5e04b654125af822347ee5854766b717114d42d2af377ff5038",
+        "semantic.json": "7cdff5877846c8168d8b0dd38e2abaa6d3e2d0be7280ea51cbd0d0942b739e99",
+        "static.json": "3c5540e17078ae112bce8d0114cb5e9738bfbbdabc7168f481efaee309a9c640"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "FAIL"
       },
       "repository": "https://github.com/psd-tools/psd-tools",
