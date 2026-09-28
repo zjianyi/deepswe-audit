@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 61, 'semantic': 60}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 61, 'semantic': 61}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -70,7 +70,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | python | numba-stencil-boundary-modes | FAIL | FAIL | INFRASTRUCTURE_FAILURE |
 | typescript | obsidian-linter-auto-table-of-contents | PASS | DEFERRED_EVIDENCE_REQUIRED | FAIL |
 | typescript | obsidian-linter-link-format-conversion | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
-| typescript | obsidian-linter-scoped-ignore-markers | PASS | INFRASTRUCTURE_FAILURE | NOT_RUN |
+| typescript | obsidian-linter-scoped-ignore-markers | PASS | INFRASTRUCTURE_FAILURE | DEFERRED_EVIDENCE_REQUIRED |
 | typescript | ofetch-per-origin-circuit-breaker | PASS | NOT_RUN | NOT_RUN |
 | go | onedump-dump-encryption-pipeline | PASS | NOT_RUN | NOT_RUN |
 | go | opa-rego-rule-profiling | PASS | NOT_RUN | NOT_RUN |

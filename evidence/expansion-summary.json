@@ -10,10 +10,10 @@
       "NOT_RUN": 42
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 17,
+      "DEFERRED_EVIDENCE_REQUIRED": 18,
       "FAIL": 30,
       "INFRASTRUCTURE_FAILURE": 13,
-      "NOT_RUN": 43
+      "NOT_RUN": 42
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 61,
-    "semantic": 60,
+    "semantic": 61,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1132,17 +1132,18 @@
       "task_id": "obsidian-linter-link-format-conversion"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "9ecd378873fa7afb79f1de7fccc547aaee0ea11ae88e0d131aee107d475d617c",
+        "semantic.json": "4b3a0507b654b583bc6b522a4b71cd984ccb3dd02c1095bbc5bae9ccb30d31d7",
         "static.json": "42d7e4958744be1f06025fb9225ceae5aa82c29b097ac52f93ae639b910434aa"
       },
       "language": "typescript",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/platers/obsidian-linter",

@@ -152,3 +152,5 @@
 - 2026-09-28 06:44 UTC: Obsidian link conversion native deferred (endpoints 1/0, attacks 0 without reach markers), sole S0 active. GitHub 61 native jobs completed, ofetch active; 60 native/59 semantic local outcomes and one completed native job awaits serial import. 202 public evidence hashes verified; worker healthy, no retries. NEXT unchanged.
 
 - 2026-09-28 06:46 UTC: Link-conversion S0 deferred, raw archive checked. Scoped-ignore native infrastructure blocker confirmed registry Rate exceeded from raw image-pull log; sole S0 now reviews blocked task. 61 native/60 semantic outcomes, zero clean; ofetch native active. 205 public bindings verified; no worker errors/retries. NEXT unchanged.
+
+- 2026-09-28 06:49 UTC: Scoped-ignore S0 deferred on blocked native evidence; raw archive verified. 61 native/61 semantic local outcomes, zero clean. GitHub 62 native complete; ofetch awaits serial import, Onedump running. Original worker polling normally without errors. 206 public evidence hashes verified; no retries. NEXT unchanged.
