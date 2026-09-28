@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 23,
+      "DEFERRED_EVIDENCE_REQUIRED": 24,
       "FAIL": 54,
       "INFRASTRUCTURE_FAILURE": 19,
-      "NOT_RUN": 7
+      "NOT_RUN": 6
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 27,
+      "DEFERRED_EVIDENCE_REQUIRED": 28,
       "FAIL": 44,
       "INFRASTRUCTURE_FAILURE": 25,
-      "NOT_RUN": 7
+      "NOT_RUN": 6
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 96,
-    "semantic": 96,
+    "execution": 97,
+    "semantic": 97,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1787,14 +1787,18 @@
       "task_id": "updo-policy-alerting"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "4cbad16a32f55b061aa19ff2d13dc819e2da3d581a08884966b927802de7d97c",
+        "semantic.json": "d2ae64673784da3f39319ab64326da384b579216659d87dac284f9af05b19960",
+        "static.json": "0967c1ff8ddcbf2a814fc4b98b182a756c663bfd4020b2606f9e400da6b69523"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/open-circle/valibot",

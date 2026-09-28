@@ -467,3 +467,11 @@ TOMLKit S0 validated as FAIL, corroborating native reward bypass under SEM-008; 
 ### 2026-09-28 10:10 UTC — 96 outcomes and reconciliation through task 94
 
 Published True Myth S0 FAIL and separate hash-bound annotation of Iterable traverse type/coverage gap: runtime for-of already supports iteration, but signatures restrict ReadonlyArray; no legitimate-candidate false negative demonstrated. ts-pattern oracle/no-op 1/0 (85 F2P, 6 P2P), attacks 0 without reach, S0 deferred; raw JSON parsed (8812 bytes). Updo oracle/no-op 1/0 (17 F2P, 123 P2P), protected-paths reward 1 accepted without exception with explicit reach/write markers despite build failures and missing final CTRF; other attacks rejected with reach. Updo S0 strict SEM-020 mismatched/duplicate finding references preserved as infrastructure failure; raw parsed (7338 bytes). Accounting 96 native and 96 S0 outcomes, zero clean. Independent reconciliation tasks 90–94 verified 364 hashes, cumulative 6979 across 94 tasks, no discrepancies. Refreshed EXPANSION/summary and verified all 318 public evidence hashes. Original sole worker waiting; GitHub Valibot active, six queued. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:12 UTC — Valibot native monitoring checkpoint
+
+Fresh GitHub: 97 native tasks complete, Vitest duration sharding active, 5 queued. Read-only raw reconciliation confirms Valibot oracle/no-op 1/0 (10 F2P, 209 P2P); all attacks reward 0 without reach markers, no Pier exceptions. Native deferred; one Valibot S0 active under original worker PID 99581, no worker/poll errors. Local 97 native/96 S0; published summary remains 96/96 until next publication. No new attempts, retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:14 UTC — Valibot outcomes published
+
+Valibot S0 validated as DEFERRED_EVIDENCE_REQUIRED for probe reach and reproducibility evidence; archived raw JSON parsed (9487 bytes). Native evidence reconciled at preceding checkpoint. Published its static/native/S0 evidence and refreshed expansion report/summary: 97 native and 97 S0 outcomes, zero clean. Verified all 321 public evidence hashes. GitHub unchanged: Vitest duration sharding active, 5 queued; original worker waiting without errors. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

