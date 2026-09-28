@@ -301,3 +301,7 @@ Native completion advanced to 77/103; Returns validated-error accumulation activ
 ### 2026-09-28 08:31 UTC — Quill S0 outcome
 
 Quill S0 validated as deferred for unobserved probe reach, independence, threshold calibration and reproducibility gaps; archived raw review parsed (11528 bytes). Native evidence and runtime digest retained. Accounting now 77 native and 77 S0 outcomes, zero clean results. Returns native active with 25 queued; original worker waiting without active S0 or errors. Verified 256 public evidence hashes; published semantic result, summary and EXPANSION.md. No new attempts or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:34 UTC — Returns native integrity failure
+
+Native completion advanced to 78/103; SCC bounded-memory spilling active, 24 queued. Returns protected-path reward 1 accepted by Pier without exception despite 15 collection errors for missing feature imports. Explicit reach/write markers verified; oracle/no-op rewards 1/0 (159 F2P, 61 P2P). Forgery rejected with reach; suppression reward 0 without observed reach. Sole original worker and Returns S0 active without errors. Refreshed EXPANSION.md and summary; verified 258 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
