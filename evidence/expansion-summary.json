@@ -10,10 +10,10 @@
       "NOT_RUN": 51
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 14,
+      "DEFERRED_EVIDENCE_REQUIRED": 15,
       "FAIL": 25,
       "INFRASTRUCTURE_FAILURE": 12,
-      "NOT_RUN": 52
+      "NOT_RUN": 51
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 52,
-    "semantic": 51,
+    "semantic": 52,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -966,17 +966,18 @@
       "task_id": "kysely-window-grouping-helpers"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "25e97cacaea7ccd59db2111c297b51fa77dedaed1a0acb26d51452cfc4ca25c1",
+        "semantic.json": "74c177d2f2cb6673ed650d5e35dea3eef538061a2a8c394fb6db5a174aa8a6b6",
         "static.json": "dc6363d3002bbaea5f12c2d092c1e3dd2dfc783717f6b524a0748b6ceca46681"
       },
       "language": "python",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "FAIL"
       },
       "repository": "https://github.com/langchain-ai/langchain",
