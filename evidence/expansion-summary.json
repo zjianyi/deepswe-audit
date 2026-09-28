@@ -11,9 +11,9 @@
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 23,
-      "FAIL": 37,
+      "FAIL": 38,
       "INFRASTRUCTURE_FAILURE": 20,
-      "NOT_RUN": 23
+      "NOT_RUN": 22
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 81,
-    "semantic": 80,
+    "semantic": 81,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1494,17 +1494,18 @@
       "task_id": "scriggo-method-declarations"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "9b30511606c3ad1c73f82683022dcaa70b8ada3113219623e63d1ddea5ad49b9",
+        "semantic.json": "46eb41cfac9cc73739f6bdc41eca7aaff2603d0e65876c3615c9b3e43179f9b3",
         "static.json": "b24fb2f6f9cec5220df6d8fb721b962bc4428646281d50045e2ef4c1e8fa67cd"
       },
       "language": "python",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "FAIL"
       },
       "repository": "https://github.com/skrub-data/skrub",

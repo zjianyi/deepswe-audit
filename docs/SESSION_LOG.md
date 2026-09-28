@@ -383,3 +383,7 @@ Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encodin
 ### 2026-09-28 09:14 UTC — Skrub native integrity failure
 
 Native completion advanced to 81/103; SQL formatter BigQuery pipe formatting active, 21 queued. Skrub protected-path reward 1 accepted by Pier without exception despite two collection errors for missing DurationEncoder. Explicit reach/write markers verified; oracle/no-op rewards 1/0 (130 F2P, 2784 P2P). Forgery rejected with reach; suppression reward 0 without observed reach. Sole original worker and Skrub S0 active without errors. Refreshed EXPANSION.md and summary; verified 267 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:16 UTC — Skrub S0 integrity finding
+
+Skrub S0 validated as FAIL, corroborating native protected-path reward bypass under SEM-008. Archived raw review parsed (6317 bytes). Accounting now 81 native and 81 S0 outcomes, zero clean results. SQL formatter native active with 21 queued; original worker waiting without active S0 or errors. Verified 268 public evidence hashes; published semantic result, summary and EXPANSION.md. No new attempts or policy changes; NEXT unchanged. Validation: git diff --check.
