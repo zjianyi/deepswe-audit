@@ -4,13 +4,14 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "FAIL": 4,
-      "NOT_RUN": 99
+      "FAIL": 6,
+      "NOT_RUN": 97
     },
     "semantic": {
+      "DEFERRED_EVIDENCE_REQUIRED": 1,
       "FAIL": 2,
-      "INFRASTRUCTURE_FAILURE": 1,
-      "NOT_RUN": 100
+      "INFRASTRUCTURE_FAILURE": 2,
+      "NOT_RUN": 98
     },
     "static": {
       "FAIL": 16,
@@ -18,8 +19,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 4,
-    "semantic": 3,
+    "execution": 6,
+    "semantic": 5,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -81,31 +82,37 @@
       "task_id": "actionlint-action-pinning-lint"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "47b4535a789b0764cc2b0ba1f61105fb821db4976a3f87d8972d0ed77a853ae6",
         "execution.json": "561468884b881d100ed8e38bc4c36f5decd797cfd73c0c8f483cdba62fcedaf9",
+        "semantic.json": "94fa6d65aec6be6d9b7128d9bb1ad72b83f99335c383db18e82c51dddd3ad00d",
         "static.json": "5e10709f2761928085f1db9df3b567e3bc7fc5ebe2480d361eb76e17609c6f4e"
       },
       "language": "python",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/reagento/adaptix",
       "task_id": "adaptix-name-mapping-aliases"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "065fd0b5baf56cc55108fbe640ec7762b4bf0b07dc73689e9b2774a8e40d2fb7",
+        "semantic.json": "66abef16d34758930a609f20862c1db7e0a8b86c497e5f8fad86ea6a0ac5b398",
+        "static.json": "353844386376e64adf52de0de6cf1600c7dd1f73e4d2f45d982c4f0e58fd9c99"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/aio-libs/aiomonitor",
@@ -115,10 +122,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "665a2c2dde174ddff6d43542e23dd49a5a189e85ab7c7d85f2f252553ed87517",
+        "static.json": "2ad94bd7143545504be349b6250149951a216effa586b77d5f060647c6a8f6dd"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

