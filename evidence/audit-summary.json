@@ -3,7 +3,7 @@
   "clean_count": 0,
   "completed_phase_counts": {
     "execution": 10,
-    "semantic": 8,
+    "semantic": 9,
     "static": 10
   },
   "corpus_static_counts": {
@@ -133,18 +133,18 @@
       "task_id": "wasmi-trap-coredumps"
     },
     {
-      "all_phases_evaluated": false,
+      "all_phases_evaluated": true,
       "clean_three_phase_result": false,
       "has_infrastructure_blocker": false,
       "has_task_defect": false,
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/jeffijoe/awilix",
-      "semantic_finding_count": 0,
+      "semantic_finding_count": 6,
       "task_id": "awilix-async-container-initialization"
     },
     {

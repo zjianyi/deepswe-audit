@@ -14,7 +14,7 @@ Static outcomes: `{'FAIL': 16, 'PASS': 97}`.
 | dateutil-rfc5545-timezone-interop | PASS | INFRASTRUCTURE_FAILURE | DEFERRED_EVIDENCE_REQUIRED | False |
 | fd-deterministic-multi-key-sorting | PASS | INFRASTRUCTURE_FAILURE | FAIL | False |
 | wasmi-trap-coredumps | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED | False |
-| awilix-async-container-initialization | PASS | DEFERRED_EVIDENCE_REQUIRED | NOT_RUN | False |
+| awilix-async-container-initialization | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED | False |
 | happy-dom-abort-pending-body-reads | PASS | DEFERRED_EVIDENCE_REQUIRED | NOT_RUN | False |
 
 ## Interpretation
