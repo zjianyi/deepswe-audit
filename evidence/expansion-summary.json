@@ -4,12 +4,13 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "FAIL": 1,
-      "NOT_RUN": 102
+      "FAIL": 3,
+      "NOT_RUN": 100
     },
     "semantic": {
       "FAIL": 1,
-      "NOT_RUN": 102
+      "INFRASTRUCTURE_FAILURE": 1,
+      "NOT_RUN": 101
     },
     "static": {
       "FAIL": 16,
@@ -17,8 +18,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 1,
-    "semantic": 1,
+    "execution": 3,
+    "semantic": 2,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -43,14 +44,18 @@
       "task_id": "abs-module-cache-flags"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "13c0c5316297babf99ae1ab487fc4dc93f21f03fa14122dc33feab9bd4971050",
+        "semantic.json": "5efc917f4b7c27a493e7981151699d2b40d69faaf723525170257f35d19e51ec",
+        "static.json": "0f45a7595a4f6325fa19112e88cd449ad58d3b05f612311400abea9ee9c78d17"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/abs-lang/abs",
@@ -60,10 +65,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "b276f856b315053556721b8625bb1ec4ce54f5838cddf08f543e183e2aa2ed52",
+        "static.json": "f2d57036e3c00ff410f36bbb907f96597cb89bdbb3f08475f9572109f9068e32"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

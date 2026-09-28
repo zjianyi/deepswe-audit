@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 1, 'semantic': 1}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 3, 'semantic': 2}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -11,8 +11,8 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | Language | Task | Static | Execution | Semantic |
 |---|---|---|---|---|
 | go | abs-module-cache-flags | PASS | FAIL | FAIL |
-| go | abs-stepped-slices | PASS | NOT_RUN | NOT_RUN |
-| go | actionlint-action-pinning-lint | PASS | NOT_RUN | NOT_RUN |
+| go | abs-stepped-slices | PASS | FAIL | INFRASTRUCTURE_FAILURE |
+| go | actionlint-action-pinning-lint | PASS | FAIL | NOT_RUN |
 | python | adaptix-name-mapping-aliases | PASS | NOT_RUN | NOT_RUN |
 | python | aiomonitor-task-snapshots-diff | PASS | NOT_RUN | NOT_RUN |
 | go | anko-default-function-arguments | PASS | NOT_RUN | NOT_RUN |
