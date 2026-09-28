@@ -11,9 +11,9 @@
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 16,
-      "FAIL": 25,
+      "FAIL": 26,
       "INFRASTRUCTURE_FAILURE": 12,
-      "NOT_RUN": 50
+      "NOT_RUN": 49
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 54,
-    "semantic": 53,
+    "semantic": 54,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1003,17 +1003,19 @@
       "task_id": "mashumaro-flattened-dataclass-fields"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "1c1edf98e148d5b4d5b870c8ca659e108c07279e0ac2ec9ffb991f0b93d2dc22",
         "execution.json": "35e5b4cb18a8e5b0a53fe75d394837c35612dae31e8989240aa2e196573f124d",
+        "semantic.json": "459b57ded8b740d1ab941e8fa1c18f6708a825decb6efd4d537dc019665abec7",
         "static.json": "83d922b26f9225acb5ad5ac9ac1670d316a90d3ee1cff715b9f05f32322f93b7"
       },
       "language": "typescript",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/meriyah/meriyah",

