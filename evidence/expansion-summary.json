@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 22,
-      "FAIL": 53,
+      "DEFERRED_EVIDENCE_REQUIRED": 23,
+      "FAIL": 54,
       "INFRASTRUCTURE_FAILURE": 19,
-      "NOT_RUN": 9
+      "NOT_RUN": 7
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 26,
-      "FAIL": 43,
-      "INFRASTRUCTURE_FAILURE": 24,
-      "NOT_RUN": 10
+      "DEFERRED_EVIDENCE_REQUIRED": 27,
+      "FAIL": 44,
+      "INFRASTRUCTURE_FAILURE": 25,
+      "NOT_RUN": 7
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 94,
-    "semantic": 93,
+    "execution": 96,
+    "semantic": 96,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1732,45 +1732,55 @@
       "task_id": "tomlkit-toml-table-converters"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "9b8e674d97b03b0f611efc3d64c9ed27030528233c062c2443ce13bd4e47c113",
         "execution.json": "5e35b9fcb435040ea5cbafbaeceb96fe3224c95b2d114855bc37cce3bf5145ae",
+        "semantic.json": "2b45edf1d63d4d6bd15d68a48f81f307ae738814ab6fc43ad9e6950d953fc458",
         "static.json": "2c6358aaa2f00ca9927392dd139dec9716c64835dfd5076d94bc0abc877dfd97"
       },
       "language": "typescript",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/true-myth/true-myth",
       "task_id": "true-myth-iterable-collection-combinators"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "90e97691a64cbee7bd53aa4d395f8d9521220ac7b9f3611ce20916654faf1a8c",
+        "semantic.json": "5996bd57473cf6cb04c58ed73bebf21ee6baa4e315ecd5d97dcd2cc5494e83b6",
+        "static.json": "dedd0269fcb0773cf9416a277ca0f5016844abbcbf2dbc43db2c84dcd879246f"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/gvergnaud/ts-pattern",
       "task_id": "ts-pattern-match-each"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "00d52c07cbe2ffe5e3a3076ea0adf30094c6f358d3425ccc211121376122a352",
+        "semantic.json": "43f1e8b375bf9935dcca2c4e0fde6836e27738d599c7feace9085ce920cb3886",
+        "static.json": "30b9835fa90bd7e429cbc8038566a13b37b86042aa6b65b4b188fff332a4c8e2"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/Owloops/updo",

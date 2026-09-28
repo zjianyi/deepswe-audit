@@ -1,0 +1,39 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 364,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "testem-per-launcher-reports",
+      "artifact_count": 1,
+      "native_evidence_sha256": "ca9b20f2a438f4b88d9638db5ad986927a8233e4fa3c2e8a369cf3dd3e9f78c7"
+    },
+    {
+      "task_id": "textual-kitty-key-phases",
+      "artifact_count": 84,
+      "native_evidence_sha256": "5e839f06f83182ab19e08c5865e101d79a3d955b8280aa5168fb4ae21e2e4526"
+    },
+    {
+      "task_id": "textual-richlog-follow-state",
+      "artifact_count": 84,
+      "native_evidence_sha256": "aace235b4caee20b989009ce938ce4f9d27f773989f92fc73d4a632ab108a47e"
+    },
+    {
+      "task_id": "tomlkit-toml-table-converters",
+      "artifact_count": 84,
+      "native_evidence_sha256": "0834b01ad67354992499f7542e87d7bda6b929b5f26bc7a43b826ff85d0f02ff"
+    },
+    {
+      "task_id": "true-myth-iterable-collection-combinators",
+      "artifact_count": 111,
+      "native_evidence_sha256": "36ada23fc0315d87222c20cd2c55b6d77352dc8f9c73abd2eb2cbf4e96c853dc"
+    }
+  ],
+  "observations": [
+    "Independent read-only reconciliation verified 364/364 artifact hashes, all five public/native bindings and available case fields.",
+    "Both Textual protected-paths trials accepted reward 1 without exceptions despite failing feature tests; absent reach/write markers constrain attribution.",
+    "TOMLKit and True Myth protected-paths trials accepted reward 1 with explicit reach/write markers and missing final CTRF. TOMLKit raw output includes a collection error.",
+    "Testem was blocked by registry Data limit exceeded. All four executable oracle/no-op pairs returned 1/0."
+  ]
+}

