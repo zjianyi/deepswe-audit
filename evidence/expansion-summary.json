@@ -11,9 +11,9 @@
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 26,
-      "FAIL": 40,
+      "FAIL": 41,
       "INFRASTRUCTURE_FAILURE": 24,
-      "NOT_RUN": 13
+      "NOT_RUN": 12
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 91,
-    "semantic": 90,
+    "semantic": 91,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1676,18 +1676,19 @@
       "task_id": "testem-per-launcher-reports"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "audit-annotation.json": "11d581960bf6282614502b852039a23717481a654e1ce2e6668242c3f610fa6f",
         "execution.json": "77319ab50c4fb1e163cee4529037625100358111f94942957d3d87b4c108738e",
+        "semantic.json": "6690b2cfcd7d40d7cfaa7cadc74cb1a5980c5317288bc7c77438c271369d298f",
         "static.json": "b083f654e0fce544a50ccaa58b34349c91cc65e06301a041082bc372a098a740"
       },
       "language": "python",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/Textualize/textual",
