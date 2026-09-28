@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 50, 'semantic': 50}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 51, 'semantic': 51}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -60,7 +60,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | python | koota-entity-snapshot-rollback | PASS | DEFERRED_EVIDENCE_REQUIRED | INFRASTRUCTURE_FAILURE |
 | typescript | koota-pair-relation-tracking | PASS | DEFERRED_EVIDENCE_REQUIRED | FAIL |
 | typescript | koota-query-predicates | PASS | DEFERRED_EVIDENCE_REQUIRED | INFRASTRUCTURE_FAILURE |
-| typescript | kysely-window-grouping-helpers | PASS | NOT_RUN | NOT_RUN |
+| typescript | kysely-window-grouping-helpers | PASS | FAIL | INFRASTRUCTURE_FAILURE |
 | python | langchain-request-coalescing | FAIL | NOT_RUN | NOT_RUN |
 | python | mashumaro-flattened-dataclass-fields | FAIL | NOT_RUN | NOT_RUN |
 | typescript | meriyah-explicit-resource-declarations | PASS | NOT_RUN | NOT_RUN |

