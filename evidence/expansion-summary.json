@@ -5,15 +5,15 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 25,
-      "FAIL": 55,
+      "FAIL": 56,
       "INFRASTRUCTURE_FAILURE": 20,
-      "NOT_RUN": 3
+      "NOT_RUN": 2
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 28,
       "FAIL": 45,
-      "INFRASTRUCTURE_FAILURE": 26,
-      "NOT_RUN": 4
+      "INFRASTRUCTURE_FAILURE": 27,
+      "NOT_RUN": 3
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 100,
-    "semantic": 99,
+    "execution": 101,
+    "semantic": 100,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1841,17 +1841,18 @@
       "task_id": "vulture-persistent-analysis-cache"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "3e7f7b0476bc4b67d783b22326b599a9e1eef4e78fd3298a7c6aef08ea4b52b6",
+        "semantic.json": "da5e8214686afcf49032680d4429f3b3637313043d79110d35bafb43a92d5d32",
         "static.json": "07d37fbfa1e8c8b3c8c6ca6a7a56b48f1212ec0de1f10d5fe930e31cac50be57"
       },
       "language": "go",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/wazero/wazero.git",
@@ -1861,10 +1862,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "f0a3ea5d52cf831e063055c0523fb028ebd437a3e112d60c35ac392a78e3dead",
+        "static.json": "7eb589ea478d5c4a213558d4a88eb0764b7b46997bb33d0e3871f4e28156eb0b"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

