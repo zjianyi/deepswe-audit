@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 14, 'semantic': 13}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 14, 'semantic': 14}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -23,7 +23,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | python | bandit-interprocedural-taint-checks | PASS | FAIL | DEFERRED_EVIDENCE_REQUIRED |
 | rust | boa-hierarchical-evaluation-cancellation | PASS | INFRASTRUCTURE_FAILURE | INFRASTRUCTURE_FAILURE |
 | python | cattrs-partial-structuring-recovery | FAIL | INFRASTRUCTURE_FAILURE | FAIL |
-| typescript | clack-async-autocomplete-options | PASS | INFRASTRUCTURE_FAILURE | NOT_RUN |
+| typescript | clack-async-autocomplete-options | PASS | INFRASTRUCTURE_FAILURE | FAIL |
 | typescript | claude-code-by-agents-recursive-delegation | PASS | NOT_RUN | NOT_RUN |
 | typescript | cliffy-config-file-parsing | PASS | NOT_RUN | NOT_RUN |
 | javascript | csstree-shorthand-expansion-compression | PASS | NOT_RUN | NOT_RUN |

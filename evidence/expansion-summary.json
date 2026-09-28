@@ -11,9 +11,9 @@
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 3,
-      "FAIL": 7,
+      "FAIL": 8,
       "INFRASTRUCTURE_FAILURE": 3,
-      "NOT_RUN": 90
+      "NOT_RUN": 89
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 14,
-    "semantic": 13,
+    "semantic": 14,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -269,18 +269,19 @@
       "task_id": "cattrs-partial-structuring-recovery"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
-        "audit-annotation.json": "218b6579d986dc05510034ed33ccfabcb14c8250fc57cb5283efbf0eb62a0080",
+        "audit-annotation.json": "7304b741455be7e41fc99093ed0c56a9a7402fe6f1c2cf0b41e3b58500bff7c6",
         "execution.json": "22429d38f69e01d66aecf5ccf4d2249ac0ab80c0fa513da4d6e16ed957f19704",
+        "semantic.json": "f51ccbf3f35aed03e453d608df9351ef0bd7620b4e5985554f2032ca1567846a",
         "static.json": "281bca7c3885721956fc92eb3020926e8cf1569fa1017dcb8f1e6db29c5e4652"
       },
       "language": "typescript",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/bombshell-dev/clack",
