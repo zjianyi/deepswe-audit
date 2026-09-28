@@ -12,8 +12,8 @@
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 21,
       "FAIL": 34,
-      "INFRASTRUCTURE_FAILURE": 16,
-      "NOT_RUN": 32
+      "INFRASTRUCTURE_FAILURE": 17,
+      "NOT_RUN": 31
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 72,
-    "semantic": 71,
+    "semantic": 72,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1332,17 +1332,18 @@
       "task_id": "prometheus-transactional-reload-status"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "07362efb4e2ac208674278ca52a833cde256c5fae7b653a2d3bb3c2a94588b61",
+        "semantic.json": "836927aad829ae4f43c1ca304748392f08fb408417e516dc9ad4dbc08dbc6783",
         "static.json": "ef2f1adac61fe67c9775d349c2385bd619a632388bd29cfa28916916c25f521b"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/prometheus/prometheus",

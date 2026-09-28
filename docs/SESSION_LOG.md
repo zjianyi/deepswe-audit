@@ -255,3 +255,7 @@ Fresh GitHub status unchanged: 71 native tasks completed, Prometheus typed-label
 ### 2026-09-28 08:03 UTC — Prometheus typed-label sorting native outcome
 
 Native completion advanced to 72/103; PSD tools blend-range API active, 30 queued. Typed-label sorting protected-path reward 1 accepted without Pier exception and explicit reach/write markers verified against raw result/logs; final CTRF absent. Oracle/no-op 1/0, both other attacks 0 with reach. Sole S0 active under original worker without errors. Refreshed EXPANSION.md and summary; 240 public evidence hashes verified. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:05 UTC — Prometheus typed-label sorting S0 blocker
+
+S0 rejected by strict SEM-020 validation: actionable verdict requires a finding. Parsed archived raw review (7157 bytes); preserved first infrastructure-failure outcome without repair or rereview. Native protected-path reward bypass remains independently supported. Accounting now 72 native and 72 S0 outcomes, zero clean results. PSD blend-range API native active with 30 queued; sole worker waiting without errors. Verified 241 public evidence hashes. Published refreshed EXPANSION.md, summary and semantic result. NEXT unchanged. Validation: git diff --check.
