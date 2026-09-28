@@ -10,10 +10,10 @@
       "NOT_RUN": 32
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 20,
+      "DEFERRED_EVIDENCE_REQUIRED": 21,
       "FAIL": 34,
       "INFRASTRUCTURE_FAILURE": 16,
-      "NOT_RUN": 33
+      "NOT_RUN": 32
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 71,
-    "semantic": 70,
+    "semantic": 71,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1314,17 +1314,18 @@
       "task_id": "pest-character-class-coalescing"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "a83fe8c71685664b418bc79a70faa4ca724b8bb4a4035b795dfe88322abc5cb7",
+        "semantic.json": "439ab47c650597a35fd13166a1eebf0198f59326ab1cd13c5f93e11550cf768c",
         "static.json": "95163bc1052af9c6651408af2fb0f194780b17c95be427d0bb0f9445114d6a5f"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/prometheus/prometheus.git",
