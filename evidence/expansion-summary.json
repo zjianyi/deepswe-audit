@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 4,
+      "DEFERRED_EVIDENCE_REQUIRED": 5,
       "FAIL": 19,
       "INFRASTRUCTURE_FAILURE": 9,
-      "NOT_RUN": 71
+      "NOT_RUN": 70
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 8,
+      "DEFERRED_EVIDENCE_REQUIRED": 9,
       "FAIL": 16,
       "INFRASTRUCTURE_FAILURE": 7,
-      "NOT_RUN": 72
+      "NOT_RUN": 71
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 32,
-    "semantic": 31,
+    "execution": 33,
+    "semantic": 32,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -601,17 +601,19 @@
       "task_id": "go-git-worktree-merge-conflicts"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "650c509efbf901ca2a26a713a91e6aa02b5df45796fb9a76abc9e0a60c4ce35c",
         "execution.json": "aecb5f18549b015feb8134e11ab533744ef471f0510749841b51f950ded539aa",
+        "semantic.json": "8f165a3f304083362429f844a75c48c0ece6ba3a6e6b10a8437fb76e13849337",
         "static.json": "a49eb92bc196f64bdfb6d157a5bb624940e1014923edf22095f1a30e233ee1e6"
       },
       "language": "python",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "FAIL"
       },
       "repository": "https://github.com/graphql-python/gql",
@@ -621,10 +623,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "3d0bcfc49d8c0df838c799e18fa9ad911f709a37e607171f882baede12de0b3d",
+        "static.json": "b25a2383b7018cdec11611e3e71c47b124d61c07f22b50a840d5640d31696598"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },
