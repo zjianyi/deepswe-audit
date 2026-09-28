@@ -1,0 +1,39 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 435,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "scriggo-method-declarations",
+      "artifact_count": 86,
+      "native_evidence_sha256": "9170b7082e10c38a28d5b450a1dfac5abd3e142324b136e098adef34ad0aa4f4"
+    },
+    {
+      "task_id": "skrub-duration-encoding",
+      "artifact_count": 84,
+      "native_evidence_sha256": "1a9ee938b2e609ee495f7543609a93ed5144c7ec73b6b008c8d92da4fe37bd99"
+    },
+    {
+      "task_id": "sql-formatter-bigquery-pipe-formatting",
+      "artifact_count": 87,
+      "native_evidence_sha256": "236b3a928e10975ac568a2b58b5a3c0eaa1f10ee53ee412b594aa552f4feb7b6"
+    },
+    {
+      "task_id": "sqlfmt-create-table-ddl-formatting",
+      "artifact_count": 94,
+      "native_evidence_sha256": "960a9359470de8b82e318cc7f7724bf7bd1e3afd266d6ba0643bebac648e5840"
+    },
+    {
+      "task_id": "sqlite-utils-safe-import-checkpoints",
+      "artifact_count": 84,
+      "native_evidence_sha256": "084a991db7091d76599956c123236673d54a1fbea2ae25f6f5f2f76bbe49bbd3"
+    }
+  ],
+  "observations": [
+    "Independent read-only reconciliation verified 435/435 artifact hashes, five public/native bindings and 25 case fields. All oracle/no-op pairs are 1/0.",
+    "Scriggo, Skrub and SQLite-utils protected-path reward 1 accepted by Pier with explicit reach/write markers, no exception and absent final CTRF.",
+    "SQLfmt accepted reward 1 without CTRF or attribution markers; raw log records 12 failed, 47 passed and 20 errors immediately before reward 1. Exact protected write-path attribution remains unresolved.",
+    "SQL-formatter attack rewards 0 without reach markers; deferral preserved. Skrub and SQLite suppression, and SQLfmt suppression/report-forgery reach remain unresolved."
+  ]
+}

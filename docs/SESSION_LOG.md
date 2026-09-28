@@ -403,3 +403,7 @@ Accounting advanced to 83 native and 83 S0 outcomes, zero clean results. SQLfmt 
 ### 2026-09-28 09:28 UTC — SQLite-utils native integrity finding
 
 Native completion advanced to 84/103; SuperJSON active with 18 queued. SQLite-utils protected-paths trial accepted reward 1 without exception despite a collection error for missing SafeImportNotEnabledError; explicit reach/write markers verified. Oracle/no-op rewards 1/0 (60 F2P, 1038 P2P). Forgery rejected with reach; suppression reward 0 without observed reach. Sole original worker and SQLite-utils S0 active without errors. Refreshed expansion report and summary; verified 277 public evidence hashes. Assigned existing read-only reconciliation agent tasks 80–84; no additional reviews or attempts. No policy changes or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:31 UTC — SQLite-utils S0 and artifact reconciliation
+
+SQLite-utils S0 validated as FAIL and corroborates native reward bypass under SEM-008; suppression reach and reproducibility remain deferred. Archived raw JSON parsed (10390 bytes). Accounting now 84 native and 84 S0 outcomes, zero clean results. SuperJSON active with 18 queued; original worker waiting without errors. Independent tasks 80–84 reconciliation verified 435 artifact hashes and 25 case fields with no discrepancies, cumulative 6494 artifacts. Published reconciliation summary and semantic result; verified 278 public evidence hashes. No new attempts or policy changes; NEXT unchanged. Validation: git diff --check.

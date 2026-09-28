@@ -11,9 +11,9 @@
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 23,
-      "FAIL": 38,
+      "FAIL": 39,
       "INFRASTRUCTURE_FAILURE": 22,
-      "NOT_RUN": 20
+      "NOT_RUN": 19
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 84,
-    "semantic": 83,
+    "semantic": 84,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1549,17 +1549,18 @@
       "task_id": "sqlfmt-create-table-ddl-formatting"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "d6032151c5974c3ff449dffd2676d81bb75f382cd439063e0d465ac32c2fef0c",
+        "semantic.json": "ec4edb8d09e3726cb69dfcf0598a1808f57e471df4c89fc88a47cf67838c61a2",
         "static.json": "67a279aefda4f18d207ebab6331cc29ff8eee10dfdf6dcf4fd32c42016d185e4"
       },
       "language": "python",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "FAIL"
       },
       "repository": "https://github.com/simonw/sqlite-utils",
