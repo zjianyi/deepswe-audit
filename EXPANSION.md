@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 93, 'semantic': 92}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 94, 'semantic': 93}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -102,8 +102,8 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | javascript | testem-per-launcher-reports | PASS | INFRASTRUCTURE_FAILURE | INFRASTRUCTURE_FAILURE |
 | python | textual-kitty-key-phases | PASS | FAIL | FAIL |
 | python | textual-richlog-follow-state | FAIL | FAIL | FAIL |
-| python | tomlkit-toml-table-converters | PASS | FAIL | NOT_RUN |
-| typescript | true-myth-iterable-collection-combinators | PASS | NOT_RUN | NOT_RUN |
+| python | tomlkit-toml-table-converters | PASS | FAIL | FAIL |
+| typescript | true-myth-iterable-collection-combinators | PASS | FAIL | NOT_RUN |
 | typescript | ts-pattern-match-each | PASS | NOT_RUN | NOT_RUN |
 | go | updo-policy-alerting | PASS | NOT_RUN | NOT_RUN |
 | typescript | valibot-recursive-schema-composition | PASS | NOT_RUN | NOT_RUN |

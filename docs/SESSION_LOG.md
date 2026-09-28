@@ -455,3 +455,11 @@ Textual RichLog oracle/no-op rewards 1/0 (20 F2P, 6 P2P). Protected-paths reward
 ### 2026-09-28 09:57 UTC — Concurrent worker progress reconciled before session end
 
 Worker advanced during publication: Textual RichLog S0 validated FAIL, corroborating reward bypass under SEM-013; raw JSON parsed (7767 bytes). TOMLKit native imported with oracle/no-op 1/0 (60 F2P, 964 P2P); protected-path reward 1 accepted without exception despite missing tomlkit.convert collection error and explicit reach/write markers. Forgery rejected with reach; suppression reach unresolved. The refreshed summary already included these outcomes, so published the corresponding files immediately after raw reconciliation. Accounting 93 native and 92 S0 outcomes; 307 public evidence hashes verified in preceding check. Sole worker now running TOMLKit S0. No new attempts or retries. Validation: git diff --check.
+
+### 2026-09-28 09:59 UTC — Unchanged monitoring checkpoint
+
+Fresh GitHub status: 95 native tasks complete, Updo active, 7 queued. Local outcomes remain 93 native and 92 S0; TOMLKit S0 and sole original worker PID 99581 remain active without worker/poll errors. No intervention, retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:02 UTC — TOMLKit S0 and True Myth integrity finding
+
+TOMLKit S0 validated as FAIL, corroborating native reward bypass under SEM-008; raw JSON parsed (14066 bytes). True Myth oracle/no-op 1/0 (96 F2P, 561 P2P); protected-paths accepted reward 1 without exception with explicit reach/write markers and missing final CTRF. Forgery and suppression reward 0 with observed reach. Local accounting {'static': 103, 'execution': 94, 'semantic': 93}, zero clean. GitHub 95 native complete, Updo active, 7 queued. Original worker and one True Myth S0 active without errors. Refreshed report/summary; verified 310 public evidence hashes. Existing read-only agent assigned tasks 90–94 reconciliation; no additional S0. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
