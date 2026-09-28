@@ -12,8 +12,8 @@
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 16,
       "FAIL": 29,
-      "INFRASTRUCTURE_FAILURE": 12,
-      "NOT_RUN": 46
+      "INFRASTRUCTURE_FAILURE": 13,
+      "NOT_RUN": 45
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 58,
-    "semantic": 57,
+    "semantic": 58,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1077,17 +1077,18 @@
       "task_id": "narwhals-rolling-window-suite"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "9a40e6540aa82f7a038c7229a5982d19b14f839e3fd5c53ece2ca9a058286416",
+        "semantic.json": "c8b711eda128dc1c1aede87b339c83f6a881c9be1c4b7b5d3ec8b49bfd0d46ae",
         "static.json": "8fff7a35f8043db5fe7e5e8aafee1b909dbb105a8f6d89f916149583eb7ef414"
       },
       "language": "python",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "FAIL"
       },
       "repository": "https://github.com/numba/numba",

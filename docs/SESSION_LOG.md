@@ -142,3 +142,5 @@
 - 2026-09-28 06:27 UTC: Unchanged 57 native/57 semantic outcomes. Numba native running, 45 queued; original worker polling normally without errors or active S0. No retries or duplicate attempts; diff check passed. NEXT objective unchanged.
 - 2026-09-28 06:29 UTC: Unchanged 57 native/57 semantic outcomes. Numba native running, 45 queued; original worker polling normally without errors or active S0. No retries or duplicate attempts; diff check passed. NEXT objective unchanged.
 - 2026-09-28 06:32 UTC: Numba native reward bypass imported; raw Pier acceptance without exception and 29 failed/3 passed test log corroborated. Exact write attribution remains unobserved. Sole S0 active, Obsidian native running. Counts {'static': 103, 'execution': 58, 'semantic': 57}; public hashes/diff verified; no errors or retries. NEXT unchanged.
+
+- 2026-09-28 06:36 UTC: Numba S0 strict-validation infrastructure blocker recorded; archived raw JSON verified, no rereview. 58 native/58 semantic outcomes, zero clean. Obsidian native active; sole original worker polling without errors. Verified 196 public evidence bindings and diff check; NEXT unchanged.

