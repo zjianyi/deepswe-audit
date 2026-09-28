@@ -1,0 +1,48 @@
+{
+  "schema_version": "deepswe.evidence-reconciliation/1",
+  "method": "Independent read-only subagent reconciliation; no task execution or additional S0.",
+  "artifact_hashes_verified": 268,
+  "tasks": [
+    {
+      "task_id": "expr-try-catch-errors",
+      "artifact_hashes_verified": 1,
+      "native_run_sha256": "26c2c48ee7582de7a579b4bcd0d34e8b2797972fe433177f69e54400f32e04bc",
+      "public_execution_sha256": "cb23104e0f2a5104ca7d73a1c8cbe681997cfadde4ec816ef7d59b3d16c259f5",
+      "result": "All available public/native case fields and bindings match raw evidence."
+    },
+    {
+      "task_id": "fastapi-deprecation-response-headers",
+      "artifact_hashes_verified": 1,
+      "native_run_sha256": "5f998ebe6b12d955f6fba943c10aede2e14d6da8447de7ca08e46b281476c5a5",
+      "public_execution_sha256": "3124a5b302630848181d6f58e721c89dd255fd5c26f391cc74e8fddafc5d6a20",
+      "result": "All available public/native case fields and bindings match raw evidence."
+    },
+    {
+      "task_id": "fastapi-implicit-head-options",
+      "artifact_hashes_verified": 94,
+      "native_run_sha256": "1fee4e05c2c4d1c698c01ead54dc1e336546d69b2903a6c0c0deeea052b27c56",
+      "public_execution_sha256": "86c12052c194b9d0e54c20bec3bd3ec0ede745310fbd3ccb01f948b576d5aa72",
+      "result": "All available public/native case fields and bindings match raw evidence."
+    },
+    {
+      "task_id": "geo-shapeindex-serialization",
+      "artifact_hashes_verified": 86,
+      "native_run_sha256": "f264777043e6a4e30f9f28a12d44f3f2010a8076c18522f87309c4c49e33b5af",
+      "public_execution_sha256": "2fe8e7b7939619897b024a147ac308447c915823588e5189e8380648daf82dc1",
+      "result": "All available public/native case fields and bindings match raw evidence."
+    },
+    {
+      "task_id": "go-critic-doc-link-checker",
+      "artifact_hashes_verified": 86,
+      "native_run_sha256": "dc15f8272a0bbbd33ecb28bdf9a6ce679ed99277b9581c20c894f93ec092ec89",
+      "public_execution_sha256": "ac2cf87147478bb1f06073f953c14fa0dcb0d22c144da03a4f4cabe8ef20640d",
+      "result": "All available public/native case fields and bindings match raw evidence."
+    }
+  ],
+  "observations": [
+    "Geo forge-reports: final CTRF all 623 required IDs passed, native/Pier reward 1. Forged base report contains all IDs; new report empty, logs show build failure.",
+    "Go-critic forge-reports: final CTRF all 19 required IDs passed, native/Pier reward 1. Forged base report contains all IDs; new report one row, logs say no tests to run.",
+    "Geo, Go-critic and FastAPI implicit HEAD protected-path rewards 1 accepted, explicit write markers, absent final CTRF.",
+    "Expr and FastAPI deprecation image pulls confirm Data limit exceeded. All three executable oracle/no-op pairs were 1/0."
+  ]
+}

@@ -5,15 +5,15 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 4,
-      "FAIL": 18,
+      "FAIL": 19,
       "INFRASTRUCTURE_FAILURE": 9,
-      "NOT_RUN": 72
+      "NOT_RUN": 71
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 8,
-      "FAIL": 15,
+      "FAIL": 16,
       "INFRASTRUCTURE_FAILURE": 7,
-      "NOT_RUN": 73
+      "NOT_RUN": 72
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 31,
-    "semantic": 30,
+    "execution": 32,
+    "semantic": 31,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -583,17 +583,18 @@
       "task_id": "go-genai-streamed-function-args"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "6ffc94f457685972a953fd121a0a44fc462c30db4157cf8a16ca6add0b13464b",
+        "semantic.json": "6853e7f67f44c954d57f540abf224c357b26522af9c3ca99a06fdd3ce8c76ec3",
         "static.json": "8bade1760ffc3abccc0f9f6a2f64c06715c25d035ae131a91f2de1eb3d585504"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/go-git/go-git",
@@ -603,10 +604,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "aecb5f18549b015feb8134e11ab533744ef471f0510749841b51f950ded539aa",
+        "static.json": "a49eb92bc196f64bdfb6d157a5bb624940e1014923edf22095f1a30e233ee1e6"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "FAIL"
       },
