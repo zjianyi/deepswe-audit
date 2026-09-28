@@ -10,10 +10,10 @@
       "NOT_RUN": 70
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 9,
+      "DEFERRED_EVIDENCE_REQUIRED": 10,
       "FAIL": 16,
       "INFRASTRUCTURE_FAILURE": 7,
-      "NOT_RUN": 71
+      "NOT_RUN": 70
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 33,
-    "semantic": 32,
+    "semantic": 33,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -620,17 +620,18 @@
       "task_id": "gql-incremental-graphql-delivery"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "3d0bcfc49d8c0df838c799e18fa9ad911f709a37e607171f882baede12de0b3d",
+        "semantic.json": "c25fdc06e1dee7c8e9b132fa787ec1a09e4a52916f61b0b163d271ded5c415b4",
         "static.json": "b25a2383b7018cdec11611e3e71c47b124d61c07f22b50a840d5640d31696598"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/capricorn86/happy-dom",
