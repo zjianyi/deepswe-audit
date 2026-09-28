@@ -164,3 +164,9 @@
 - 2026-09-28 06:58 UTC: Onedump native FAIL: protected-path reward 1 accepted by Pier, explicit raw protected-write markers and no exception. Endpoints 1/0; other attacks 0 with reach markers. {'static': 103, 'execution': 63, 'semantic': 62}, zero clean; sole Onedump S0 active, OPA native running. 211 public hashes verified; no errors/retries. NEXT unchanged.
 
 - 2026-09-28 07:00 UTC: Onedump S0 strict-validation infrastructure blocker recorded; raw JSON archived and verified, no rereview. 63 native/63 semantic outcomes, zero clean; native reward bypass remains supported. OPA running; worker polling without errors. All 212 public evidence hashes and diff check passed. NEXT unchanged.
+
+- 2026-09-28 07:02 UTC: Unchanged 63 native/63 semantic outcomes. OPA native running, 39 queued; original worker polling normally without worker/poll errors or active S0. No retries or duplicate attempts; diff check passed. NEXT objective unchanged.
+
+- 2026-09-28 07:04 UTC: Unchanged 63 native/63 semantic outcomes. OPA native running, 39 queued; original worker polling normally without worker/poll errors or active S0. No retries or duplicate attempts; diff check passed. NEXT objective unchanged.
+
+- 2026-09-28 07:06 UTC: OPA native FAIL: protected-path reward 1 accepted by Pier, explicit raw protected-write markers and no exception. Endpoints 1/0; other attacks 0 with reach markers. {'static': 103, 'execution': 64, 'semantic': 63}, zero clean; sole OPA S0 active, Optique conditional native running, one completed native awaits import. 214 public hashes verified; tasks 60–64 read-only reconciliation delegated. No errors/retries. NEXT unchanged.

@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 63, 'semantic': 63}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 64, 'semantic': 63}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -73,7 +73,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | typescript | obsidian-linter-scoped-ignore-markers | PASS | INFRASTRUCTURE_FAILURE | DEFERRED_EVIDENCE_REQUIRED |
 | typescript | ofetch-per-origin-circuit-breaker | PASS | FAIL | FAIL |
 | go | onedump-dump-encryption-pipeline | PASS | FAIL | INFRASTRUCTURE_FAILURE |
-| go | opa-rego-rule-profiling | PASS | NOT_RUN | NOT_RUN |
+| go | opa-rego-rule-profiling | PASS | FAIL | NOT_RUN |
 | go | opa-template-string-reconstruction | PASS | NOT_RUN | NOT_RUN |
 | typescript | optique-conditional-option-dependencies | PASS | NOT_RUN | NOT_RUN |
 | rust | oxvg-structural-selector-preservation | PASS | NOT_RUN | NOT_RUN |
