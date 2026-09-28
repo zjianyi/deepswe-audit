@@ -5,15 +5,15 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 13,
-      "FAIL": 29,
+      "FAIL": 30,
       "INFRASTRUCTURE_FAILURE": 10,
-      "NOT_RUN": 51
+      "NOT_RUN": 50
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 15,
+      "DEFERRED_EVIDENCE_REQUIRED": 16,
       "FAIL": 25,
       "INFRASTRUCTURE_FAILURE": 12,
-      "NOT_RUN": 51
+      "NOT_RUN": 50
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 52,
-    "semantic": 52,
+    "execution": 53,
+    "semantic": 53,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -984,14 +984,18 @@
       "task_id": "langchain-request-coalescing"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "81b3587341767fbfd9e7c3ed76d844cee603020e94c01e562565ac95cce720c1",
+        "semantic.json": "456224a92cdbfde587dcd0b5522f70a84cb8bf7413924218ae31a9ae771e5b66",
+        "static.json": "904432ecfdc2e601ad1900b1fa263681e196e4e490067fea0a365027593218d5"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "FAIL"
       },
       "repository": "https://github.com/Fatal1ty/mashumaro",

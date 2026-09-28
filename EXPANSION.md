@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 52, 'semantic': 52}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 53, 'semantic': 53}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -62,7 +62,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | typescript | koota-query-predicates | PASS | DEFERRED_EVIDENCE_REQUIRED | INFRASTRUCTURE_FAILURE |
 | typescript | kysely-window-grouping-helpers | PASS | FAIL | INFRASTRUCTURE_FAILURE |
 | python | langchain-request-coalescing | FAIL | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
-| python | mashumaro-flattened-dataclass-fields | FAIL | NOT_RUN | NOT_RUN |
+| python | mashumaro-flattened-dataclass-fields | FAIL | FAIL | DEFERRED_EVIDENCE_REQUIRED |
 | typescript | meriyah-explicit-resource-declarations | PASS | NOT_RUN | NOT_RUN |
 | python | mnamer-daemon-watch-lifecycle | PASS | NOT_RUN | NOT_RUN |
 | python | mobly-grouped-test-barriers | FAIL | NOT_RUN | NOT_RUN |
