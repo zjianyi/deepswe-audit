@@ -1,0 +1,38 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 516,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "ts-pattern-match-each",
+      "artifact_count": 87,
+      "native_evidence_sha256": "38f9dc2ed7f5551b2a8a87b6329abbbc368a589a8b6a1f3b00fc4f8d4bd21ec8"
+    },
+    {
+      "task_id": "updo-policy-alerting",
+      "artifact_count": 86,
+      "native_evidence_sha256": "98fe00d772ce835b51812cd88b9636ea3eeb2fb61e0e408309ec92df2b302619"
+    },
+    {
+      "task_id": "valibot-recursive-schema-composition",
+      "artifact_count": 132,
+      "native_evidence_sha256": "dd67a20cb5bcb158917349c26ae6762b2c645f43ad9e5348d1abfcaa9b5f99be"
+    },
+    {
+      "task_id": "vitest-duration-sharding",
+      "artifact_count": 127,
+      "native_evidence_sha256": "69c1b19eff89a16b1f63971a7a8b00ab832d80e8b0c720aa33661ff7b021b987"
+    },
+    {
+      "task_id": "vulture-persistent-analysis-cache",
+      "artifact_count": 84,
+      "native_evidence_sha256": "ffd39634dd923f8dbea04a589521244c1903b9e010beafc9c1532f2f41b04651"
+    }
+  ],
+  "observations": [
+    "Independent read-only reconciliation verified 516/516 artifact hashes, all five public/native bindings and 25 case outcomes. All oracle/no-op pairs returned 1/0.",
+    "Updo and Vulture protected-paths accepted reward 1 with explicit reach/write markers, no exception and absent final CTRF.",
+    "TS-pattern, Valibot and Vitest attacks returned reward 0 without reach markers; their deferrals are preserved. Vulture suppression reach remains unresolved."
+  ]
+}

