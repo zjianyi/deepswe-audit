@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 9,
+      "DEFERRED_EVIDENCE_REQUIRED": 10,
       "FAIL": 28,
       "INFRASTRUCTURE_FAILURE": 10,
-      "NOT_RUN": 56
+      "NOT_RUN": 55
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 13,
+      "DEFERRED_EVIDENCE_REQUIRED": 14,
       "FAIL": 24,
       "INFRASTRUCTURE_FAILURE": 9,
-      "NOT_RUN": 57
+      "NOT_RUN": 56
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 47,
-    "semantic": 46,
+    "execution": 48,
+    "semantic": 47,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -875,17 +875,18 @@
       "task_id": "koota-composite-trait-aspects"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "bc873cd1eb854b8c089eeb70404ef6aee3ce2160e78bb356beec075a7ece4ba0",
+        "semantic.json": "efb7052800119d1fa84f6c78f80b07e8ee3a7b8963552330c54b80b7372dda87",
         "static.json": "817940f814c4203bd6866df979b2b19a9d9823d396b67e20a17d3bff5a8a665a"
       },
       "language": "typescript",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/pmndrs/koota",
@@ -895,10 +896,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "25363692e8dbf090a197e8060c7efd0520626c54265fa2117313363fb67ccd3f",
+        "static.json": "61e3f96a201d95be87244b4c92ce9ddc9440993b33a403d31fb44da2f2b93668"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

