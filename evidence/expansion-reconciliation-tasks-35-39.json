@@ -1,0 +1,38 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 439,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "httpx-deterministic-cookie-store",
+      "artifact_count": 90,
+      "native_evidence_sha256": "e665519669c6ae693e95a20d64c8ec12329eec2dd6ca76d2f31b390b8793e57d"
+    },
+    {
+      "task_id": "httpx-multipart-response-parsing",
+      "artifact_count": 84,
+      "native_evidence_sha256": "76955ee7443a96d6c92bc4ca2d8843c3f06eb6c52b9c259db190a83669d32712"
+    },
+    {
+      "task_id": "httpx-streaming-json-iteration",
+      "artifact_count": 84,
+      "native_evidence_sha256": "93688370553083c8f78313e523ed2ea64e10e30ad5483ab780d3d43b7de67b28"
+    },
+    {
+      "task_id": "igel-persist-feature-schema",
+      "artifact_count": 84,
+      "native_evidence_sha256": "196438f3e18b2c0ceffd171347a524e23e69c6640944c2df267b573041162c6c"
+    },
+    {
+      "task_id": "ink-grid-box-layout",
+      "artifact_count": 97,
+      "native_evidence_sha256": "f18f28f2afc813592bd91924789653829b75c2da8069a87232a42f0c909e3c79"
+    }
+  ],
+  "observations": [
+    "All 25 public/native case fields match original evidence; oracle/no-op endpoints 1/0.",
+    "Multipart, streaming JSON and Igel protected-path reward 1 accepted without exceptions despite absent CTRF and attribution markers; logs show 122, 108 and 24 failed tests respectively before reward 1.",
+    "Cookie store and Ink probes have reward 0 without reach markers; no runtime bypass demonstrated."
+  ]
+}

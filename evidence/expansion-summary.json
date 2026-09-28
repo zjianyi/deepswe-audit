@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 6,
-      "FAIL": 23,
+      "DEFERRED_EVIDENCE_REQUIRED": 7,
+      "FAIL": 25,
       "INFRASTRUCTURE_FAILURE": 9,
-      "NOT_RUN": 65
+      "NOT_RUN": 62
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 11,
-      "FAIL": 19,
+      "FAIL": 22,
       "INFRASTRUCTURE_FAILURE": 7,
-      "NOT_RUN": 66
+      "NOT_RUN": 63
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 38,
-    "semantic": 37,
+    "execution": 41,
+    "semantic": 40,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -712,45 +712,55 @@
       "task_id": "httpx-streaming-json-iteration"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "eea53e7163facb7e6aaeea5ac8ba0bbc0c89730a97d32c528317d247c7db3cfe",
+        "semantic.json": "447ade5e210014ab3168b4fc8c81257248ac98f5130dc214430c5fc61b6e35e6",
         "static.json": "951a5a0b641cfafc4597ede6cee5aa650c8cd56b1e804a9da71ceb08122e582e"
       },
       "language": "python",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/nidhaloff/igel",
       "task_id": "igel-persist-feature-schema"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "audit-annotation.json": "a9ba9a43265be6516a2900ee5f9155d481ca1feba98282cdb72c59338cd2bdcf",
+        "execution.json": "5ec128a7f324785c7eca49d2fc1661c48f44656dc18f65b646dfd3303e932ab2",
+        "semantic.json": "2adba002d6051e035cf99c79289cf4d68fd80eb7ceea15ad42aee90caec8df63",
+        "static.json": "0463df2b3a252839973f133e8f3624d72b8408e1aefcc869f3cc73e92bcd60d5"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/vadimdemedes/ink",
       "task_id": "ink-grid-box-layout"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "02ce2f0e447cae4b61e185cfd6144f74a1ab1ac3baa091108c2b343d8463f9c3",
+        "semantic.json": "c8ec78e01b164b36b9100e728684711c875fda3c06f767983d9cbafc7e47b8dd",
+        "static.json": "c8f0a40750ffd0feb6a49245a07ff271a57926197fc032a4b49dee5a911b3e1b"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/ipython/ipython",
@@ -760,10 +770,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "991f7f58e9f3b31c56dcf5034b34fc84474535e38052b9c5802d4b9496223e2c",
+        "static.json": "44797ff321552f9a9bbd87337b25df5de3ff8d6afa46c05fc494010e4c69c99b"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

