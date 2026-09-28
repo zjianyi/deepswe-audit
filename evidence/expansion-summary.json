@@ -5,15 +5,15 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 4,
-      "FAIL": 16,
+      "FAIL": 18,
       "INFRASTRUCTURE_FAILURE": 9,
-      "NOT_RUN": 74
+      "NOT_RUN": 72
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 8,
-      "FAIL": 14,
-      "INFRASTRUCTURE_FAILURE": 6,
-      "NOT_RUN": 75
+      "FAIL": 15,
+      "INFRASTRUCTURE_FAILURE": 7,
+      "NOT_RUN": 73
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 29,
-    "semantic": 28,
+    "execution": 31,
+    "semantic": 30,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -547,31 +547,36 @@
       "task_id": "geo-shapeindex-serialization"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "ac2cf87147478bb1f06073f953c14fa0dcb0d22c144da03a4f4cabe8ef20640d",
+        "semantic.json": "335d94f11a696450118fd5a2cd3c92736818bc19a7e5de84f0ee58220852eda3",
         "static.json": "6ea18004c0ec9ef66030f442e2408b0ef6dc70cf71f49a56d5b987b034043d7c"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/go-critic/go-critic",
       "task_id": "go-critic-doc-link-checker"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "0c5087d64f8df07957279798ea72d596c3cb83bd412cc135d7e7e195abcdc3d6",
+        "semantic.json": "80e72861c6bc10dc9493b2d6093ce0ae75e4ed7242fdb05c5cd8ccc17a02aaf7",
+        "static.json": "5876adcde55f010da067220f56560dec27cb8afb57f85aed8c8c53e6c33ab7bd"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/googleapis/go-genai.git",
@@ -581,10 +586,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "6ffc94f457685972a953fd121a0a44fc462c30db4157cf8a16ca6add0b13464b",
+        "static.json": "8bade1760ffc3abccc0f9f6a2f64c06715c25d035ae131a91f2de1eb3d585504"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },
