@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 5,
-      "FAIL": 20,
+      "DEFERRED_EVIDENCE_REQUIRED": 6,
+      "FAIL": 21,
       "INFRASTRUCTURE_FAILURE": 9,
-      "NOT_RUN": 69
+      "NOT_RUN": 67
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 10,
-      "FAIL": 16,
+      "FAIL": 18,
       "INFRASTRUCTURE_FAILURE": 7,
-      "NOT_RUN": 70
+      "NOT_RUN": 68
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 34,
-    "semantic": 33,
+    "execution": 36,
+    "semantic": 35,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -638,31 +638,36 @@
       "task_id": "happy-dom-deterministic-intersectionobserver"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "fb6a69709a841363eca1de8496863f0b54c5ff013f8fae360f0f50dc6fb824c7",
+        "semantic.json": "d824c6d211a9b56fbd320d053fc2122a2adbeb77f8f340381299c080ae54e75d",
         "static.json": "b355cd90ac8a94d91ac5df4f34e3f3b7c20293cfc5c37702f0e55e2dd75efc3f"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/helm/helm",
       "task_id": "helm-unified-manifest-stream"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "746407f01e6c3f655b5fc3f213aa4ee03833f05662250ee89c687b1138d778d4",
+        "semantic.json": "a25e99f8e6e68c91159b6d4cdabc5f3136ed0c38a148d673346762fbc60a7e9b",
+        "static.json": "1c622dfd5c30ef361be27a6843ba5fcdf3886cd1103a505e3d72493ccce6994c"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/encode/httpx",
@@ -672,10 +677,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "a5808da95bfbff3358289a1bd566a3dc8cf2ad635e036446019fa40d79081b03",
+        "static.json": "52c0599ca42c2a549196bddb3645e1ccdf7e1cc4a2ab540a8f496a266f99bb12"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 34, 'semantic': 33}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 36, 'semantic': 35}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -43,9 +43,9 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | go | go-git-worktree-merge-conflicts | PASS | FAIL | FAIL |
 | python | gql-incremental-graphql-delivery | FAIL | FAIL | DEFERRED_EVIDENCE_REQUIRED |
 | typescript | happy-dom-deterministic-intersectionobserver | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
-| go | helm-unified-manifest-stream | PASS | FAIL | NOT_RUN |
-| typescript | httpx-deterministic-cookie-store | PASS | NOT_RUN | NOT_RUN |
-| python | httpx-multipart-response-parsing | PASS | NOT_RUN | NOT_RUN |
+| go | helm-unified-manifest-stream | PASS | FAIL | FAIL |
+| typescript | httpx-deterministic-cookie-store | PASS | DEFERRED_EVIDENCE_REQUIRED | FAIL |
+| python | httpx-multipart-response-parsing | PASS | FAIL | NOT_RUN |
 | python | httpx-streaming-json-iteration | PASS | NOT_RUN | NOT_RUN |
 | python | igel-persist-feature-schema | PASS | NOT_RUN | NOT_RUN |
 | typescript | ink-grid-box-layout | PASS | NOT_RUN | NOT_RUN |
