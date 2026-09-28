@@ -23,3 +23,4 @@
 - Harden local recovery without changing evaluation semantics: check existing S0 marker before preparing input; backfill absent public outcome from archived local JSON without rereview. Preserve current worker and frozen reviewer; four focused recovery tests plus full public suite (27 passed) validate the change.
 - User changed heartbeat monitoring to every three minutes. Preserve meaningful-change notifications and the ongoing audit worker.
 - User switched heartbeat monitoring back to every minute; retain meaningful-change notifications and existing audit constraints.
+- Boa expansion image failure is confirmed registry throttling (toomanyrequests: Rate exceeded), not an absent-image claim. Preserve first native attempt and review blocked evidence; no infrastructure retry until a corrected cause is documented.

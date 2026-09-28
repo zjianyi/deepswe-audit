@@ -6,13 +6,14 @@
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 1,
       "FAIL": 10,
-      "NOT_RUN": 92
+      "INFRASTRUCTURE_FAILURE": 1,
+      "NOT_RUN": 91
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 2,
+      "DEFERRED_EVIDENCE_REQUIRED": 3,
       "FAIL": 6,
       "INFRASTRUCTURE_FAILURE": 2,
-      "NOT_RUN": 93
+      "NOT_RUN": 92
     },
     "static": {
       "FAIL": 16,
@@ -20,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 11,
-    "semantic": 10,
+    "execution": 12,
+    "semantic": 11,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -211,17 +212,19 @@
       "task_id": "bandit-incremental-cache-control"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "9690ce1aa11607f94f8f3c7a72676f6e645dd7a050c17ea493dfcf99b8953282",
         "execution.json": "085d42ad7113cc87350d9fe05304e86b53c82f64f43bfcb33d817e0f7aea81fa",
+        "semantic.json": "6a3d952a0b546c5db4125d5ce4bb59fbe2faff7bfae5006fb14fd8de9e039468",
         "static.json": "00d89a7534cb10b674878ceca784085e21aa08a4bd11bdf459ac4737c08e974b"
       },
       "language": "python",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/PyCQA/bandit.git",
@@ -231,10 +234,14 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "audit-annotation.json": "de9920d770dae38789aefe4ab60c13db0154950c746360801f773bdd41f083a7",
+        "execution.json": "c188e4862400186b8bfbd86e262b67e30d95ce56bcd3ea20109eebc35fa50189",
+        "static.json": "90164fa592b4083ec5fc8870a6658fc19c38bc736f5b5e2f26765454bb18f2fc"
+      },
       "language": "rust",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

