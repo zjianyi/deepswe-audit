@@ -503,3 +503,7 @@ Vulture S0 validated FAIL, corroborating protected-path reward bypass; raw JSON 
 ### 2026-09-28 10:29 UTC — Yaegi integrity finding and Wazero S0 blocker
 
 Wazero S0 failed strict validation because a finding prefix differs from its criterion; raw JSON parsed (11708 bytes), no rereview. Yaegi oracle/no-op 1/0 (38 F2P, 58 P2P); protected-path reward 1 accepted without exception with explicit reach/write markers and missing CTRF despite failing feature tests. Both other attacks rejected with observed reach. Published new outcomes and refreshed report: 101 native/100 S0, zero clean. Verified 332 public evidence hashes. GitHub 101 native complete, Yjs active, one queued. Sole worker running Yaegi S0 without errors. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:32 UTC — Yaegi S0 corroboration
+
+Yaegi S0 validated FAIL corroborating protected-path reward bypass under SEM-008; raw JSON parsed (6841 bytes). Published review and refreshed report: 101 native/101 S0, zero clean. Verified 333 public evidence hashes. GitHub Yjs active, one queued; original worker waiting without errors. After inspecting existing agents, assigned the idle accounting agent a strictly read-only check of the first 101 S0 attempt/raw/public archives and bindings, excluding final two ongoing tasks; no new reviews. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

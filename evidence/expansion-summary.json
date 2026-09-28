@@ -11,9 +11,9 @@
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 28,
-      "FAIL": 45,
+      "FAIL": 46,
       "INFRASTRUCTURE_FAILURE": 27,
-      "NOT_RUN": 3
+      "NOT_RUN": 2
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 101,
-    "semantic": 100,
+    "semantic": 101,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1859,17 +1859,18 @@
       "task_id": "wazero-multi-module-snapshots"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "f0a3ea5d52cf831e063055c0523fb028ebd437a3e112d60c35ac392a78e3dead",
+        "semantic.json": "7f0df42fd769ec6f7785cd0f5d7381774263492930774e41d40337093275d7cf",
         "static.json": "7eb589ea478d5c4a213558d4a88eb0764b7b46997bb33d0e3871f4e28156eb0b"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/traefik/yaegi",
