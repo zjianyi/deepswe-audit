@@ -5,15 +5,15 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 18,
-      "FAIL": 41,
+      "FAIL": 42,
       "INFRASTRUCTURE_FAILURE": 14,
-      "NOT_RUN": 30
+      "NOT_RUN": 29
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 21,
-      "FAIL": 34,
+      "FAIL": 35,
       "INFRASTRUCTURE_FAILURE": 18,
-      "NOT_RUN": 30
+      "NOT_RUN": 29
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 73,
-    "semantic": 73,
+    "execution": 74,
+    "semantic": 74,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1368,14 +1368,18 @@
       "task_id": "psd-tools-blend-range-api"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "ab912a52c352ff74d7c3a101d4250a15f89de4213cda44548e8d9fe234d94e5f",
+        "semantic.json": "b58aba35b592e05505381f14f442018f496f23f6f44443529667105f10dbadcb",
+        "static.json": "31333804f691b1d32a9c37a9a9238beebb61fa60b235151178c4bdcd797b941b"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "FAIL",
         "static": "FAIL"
       },
       "repository": "https://github.com/Gallopsled/pwntools",

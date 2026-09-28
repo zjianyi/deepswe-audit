@@ -1,0 +1,39 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 484,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "pest-character-class-coalescing",
+      "artifact_count": 139,
+      "native_evidence_sha256": "030a3e49da10f558ccd9a352e7a95affba34f74a54ac442bd81339adc17b0143"
+    },
+    {
+      "task_id": "prometheus-transactional-reload-status",
+      "artifact_count": 90,
+      "native_evidence_sha256": "d173d5c7fe1d65e6fb2fc2b9b9e9130d87db1fcf8729b7de6b58818a1449908c"
+    },
+    {
+      "task_id": "prometheus-typed-label-sorting",
+      "artifact_count": 86,
+      "native_evidence_sha256": "f9a2fa926f0f26b741ba79b778823566823b0e270655fba76cbfb78030ab4a78"
+    },
+    {
+      "task_id": "psd-tools-blend-range-api",
+      "artifact_count": 84,
+      "native_evidence_sha256": "49495f52a50a151e64d2c3309ebc5cec07e7718f339bfcd668219c0ea05f8a30"
+    },
+    {
+      "task_id": "pwntools-tube-multiplexing",
+      "artifact_count": 85,
+      "native_evidence_sha256": "bda25280888764eff54b33d7a2121d372b5a55b24e7fd6bc3d639188c16a8775"
+    }
+  ],
+  "observations": [
+    "Independent read-only reconciliation verified 484/484 artifact hashes, all five public/native bindings and all 25 cases against raw evidence. All oracle/no-op pairs are 1/0.",
+    "Prometheus typed labels, PSD tools and Pwntools protected-path reward 1 accepted by Pier with explicit reach/write markers, no exception and absent final CTRF. PSD and Pwntools logs show new-test collection errors before reward 1.",
+    "Pest and Prometheus transactional reload attack rewards 0 without reach markers; deferrals preserved.",
+    "PSD and Pwntools suppression reach remains unresolved."
+  ]
+}

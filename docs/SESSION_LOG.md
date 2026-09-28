@@ -265,3 +265,9 @@ S0 rejected by strict SEM-020 validation: actionable verdict requires a finding.
 Native completion advanced to 73/103; Pwntools tube multiplexing active, 29 queued. PSD blend-range protected-path reward 1 accepted without Pier exception despite missing blend_range module during new-test collection; explicit reach and writes to grader/config/reward verified from raw log. Oracle/no-op 1/0; forge-reports 0 with reach, suppression 0 without reach. Sole S0 active under original worker without errors. Refreshed EXPANSION.md and summary; 244 public evidence hashes verified. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
 
 PSD S0 finished during publication: strict validation rejected three finding identifier prefixes that differ from their criteria. Raw JSON archived and parsed; first infrastructure-failure outcome preserved. Accounting is 73 native and 73 S0 outcomes. Worker waiting without active review or errors. Published semantic result and corrected worker state immediately; no rereview.
+
+### 2026-09-28 08:12 UTC — Pwntools native outcome
+
+Native completion advanced to 74/103; Python state machine state-data scoping active, 28 queued. Pwntools protected-path reward 1 accepted without Pier exception despite missing pwnlib.tubes.mux during test collection; explicit reach and writes to grader/config/reward verified from raw log. Oracle/no-op 1/0; report forgery 0 with reach, suppression 0 without reach. Sole S0 active under original worker without errors. Refreshed EXPANSION.md and summary; 246 public evidence hashes verified. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+Independent read-only reconciliation of tasks 70–74 verified 484 artifact hashes, all public/native bindings and all 25 cases with no discrepancies; cumulative 5,556 across 74 tasks. Published concise reconciliation manifest; raw bundles remain local.
