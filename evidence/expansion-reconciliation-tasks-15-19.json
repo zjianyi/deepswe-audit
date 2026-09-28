@@ -1,0 +1,48 @@
+{
+  "schema_version": "deepswe.evidence-reconciliation/1",
+  "method": "Independent read-only subagent reconciliation; no task execution or additional S0.",
+  "artifact_hashes_verified": 403,
+  "tasks": [
+    {
+      "task_id": "claude-code-by-agents-recursive-delegation",
+      "artifact_hashes_verified": 102,
+      "native_run_sha256": "1f8208d6ee44db7bc8c55879878d5b2f81e08217dc2f40ecb44b64cec065efd4",
+      "public_execution_sha256": "06885d8dce830e7e800a601e5741669e5171c8a0c3f7d1d22a26e4ec08b58794",
+      "result": "Public/native bindings and all available case fields match raw evidence."
+    },
+    {
+      "task_id": "cliffy-config-file-parsing",
+      "artifact_hashes_verified": 102,
+      "native_run_sha256": "84737ff613f8a180d9741a48cca618b61dda3aea7f9f6b4855e21c8e997018c1",
+      "public_execution_sha256": "2e07960930a7c758d06074e7cea4044ac87afbe74b60ad21f5ae6ff89c3e14e4",
+      "result": "Public/native bindings and all available case fields match raw evidence."
+    },
+    {
+      "task_id": "csstree-shorthand-expansion-compression",
+      "artifact_hashes_verified": 1,
+      "native_run_sha256": "a18a2ec46a7b2b24eaa0961769d47232b8878dfaf78d5efb859d0e45fdfb800a",
+      "public_execution_sha256": "3ac6ccdd0d8cf5efe0288fa47fd1e521f3e44055a61f91ea7bfe6a2eb696aaa9",
+      "result": "Public/native bindings and all available case fields match raw evidence."
+    },
+    {
+      "task_id": "dasel-html-document-format",
+      "artifact_hashes_verified": 86,
+      "native_run_sha256": "a1e0477749acd7921259630361af61c4aa3b81c366256ab3f0a7f968078f11d3",
+      "public_execution_sha256": "92d8cb07e74b379cb6738bff2a9ac6ebb45104eb22a5644ccb83c00314f971fb",
+      "result": "Public/native bindings and all available case fields match raw evidence."
+    },
+    {
+      "task_id": "drizzle-orm-window-function-builders",
+      "artifact_hashes_verified": 112,
+      "native_run_sha256": "f58e8576100b3b279b52594e3ad69d722da185ad5463c8668ff2556b9b42e44d",
+      "public_execution_sha256": "476a217ba37b91a0455bb9a85c0b7eb49029cd996b8c8bbcb0c104c3dce6a741",
+      "result": "Public/native bindings and all available case fields match raw evidence."
+    }
+  ],
+  "observations": [
+    "Dasel protected-path reward 1 accepted by Pier without exception, with explicit reach/write markers and absent final CTRF.",
+    "Claude-code-by-agents, Cliffy and Drizzle attack rewards were 0, with all reach markers absent; deferrals correctly retained.",
+    "CSSTree image-pull.log confirms Data limit exceeded; pre-execution infrastructure blocker. Pull-log SHA-256: 057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546.",
+    "All four executable oracle/no-op pairs were 1/0."
+  ]
+}
