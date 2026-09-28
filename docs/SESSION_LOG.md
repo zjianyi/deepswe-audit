@@ -329,3 +329,5 @@ Fresh GitHub status unchanged: 79 native tasks completed, Scriggo method declara
 ### 2026-09-28 08:47 UTC — Scriggo native integrity failure
 
 Native completion advanced to 80/103; Skrub duration encoding active, 22 queued. Scriggo protected-path reward 1 accepted by Pier without exception despite failing feature tests. Explicit reach/write markers verified; oracle/no-op rewards 1/0 (48 F2P, 1049 P2P). Both other attacks rejected with reach. Sole original worker and Scriggo S0 active without errors. Refreshed EXPANSION.md and summary; verified 265 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+Scriggo S0 completed during publication: validated FAIL corroborates the native protected-path bypass; mutant coverage remains deferred. Parsed archived raw output (8339 bytes), preserved first attempt. Final accounting 80 native and 80 S0 outcomes; worker waiting normally. Published the semantic result referenced by the refreshed summary.

