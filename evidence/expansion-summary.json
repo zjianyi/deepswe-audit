@@ -4,14 +4,14 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "FAIL": 6,
-      "NOT_RUN": 97
+      "FAIL": 7,
+      "NOT_RUN": 96
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 1,
-      "FAIL": 3,
+      "FAIL": 4,
       "INFRASTRUCTURE_FAILURE": 2,
-      "NOT_RUN": 97
+      "NOT_RUN": 96
     },
     "static": {
       "FAIL": 16,
@@ -19,8 +19,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 6,
-    "semantic": 6,
+    "execution": 7,
+    "semantic": 7,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -137,14 +137,18 @@
       "task_id": "anko-default-function-arguments"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "05552a21e0625cb71653dfd8543e5061e34f2d879d76935de344beeb6e2c57a5",
+        "semantic.json": "b21f58bd2029a388497e321aaf7c9eb070b20096d58d3a75302c4c7d5ace1e04",
+        "static.json": "7363b06276ebcc2a516f8f1a6c55dc986dec883f27fc88732e4a1fa4a510aad4"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/mattn/anko",

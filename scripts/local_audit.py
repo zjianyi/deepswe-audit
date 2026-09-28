@@ -91,9 +91,20 @@ def import_native(native_path):
 
 
 def semantic(task_id):
-    from btqc.semantic.reviewer import prepare_semantic_input,review_semantic_input
     out=ROOT/'.local/phase3'/task_id;out.mkdir(parents=True,exist_ok=True)
-    if (out/'semantic.json').exists():print(task_id,'already has S0 outcome');return
+    if (out/'semantic.json').exists():
+        # A crash between the local and public writes must not require another S0.
+        public=public_dir(task_id)/'semantic.json'
+        if not public.exists():
+            preserved=(out/'semantic.json').read_bytes()
+            json.loads(preserved)  # Refuse a partial local write; never publish malformed JSON.
+            public.parent.mkdir(parents=True,exist_ok=True)
+            with public.open('xb') as stream:stream.write(preserved)
+        print(task_id,'already has S0 outcome');return
+    if (out/'attempt.json').exists():
+        # Refuse before prepare_semantic_input can overwrite the first attempt's input.
+        raise RuntimeError('S0 attempt already started; inspect retained evidence, never relaunch automatically')
+    from btqc.semantic.reviewer import prepare_semantic_input,review_semantic_input
     phase1=ROOT/'.local/phase1'/task_id/'static.json';phase2=ROOT/'.local/phase2'/task_id/'execution.json'
     prepare_semantic_input(SOURCE/task_id,adapter_name='deepswe',static_evidence_path=phase1,execution_evidence_path=phase2,output_path=out/'input.json')
     os.environ.setdefault('CODEX_HOME',str(Path.home()/'.codex'))
