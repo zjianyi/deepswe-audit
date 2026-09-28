@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 65, 'semantic': 65}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 66, 'semantic': 65}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -75,7 +75,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | go | onedump-dump-encryption-pipeline | PASS | FAIL | INFRASTRUCTURE_FAILURE |
 | go | opa-rego-rule-profiling | PASS | FAIL | INFRASTRUCTURE_FAILURE |
 | go | opa-template-string-reconstruction | PASS | INFRASTRUCTURE_FAILURE | DEFERRED_EVIDENCE_REQUIRED |
-| typescript | optique-conditional-option-dependencies | PASS | NOT_RUN | NOT_RUN |
+| typescript | optique-conditional-option-dependencies | PASS | DEFERRED_EVIDENCE_REQUIRED | NOT_RUN |
 | rust | oxvg-structural-selector-preservation | PASS | NOT_RUN | NOT_RUN |
 | go | participle-grammar-conflict-analysis | PASS | NOT_RUN | NOT_RUN |
 | go | pebble-durability-wait-apis | PASS | NOT_RUN | NOT_RUN |

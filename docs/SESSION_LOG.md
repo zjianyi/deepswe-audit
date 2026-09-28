@@ -173,3 +173,5 @@
 
 - 2026-09-28 07:09 UTC: OPA profiling S0 strict-validation blocker preserved with raw archive. Template reconstruction native blocked by registry Data limit exceeded; sole S0 active. {'static': 103, 'execution': 65, 'semantic': 64}, zero clean. Tasks 60–64 reconciliation verified 376 hashes, cumulative 4,783, no discrepancies. 217 public evidence bindings verified; no retries or worker errors. NEXT unchanged.
 - Same checkpoint: Template reconstruction S0 finished deferred during publication; archived raw JSON verified. Counts now 65 native/65 semantic, worker waiting normally. All 218 public evidence bindings verified and summary refreshed.
+
+- 2026-09-28 07:12 UTC: Optique conditional native deferred: endpoints 1/0, attacks 0 without reach markers. {'static': 103, 'execution': 66, 'semantic': 65}, zero clean; sole S0 active. GitHub 67 native complete; Participle active and one complete job awaits import. 220 public hashes verified; worker healthy, no retries. NEXT unchanged.
