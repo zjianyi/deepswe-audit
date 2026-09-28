@@ -391,3 +391,7 @@ Skrub S0 validated as FAIL, corroborating native protected-path reward bypass un
 ### 2026-09-28 09:18 UTC — SQL formatter native outcome
 
 Native completion advanced to 82/103; SQLfmt CREATE TABLE DDL active, 20 queued. SQL formatter BigQuery oracle/no-op rewards 1/0 (26 F2P, 5709 P2P); all three attacks reward 0 without observed verifier reach, preserving deferral. Raw trial rewards, exceptions and markers match public evidence. Sole original worker and SQL formatter S0 active without errors. Refreshed EXPANSION.md and summary; verified 270 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:20 UTC — SQL formatter S0 blocker
+
+SQL formatter S0 rejected by strict SEM-020 criterion/verdict and duplicate-reference validation; archived raw output parsed (8068 bytes), first infrastructure-failure outcome preserved without rereview. Native outcome remains deferred for unobserved attack reach. Accounting now 82 native and 82 S0 outcomes, zero clean results. SQLfmt native active with 20 queued; original worker waiting without active S0 or errors. Verified 271 public evidence hashes; published semantic result, summary and EXPANSION.md. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

@@ -12,8 +12,8 @@
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 23,
       "FAIL": 38,
-      "INFRASTRUCTURE_FAILURE": 20,
-      "NOT_RUN": 22
+      "INFRASTRUCTURE_FAILURE": 21,
+      "NOT_RUN": 21
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 82,
-    "semantic": 81,
+    "semantic": 82,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1512,17 +1512,18 @@
       "task_id": "skrub-duration-encoding"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "a2c1455a6ecaa13015d3ff58346d5bdbbb95c84488f553a4a62e2c0ec39db946",
+        "semantic.json": "b3e69adde1af95e4ded623bd3a59e16fdc78434615515e4c1de9639c139756ba",
         "static.json": "9c7c01cde2ef555be6459e9eb6645f1710588a66879bde88a68bc9642dc2c626"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/sql-formatter-org/sql-formatter",

@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 82, 'semantic': 81}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 82, 'semantic': 82}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -91,7 +91,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | go | scc-bounded-memory-spilling | PASS | FAIL | INFRASTRUCTURE_FAILURE |
 | go | scriggo-method-declarations | PASS | FAIL | FAIL |
 | python | skrub-duration-encoding | FAIL | FAIL | FAIL |
-| typescript | sql-formatter-bigquery-pipe-formatting | PASS | DEFERRED_EVIDENCE_REQUIRED | NOT_RUN |
+| typescript | sql-formatter-bigquery-pipe-formatting | PASS | DEFERRED_EVIDENCE_REQUIRED | INFRASTRUCTURE_FAILURE |
 | python | sqlfmt-create-table-ddl-formatting | FAIL | NOT_RUN | NOT_RUN |
 | python | sqlite-utils-safe-import-checkpoints | FAIL | NOT_RUN | NOT_RUN |
 | typescript | superjson-error-stack-serialization | PASS | NOT_RUN | NOT_RUN |
