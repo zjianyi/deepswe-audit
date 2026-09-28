@@ -281,3 +281,7 @@ Fresh GitHub status unchanged: 74 native tasks completed, Python state machine s
 ### 2026-09-28 08:17 UTC — Python state-data native outcome
 
 Native completion advanced to 75/103; Query restored-state persistence active, 27 queued. Python state-data protected-path reward 1 accepted without Pier exception despite 72 failed feature tests; explicit reach/write markers verified from raw log. Oracle/no-op 1/0; both other attacks 0 with reach. Sole S0 active under original worker without errors. Refreshed EXPANSION.md and summary; 249 public evidence hashes verified. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:20 UTC — Python state-data S0 blocker
+
+S0 rejected by strict SEM-020 criterion/verdict and duplicate-reference validation. Parsed archived raw review (7485 bytes); preserved first infrastructure-failure outcome without repair or rereview. Native protected-path reward bypass remains independently supported. Accounting now 75 native and 75 S0 outcomes, zero clean results. Query restored-state persistence native active with 27 queued; sole worker waiting without errors. Verified 250 public evidence hashes. Published refreshed EXPANSION.md, summary and semantic result. NEXT unchanged. Validation: git diff --check.
