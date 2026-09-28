@@ -146,3 +146,5 @@
 - 2026-09-28 06:36 UTC: Numba S0 strict-validation infrastructure blocker recorded; archived raw JSON verified, no rereview. 58 native/58 semantic outcomes, zero clean. Obsidian native active; sole original worker polling without errors. Verified 196 public evidence bindings and diff check; NEXT unchanged.
 
 - 2026-09-28 06:38 UTC: Obsidian auto-TOC native outcome deferred: endpoints 1/0, all three probes binary 0 without reach markers. 59 native/58 semantic outcomes, zero clean; sole S0 active, Obsidian link conversion native running. Verified 198 public bindings; tasks 55–59 read-only reconciliation delegated. No errors/retries; NEXT unchanged.
+
+- 2026-09-28 06:42 UTC: Obsidian TOC S0 FAIL archived and static whitespace claim checked; separate hash-bound annotation limits the claim to reference behavior, not demonstrated candidate rejection. 59 native/59 semantic outcomes, zero clean. Tasks 55–59 reconciliation verified 340 hashes, cumulative 4,407, no discrepancies. 200 public bindings verified; worker waiting normally, no retries. NEXT unchanged.

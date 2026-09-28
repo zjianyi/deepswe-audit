@@ -1,0 +1,39 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 340,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "mnamer-daemon-watch-lifecycle",
+      "artifact_count": 84,
+      "native_evidence_sha256": "0158f5041434c11c3ecbc396e8bc58a66aecc353af80aecc4fd830845452cd98"
+    },
+    {
+      "task_id": "mobly-grouped-test-barriers",
+      "artifact_count": 84,
+      "native_evidence_sha256": "2bf2295f88a5748b1d31099c5e28d695037163357374f2b36383d613b1be263e"
+    },
+    {
+      "task_id": "narwhals-rolling-window-suite",
+      "artifact_count": 1,
+      "native_evidence_sha256": "347a91d0558ed8cc38acff4ea53b6f456b7f9ff192e8995ed72b17e78fa555c6"
+    },
+    {
+      "task_id": "numba-stencil-boundary-modes",
+      "artifact_count": 84,
+      "native_evidence_sha256": "343aa61b462ec7f19f857830e5dbcc1822e4e627f8c7e1e03afc2be56338b6bf"
+    },
+    {
+      "task_id": "obsidian-linter-auto-table-of-contents",
+      "artifact_count": 87,
+      "native_evidence_sha256": "28e4cae113047fb756c80e43be67ee320128df4f527ebdef871741ca734545a2"
+    }
+  ],
+  "observations": [
+    "Independent read-only reconciliation verified 340/340 artifact hashes and all five public/native bindings and available case fields. Four executable oracle/no-op pairs are 1/0.",
+    "Mnamer, Mobly and Numba protected-path reward 1 accepted by Pier without exception despite missing CTRF and attribution markers. Raw new-test logs show 51 failed/9 passed, 79 failed/4 passed, and 29 failed/3 passed respectively. Exact write paths remain unresolved.",
+    "Narwhals registry toomanyrequests: Data limit exceeded confirms pre-execution blocker.",
+    "Obsidian TOC attacks all reward 0 without reach markers; deferral preserved."
+  ]
+}
