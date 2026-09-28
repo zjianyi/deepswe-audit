@@ -156,3 +156,9 @@
 - 2026-09-28 06:49 UTC: Scoped-ignore S0 deferred on blocked native evidence; raw archive verified. 61 native/61 semantic local outcomes, zero clean. GitHub 62 native complete; ofetch awaits serial import, Onedump running. Original worker polling normally without errors. 206 public evidence hashes verified; no retries. NEXT unchanged.
 
 - 2026-09-28 06:51 UTC: Ofetch native FAIL: protected-path reward 1 accepted by Pier, explicit raw protected-write markers and no exception. Endpoints 1/0; other attacks 0 with reach markers. 62 native/62 semantic outcomes, zero clean; Ofetch S0 finished FAIL confirming native integrity evidence; archived raw JSON verified. Separate deferred finding notes absent task-quality.toml. Worker waiting normally; Onedump native running. 209 public hashes verified; no errors/retries. NEXT unchanged.
+
+- 2026-09-28 06:53 UTC: Unchanged 62 native/62 semantic outcomes. Onedump native running, 40 queued; original worker polling normally without worker/poll errors or active S0. No retries or duplicate attempts; diff check passed. NEXT objective unchanged.
+
+- 2026-09-28 06:55 UTC: Unchanged 62 native/62 semantic outcomes. Onedump native running, 40 queued; original worker polling normally without worker/poll errors or active S0. No retries or duplicate attempts; diff check passed. NEXT objective unchanged.
+
+- 2026-09-28 06:58 UTC: Onedump native FAIL: protected-path reward 1 accepted by Pier, explicit raw protected-write markers and no exception. Endpoints 1/0; other attacks 0 with reach markers. {'static': 103, 'execution': 63, 'semantic': 62}, zero clean; sole Onedump S0 active, OPA native running. 211 public hashes verified; no errors/retries. NEXT unchanged.

