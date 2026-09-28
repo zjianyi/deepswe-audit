@@ -6,14 +6,14 @@
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 16,
       "FAIL": 37,
-      "INFRASTRUCTURE_FAILURE": 13,
-      "NOT_RUN": 37
+      "INFRASTRUCTURE_FAILURE": 14,
+      "NOT_RUN": 36
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 19,
-      "FAIL": 31,
+      "FAIL": 32,
       "INFRASTRUCTURE_FAILURE": 15,
-      "NOT_RUN": 38
+      "NOT_RUN": 37
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 66,
-    "semantic": 65,
+    "execution": 67,
+    "semantic": 66,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1222,17 +1222,19 @@
       "task_id": "opa-template-string-reconstruction"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "027349e54face8afd95eb081a83506d6a67641e3303574de153a96349cf9a783",
         "execution.json": "6e7b7ba20e152e29b641f2c61740ce0fdc8e4b04d8aa6b53ed17dd619a95b780",
+        "semantic.json": "4dd57a6470fd0f4b89b547f3cacfd27f0aa9de45d59d7d9babd1f287e0ab5bc6",
         "static.json": "e733fa2fe4bd68d235d4c69193ae4ea2b144dbc1bc0a353dc685724c61b54040"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/dahlia/optique",
@@ -1242,10 +1244,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "72dec64cb3a472a91bf9c809c0e99bdcf424beda86b3d5dd314d5cce72d29e71",
+        "static.json": "ba4c338c367ebaef45a31052fc6b41636572a77225a2d5766ce2c0b1f8ee946c"
+      },
       "language": "rust",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

