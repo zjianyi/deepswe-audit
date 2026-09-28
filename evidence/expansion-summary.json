@@ -10,10 +10,10 @@
       "NOT_RUN": 26
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 22,
+      "DEFERRED_EVIDENCE_REQUIRED": 23,
       "FAIL": 35,
       "INFRASTRUCTURE_FAILURE": 19,
-      "NOT_RUN": 27
+      "NOT_RUN": 26
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 77,
-    "semantic": 76,
+    "semantic": 77,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1422,17 +1422,18 @@
       "task_id": "query-persist-restored-query-state"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "c3fe7123ca70c2efdcb7189824b939fba3f828cd36e623dd1646c3c15cc83339",
+        "semantic.json": "57f77ec13a440005adf49c2a936d6fb93b87c3623c18aa59013d2bbb80a7e5b7",
         "static.json": "ae383d507a017ccdb9e3b4d18c14ae110373c747bac7d9d333c43007c9fb5073"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/slab/quill",

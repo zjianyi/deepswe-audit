@@ -297,3 +297,7 @@ Native completion advanced to 76/103; Quill shared-toolbar focus active, 26 queu
 ### 2026-09-28 08:29 UTC — Query S0 and Quill native outcomes
 
 Native completion advanced to 77/103; Returns validated-error accumulation active, 25 queued. Query S0 validated as deferred; raw review parsed (12762 bytes), no added attempts. Quill oracle/no-op rewards 1/0; all three attacks reward 0 with no observed verifier reach. Raw trial rewards, exceptions and markers match public evidence; native outcome deferred. Sole original worker and Quill S0 active without errors. Refreshed EXPANSION.md and summary; verified 255 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:31 UTC — Quill S0 outcome
+
+Quill S0 validated as deferred for unobserved probe reach, independence, threshold calibration and reproducibility gaps; archived raw review parsed (11528 bytes). Native evidence and runtime digest retained. Accounting now 77 native and 77 S0 outcomes, zero clean results. Returns native active with 25 queued; original worker waiting without active S0 or errors. Verified 256 public evidence hashes; published semantic result, summary and EXPANSION.md. No new attempts or policy changes; NEXT unchanged. Validation: git diff --check.
