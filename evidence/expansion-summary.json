@@ -5,9 +5,9 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 18,
-      "FAIL": 42,
+      "FAIL": 43,
       "INFRASTRUCTURE_FAILURE": 14,
-      "NOT_RUN": 29
+      "NOT_RUN": 28
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 21,
@@ -21,7 +21,7 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 74,
+    "execution": 75,
     "semantic": 74,
     "static": 103
   },
@@ -1389,10 +1389,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "0fa7866cd886cd9f6245dda27e886c3b1b38468a2aa06540507115fd917a6ed3",
+        "static.json": "edf27191e7b28b6dc1f9f4a72fc60fe1af1358a6be2c64663df150047d556b04"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "FAIL"
       },

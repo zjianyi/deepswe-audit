@@ -273,3 +273,11 @@ Native completion advanced to 74/103; Python state machine state-data scoping ac
 Independent read-only reconciliation of tasks 70–74 verified 484 artifact hashes, all public/native bindings and all 25 cases with no discrepancies; cumulative 5,556 across 74 tasks. Published concise reconciliation manifest; raw bundles remain local.
 
 Pwntools S0 finished during publication and validated as FAIL, corroborating the native protected-path reward bypass while retaining suppression and reproducibility deferrals. Archived raw review parsed (10,338 bytes). Accounting now 74 native and 74 S0 outcomes, zero clean results; 247 public evidence hashes verified. Published semantic result and corrected worker state immediately. No rereview.
+
+### 2026-09-28 08:15 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 74 native tasks completed, Python state machine state-data scoping active, 28 queued. Local accounting remains 74 native and 74 S0 outcomes. Original worker PID 99581 waiting normally with no active S0 or worker/poll errors. No attempts started or repeated; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:17 UTC — Python state-data native outcome
+
+Native completion advanced to 75/103; Query restored-state persistence active, 27 queued. Python state-data protected-path reward 1 accepted without Pier exception despite 72 failed feature tests; explicit reach/write markers verified from raw log. Oracle/no-op 1/0; both other attacks 0 with reach. Sole S0 active under original worker without errors. Refreshed EXPANSION.md and summary; 249 public evidence hashes verified. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
