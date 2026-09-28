@@ -6,14 +6,14 @@
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 22,
       "FAIL": 49,
-      "INFRASTRUCTURE_FAILURE": 17,
-      "NOT_RUN": 15
+      "INFRASTRUCTURE_FAILURE": 18,
+      "NOT_RUN": 14
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 25,
+      "DEFERRED_EVIDENCE_REQUIRED": 26,
       "FAIL": 39,
       "INFRASTRUCTURE_FAILURE": 23,
-      "NOT_RUN": 16
+      "NOT_RUN": 15
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 88,
-    "semantic": 87,
+    "execution": 89,
+    "semantic": 88,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1621,17 +1621,18 @@
       "task_id": "tengo-callable-instance-isolation"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "19373355e15bcfc2dc29cbccdb121d857cf213e230b2c69a960cc060d9110139",
+        "semantic.json": "4e888a3bdf40cfd44f4492e472e1e700d08585bbdcffa36f2c285e27b02aa718",
         "static.json": "30f01f820e1cdfb07d65f5e80f59c83cbdf98155c1af18c0250092b5d22807b3"
       },
       "language": "go",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/d5/tengo",
@@ -1641,10 +1642,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "652115fff70e7fdd330bdf24452ccda1e40ddced63d3693afe29249718d55361",
+        "static.json": "ec5c549b1f48ed3652e0cd84c9f387aabae9272643d7e2210b62df289a7b7676"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

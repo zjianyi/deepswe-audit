@@ -431,3 +431,7 @@ Fresh GitHub status: 91 native tasks complete, Textual RichLog active, 11 queued
 ### 2026-09-28 09:44 UTC — Tengo callable S0 and destructuring registry blocker
 
 Tengo callable isolation S0 validated as DEFERRED_EVIDENCE_REQUIRED for missing runtime evidence; raw JSON parsed (13405 bytes). Tengo destructuring blocked before cases; image-pull.log confirms registry Data limit exceeded. Local accounting {'static': 103, 'execution': 88, 'semantic': 87}, zero clean results. GitHub 92 native complete, TOMLKit active, 10 queued. Original worker and one Tengo destructuring S0 active without errors. Refreshed report/summary; verified 289 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:46 UTC — Tengo destructuring S0 and Termenv registry blocker
+
+Tengo destructuring S0 validated as DEFERRED_EVIDENCE_REQUIRED for missing runtime evidence; raw JSON parsed (14546 bytes). Termenv blocked before cases; image-pull.log confirms registry Rate exceeded, distinguished from recent data-limit failures. Local accounting {'static': 103, 'execution': 89, 'semantic': 88}, zero clean results. GitHub 92 native complete, TOMLKit active, 10 queued. Original worker and one Termenv S0 active without errors. Refreshed report/summary; verified 292 public evidence hashes. Assigned existing read-only agent reconciliation tasks 85–89; no additional reviews. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
