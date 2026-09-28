@@ -491,3 +491,7 @@ Fresh GitHub: 98 native tasks complete, Vulture active, 4 queued. Read-only raw 
 ### 2026-09-28 10:22 UTC — Vitest S0 validation blocker
 
 Vitest duration sharding S0 rejected by strict validation: duplicate SEM-010, missing SEM-001, mismatched finding prefixes and criterion/verdict references. Raw JSON parsed (7307 bytes) and preserved; no repeat attempt. Native evidence reconciled at preceding checkpoint remains deferred. Published static/native/S0 evidence and refreshed expansion report/summary: 98 native and 98 S0 outcomes, zero clean. Verified all 324 public evidence hashes. GitHub Vulture active, 4 queued; original worker waiting without errors. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:24 UTC — Vulture native integrity finding
+
+Vulture oracle/no-op 1/0 (24 F2P, 295 P2P); protected-path reward 1 accepted without exception with explicit reach/write markers, missing CTRF and missing vulture.cache collection error. Forgery rejected with observed reach; suppression reward 0 without reach. Published native/static evidence and refreshed report: 99 native/98 S0, zero clean. Verified 326 public evidence hashes. GitHub 100 native complete, Yaegi active, 2 queued. Sole worker running Vulture S0 without errors; existing read-only reconciliation agent assigned tasks 95–99 after checking no duplicate active assignment. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
