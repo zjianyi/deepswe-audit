@@ -407,3 +407,7 @@ Native completion advanced to 84/103; SuperJSON active with 18 queued. SQLite-ut
 ### 2026-09-28 09:31 UTC — SQLite-utils S0 and artifact reconciliation
 
 SQLite-utils S0 validated as FAIL and corroborates native reward bypass under SEM-008; suppression reach and reproducibility remain deferred. Archived raw JSON parsed (10390 bytes). Accounting now 84 native and 84 S0 outcomes, zero clean results. SuperJSON active with 18 queued; original worker waiting without errors. Independent tasks 80–84 reconciliation verified 435 artifact hashes and 25 case fields with no discrepancies, cumulative 6494 artifacts. Published reconciliation summary and semantic result; verified 278 public evidence hashes. No new attempts or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:33 UTC — SuperJSON native outcome
+
+GitHub reports 90 completed native jobs, active ['native (textual-kitty-key-phases)'], 12 queued. Local accounting {'static': 103, 'execution': 85, 'semantic': 84}, zero clean. SuperJSON oracle/no-op rewards 1/0 (80 F2P, 116 P2P); all attacks reward 0 with no observed reach, preserving deferral. Raw rewards and exceptions match public evidence. Original sequential worker stage semantic without errors. Additional GitHub completions await worker import/validation; workflow success alone is not a passing audit outcome. Refreshed report/summary and verified 280 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
