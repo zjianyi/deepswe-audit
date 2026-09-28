@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 18,
+      "DEFERRED_EVIDENCE_REQUIRED": 19,
       "FAIL": 43,
       "INFRASTRUCTURE_FAILURE": 14,
-      "NOT_RUN": 28
+      "NOT_RUN": 27
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 21,
+      "DEFERRED_EVIDENCE_REQUIRED": 22,
       "FAIL": 35,
       "INFRASTRUCTURE_FAILURE": 19,
-      "NOT_RUN": 28
+      "NOT_RUN": 27
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 75,
-    "semantic": 75,
+    "execution": 76,
+    "semantic": 76,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1404,14 +1404,18 @@
       "task_id": "python-statemachine-state-data-scoping"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "ac7140be23349f21c55b52a3b579f70691f65d9f9e0a72246fba312aaddcacd6",
+        "semantic.json": "23a59c8ebf30e81f7b811a673cca1f275838757a9dcfe5b897f7fa0eb15c7f17",
+        "static.json": "f04456cd47481672d589cd7a94702035da5e8a07f79371876508707dbd7f1c4b"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/TanStack/query",

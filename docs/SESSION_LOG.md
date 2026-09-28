@@ -285,3 +285,11 @@ Native completion advanced to 75/103; Query restored-state persistence active, 2
 ### 2026-09-28 08:20 UTC — Python state-data S0 blocker
 
 S0 rejected by strict SEM-020 criterion/verdict and duplicate-reference validation. Parsed archived raw review (7485 bytes); preserved first infrastructure-failure outcome without repair or rereview. Native protected-path reward bypass remains independently supported. Accounting now 75 native and 75 S0 outcomes, zero clean results. Query restored-state persistence native active with 27 queued; sole worker waiting without errors. Verified 250 public evidence hashes. Published refreshed EXPANSION.md, summary and semantic result. NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:22 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 75 native tasks completed, Query restored-state persistence active, 27 queued. Local accounting remains 75 native and 75 S0 outcomes. Original worker PID 99581 waiting normally with no active S0 or worker/poll errors. No attempts started or repeated; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:27 UTC — Query restored-state native outcome
+
+Native completion advanced to 76/103; Quill shared-toolbar focus active, 26 queued. Query oracle/no-op rewards 1/0; all three attacks reward 0 with no observed verifier reach. Raw trial rewards, exceptions and markers match public execution evidence; native outcome remains deferred. Sole original worker and one S0 active without errors. Refreshed EXPANSION.md and summary; verified 252 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
