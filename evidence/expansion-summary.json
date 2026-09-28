@@ -9,9 +9,9 @@
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 1,
-      "FAIL": 4,
+      "FAIL": 5,
       "INFRASTRUCTURE_FAILURE": 2,
-      "NOT_RUN": 96
+      "NOT_RUN": 95
     },
     "static": {
       "FAIL": 16,
@@ -20,7 +20,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 8,
-    "semantic": 7,
+    "semantic": 8,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -155,17 +155,18 @@
       "task_id": "anko-typed-variable-bindings"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "2fee2d98f393b7007f155a92d03027cee636b7b34fdde2e66e20c1407775c70f",
+        "semantic.json": "042e0561ad78614ec91acb47e60ea6c42eb33dfc6fc961e2e6a0cbd64db352d4",
         "static.json": "dcbb9baf88b065a411cff59662107535ad236c356b150e718afd019a4d5835b7"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/getarcaneapp/arcane.git",
