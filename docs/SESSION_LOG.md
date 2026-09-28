@@ -317,3 +317,7 @@ Fresh GitHub status: 79 native task jobs completed, Scriggo method declarations 
 ### 2026-09-28 08:40 UTC — SCC native integrity failure
 
 Native completion advanced to 79/103; Scriggo method declarations active, 23 queued. SCC protected-path reward 1 accepted by Pier without exception despite failing feature tests. Explicit reach/write markers verified; oracle/no-op rewards 1/0 (31 F2P, 286 P2P). Both other attacks rejected with reach. Sole original worker and SCC S0 active without errors. Refreshed EXPANSION.md and summary; verified 261 public evidence hashes. Existing reconciliation agent assigned read-only tasks 75–79 hash/case verification. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:43 UTC — SCC S0 blocker and reconciliation
+
+SCC S0 rejected by strict SEM-020 criterion/verdict and duplicate-reference validation; raw review parsed (7348 bytes), first outcome preserved without rereview. Native integrity finding independently supported. Accounting now 79 native and 79 S0 outcomes, zero clean results. Scriggo active, 23 queued; sole worker waiting without errors. Verified 262 public evidence hashes. Independent agent verified 503/503 native artifact hashes and all 25 cases for tasks 75–79, no discrepancies; cumulative 6,059. Published reconciliation, S0 result and refreshed reports. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

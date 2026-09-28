@@ -12,8 +12,8 @@
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 23,
       "FAIL": 36,
-      "INFRASTRUCTURE_FAILURE": 19,
-      "NOT_RUN": 25
+      "INFRASTRUCTURE_FAILURE": 20,
+      "NOT_RUN": 24
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 79,
-    "semantic": 78,
+    "semantic": 79,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1458,17 +1458,18 @@
       "task_id": "returns-validated-error-accumulation"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "6e159fbe3cd0a84b5d6d17c6b86c1fdeafbee66c12a12b8e11c40485730f17f6",
+        "semantic.json": "a4ca80b08c519d3689efdd9436d63c53ac089de72ee5531b164c62e6570a1b08",
         "static.json": "1a9ce4d4c034ad1ba287fbba1154fa7851c54c208fdfcda6a58379380fbddd69"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/boyter/scc.git",

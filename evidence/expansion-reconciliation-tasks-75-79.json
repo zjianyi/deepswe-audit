@@ -1,0 +1,39 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 503,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "python-statemachine-state-data-scoping",
+      "artifact_count": 94,
+      "native_evidence_sha256": "10fec439bf080aafe1914f628e5a31d181838f665a65f7f305aff68a1db7a7e2"
+    },
+    {
+      "task_id": "query-persist-restored-query-state",
+      "artifact_count": 112,
+      "native_evidence_sha256": "351400355cb571adc22d3ea7523b3235d1c6c470ceca7d4e2a46ee2c33d07c9e"
+    },
+    {
+      "task_id": "quill-shared-toolbar-focus",
+      "artifact_count": 117,
+      "native_evidence_sha256": "2818f440ee3389d6ded612632f1dc657e939a09bbe7f18a0a158efab25c9b40e"
+    },
+    {
+      "task_id": "returns-validated-error-accumulation",
+      "artifact_count": 94,
+      "native_evidence_sha256": "0c582bacbe8c7d68c4e681066e336ae08027a9ba8f180916bd819abd0db1e393"
+    },
+    {
+      "task_id": "scc-bounded-memory-spilling",
+      "artifact_count": 86,
+      "native_evidence_sha256": "24c777da015a5fca3242ffe965d9d955575dc3f852d211b430f7c48b1f9edd52"
+    }
+  ],
+  "observations": [
+    "Independent read-only reconciliation verified 503/503 artifact hashes, all five public/native bindings and all 25 cases against raw evidence. All oracle/no-op pairs are 1/0.",
+    "Python-statemachine, Returns and SCC protected-path reward 1 accepted by Pier with explicit reach/write markers, no exception and absent final CTRF.",
+    "Query-persist and Quill attack rewards 0 without reach markers; deferrals preserved.",
+    "Returns suppression reach remains unresolved."
+  ]
+}
