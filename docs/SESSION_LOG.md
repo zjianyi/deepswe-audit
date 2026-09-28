@@ -321,3 +321,11 @@ Native completion advanced to 79/103; Scriggo method declarations active, 23 que
 ### 2026-09-28 08:43 UTC — SCC S0 blocker and reconciliation
 
 SCC S0 rejected by strict SEM-020 criterion/verdict and duplicate-reference validation; raw review parsed (7348 bytes), first outcome preserved without rereview. Native integrity finding independently supported. Accounting now 79 native and 79 S0 outcomes, zero clean results. Scriggo active, 23 queued; sole worker waiting without errors. Verified 262 public evidence hashes. Independent agent verified 503/503 native artifact hashes and all 25 cases for tasks 75–79, no discrepancies; cumulative 6,059. Published reconciliation, S0 result and refreshed reports. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:45 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 79 native tasks completed, Scriggo method declarations active, 23 queued. Local accounting remains 79 native and 79 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:47 UTC — Scriggo native integrity failure
+
+Native completion advanced to 80/103; Skrub duration encoding active, 22 queued. Scriggo protected-path reward 1 accepted by Pier without exception despite failing feature tests. Explicit reach/write markers verified; oracle/no-op rewards 1/0 (48 F2P, 1049 P2P). Both other attacks rejected with reach. Sole original worker and Scriggo S0 active without errors. Refreshed EXPANSION.md and summary; verified 265 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

