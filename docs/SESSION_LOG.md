@@ -28,3 +28,4 @@
 - 2026-09-28 00:56 UTC monitor: unchanged; first abs native job running, 102 queued; worker healthy/waiting, no errors, zero expansion execution or S0 outcomes.
 - 2026-09-28 00:57 UTC monitor: unchanged; first abs native job running, 102 queued, worker healthy/waiting without errors. No expansion outcomes yet or duplicate launches.
 - 2026-09-28 00:59 UTC: first expansion result imported/verified. abs-module-cache-flags FAIL on protected-path reward 1 accepted by Pier; oracle/no-op correct, report-forgery partial inflated. S0 active; next abs task executing and 101 queued. Refreshed expansion summary and retained native observations.
+- 2026-09-28 01:01 UTC: abs-module-cache-flags S0 completed FAIL, critical SEM-008 finding matches native reward-bypass evidence. Confirmed raw review and inert bundle archived. Worker waiting for second abs task; 101 queued. Published first complete expansion packet; no rerun.
