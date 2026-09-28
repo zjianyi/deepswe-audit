@@ -395,3 +395,7 @@ Native completion advanced to 82/103; SQLfmt CREATE TABLE DDL active, 20 queued.
 ### 2026-09-28 09:20 UTC — SQL formatter S0 blocker
 
 SQL formatter S0 rejected by strict SEM-020 criterion/verdict and duplicate-reference validation; archived raw output parsed (8068 bytes), first infrastructure-failure outcome preserved without rereview. Native outcome remains deferred for unobserved attack reach. Accounting now 82 native and 82 S0 outcomes, zero clean results. SQLfmt native active with 20 queued; original worker waiting without active S0 or errors. Verified 271 public evidence hashes; published semantic result, summary and EXPANSION.md. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:26 UTC — SQLfmt integrity finding and S0 blocker
+
+Accounting advanced to 83 native and 83 S0 outcomes, zero clean results. SQLfmt oracle/no-op rewards 1/0 (32 F2P, 1273 P2P). Protected-paths trial accepted reward 1 without exception despite 12 failed, 47 passed and 20 errors; missing CTRF and reach/write markers constrain attribution. Published a separate hash-bound annotation. Other probes reward 0 with unobserved reach. S0 failed strict SEM-020 criterion/verdict and duplicate-reference validation; archived raw JSON parsed (7799 bytes), no rereview. SQLite-utils active with 19 queued; original worker waiting without errors. Verified 275 public evidence hashes; refreshed expansion report and summary. No policy changes or retries; NEXT unchanged. Validation: git diff --check.

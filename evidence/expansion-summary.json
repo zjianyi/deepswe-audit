@@ -5,15 +5,15 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 21,
-      "FAIL": 47,
+      "FAIL": 48,
       "INFRASTRUCTURE_FAILURE": 14,
-      "NOT_RUN": 21
+      "NOT_RUN": 20
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 23,
       "FAIL": 38,
-      "INFRASTRUCTURE_FAILURE": 21,
-      "NOT_RUN": 21
+      "INFRASTRUCTURE_FAILURE": 22,
+      "NOT_RUN": 20
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 82,
-    "semantic": 82,
+    "execution": 83,
+    "semantic": 83,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1530,14 +1530,19 @@
       "task_id": "sql-formatter-bigquery-pipe-formatting"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "audit-annotation.json": "6fa78a5464aa54f360dab8e64170fcb4e06bafcb189d6a38b6b3aca9d97272f6",
+        "execution.json": "b7abf8f758e14488deca5ead762acc08dd478bec3d5a00d874bd9cc77f34e01b",
+        "semantic.json": "8ce5fdf73b13c93bab086d24afe62cb8d53a3d21979ea2f6a85aae7349090aab",
+        "static.json": "50574fb5a9c9d88924d1d5951384ee9246a2453d2342c02e20faf9dde1de3bce"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "FAIL"
       },
       "repository": "https://github.com/tconbeer/sqlfmt",

