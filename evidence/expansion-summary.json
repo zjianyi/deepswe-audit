@@ -4,13 +4,13 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "FAIL": 3,
-      "NOT_RUN": 100
+      "FAIL": 4,
+      "NOT_RUN": 99
     },
     "semantic": {
-      "FAIL": 1,
+      "FAIL": 2,
       "INFRASTRUCTURE_FAILURE": 1,
-      "NOT_RUN": 101
+      "NOT_RUN": 100
     },
     "static": {
       "FAIL": 16,
@@ -18,8 +18,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 3,
-    "semantic": 2,
+    "execution": 4,
+    "semantic": 3,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -62,17 +62,19 @@
       "task_id": "abs-stepped-slices"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
+        "audit-annotation.json": "ffe75521e47da8d2c59d11b9094372db60c9bfcc12bafb4c01a1c4eca3ed4f17",
         "execution.json": "b276f856b315053556721b8625bb1ec4ce54f5838cddf08f543e183e2aa2ed52",
+        "semantic.json": "62a0589e54dd7c27e566c4b71ee19a52b6525bd43a2ff0b5f2894afe97e4fd46",
         "static.json": "f2d57036e3c00ff410f36bbb907f96597cb89bdbb3f08475f9572109f9068e32"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/rhysd/actionlint",
@@ -82,10 +84,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "561468884b881d100ed8e38bc4c36f5decd797cfd73c0c8f483cdba62fcedaf9",
+        "static.json": "5e10709f2761928085f1db9df3b567e3bc7fc5ebe2480d361eb76e17609c6f4e"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

