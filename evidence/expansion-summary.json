@@ -12,8 +12,8 @@
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 12,
       "FAIL": 24,
-      "INFRASTRUCTURE_FAILURE": 8,
-      "NOT_RUN": 59
+      "INFRASTRUCTURE_FAILURE": 9,
+      "NOT_RUN": 58
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 45,
-    "semantic": 44,
+    "semantic": 45,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -839,17 +839,18 @@
       "task_id": "kombu-single-active-consumer-priority"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "b8fff278a4557362fb2b9430f1a70ced84073f745a7399b6a12f9f498ce4d473",
+        "semantic.json": "9beb746127b7fa3ca3608ca6a8d6bf382f77d810c39f65526b273510aa59682b",
         "static.json": "3c79bb024f6f7cb99ee1a92c9fe3fcdb41e9913f1c486593469b9531b93b505e"
       },
       "language": "python",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/celery/kombu",
