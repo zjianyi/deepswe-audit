@@ -10,10 +10,10 @@
       "NOT_RUN": 84
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 5,
+      "DEFERRED_EVIDENCE_REQUIRED": 6,
       "FAIL": 9,
       "INFRASTRUCTURE_FAILURE": 4,
-      "NOT_RUN": 85
+      "NOT_RUN": 84
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 19,
-    "semantic": 18,
+    "semantic": 19,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -361,17 +361,18 @@
       "task_id": "dasel-html-document-format"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "476a217ba37b91a0455bb9a85c0b7eb49029cd996b8c8bbcb0c104c3dce6a741",
+        "semantic.json": "89d43961294558a426a84ba5330fc007f55f5197d3422c1439189ec112cce1ee",
         "static.json": "c17821f4e819ccc154033f1634df09fe453161ba8d2edfc80af1bee5b3e8cc72"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/drizzle-team/drizzle-orm",
