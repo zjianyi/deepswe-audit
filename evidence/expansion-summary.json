@@ -1,19 +1,19 @@
 {
-  "all_scheduled_accounted": false,
+  "all_phases_resolved_count": 35,
+  "all_scheduled_accounted": true,
   "clean_count": 0,
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
+  "finalized": true,
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 26,
       "FAIL": 56,
-      "INFRASTRUCTURE_FAILURE": 20,
-      "NOT_RUN": 1
+      "INFRASTRUCTURE_FAILURE": 21
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 28,
+      "DEFERRED_EVIDENCE_REQUIRED": 29,
       "FAIL": 46,
-      "INFRASTRUCTURE_FAILURE": 28,
-      "NOT_RUN": 1
+      "INFRASTRUCTURE_FAILURE": 28
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,13 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 102,
-    "semantic": 102,
+    "execution": 103,
+    "semantic": 103,
+    "static": 103
+  },
+  "resolved_phase_counts": {
+    "execution": 56,
+    "semantic": 46,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1895,14 +1900,18 @@
       "task_id": "yjs-map-conflict-detection"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "53d96f3849f94a91e4fc1d0ec9cc414eb75ddbf7545d37e4bafd2f6ed9519dc4",
+        "semantic.json": "59efdf3f64bc00b026b28690a03c61e9e82e65c27bb9fdebc2d78d4dcff0430d",
+        "static.json": "67c021fb27206926eb35f52c9373e3f9b31e2adb1b219b9d24773982e03e0de3"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/carvel-dev/ytt",

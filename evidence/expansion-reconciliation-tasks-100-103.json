@@ -1,0 +1,33 @@
+{
+  "schema_version": "deepswe.artifact-reconciliation/1",
+  "run_id": "36363797336",
+  "artifact_count": 185,
+  "discrepancies": [],
+  "tasks": [
+    {
+      "task_id": "wazero-multi-module-snapshots",
+      "artifact_count": 1,
+      "native_evidence_sha256": "468c91d0bcbd6afe49eec6cf6db5d04f6497df54a598467a9a8b4fc1029958da"
+    },
+    {
+      "task_id": "yaegi-go-embed-directives",
+      "artifact_count": 86,
+      "native_evidence_sha256": "c87e5c63f7938bc16012931897739964c6014b988034e4d8dd9a3f6fcb8c93a2"
+    },
+    {
+      "task_id": "yjs-map-conflict-detection",
+      "artifact_count": 97,
+      "native_evidence_sha256": "b6c1b67fb677c079045aa76d67e32f08cbc74a351e8dece3756f8f121c49f12f"
+    },
+    {
+      "task_id": "ytt-jsonpath-query-api",
+      "artifact_count": 1,
+      "native_evidence_sha256": "ee5d130d7192c5ba33aee4099ef274110451e5e6ec2aecc0ad34da5697c08275"
+    }
+  ],
+  "observations": [
+    "Independent read-only reconciliation verified all 185 artifact hashes, four public/native bindings and available case fields. Cumulative 7680 artifacts across all 103 tasks.",
+    "Yaegi protected-path reward 1 accepted with reach/write markers, no exception, missing CTRF. Yaegi and Yjs oracle/no-op pairs 1/0.",
+    "Yjs attack rewards 0 without reach markers; deferral preserved. Wazero and Ytt blocked before execution by registry Data limit exceeded."
+  ]
+}

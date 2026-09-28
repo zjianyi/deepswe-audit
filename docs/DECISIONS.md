@@ -25,3 +25,5 @@
 - User switched heartbeat monitoring back to every minute; retain meaningful-change notifications and existing audit constraints.
 - Boa expansion image failure is confirmed registry throttling (toomanyrequests: Rate exceeded), not an absent-image claim. Preserve first native attempt and review blocked evidence; no infrastructure retry until a corrected cause is documented.
 - Cattrs image-pull response is registry Data limit exceeded; distinguish it from Boa Rate exceeded while retaining both as infrastructure blockers. Boa S0 duplicate/unknown finding references fail strict validation; preserve raw output and no second attempt.
+
+- Close the 103-task expansion as fully accounted, not fully resolved or clean: native 56 FAIL/26 DEFERRED/21 INFRA; S0 46 FAIL/29 DEFERRED/28 INFRA. Preserve all first attempts and archived rejected raw outputs; no retries or reviewer-output repairs. Final report and run manifest are separate from the immutable pilot. Pause monitoring after publication; any further execution requires explicit follow-up authorization within the established retry constraints.

