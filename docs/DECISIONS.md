@@ -21,3 +21,5 @@
 - Aiomonitor strict SEM-020 validation failure remains an explicit semantic blocker, with archived raw output. Adaptix's missing reach markers constrain path attribution but do not erase recorded Pier reward acceptance; preserve both native evidence and original deferred S0.
 - User authorized subagents to speed up the audit. Delegate independent read-only raw-evidence reconciliation and mechanical accounting checks; these are not additional S0 reviews. Preserve serial native jobs, serial authenticated S0 reviews, and one local worker. Monitoring prompt carries this authorization forward.
 - Harden local recovery without changing evaluation semantics: check existing S0 marker before preparing input; backfill absent public outcome from archived local JSON without rereview. Preserve current worker and frozen reviewer; four focused recovery tests plus full public suite (27 passed) validate the change.
+- User changed heartbeat monitoring to every three minutes. Preserve meaningful-change notifications and the ongoing audit worker.
+- User switched heartbeat monitoring back to every minute; retain meaningful-change notifications and existing audit constraints.

@@ -4,8 +4,8 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "FAIL": 7,
-      "NOT_RUN": 96
+      "FAIL": 8,
+      "NOT_RUN": 95
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 1,
@@ -19,7 +19,7 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 7,
+    "execution": 8,
     "semantic": 7,
     "static": 103
   },
@@ -158,10 +158,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "2fee2d98f393b7007f155a92d03027cee636b7b34fdde2e66e20c1407775c70f",
+        "static.json": "dcbb9baf88b065a411cff59662107535ad236c356b150e718afd019a4d5835b7"
+      },
       "language": "go",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "FAIL",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },
