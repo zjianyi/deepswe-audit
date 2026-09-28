@@ -1,0 +1,11 @@
+{
+  "github_run_id": "36363797336",
+  "url": "https://github.com/zjianyi/deepswe-audit/actions/runs/36363797336",
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "cohort_manifest_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
+  "native_concurrency": 1,
+  "semantic_concurrency": 1,
+  "native_retries": 0,
+  "reviewer": "gpt-5.6-luna",
+  "review_backend": "local ChatGPT-authenticated Codex; read-only; no API fallback"
+}

@@ -19,4 +19,6 @@
 - Expansion workflow and sequential local worker implemented. Phase 1 already covers all 103; local static envelopes gain frozen codebase context before evidence import, with original envelopes retained locally.
 - Expansion-only driver captures native reward/Pier acceptance even without final CTRF; accepted candidate attack reward is a failure. S0 wrapper archives raw output and uses an attempt marker to prevent repeats. Frozen BTQC source, rubric and validation unchanged.
 - Validation: 23 public fixtures and actionlint pass; first expansion task context/static prepared; original pilot evidence hashes verified unchanged.
-- Dispatch and one-minute monitor activation pending.
+- Expansion run 36363797336 dispatched at e0f63ae14f4fbd4ad74d615372ec720f3609b33c: abs-module-cache-flags running, 102 queued at launch. URL: https://github.com/zjianyi/deepswe-audit/actions/runs/36363797336
+- Sequential local worker active: PID 99581, exec session 18701, scripts/expansion.py work --run 36363797336. It downloads/imports completed jobs, prepares immutable context/static evidence and executes one S0 per task. Inspect lock/process and durable attempt markers before any restart.
+- One-minute automation deepswe-audit-progress updated and ACTIVE for this expansion, with meaningful-change notifications only.
