@@ -12,8 +12,8 @@
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 14,
       "FAIL": 25,
-      "INFRASTRUCTURE_FAILURE": 10,
-      "NOT_RUN": 54
+      "INFRASTRUCTURE_FAILURE": 11,
+      "NOT_RUN": 53
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 50,
-    "semantic": 49,
+    "semantic": 50,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -930,17 +930,18 @@
       "task_id": "koota-pair-relation-tracking"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "7993dc8c0acd3220ebe9fe9d9e40caa68416f60cbf08c639e294e6aa37e0de8e",
+        "semantic.json": "cc805dba378935874a1e14f796eaf565e497cd7e6a5d06513f1dbafea72a6b5e",
         "static.json": "5080744889b1bdc2758dafbf00c49a5fd68afd637e2be08ecd6f92348fb26310"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/pmndrs/koota",
