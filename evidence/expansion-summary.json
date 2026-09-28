@@ -6,14 +6,14 @@
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 4,
       "FAIL": 12,
-      "INFRASTRUCTURE_FAILURE": 4,
-      "NOT_RUN": 83
+      "INFRASTRUCTURE_FAILURE": 5,
+      "NOT_RUN": 82
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 6,
-      "FAIL": 9,
+      "FAIL": 10,
       "INFRASTRUCTURE_FAILURE": 4,
-      "NOT_RUN": 84
+      "NOT_RUN": 83
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 20,
-    "semantic": 19,
+    "execution": 21,
+    "semantic": 20,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -379,17 +379,18 @@
       "task_id": "drizzle-orm-window-function-builders"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "b356cf6b4f47f6c8ca41dab7350c1c85e1bd0a3802ecd48531ee91547414163f",
+        "semantic.json": "235c09745bc101aeca69cd98d34e28805ca88143dae614473f959b7cf643f75a",
         "static.json": "1a2f508ec8c036b537dc1f7d409e17de35db16b8961af33e3a44f560083e555d"
       },
       "language": "typescript",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/dynamodb-toolbox/dynamodb-toolbox",
@@ -399,10 +400,14 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "audit-annotation.json": "f73c2137fd1253829fe261810d8c462011832cc90f8ba74242b067d9dbccb07f",
+        "execution.json": "92d96a3a155510e1d7fe40eece7cadc508fb0e1f5e07f04cdd31fb64a3c6ff5f",
+        "static.json": "80ec1c286edf6c30c3e0c60684899e0a4f849cd1316a626e0afd9c284993480a"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },
