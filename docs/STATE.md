@@ -10,7 +10,7 @@
 - Ten S0 attempts recorded: nine validated reviews (three FAIL, six DEFERRED_EVIDENCE_REQUIRED), one INFRASTRUCTURE_FAILURE. Happy DOM output failed strict SEM-020 validation; no rerun. No semantic processes remain.
 - All scheduled items accounted for. Zero clean three-phase results. Final REPORT.md, ten per-task evidence folders, 113-task inventory, static findings and reproducible manifests/run.json published; detailed source/native/input bundles retained locally.
 - Final validation: 19 public tests, actionlint and git diff checks pass; all 113 source, framework/context and ten artifact bindings verified. Earlier private BTQC regression suite: 112 passed. No shared policy or frozen runtime altered during final reporting.
-- One-minute monitor deepswe-audit-progress is PAUSED after final publication; no unfinished execution or review jobs.
+- Pilot monitoring was paused after final publication; subsequently resumed for the separately authorized expansion below.
 - No native retries used. No documented registry correction yet; KaTeX remains explicitly blocked. Banana Bench unchanged.
 
 ## Authorized expansion
@@ -22,3 +22,5 @@
 - Expansion run 36363797336 dispatched at e0f63ae14f4fbd4ad74d615372ec720f3609b33c: abs-module-cache-flags running, 102 queued at launch. URL: https://github.com/zjianyi/deepswe-audit/actions/runs/36363797336
 - Sequential local worker active: PID 99581, exec session 18701, scripts/expansion.py work --run 36363797336. It downloads/imports completed jobs, prepares immutable context/static evidence and executes one S0 per task. Inspect lock/process and durable attempt markers before any restart.
 - One-minute automation deepswe-audit-progress updated and ACTIVE for this expansion, with meaningful-change notifications only.
+
+- Expansion checkpoint 2026-09-28 00:59 UTC: abs-module-cache-flags imported FAIL: oracle/no-op binary endpoints passed; protected-path candidate attack earned reward 1 accepted by Pier, with protected-write markers. Forged reports raised partial credit from 0.130435 to 0.347826 while binary stayed 0. Its S0 is running. abs-stepped-slices executing, 101 queued. Worker healthy, no errors; recorded execution 1/103, semantic 0/103.
