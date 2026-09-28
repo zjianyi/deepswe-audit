@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 16,
+      "DEFERRED_EVIDENCE_REQUIRED": 17,
       "FAIL": 39,
       "INFRASTRUCTURE_FAILURE": 14,
-      "NOT_RUN": 34
+      "NOT_RUN": 33
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 19,
-      "FAIL": 33,
+      "FAIL": 34,
       "INFRASTRUCTURE_FAILURE": 16,
-      "NOT_RUN": 35
+      "NOT_RUN": 34
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 69,
-    "semantic": 68,
+    "execution": 70,
+    "semantic": 69,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1278,17 +1278,18 @@
       "task_id": "participle-grammar-conflict-analysis"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "c474dee28598b91605bd7003fa4c027bc427d7782687e89afa1401cc249aadbf",
+        "semantic.json": "e7027b5ab20d4902ef6a1f9c88ef46c0023ee4cf0c8774de69fbf4032b77b141",
         "static.json": "a1da3718f6d75cd1e24ad1044fcebffc0801cc84ba808f2d7527607bf070d3f0"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/cockroachdb/pebble",
@@ -1298,10 +1299,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "08d86f2d7fb5b4f56ad5764d904a4a74a7234a5a6392db58114c296fdfbb2304",
+        "static.json": "3a213624226661cc88b7e83cebc7679f24266905dce14a550381d9806fddea99"
+      },
       "language": "rust",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

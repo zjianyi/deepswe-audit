@@ -195,3 +195,7 @@ Fresh GitHub status remains 68 native jobs completed, one active (pebble-durabil
 Native completion advanced to 69/103; Pest active and 33 queued. Pebble protected-path reward 1, explicit protected writes and probe reach, and no Pier exception verified against raw result and test log; final CTRF absent. Oracle/no-op 1/0; other attacks 0 with reach. S0 remains active under the sole existing worker; no errors or retries. Refreshed EXPANSION.md and evidence/expansion-summary.json, verified 231 public evidence hashes. NEXT unchanged. Validation: git diff --check.
 
 Independent read-only reconciliation of tasks 65–69 verified 289 artifact hashes and all native/public bindings, with no discrepancies; cumulative 5,072 across 69 tasks. Published concise reconciliation manifest; raw bundles remain local.
+
+### 2026-09-28 07:34 UTC — Pebble S0 and Pest native outcome
+
+Native completion advanced to 70/103; Prometheus transactional reload active and 32 queued. Pebble S0 validated as FAIL and corroborates the native protected-path bypass; parsed archived raw review (12,114 bytes). Pest endpoints 1/0, all attacks 0 without reach markers verified against raw results/logs; native remains deferred, sole S0 active. Refreshed EXPANSION.md and expansion summary; 234 public evidence hashes verified. No errors, retries, or policy changes; NEXT unchanged. Validation: git diff --check.

