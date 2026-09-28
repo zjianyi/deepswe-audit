@@ -12,8 +12,8 @@
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 18,
       "FAIL": 31,
-      "INFRASTRUCTURE_FAILURE": 13,
-      "NOT_RUN": 41
+      "INFRASTRUCTURE_FAILURE": 14,
+      "NOT_RUN": 40
     },
     "static": {
       "FAIL": 16,
@@ -22,7 +22,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 63,
-    "semantic": 62,
+    "semantic": 63,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1168,17 +1168,18 @@
       "task_id": "ofetch-per-origin-circuit-breaker"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "1428ca9fadfd9a0a2a53522ec44bdd4df5f8c838ecb3f1e7cfd407b33efdbf8f",
+        "semantic.json": "4761159ab0600a279a0c2f71a82ee87ba6825b7fa84564fb1699f9e79c96bc0a",
         "static.json": "7f4be9c918b635f573741dfb48863932b9046e0563e6458e6b5aafd3ec8165dc"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/liweiyi88/onedump",
