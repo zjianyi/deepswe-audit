@@ -1,1 +1,1 @@
-Complete the frozen ten-task pilot by importing remaining run 36356902711 artifacts, conducting one sequential S0 review per remaining task, and publishing the evidence-backed final audit report.
+Finish the four queued S0 reviews, reconcile findings with durable native evidence, and publish the final ten-task audit report with explicit blockers and completion accounting.

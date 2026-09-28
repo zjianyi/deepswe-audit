@@ -1,16 +1,13 @@
 # State
 
-- Frozen corpus: 113 tasks; deterministic ten-task pilot. Upstream and Pier pins unchanged.
-- Phase 1: 97 PASS, 16 FAIL; 113 reproducibility warnings.
-- Integration checks previously passed: 112 BTQC tests, 17 audit tests, actionlint.
-- Smoke run 36353718484 completed and imported: oracle reward 1, no-op reward 0 with valid partial credit 0.5. Execution FAIL: candidate code modified protected verifier surfaces. Report forgery produced partial credit 0.9827586206896551 but binary reward 0.
-- GoReleaser S0 semantic review completed: DEFERRED_EVIDENCE_REQUIRED. Original output preserved. Separate audit annotation records its incorrect interpretation of protected writes and scope mismatch concerning a mutant campaign.
-- Remaining run 36356902711: Helm, Testem, KaTeX, and Bandit completed and imported; Dateutil running, four queued as of 2026-09-27 23:22 UTC. Helm execution FAIL: oracle 1/no-op 0, protected verifier write observed; forged reports raised partial credit from 0.2033898305084746 to 0.8135593220338984 with binary reward 0.
-- Helm S0 completed: FAIL (mixed-array ordering finding); separate annotation flags its false missing-execution claims and unresolved contract interpretation. Testem S0 completed DEFERRED_EVIDENCE_REQUIRED (unreached probes, calibration and repeatability evidence unresolved). KaTeX S0 active (exec session 80415), including its blocker. Bandit review is next; five further reviews await execution evidence.
-- One-minute heartbeat deepswe-audit-progress is active; notify only meaningful changes.
-- Report and evidence summary updated: 5/10 execution outcomes, 3/10 semantic outcomes, zero clean three-phase results.
-- No upstream task modified, valid failure retried, or model-solving trial run. Banana Bench unchanged.
-
-- Testem endpoints pass (oracle 1/no-op 0); all three probes lacked reach markers, so execution remains DEFERRED_EVIDENCE_REQUIRED.
-- KaTeX execution is INFRASTRUCTURE_FAILURE: image pull was registry rate-limited (not evidence of a missing image). No cases ran; no retry yet, pending documented cause correction and serial-run completion.
-- Bandit oracle/no-op endpoints pass (1/0, native no-op partial 0.8034188034188035). All three probes lacked reach markers; execution remains DEFERRED_EVIDENCE_REQUIRED.
+- Frozen corpus: 113 tasks and the original ten-task pilot. Upstream and Pier pins unchanged; no upstream repairs or model-solving trials.
+- Phase 1: 97 PASS, 16 FAIL; 113 reproducibility warnings. Prior checks: 112 BTQC tests, 17 audit tests, actionlint.
+- Smoke 36353718484 and all nine jobs in 36356902711 completed. All ten native bundles downloaded, hash-verified and imported.
+- All nine executable oracle/no-op pairs passed (1/0), retaining native nonzero no-op partial credit. KaTeX blocked before execution by registry rate limiting.
+- Raw imported execution statuses: two FAIL (GoReleaser, Helm protected writes), three INFRASTRUCTURE_FAILURE (KaTeX, Dateutil, fd), five DEFERRED_EVIDENCE_REQUIRED (unobserved probe reach).
+- Independent raw-evidence inspection found Dateutil and fd protected-path probes accepted by Pier with reward 1 and no exception despite absent CTRF. Separate hash-bound audit annotations record these demonstrated reward bypasses; original importer classifications remain preserved. Four tasks therefore have concrete integrity findings, independent of raw aggregate labels.
+- GoReleaser and Helm also exhibit inflated report-forgery partial credit with binary reward 0.
+- Six S0 reviews completed as of 2026-09-28 00:04 UTC: GoReleaser deferred, Helm FAIL, Testem deferred, KaTeX deferred, Bandit FAIL, Dateutil deferred. Raw reviews preserved; annotations distinguish reviewer errors and interpretive findings from demonstrated exploits.
+- Sequential review queue active: exec session 25269, shell PID 92260. fd currently running, then wasmi, awilix, happy-dom. Do not launch duplicate reviews while this queue is active.
+- Zero clean three-phase results. Detailed local evidence retained. One-minute monitor active.
+- No native retries used. No documented registry correction yet; KaTeX remains explicitly blocked. Banana Bench unchanged.
