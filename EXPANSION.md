@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 41, 'semantic': 40}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 42, 'semantic': 42}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -50,8 +50,8 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | python | igel-persist-feature-schema | PASS | FAIL | FAIL |
 | typescript | ink-grid-box-layout | PASS | DEFERRED_EVIDENCE_REQUIRED | FAIL |
 | python | ipython-session-bundle-replay | PASS | FAIL | FAIL |
-| go | kcp-go-multiplexed-kcp-streams | PASS | FAIL | NOT_RUN |
-| typescript | kea-atomic-signal-selectors | PASS | NOT_RUN | NOT_RUN |
+| go | kcp-go-multiplexed-kcp-streams | PASS | FAIL | FAIL |
+| typescript | kea-atomic-signal-selectors | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
 | go | kgateway-consistent-hash-policy | PASS | NOT_RUN | NOT_RUN |
 | python | kombu-single-active-consumer-priority | PASS | NOT_RUN | NOT_RUN |
 | python | kombu-virtual-queue-dead-lettering | PASS | NOT_RUN | NOT_RUN |

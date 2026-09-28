@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 7,
+      "DEFERRED_EVIDENCE_REQUIRED": 8,
       "FAIL": 25,
       "INFRASTRUCTURE_FAILURE": 9,
-      "NOT_RUN": 62
+      "NOT_RUN": 61
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 11,
-      "FAIL": 22,
+      "DEFERRED_EVIDENCE_REQUIRED": 12,
+      "FAIL": 23,
       "INFRASTRUCTURE_FAILURE": 7,
-      "NOT_RUN": 63
+      "NOT_RUN": 61
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 41,
-    "semantic": 40,
+    "execution": 42,
+    "semantic": 42,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -767,31 +767,36 @@
       "task_id": "ipython-session-bundle-replay"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "991f7f58e9f3b31c56dcf5034b34fc84474535e38052b9c5802d4b9496223e2c",
+        "semantic.json": "d66222beede0df091208fa02c777081ec2a6d3c01ca09d1fd71f2aef15be84ac",
         "static.json": "44797ff321552f9a9bbd87337b25df5de3ff8d6afa46c05fc494010e4c69c99b"
       },
       "language": "go",
       "phases": {
         "execution": "FAIL",
-        "semantic": "NOT_RUN",
+        "semantic": "FAIL",
         "static": "PASS"
       },
       "repository": "https://github.com/xtaci/kcp-go",
       "task_id": "kcp-go-multiplexed-kcp-streams"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "bf7346d306b4ecd0e5b1d88ebd40dda36ca9a09b95eb372da987f5d085cb6625",
+        "semantic.json": "a82547a91bf136013ba3b2515c6772acee9b62cb5561bce645ffe091e0c8f9c5",
+        "static.json": "4c6b1a3b13ae35698f9367c016ed016fa13dd35e98c9e319a18c817fec283848"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/keajs/kea.git",
