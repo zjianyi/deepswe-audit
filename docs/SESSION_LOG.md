@@ -475,3 +475,19 @@ Fresh GitHub: 97 native tasks complete, Vitest duration sharding active, 5 queue
 ### 2026-09-28 10:14 UTC — Valibot outcomes published
 
 Valibot S0 validated as DEFERRED_EVIDENCE_REQUIRED for probe reach and reproducibility evidence; archived raw JSON parsed (9487 bytes). Native evidence reconciled at preceding checkpoint. Published its static/native/S0 evidence and refreshed expansion report/summary: 97 native and 97 S0 outcomes, zero clean. Verified all 321 public evidence hashes. GitHub unchanged: Vitest duration sharding active, 5 queued; original worker waiting without errors. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:16 UTC — Unchanged monitoring checkpoint
+
+Fresh GitHub: 97 native tasks complete, Vitest duration sharding active, 5 queued. Local outcomes remain 97 native and 97 S0; sole original worker PID 99581 waiting with a fresh heartbeat and no worker/poll errors. No intervention, retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:18 UTC — Unchanged monitoring checkpoint
+
+Fresh GitHub: 97 native tasks complete, Vitest duration sharding active, 5 queued. Local outcomes remain 97 native and 97 S0; sole original worker PID 99581 waiting with no worker/poll errors. No intervention, retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:20 UTC — Vitest native monitoring checkpoint
+
+Fresh GitHub: 98 native tasks complete, Vulture active, 4 queued. Read-only raw reconciliation confirms Vitest duration sharding oracle/no-op 1/0 (56 F2P, 24 P2P); all attacks reward 0 without reach markers, no Pier exceptions. Native deferred; one Vitest S0 active under original worker PID 99581, no worker/poll errors. Local 98 native/97 S0; published summary remains 97/97 until next publication. No new attempts, retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 10:22 UTC — Vitest S0 validation blocker
+
+Vitest duration sharding S0 rejected by strict validation: duplicate SEM-010, missing SEM-001, mismatched finding prefixes and criterion/verdict references. Raw JSON parsed (7307 bytes) and preserved; no repeat attempt. Native evidence reconciled at preceding checkpoint remains deferred. Published static/native/S0 evidence and refreshed expansion report/summary: 98 native and 98 S0 outcomes, zero clean. Verified all 324 public evidence hashes. GitHub Vulture active, 4 queued; original worker waiting without errors. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 97, 'semantic': 97}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 98, 'semantic': 98}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -107,7 +107,7 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | typescript | ts-pattern-match-each | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
 | go | updo-policy-alerting | PASS | FAIL | INFRASTRUCTURE_FAILURE |
 | typescript | valibot-recursive-schema-composition | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
-| typescript | vitest-duration-sharding | PASS | NOT_RUN | NOT_RUN |
+| typescript | vitest-duration-sharding | PASS | DEFERRED_EVIDENCE_REQUIRED | INFRASTRUCTURE_FAILURE |
 | python | vulture-persistent-analysis-cache | PASS | NOT_RUN | NOT_RUN |
 | go | wazero-multi-module-snapshots | PASS | NOT_RUN | NOT_RUN |
 | go | yaegi-go-embed-directives | PASS | NOT_RUN | NOT_RUN |

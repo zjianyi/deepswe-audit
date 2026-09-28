@@ -4,16 +4,16 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 24,
+      "DEFERRED_EVIDENCE_REQUIRED": 25,
       "FAIL": 54,
       "INFRASTRUCTURE_FAILURE": 19,
-      "NOT_RUN": 6
+      "NOT_RUN": 5
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 28,
       "FAIL": 44,
-      "INFRASTRUCTURE_FAILURE": 25,
-      "NOT_RUN": 6
+      "INFRASTRUCTURE_FAILURE": 26,
+      "NOT_RUN": 5
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 97,
-    "semantic": 97,
+    "execution": 98,
+    "semantic": 98,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1805,14 +1805,18 @@
       "task_id": "valibot-recursive-schema-composition"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "7165b34f33a0843c2e80250653d2469619b91c0df782bdf5331b893517b69acd",
+        "semantic.json": "8d62fd0299220832c610f801dd53f85994efdc67743c58f93c994eaec1923ad8",
+        "static.json": "9c02daeb2e25294327ce1c35468942c0f4c931a5299e0dfd7e227fd3c068be9e"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/vitest-dev/vitest.git",
