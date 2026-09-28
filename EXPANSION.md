@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 12, 'semantic': 11}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 13, 'semantic': 12}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -21,8 +21,8 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | typescript | arktype-json-schema-refs-dependencies | PASS | DEFERRED_EVIDENCE_REQUIRED | DEFERRED_EVIDENCE_REQUIRED |
 | python | bandit-incremental-cache-control | FAIL | FAIL | FAIL |
 | python | bandit-interprocedural-taint-checks | PASS | FAIL | DEFERRED_EVIDENCE_REQUIRED |
-| rust | boa-hierarchical-evaluation-cancellation | PASS | INFRASTRUCTURE_FAILURE | NOT_RUN |
-| python | cattrs-partial-structuring-recovery | FAIL | NOT_RUN | NOT_RUN |
+| rust | boa-hierarchical-evaluation-cancellation | PASS | INFRASTRUCTURE_FAILURE | INFRASTRUCTURE_FAILURE |
+| python | cattrs-partial-structuring-recovery | FAIL | INFRASTRUCTURE_FAILURE | NOT_RUN |
 | typescript | clack-async-autocomplete-options | PASS | NOT_RUN | NOT_RUN |
 | typescript | claude-code-by-agents-recursive-delegation | PASS | NOT_RUN | NOT_RUN |
 | typescript | cliffy-config-file-parsing | PASS | NOT_RUN | NOT_RUN |

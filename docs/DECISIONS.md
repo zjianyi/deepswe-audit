@@ -24,3 +24,4 @@
 - User changed heartbeat monitoring to every three minutes. Preserve meaningful-change notifications and the ongoing audit worker.
 - User switched heartbeat monitoring back to every minute; retain meaningful-change notifications and existing audit constraints.
 - Boa expansion image failure is confirmed registry throttling (toomanyrequests: Rate exceeded), not an absent-image claim. Preserve first native attempt and review blocked evidence; no infrastructure retry until a corrected cause is documented.
+- Cattrs image-pull response is registry Data limit exceeded; distinguish it from Boa Rate exceeded while retaining both as infrastructure blockers. Boa S0 duplicate/unknown finding references fail strict validation; preserve raw output and no second attempt.
