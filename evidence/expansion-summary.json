@@ -9,10 +9,10 @@
       "NOT_RUN": 94
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 1,
+      "DEFERRED_EVIDENCE_REQUIRED": 2,
       "FAIL": 5,
       "INFRASTRUCTURE_FAILURE": 2,
-      "NOT_RUN": 95
+      "NOT_RUN": 94
     },
     "static": {
       "FAIL": 16,
@@ -21,7 +21,7 @@
   },
   "recorded_outcome_counts": {
     "execution": 9,
-    "semantic": 8,
+    "semantic": 9,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -174,17 +174,18 @@
       "task_id": "arcane-drift-detection-baselines"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "33e55b7794c429de6eb85bab65746fbfebaaf966cc5a477e6351b4186dc03081",
+        "semantic.json": "69543611ef8dbf7a1a150a4d367c26bb0eb173d837ce6e44119cf18db416e6e6",
         "static.json": "bdb0a056eff1bac83062f6333ba55720eebecab8fc35c53dda259c1abb3f406a"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/arktypeio/arktype",
