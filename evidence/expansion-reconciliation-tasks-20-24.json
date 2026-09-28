@@ -1,0 +1,46 @@
+{
+  "schema_version": "deepswe.evidence-reconciliation/1",
+  "method": "Independent read-only subagent reconciliation; no task execution or additional S0.",
+  "artifact_hashes_verified": 200,
+  "tasks": [
+    {
+      "task_id": "dynamodb-toolbox-conditional-attribute-requirements",
+      "artifact_hashes_verified": 111,
+      "native_run_sha256": "d38dbaf943fc49bb456e19b9568b0cdf037eb71973f11acbb4a62751e9e1f0ac",
+      "public_execution_sha256": "b356cf6b4f47f6c8ca41dab7350c1c85e1bd0a3802ecd48531ee91547414163f",
+      "result": "All available public/native case fields and bindings match raw evidence."
+    },
+    {
+      "task_id": "dynamodb-toolbox-lazy-recursive-schemas",
+      "artifact_hashes_verified": 1,
+      "native_run_sha256": "ba879f333f4d052941dd1b09815d6f44ed6e61ceb77be06f97eca293e5ff648c",
+      "public_execution_sha256": "92d96a3a155510e1d7fe40eece7cadc508fb0e1f5e07f04cdd31fb64a3c6ff5f",
+      "result": "All available public/native case fields and bindings match raw evidence."
+    },
+    {
+      "task_id": "effect-sse-httpapi-streaming",
+      "artifact_hashes_verified": 1,
+      "native_run_sha256": "c86c3e92e5ef7142138a9070f0994f22d564b776257711ecbdaae98fa39b4019",
+      "public_execution_sha256": "f5542def596c22f1c1a61dbfe8e0960390faea8ab5892995d7b4726a527378f6",
+      "result": "All available public/native case fields and bindings match raw evidence."
+    },
+    {
+      "task_id": "eicrud-keyset-pagination-cursor",
+      "artifact_hashes_verified": 1,
+      "native_run_sha256": "4d9f2c174a7a90b738bcace7321b7b0ce8bedb4e7f097c31d3a0ff1a805f5bc3",
+      "public_execution_sha256": "e3d4eb020337abe66ee126dddb72744906c83d71b8867eb42f4d9f69f411e201",
+      "result": "All available public/native case fields and bindings match raw evidence."
+    },
+    {
+      "task_id": "etree-xml-diff-patch",
+      "artifact_hashes_verified": 86,
+      "native_run_sha256": "e51b5791ab3a5963a0dd3cc78a8dfda5fdc6d3ea452632f54a67ecc7b963617f",
+      "public_execution_sha256": "fdf9eb0159011aacd53cda5161c0c4c1741ad1ccc7bd90cd74ae6914bd0276b3",
+      "result": "All available public/native case fields and bindings match raw evidence."
+    }
+  ],
+  "observations": [
+    "DynamoDB conditional attributes and Etree endpoints 1/0; protected-path reward 1 accepted by Pier with explicit reach/write markers, null exception, absent final CTRF.",
+    "DynamoDB lazy schemas registry Rate exceeded; Effect and Eicrud Data limit exceeded. All are pre-execution blockers."
+  ]
+}

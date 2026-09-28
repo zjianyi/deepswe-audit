@@ -2,7 +2,7 @@
 
 User-authorized extension of the frozen ten-task pilot. The original [pilot report](REPORT.md) and evidence remain unchanged.
 
-Recorded outcomes: {'static': 103, 'execution': 28, 'semantic': 27}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
+Recorded outcomes: {'static': 103, 'execution': 29, 'semantic': 28}. Clean three-phase results: 0. Recorded blockers and deferred outcomes are not clean results.
 
 Same upstream/Pier pins, resources, five native cases, 20 semantic criteria and local ChatGPT-authenticated reviewer. One native job and one S0 review at a time. All 103 tasks retain their original denominator; no substitution or automatic retry.
 
@@ -37,8 +37,8 @@ Expansion-only evidence improvements retain native reward acceptance when CTRF i
 | go | expr-try-catch-errors | PASS | INFRASTRUCTURE_FAILURE | DEFERRED_EVIDENCE_REQUIRED |
 | python | fastapi-deprecation-response-headers | PASS | INFRASTRUCTURE_FAILURE | INFRASTRUCTURE_FAILURE |
 | python | fastapi-implicit-head-options | PASS | FAIL | FAIL |
-| go | geo-shapeindex-serialization | PASS | FAIL | NOT_RUN |
-| go | go-critic-doc-link-checker | PASS | NOT_RUN | NOT_RUN |
+| go | geo-shapeindex-serialization | PASS | FAIL | FAIL |
+| go | go-critic-doc-link-checker | PASS | FAIL | NOT_RUN |
 | go | go-genai-streamed-function-args | PASS | NOT_RUN | NOT_RUN |
 | go | go-git-worktree-merge-conflicts | PASS | NOT_RUN | NOT_RUN |
 | python | gql-incremental-graphql-delivery | FAIL | NOT_RUN | NOT_RUN |

