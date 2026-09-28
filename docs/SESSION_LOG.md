@@ -111,3 +111,5 @@
 - 2026-09-28 05:25 UTC: No outcome changes: 50 native/50 semantic. Kysely native running, 52 queued; original worker polling normally with no errors or active S0. No new attempts or retries; diff check passed.
 - 2026-09-28 05:28 UTC: Kysely imported two accepted reward bypasses (forged reports and protected writes), endpoints 1/0; sole S0 active. Langchain native running. Counts {'static': 103, 'execution': 51, 'semantic': 51}; public hashes/diff verified, no worker errors or retries.
 - Same checkpoint: Kysely S0 finished with strict SEM-020 validation failure before publication; raw archive verified. 51 native/51 semantic outcomes published. Native bypass findings retained; worker waiting and no second S0.
+- 2026-09-28 05:30 UTC: Unchanged 51 native/51 semantic outcomes. Langchain native running, 51 queued; original worker polling normally, no errors or active S0. No new attempts or retries; diff check passed.
+- 2026-09-28 05:32 UTC: Langchain native deferred for unreached probes, endpoints 1/0; sole S0 active. Mashumaro native running. Counts {'static': 103, 'execution': 52, 'semantic': 51}; hashes/diff verified, no errors or retries.

