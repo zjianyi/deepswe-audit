@@ -447,3 +447,7 @@ Testem per-launcher S0 failed strict validation: missing/unknown rubric criteria
 ### 2026-09-28 09:54 UTC — Textual Kitty S0 corroboration
 
 Textual Kitty S0 validated as FAIL, corroborating accepted reward forgery under SEM-008; report-forgery/suppression reach remains deferred. Archived raw JSON parsed (7995 bytes); exact write attribution limits remain documented separately. Accounting now {'execution': 91, 'semantic': 91, 'static': 103}, zero clean results. GitHub 94 native complete, ts-pattern active, 8 queued. Original worker waiting without active S0 or errors at poll. Verified 301 public evidence hashes; published semantic result, summary and expansion report. No new attempts or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:57 UTC — Textual RichLog native reward bypass
+
+Textual RichLog oracle/no-op rewards 1/0 (20 F2P, 6 P2P). Protected-paths reward 1 accepted without exception despite 20 failed and 4 passed tests, with missing CTRF and reach/write markers; hash-bound annotation records attribution limits. Other probes reward 0 without observed reach. Local accounting {'static': 103, 'execution': 93, 'semantic': 92}, zero clean. GitHub 95 native complete, Updo active, 7 queued. Original worker and one Textual RichLog S0 active without errors. Verified 307 public evidence hashes; refreshed report/summary. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
