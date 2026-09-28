@@ -150,3 +150,5 @@
 - 2026-09-28 06:42 UTC: Obsidian TOC S0 FAIL archived and static whitespace claim checked; separate hash-bound annotation limits the claim to reference behavior, not demonstrated candidate rejection. 59 native/59 semantic outcomes, zero clean. Tasks 55–59 reconciliation verified 340 hashes, cumulative 4,407, no discrepancies. 200 public bindings verified; worker waiting normally, no retries. NEXT unchanged.
 
 - 2026-09-28 06:44 UTC: Obsidian link conversion native deferred (endpoints 1/0, attacks 0 without reach markers), sole S0 active. GitHub 61 native jobs completed, ofetch active; 60 native/59 semantic local outcomes and one completed native job awaits serial import. 202 public evidence hashes verified; worker healthy, no retries. NEXT unchanged.
+
+- 2026-09-28 06:46 UTC: Link-conversion S0 deferred, raw archive checked. Scoped-ignore native infrastructure blocker confirmed registry Rate exceeded from raw image-pull log; sole S0 now reviews blocked task. 61 native/60 semantic outcomes, zero clean; ofetch native active. 205 public bindings verified; no worker errors/retries. NEXT unchanged.

