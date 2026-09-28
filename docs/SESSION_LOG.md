@@ -331,3 +331,55 @@ Fresh GitHub status unchanged: 79 native tasks completed, Scriggo method declara
 Native completion advanced to 80/103; Skrub duration encoding active, 22 queued. Scriggo protected-path reward 1 accepted by Pier without exception despite failing feature tests. Explicit reach/write markers verified; oracle/no-op rewards 1/0 (48 F2P, 1049 P2P). Both other attacks rejected with reach. Sole original worker and Scriggo S0 active without errors. Refreshed EXPANSION.md and summary; verified 265 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
 
 Scriggo S0 completed during publication: validated FAIL corroborates the native protected-path bypass; mutant coverage remains deferred. Parsed archived raw output (8339 bytes), preserved first attempt. Final accounting 80 native and 80 S0 outcomes; worker waiting normally. Published the semantic result referenced by the refreshed summary.
+
+### 2026-09-28 08:49 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:51 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:53 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:55 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:57 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:59 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:01 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:03 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:05 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:07 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:09 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:11 UTC — expansion heartbeat
+
+Fresh GitHub status unchanged: 80 native tasks completed, Skrub duration encoding active, 22 queued. Local accounting remains 80 native and 80 S0 outcomes. Original worker PID 99581 waiting normally without active S0 or worker/poll errors. No intervention or retries; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:14 UTC — Skrub native integrity failure
+
+Native completion advanced to 81/103; SQL formatter BigQuery pipe formatting active, 21 queued. Skrub protected-path reward 1 accepted by Pier without exception despite two collection errors for missing DurationEncoder. Explicit reach/write markers verified; oracle/no-op rewards 1/0 (130 F2P, 2784 P2P). Forgery rejected with reach; suppression reward 0 without observed reach. Sole original worker and Skrub S0 active without errors. Refreshed EXPANSION.md and summary; verified 267 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
