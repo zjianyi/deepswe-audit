@@ -423,3 +423,11 @@ Fresh GitHub status: 90 native tasks complete, Textual Kitty active, 12 queued. 
 ### 2026-09-28 09:39 UTC — Task graph S0 blocker and Tengo registry failure
 
 Task graph export S0 failed strict SEM-020 criterion/verdict and duplicate-reference validation; raw JSON parsed (10694 bytes), preserved first outcome without rereview. Tengo callable isolation blocked before cases; image-pull.log confirms registry Data limit exceeded. Local accounting {'static': 103, 'execution': 87, 'semantic': 86}, zero clean results. GitHub 91 native complete, Textual RichLog active, 11 queued. Original worker and one Tengo S0 active without errors. Refreshed report/summary; verified 286 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:41 UTC — Unchanged monitoring checkpoint
+
+Fresh GitHub status: 91 native tasks complete, Textual RichLog active, 11 queued. Local outcomes remain 87 native and 86 S0; Tengo callable isolation S0 and sole original worker PID 99581 remain active without worker/poll errors. No intervention, retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 09:44 UTC — Tengo callable S0 and destructuring registry blocker
+
+Tengo callable isolation S0 validated as DEFERRED_EVIDENCE_REQUIRED for missing runtime evidence; raw JSON parsed (13405 bytes). Tengo destructuring blocked before cases; image-pull.log confirms registry Data limit exceeded. Local accounting {'static': 103, 'execution': 88, 'semantic': 87}, zero clean results. GitHub 92 native complete, TOMLKit active, 10 queued. Original worker and one Tengo destructuring S0 active without errors. Refreshed report/summary; verified 289 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.

