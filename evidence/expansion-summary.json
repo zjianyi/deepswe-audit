@@ -6,14 +6,14 @@
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 9,
       "FAIL": 28,
-      "INFRASTRUCTURE_FAILURE": 9,
-      "NOT_RUN": 57
+      "INFRASTRUCTURE_FAILURE": 10,
+      "NOT_RUN": 56
     },
     "semantic": {
-      "DEFERRED_EVIDENCE_REQUIRED": 12,
+      "DEFERRED_EVIDENCE_REQUIRED": 13,
       "FAIL": 24,
       "INFRASTRUCTURE_FAILURE": 9,
-      "NOT_RUN": 58
+      "NOT_RUN": 57
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 46,
-    "semantic": 45,
+    "execution": 47,
+    "semantic": 46,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -857,17 +857,18 @@
       "task_id": "kombu-virtual-queue-dead-lettering"
     },
     {
-      "all_outcomes_recorded": false,
+      "all_outcomes_recorded": true,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
       "evidence_hashes": {
         "execution.json": "c07baff853f25e5ff313dc95e71c2dd9ddd1752425f05a15d491ff7f5b9c705d",
+        "semantic.json": "60a65771da17051c448cee7c42d761a9ad40d924218018eddc0d902b9940ba98",
         "static.json": "cfe5bedacba19d5c9ec1f7864c656e663edc3b2b8f6d59cb9db2298c5be9fb43"
       },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "DEFERRED_EVIDENCE_REQUIRED",
         "static": "PASS"
       },
       "repository": "https://github.com/pmndrs/koota",
@@ -877,10 +878,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "bc873cd1eb854b8c089eeb70404ef6aee3ce2160e78bb356beec075a7ece4ba0",
+        "static.json": "817940f814c4203bd6866df979b2b19a9d9823d396b67e20a17d3bff5a8a665a"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },
