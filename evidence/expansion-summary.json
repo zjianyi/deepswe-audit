@@ -4,10 +4,10 @@
   "cohort_hash": "2549850b9966d0e4322e575c937486292512dfd976b102991fe110f68d59031c",
   "phase_status_counts": {
     "execution": {
-      "DEFERRED_EVIDENCE_REQUIRED": 19,
+      "DEFERRED_EVIDENCE_REQUIRED": 20,
       "FAIL": 43,
       "INFRASTRUCTURE_FAILURE": 14,
-      "NOT_RUN": 27
+      "NOT_RUN": 26
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 22,
@@ -21,7 +21,7 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 76,
+    "execution": 77,
     "semantic": 76,
     "static": 103
   },
@@ -1425,10 +1425,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "c3fe7123ca70c2efdcb7189824b939fba3f828cd36e623dd1646c3c15cc83339",
+        "static.json": "ae383d507a017ccdb9e3b4d18c14ae110373c747bac7d9d333c43007c9fb5073"
+      },
       "language": "typescript",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "DEFERRED_EVIDENCE_REQUIRED",
         "semantic": "NOT_RUN",
         "static": "PASS"
       },

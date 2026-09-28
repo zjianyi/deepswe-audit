@@ -293,3 +293,7 @@ Fresh GitHub status unchanged: 75 native tasks completed, Query restored-state p
 ### 2026-09-28 08:27 UTC — Query restored-state native outcome
 
 Native completion advanced to 76/103; Quill shared-toolbar focus active, 26 queued. Query oracle/no-op rewards 1/0; all three attacks reward 0 with no observed verifier reach. Raw trial rewards, exceptions and markers match public execution evidence; native outcome remains deferred. Sole original worker and one S0 active without errors. Refreshed EXPANSION.md and summary; verified 252 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:29 UTC — Query S0 and Quill native outcomes
+
+Native completion advanced to 77/103; Returns validated-error accumulation active, 25 queued. Query S0 validated as deferred; raw review parsed (12762 bytes), no added attempts. Quill oracle/no-op rewards 1/0; all three attacks reward 0 with no observed verifier reach. Raw trial rewards, exceptions and markers match public evidence; native outcome deferred. Sole original worker and Quill S0 active without errors. Refreshed EXPANSION.md and summary; verified 255 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
