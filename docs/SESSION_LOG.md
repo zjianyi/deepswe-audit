@@ -305,3 +305,7 @@ Quill S0 validated as deferred for unobserved probe reach, independence, thresho
 ### 2026-09-28 08:34 UTC — Returns native integrity failure
 
 Native completion advanced to 78/103; SCC bounded-memory spilling active, 24 queued. Returns protected-path reward 1 accepted by Pier without exception despite 15 collection errors for missing feature imports. Explicit reach/write markers verified; oracle/no-op rewards 1/0 (159 F2P, 61 P2P). Forgery rejected with reach; suppression reward 0 without observed reach. Sole original worker and Returns S0 active without errors. Refreshed EXPANSION.md and summary; verified 258 public evidence hashes. No retries or policy changes; NEXT unchanged. Validation: git diff --check.
+
+### 2026-09-28 08:36 UTC — Returns S0 integrity finding
+
+Returns S0 validated as FAIL, corroborating the native protected-path reward bypass under SEM-008 and SEM-020; reproducibility remains deferred. Archived raw review parsed (8962 bytes). Accounting now 78 native and 78 S0 outcomes, zero clean results. SCC native active with 24 queued; original worker waiting without active S0 or errors. Verified 259 public evidence hashes; published semantic result, summary and EXPANSION.md. No new attempts or policy changes; NEXT unchanged. Validation: git diff --check.

