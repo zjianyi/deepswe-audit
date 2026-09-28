@@ -5,15 +5,15 @@
   "phase_status_counts": {
     "execution": {
       "DEFERRED_EVIDENCE_REQUIRED": 13,
-      "FAIL": 32,
-      "INFRASTRUCTURE_FAILURE": 10,
-      "NOT_RUN": 48
+      "FAIL": 33,
+      "INFRASTRUCTURE_FAILURE": 11,
+      "NOT_RUN": 46
     },
     "semantic": {
       "DEFERRED_EVIDENCE_REQUIRED": 16,
-      "FAIL": 27,
+      "FAIL": 28,
       "INFRASTRUCTURE_FAILURE": 12,
-      "NOT_RUN": 48
+      "NOT_RUN": 47
     },
     "static": {
       "FAIL": 16,
@@ -21,8 +21,8 @@
     }
   },
   "recorded_outcome_counts": {
-    "execution": 55,
-    "semantic": 55,
+    "execution": 57,
+    "semantic": 56,
     "static": 103
   },
   "schema_version": "deepswe.expansion-progress/1",
@@ -1040,14 +1040,18 @@
       "task_id": "mnamer-daemon-watch-lifecycle"
     },
     {
-      "all_outcomes_recorded": false,
-      "all_phases_resolved": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "2574426d4e73f8378e88c81f02f92825e40a4d6a460e2ac66405c59aed1cd9a5",
+        "semantic.json": "c8a3615182612d37b5ecd024cd141c20a68d7e0ac3fa7c3d2f3697e99ba94705",
+        "static.json": "d063e8d791fd9fab3c4ad795f3b6d066784a497775cab11cc8f6118345456a2a"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
-        "semantic": "NOT_RUN",
+        "execution": "FAIL",
+        "semantic": "FAIL",
         "static": "FAIL"
       },
       "repository": "https://github.com/google/mobly",
@@ -1057,10 +1061,13 @@
       "all_outcomes_recorded": false,
       "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "evidence_hashes": {},
+      "evidence_hashes": {
+        "execution.json": "6077381f3f578b4ca651bbf44f9df3406661ebf8c73801ed184640cc6fc7fdb2",
+        "static.json": "9e8daf9e5a2d6a6af6c7e66076ac1c8988a86aa7ee2b2303058b3e3d0c1a3831"
+      },
       "language": "python",
       "phases": {
-        "execution": "NOT_RUN",
+        "execution": "INFRASTRUCTURE_FAILURE",
         "semantic": "NOT_RUN",
         "static": "FAIL"
       },

