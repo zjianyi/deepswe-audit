@@ -94,18 +94,9 @@ def semantic(task_id):
 
 
 def report():
-    f=frozen();static=read(ROOT/'evidence/static-summary.json');rows=[]
-    for task_id in f['pilot']:
-        s=next(r for r in static['tasks'] if r['task_id']==task_id)
-        ep=ROOT/'evidence/pilot'/task_id/'execution.json';sp=ROOT/'evidence/pilot'/task_id/'semantic.json'
-        e=read(ep) if ep.exists() else {};m=read(sp) if sp.exists() else {}
-        phases={'static':s['status'],'execution':e.get('status','NOT_RUN'),'semantic':m.get('overall_status',m.get('status','NOT_RUN'))}
-        rows.append({'task_id':task_id,'language':s['language'],'repository':s['repository'],'phases':phases,**coverage(phases),'semantic_finding_count':len(m.get('findings',[]))})
-    write(ROOT/'evidence/audit-summary.json',{'upstream_commit':UPSTREAM,'frozen_manifest_hash':f['manifest_hash'],'corpus_static_counts':static['counts'],'pilot':rows,'completed_phase_counts':{p:sum(r['phases'][p]!='NOT_RUN' for r in rows) for p in ['static','execution','semantic']},'clean_count':sum(r['clean_three_phase_result'] for r in rows),'claim':'Balanced ten-task pilot; not a corpus prevalence estimate or release approval.'})
-    lines=['# DeepSWE audit report','',f'Frozen upstream `{UPSTREAM}`. Corpus: 113 tasks. Pilot: ten tasks across five languages and ten repositories.','',f"Static outcomes: `{static['counts']}`.",'','| Task | Static | Execution | Semantic | Clean three-phase |','|---|---|---|---|---|']
-    for r in rows:lines.append('| '+r['task_id']+' | '+' | '.join(r['phases'].values())+' | '+str(r['clean_three_phase_result'])+' |')
-    lines+=['','## Interpretation','','Task failures, unresolved evidence, and infrastructure failures are reported separately. An explicit blocker accounts for a scheduled item but does not mean the phase evaluated the task. This balanced pilot is not an unbiased corpus-wide defect-rate estimate.','', 'Detailed findings are under `evidence/pilot/<task>/semantic.json`; native summaries are adjacent. Public GitHub artifacts retain raw native evidence for 30 days; a local copy is preserved under `.local/native`.','']
-    (ROOT/'REPORT.md').write_text('\n'.join(lines));print('Report updated')
+    from report import report as public_report
+    public_report(ROOT)
+    print('Report updated')
 
 
 def main():

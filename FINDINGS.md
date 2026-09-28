@@ -1,6 +1,6 @@
-# Interim audit findings
+# Audit findings
 
-All ten native attempts are recorded. Nine oracle/no-op pairs met binary endpoint expectations; KaTeX was blocked by registry rate limiting. Semantic review remains in progress. These balanced pilot observations are not a corpus defect-rate estimate.
+All ten native attempts are recorded. Nine oracle/no-op pairs met binary endpoint expectations; KaTeX was blocked by registry rate limiting. Ten semantic attempts are recorded: nine validated reviews and one invalid-output blocker. See [the final report](REPORT.md) for limitations and reviewer discrepancies. These balanced pilot observations are not a corpus defect-rate estimate.
 
 | Task/repository | Observed integrity finding | Evidence |
 |---|---|---|

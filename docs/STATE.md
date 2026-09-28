@@ -7,7 +7,8 @@
 - Raw imported execution statuses: two FAIL (GoReleaser, Helm protected writes), three INFRASTRUCTURE_FAILURE (KaTeX, Dateutil, fd), five DEFERRED_EVIDENCE_REQUIRED (unobserved probe reach).
 - Independent raw-evidence inspection found Dateutil and fd protected-path probes accepted by Pier with reward 1 and no exception despite absent CTRF. Separate hash-bound audit annotations record these demonstrated reward bypasses; original importer classifications remain preserved. Four tasks therefore have concrete integrity findings, independent of raw aggregate labels.
 - GoReleaser and Helm also exhibit inflated report-forgery partial credit with binary reward 0.
-- Nine S0 reviews completed as of 2026-09-28 00:14 UTC: GoReleaser deferred, Helm FAIL, Testem deferred, KaTeX deferred, Bandit FAIL, Dateutil deferred, fd FAIL (reviewer flags random-sort and timestamp coverage gaps), wasmi deferred, awilix deferred. Raw reviews preserved; annotations distinguish reviewer errors and interpretive findings from demonstrated exploits.
-- Sequential review queue active: exec session 25269, shell PID 92260. happy-dom currently running as the final review. Do not launch duplicate reviews while this queue is active.
-- Zero clean three-phase results. Detailed local evidence retained. One-minute monitor active.
+- Ten S0 attempts recorded: nine validated reviews (three FAIL, six DEFERRED_EVIDENCE_REQUIRED), one INFRASTRUCTURE_FAILURE. Happy DOM output failed strict SEM-020 validation; no rerun. No semantic processes remain.
+- All scheduled items accounted for. Zero clean three-phase results. Final REPORT.md, ten per-task evidence folders, 113-task inventory, static findings and reproducible manifests/run.json published; detailed source/native/input bundles retained locally.
+- Final validation: 19 public tests, actionlint and git diff checks pass; all 113 source, framework/context and ten artifact bindings verified. Earlier private BTQC regression suite: 112 passed. No shared policy or frozen runtime altered during final reporting.
+- One-minute monitoring is ready to pause after final publication; no unfinished execution or review jobs.
 - No native retries used. No documented registry correction yet; KaTeX remains explicitly blocked. Banana Bench unchanged.

@@ -1,22 +1,38 @@
 {
-  "claim": "Balanced ten-task pilot; not a corpus prevalence estimate or release approval.",
+  "claim": "Balanced pilot; not a corpus prevalence estimate or release approval.",
   "clean_count": 0,
-  "completed_phase_counts": {
-    "execution": 10,
-    "semantic": 9,
-    "static": 10
-  },
   "corpus_static_counts": {
     "FAIL": 16,
     "PASS": 97
   },
+  "demonstrated_integrity_finding_count": 4,
   "frozen_manifest_hash": "462e98aa04ef805ea8c09f1ec0252433e1dd689086fd649d5fe84e68604ff285",
+  "phase_status_counts": {
+    "execution": {
+      "DEFERRED_EVIDENCE_REQUIRED": 5,
+      "FAIL": 2,
+      "INFRASTRUCTURE_FAILURE": 3
+    },
+    "semantic": {
+      "DEFERRED_EVIDENCE_REQUIRED": 6,
+      "FAIL": 3,
+      "INFRASTRUCTURE_FAILURE": 1
+    },
+    "static": {
+      "PASS": 10
+    }
+  },
   "pilot": [
     {
-      "all_phases_evaluated": true,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "has_infrastructure_blocker": false,
-      "has_task_defect": true,
+      "demonstrated_integrity_finding": true,
+      "evidence_hashes": {
+        "audit-annotation.json": "f1ecac21ef5b51dd04b55b61924d5b8f2554f2ce26638f73293ccf25f46318b4",
+        "execution.json": "da1729037923cf7c6bddb953b4ed7948fd45aabe1b294c6e8a20b875e06d6e7c",
+        "semantic.json": "557d8ffa621075e8071caee7b028be0e0f38d9ce72e8fae12803f22683f9037b"
+      },
       "language": "go",
       "phases": {
         "execution": "FAIL",
@@ -28,10 +44,15 @@
       "task_id": "goreleaser-retry-publish-auditing"
     },
     {
-      "all_phases_evaluated": true,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": true,
       "clean_three_phase_result": false,
-      "has_infrastructure_blocker": false,
-      "has_task_defect": true,
+      "demonstrated_integrity_finding": true,
+      "evidence_hashes": {
+        "audit-annotation.json": "2cf95a5b4238b2fc375c77af3404b092570f89ebfd9def1bf17faa60069873d9",
+        "execution.json": "5f091e9aa15a52db45e0e0f7247dfcb7ac764c055577776a92abaa3cc0c7f22e",
+        "semantic.json": "da9b2c67145cbdae5967e04dff74fbad39fee78c33076cff9c00921c25fb36fd"
+      },
       "language": "go",
       "phases": {
         "execution": "FAIL",
@@ -43,10 +64,14 @@
       "task_id": "helm-array-merge-strategies"
     },
     {
-      "all_phases_evaluated": true,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "has_infrastructure_blocker": false,
-      "has_task_defect": false,
+      "demonstrated_integrity_finding": false,
+      "evidence_hashes": {
+        "execution.json": "4d8c8f7ceb3ad6dfd907b244c4656cb833af857882d15400d449a19beffc5d7e",
+        "semantic.json": "ff34918fdcc97d6e5931d11630f2c6d047c0e13025ee83f2b393cdb95c4934d3"
+      },
       "language": "javascript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
@@ -58,10 +83,15 @@
       "task_id": "testem-bail-on-test-failure"
     },
     {
-      "all_phases_evaluated": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "has_infrastructure_blocker": true,
-      "has_task_defect": false,
+      "demonstrated_integrity_finding": false,
+      "evidence_hashes": {
+        "audit-annotation.json": "10343208ea82606a02e5c434bf6a874c801553d0d4045eebdf2afff31d92e5a9",
+        "execution.json": "9c16c50e23e04b6b9a5c42753b8f26efbe8ca9f7323cd3a7cea6a8e5b639680d",
+        "semantic.json": "5b2c69353d5b0200f77577ef77ed0a09532c882caf1f32a88157bcf8c452c716"
+      },
       "language": "javascript",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
@@ -73,10 +103,14 @@
       "task_id": "katex-multicolumn-array-spans"
     },
     {
-      "all_phases_evaluated": true,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "has_infrastructure_blocker": false,
-      "has_task_defect": true,
+      "demonstrated_integrity_finding": false,
+      "evidence_hashes": {
+        "execution.json": "f56f35877cdd5971743a67c064b3e4bc0595ed394162b226c482955f9b41e537",
+        "semantic.json": "b4fc9582e283e4876224acf903b49b48d620d51bec3325f71126bdac6078af91"
+      },
       "language": "python",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
@@ -88,10 +122,15 @@
       "task_id": "bandit-structured-nosec-directives"
     },
     {
-      "all_phases_evaluated": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "has_infrastructure_blocker": true,
-      "has_task_defect": false,
+      "demonstrated_integrity_finding": true,
+      "evidence_hashes": {
+        "audit-annotation.json": "4ec4d2b94a40e8be2b8f839e36d8500e79cb3be33e3c139cb2aeee605e38e3b8",
+        "execution.json": "8928dbf509bcce7443231421cea6ca78fe82189841cc4e48b9d3379438727340",
+        "semantic.json": "4b471d25fcb54db493671b07270216d345374e3053f80e366455f3ba79491773"
+      },
       "language": "python",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
@@ -103,10 +142,15 @@
       "task_id": "dateutil-rfc5545-timezone-interop"
     },
     {
-      "all_phases_evaluated": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "has_infrastructure_blocker": true,
-      "has_task_defect": true,
+      "demonstrated_integrity_finding": true,
+      "evidence_hashes": {
+        "audit-annotation.json": "5d2ec17b91b317b9b877fc447f5325c602a4556cf7224d48285fd41f365af5dd",
+        "execution.json": "ec479783be347b1fd24e025829473959c93dc4a9429084ecad012699ad506c02",
+        "semantic.json": "776336e90bb48a689097daae57a313638cc5b5dcfc75edb17055e4cc4ec670b9"
+      },
       "language": "rust",
       "phases": {
         "execution": "INFRASTRUCTURE_FAILURE",
@@ -118,10 +162,14 @@
       "task_id": "fd-deterministic-multi-key-sorting"
     },
     {
-      "all_phases_evaluated": true,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "has_infrastructure_blocker": false,
-      "has_task_defect": false,
+      "demonstrated_integrity_finding": false,
+      "evidence_hashes": {
+        "execution.json": "0277f9b50868e2756827223ca86d4dd2eb7b5b4788031bc90962863386029b7e",
+        "semantic.json": "ad31fe53917a3db318870911f4caf56c25cf699a47939ce95c353188b9e03ab9"
+      },
       "language": "rust",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
@@ -133,10 +181,14 @@
       "task_id": "wasmi-trap-coredumps"
     },
     {
-      "all_phases_evaluated": true,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "has_infrastructure_blocker": false,
-      "has_task_defect": false,
+      "demonstrated_integrity_finding": false,
+      "evidence_hashes": {
+        "execution.json": "189790991d5b985c3e43ea05362a7348b10abc202eb8349cfb1a465ea97ff9b0",
+        "semantic.json": "4908bd433a7e7b1677a56634c43a282520f6850f4d5f36e99126cae283d6aa47"
+      },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
@@ -148,14 +200,18 @@
       "task_id": "awilix-async-container-initialization"
     },
     {
-      "all_phases_evaluated": false,
+      "all_outcomes_recorded": true,
+      "all_phases_resolved": false,
       "clean_three_phase_result": false,
-      "has_infrastructure_blocker": false,
-      "has_task_defect": false,
+      "demonstrated_integrity_finding": false,
+      "evidence_hashes": {
+        "execution.json": "be0fe044f779e4980b7d0607d95261dde04038e052438320f5a0c47264773a7c",
+        "semantic.json": "c4a40105804a7f8cd46729794ab4ecca1e0c5b45d3ca22187b2217395e1f8edc"
+      },
       "language": "typescript",
       "phases": {
         "execution": "DEFERRED_EVIDENCE_REQUIRED",
-        "semantic": "NOT_RUN",
+        "semantic": "INFRASTRUCTURE_FAILURE",
         "static": "PASS"
       },
       "repository": "https://github.com/capricorn86/happy-dom",
@@ -163,5 +219,17 @@
       "task_id": "happy-dom-abort-pending-body-reads"
     }
   ],
+  "recorded_outcome_counts": {
+    "execution": 10,
+    "semantic": 10,
+    "static": 10
+  },
+  "resolved_phase_counts": {
+    "execution": 2,
+    "semantic": 3,
+    "static": 10
+  },
+  "scheduled_items_accounted": true,
+  "schema_version": "deepswe.audit-summary/2",
   "upstream_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea"
 }
